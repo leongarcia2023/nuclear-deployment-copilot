@@ -1,0 +1,63 @@
+{
+  "corpusId": "nuclear-deployment-demo-corpus",
+  "generatedAt": "2026-05-17",
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Aurora AAP-80 Project Overview for Strategic Fuel Partners",
+      "sourceType": "uploaded_document_claimed",
+      "publisher": "Uploaded memo",
+      "date": "2026-04-24",
+      "excerpt": "Claims first-core HALEU demand, target commercial operation window, preferred fabrication pathway, and non-binding host site evaluation.",
+      "confidence": "medium"
+    },
+    {
+      "id": "src-002",
+      "title": "Pre-application meeting summary",
+      "sourceType": "public_source_verified",
+      "publisher": "Regulatory docket sample",
+      "date": "2025-11-12",
+      "url": "https://example.com/regulatory-docket",
+      "excerpt": "Confirms public interaction around reactor concept and licensing approach, but does not validate construction schedule.",
+      "confidence": "medium"
+    },
+    {
+      "id": "src-003",
+      "title": "HALEU supply market note",
+      "sourceType": "public_source_verified",
+      "publisher": "Market intelligence sample",
+      "date": "2026-02-05",
+      "url": "https://example.com/haleu-market-note",
+      "excerpt": "Describes supply scarcity, reservation behavior, and schedule risk for advanced reactor first cores.",
+      "confidence": "high"
+    },
+    {
+      "id": "src-004",
+      "title": "Regulatory readiness checklist",
+      "sourceType": "public_source_verified",
+      "publisher": "Agency guidance sample",
+      "date": "2025-08-19",
+      "url": "https://example.com/readiness-checklist",
+      "excerpt": "Lists licensing artifacts that would support a higher confidence project-readiness finding.",
+      "confidence": "high"
+    },
+    {
+      "id": "src-005",
+      "title": "Strategic partner diligence notes",
+      "sourceType": "internal_source_verified",
+      "publisher": "Internal diligence sample",
+      "date": "2026-05-02",
+      "excerpt": "Indicates partner conversations are active, but not yet converted into binding project finance or offtake evidence.",
+      "confidence": "medium"
+    },
+    {
+      "id": "src-006",
+      "title": "Schedule claims reconciliation",
+      "sourceType": "inferred",
+      "publisher": "Copilot synthesis",
+      "date": "2026-05-17",
+      "excerpt": "Compares uploaded schedule claims against public evidence gaps and flags missing proof points.",
+      "confidence": "low"
+    }
+  ]
+}

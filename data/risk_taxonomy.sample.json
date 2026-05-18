@@ -1,0 +1,41 @@
+{
+  "taxonomyId": "nuclear-deployment-readiness-v0",
+  "items": [
+    {
+      "id": "risk-fuel-spec",
+      "category": "Fuel cycle",
+      "label": "Fuel specification ambiguity",
+      "description": "The developer has not produced a supplier-actionable fuel specification.",
+      "negativeSignals": ["Assay range only", "No chemical form", "No acceptance criteria", "No fuel design authority"],
+      "proofSignals": ["Controlled specification", "Design authority attestation", "Qualification schedule", "Fabrication interface control"],
+      "defaultStatus": "missing"
+    },
+    {
+      "id": "risk-site",
+      "category": "Project readiness",
+      "label": "Site control gap",
+      "description": "The project timeline depends on a site that is not independently verified.",
+      "negativeSignals": ["Non-binding host language", "No permit matrix", "No interconnection status"],
+      "proofSignals": ["Site control document", "Host customer agreement", "State/local permit map", "Security envelope plan"],
+      "defaultStatus": "uploaded_document_claimed"
+    },
+    {
+      "id": "risk-finance",
+      "category": "Commercial",
+      "label": "Reservation credit risk",
+      "description": "The counterparty may want fuel optionality without balance sheet support.",
+      "negativeSignals": ["No board authority", "No credit support", "No milestone financing"],
+      "proofSignals": ["Board-approved procurement authority", "Parent guarantee", "Escrow", "Cost-share award"],
+      "defaultStatus": "inferred"
+    },
+    {
+      "id": "risk-public-opacity",
+      "category": "Evidence",
+      "label": "Public record insufficiency",
+      "description": "Public sources cannot verify details that usually sit in NDA data rooms.",
+      "negativeSignals": ["Only press claims", "No docket artifacts", "No technical appendices"],
+      "proofSignals": ["NDA data room index", "Auditable source pack", "Executive attestation"],
+      "defaultStatus": "unknowable_from_public_docs"
+    }
+  ]
+}

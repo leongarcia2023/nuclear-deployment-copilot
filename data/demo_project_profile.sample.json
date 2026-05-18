@@ -1,0 +1,329 @@
+{
+  "id": "aurora-advanced-power-haleu-readiness",
+  "projectName": "Aurora Advanced Power Demonstration Unit 1",
+  "companyName": "Aurora Advanced Power",
+  "uploadedMemoTitle": "Aurora AAP-80 Project Overview for Strategic Fuel Partners",
+  "userModeDefault": "fuel-cycle supplier",
+  "oneLineAssessment": {
+    "value": "A plausible medium-term HALEU customer, but not yet a bankable fuel reservation counterparty until site control, licensing schedule, offtake structure, and first-core assay/specification evidence are produced.",
+    "status": "inferred",
+    "evidenceIds": ["src-001", "src-002", "src-006"],
+    "note": "Demo synthesis only. No real LLM calls are implemented."
+  },
+  "readinessBand": "conditional",
+  "readinessScore": 67,
+  "assessmentDate": "2026-05-17",
+  "profileHeader": {
+    "reactorType": {
+      "value": "80 MWe sodium-cooled fast reactor concept",
+      "status": "uploaded_document_claimed",
+      "evidenceIds": ["src-001"]
+    },
+    "fuelNeed": {
+      "value": "HALEU metal fuel, target 12-16 metric tons for first core plus reload qualification lots",
+      "status": "uploaded_document_claimed",
+      "evidenceIds": ["src-001"]
+    },
+    "firstFuelDate": {
+      "value": "2031 target, schedule not independently verified",
+      "status": "inferred",
+      "evidenceIds": ["src-001", "src-006"]
+    },
+    "deploymentSite": {
+      "value": "Western U.S. industrial host site under non-binding site evaluation",
+      "status": "uploaded_document_claimed",
+      "evidenceIds": ["src-001"]
+    },
+    "commercialStage": {
+      "value": "Pre-application licensing and partner diligence",
+      "status": "public_source_verified",
+      "evidenceIds": ["src-002", "src-004"]
+    }
+  },
+  "readinessScores": [
+    {
+      "id": "score-fuel-spec",
+      "label": "Fuel Specification Maturity",
+      "score": 72,
+      "maxScore": 100,
+      "band": "conditional",
+      "status": "uploaded_document_claimed",
+      "rationale": "Memo includes assay range, form factor, and first-core estimate, but lacks signed fuel design authority, qualification basis, or supplier-facing specification package.",
+      "evidenceIds": ["src-001"]
+    },
+    {
+      "id": "score-licensing",
+      "label": "Licensing Path Evidence",
+      "score": 64,
+      "maxScore": 100,
+      "band": "conditional",
+      "status": "public_source_verified",
+      "rationale": "Public pre-application touchpoints exist, but the docket record does not yet establish a construction permit filing date or fuel qualification closure path.",
+      "evidenceIds": ["src-002", "src-004"]
+    },
+    {
+      "id": "score-site",
+      "label": "Site and Customer Pull",
+      "score": 51,
+      "maxScore": 100,
+      "band": "speculative",
+      "status": "uploaded_document_claimed",
+      "rationale": "A host site is described, but site control, interconnection, end-customer offtake, and state-level incentives are not evidenced in public documents.",
+      "evidenceIds": ["src-001", "src-006"]
+    },
+    {
+      "id": "score-finance",
+      "label": "Financeability",
+      "score": 58,
+      "maxScore": 100,
+      "band": "conditional",
+      "status": "inferred",
+      "rationale": "Strategic partner discussions are credible enough for diligence, but no binding customer contract, milestone financing, or cost-share award is available in the demo corpus.",
+      "evidenceIds": ["src-001", "src-005"]
+    },
+    {
+      "id": "score-supply",
+      "label": "Supplier Readiness Fit",
+      "score": 82,
+      "maxScore": 100,
+      "band": "credible",
+      "status": "inferred",
+      "rationale": "The projected first-core timing and reload profile are attractive to a fuel-cycle supplier if validated by technical interfaces and credit support.",
+      "evidenceIds": ["src-001", "src-003"]
+    }
+  ],
+  "fuelCycleDependencies": [
+    {
+      "id": "dep-haleu",
+      "dependency": "HALEU feedstock reservation",
+      "needBy": "2028 decision gate",
+      "exposure": "critical",
+      "status": "inferred",
+      "currentEvidence": "First-core HALEU quantity and assay are claimed; reservation pathway is not demonstrated.",
+      "proofNeeded": "Binding term sheet or board-approved reservation mandate with assay, quantity, delivery windows, and credit support.",
+      "evidenceIds": ["src-001", "src-003"]
+    },
+    {
+      "id": "dep-conversion",
+      "dependency": "Conversion and deconversion routing",
+      "needBy": "2027 fuel qualification planning",
+      "exposure": "high",
+      "status": "missing",
+      "currentEvidence": "No conversion routing, UF6 handling, metal fuel interface, or fallback path appears in the demo corpus.",
+      "proofNeeded": "Process flow, supplier shortlist, material control account plan, and interface responsibility matrix.",
+      "evidenceIds": []
+    },
+    {
+      "id": "dep-fabrication",
+      "dependency": "Metal fuel fabrication capacity",
+      "needBy": "2029 qualification lots",
+      "exposure": "critical",
+      "status": "uploaded_document_claimed",
+      "currentEvidence": "Memo names a preferred fabrication partner, but no executable agreement is provided.",
+      "proofNeeded": "Signed fabrication MOU or services agreement with qualification schedule, safeguards scope, and capacity allocation.",
+      "evidenceIds": ["src-001"]
+    },
+    {
+      "id": "dep-transport",
+      "dependency": "Licensed package and transport plan",
+      "needBy": "2030 first-core logistics",
+      "exposure": "medium",
+      "status": "unknowable_from_public_docs",
+      "currentEvidence": "Public filings do not expose detailed nuclear material transport planning.",
+      "proofNeeded": "Confidential logistics plan, package selection, route assumptions, and responsible licensee mapping.",
+      "evidenceIds": ["src-004"]
+    }
+  ],
+  "evidenceQuality": [
+    {
+      "id": "eq-reactor",
+      "claim": "Technology concept and intended output are defined.",
+      "status": "public_source_verified",
+      "sourceIds": ["src-002", "src-004"],
+      "quality": "adequate",
+      "diligenceImplication": "Enough to classify demand type, not enough to underwrite supply timing."
+    },
+    {
+      "id": "eq-fuel-demand",
+      "claim": "First-core HALEU demand is material to suppliers.",
+      "status": "uploaded_document_claimed",
+      "sourceIds": ["src-001"],
+      "quality": "thin",
+      "diligenceImplication": "Require technical appendix and fuel design authority confirmation."
+    },
+    {
+      "id": "eq-site",
+      "claim": "Deployment site is available on target schedule.",
+      "status": "missing",
+      "sourceIds": [],
+      "quality": "absent",
+      "diligenceImplication": "Do not treat as near-term demand until site control evidence exists."
+    },
+    {
+      "id": "eq-finance",
+      "claim": "Project can fund fuel reservation before final investment decision.",
+      "status": "inferred",
+      "sourceIds": ["src-005", "src-006"],
+      "quality": "thin",
+      "diligenceImplication": "Credit and cancellation terms matter more than stated demand volume."
+    }
+  ],
+  "unknowns": [
+    {
+      "id": "unk-001",
+      "unknown": "Whether Aurora has budget authority to sign a fuel reservation before licensing certainty.",
+      "status": "missing",
+      "severity": "high",
+      "owner": "Commercial diligence",
+      "nextStep": "Request board-approved procurement authority or financing condition precedent."
+    },
+    {
+      "id": "unk-002",
+      "unknown": "Whether the claimed host site can accept nuclear construction and security envelope on the proposed schedule.",
+      "status": "uploaded_document_claimed",
+      "severity": "high",
+      "owner": "Site diligence",
+      "nextStep": "Ask for site control, permitting matrix, community engagement record, and interconnection status."
+    },
+    {
+      "id": "unk-003",
+      "unknown": "Final enrichment assay, chemical form, and acceptance criteria for first reload batch.",
+      "status": "unknowable_from_public_docs",
+      "severity": "medium",
+      "owner": "Technical interface",
+      "nextStep": "Set up confidential fuel specification review with export-control screening."
+    },
+    {
+      "id": "unk-004",
+      "unknown": "Whether alternate HALEU supply can cover delay in domestic enrichment ramp.",
+      "status": "inferred",
+      "severity": "medium",
+      "owner": "Supply planning",
+      "nextStep": "Model delay cases and map substitution constraints by assay and delivery window."
+    }
+  ],
+  "counterpartyQuestions": [
+    {
+      "id": "q-001",
+      "question": "What fuel reservation volume can you commit to before construction permit issuance?",
+      "whyItMatters": "Separates real near-term demand from aspirational project schedules.",
+      "expectedEvidence": "Procurement authority, credit support, cancellation terms, and delivery window.",
+      "priority": "must-answer",
+      "status": "missing"
+    },
+    {
+      "id": "q-002",
+      "question": "Who owns fuel design authority and qualification responsibility?",
+      "whyItMatters": "Supplier risk changes materially if the developer cannot close technical interfaces.",
+      "expectedEvidence": "Fuel design control document, fabrication partner agreement, and qualification plan.",
+      "priority": "must-answer",
+      "status": "uploaded_document_claimed"
+    },
+    {
+      "id": "q-003",
+      "question": "Which external milestones would cause you to defer first-core fuel procurement?",
+      "whyItMatters": "Defines schedule fragility and inventory risk for suppliers.",
+      "expectedEvidence": "Milestone dependency map tied to licensing, site, offtake, and financing.",
+      "priority": "important",
+      "status": "inferred"
+    },
+    {
+      "id": "q-004",
+      "question": "What evidence can be shared under NDA that is not visible in public filings?",
+      "whyItMatters": "Moves the profile from public plausibility to diligence-grade conviction.",
+      "expectedEvidence": "Data room index, source list, and responsible executive attestation.",
+      "priority": "important",
+      "status": "unknowable_from_public_docs"
+    }
+  ],
+  "recommendedAction": {
+    "decision": "advance with conditions",
+    "status": "inferred",
+    "rationale": "Treat Aurora as a serious but not yet bankable HALEU prospect. The best next move is structured diligence, not a supply commitment.",
+    "conditions": [
+      "No reserved production slot until fuel specification package and fuel design authority are verified.",
+      "Require site control or host-customer evidence before assigning near-term demand probability above 50%.",
+      "Offer a conditional reservation framework with credit support and staged cancellation economics."
+    ],
+    "nextReviewTrigger": "Re-score when Aurora provides NDA data room evidence or files a licensing milestone tied to first-core fuel."
+  },
+  "memo": [
+    {
+      "heading": "Bottom line",
+      "body": "Aurora looks like a credible diligence target for a HALEU supplier because the claimed fuel requirement is sizable and the schedule sits inside the window where supplier capacity decisions matter. The project is not yet a confirmed future customer because the evidence stack is thin around site, finance, and fuel qualification execution.",
+      "status": "inferred",
+      "evidenceIds": ["src-001", "src-002", "src-003"]
+    },
+    {
+      "heading": "What would prove deployability",
+      "body": "The proof package should include a controlled fuel specification, reservation authority, signed fabrication pathway, site control evidence, and a milestone-linked procurement calendar. Public sources alone cannot answer several of those questions.",
+      "status": "inferred",
+      "evidenceIds": ["src-001", "src-004", "src-006"]
+    },
+    {
+      "heading": "Commercial posture",
+      "body": "Engage now, but make the next meeting evidence-led. A supplier should ask for data room materials before discussing priority allocation, and should price uncertainty into any conditional reservation.",
+      "status": "inferred",
+      "evidenceIds": ["src-005", "src-006"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-001",
+      "title": "Aurora AAP-80 Project Overview for Strategic Fuel Partners",
+      "sourceType": "uploaded_document_claimed",
+      "publisher": "Uploaded memo",
+      "date": "2026-04-24",
+      "excerpt": "Claims first-core HALEU demand, target commercial operation window, preferred fabrication pathway, and non-binding host site evaluation.",
+      "confidence": "medium"
+    },
+    {
+      "id": "src-002",
+      "title": "Pre-application meeting summary",
+      "sourceType": "public_source_verified",
+      "publisher": "Regulatory docket sample",
+      "date": "2025-11-12",
+      "url": "https://example.com/regulatory-docket",
+      "excerpt": "Confirms public interaction around reactor concept and licensing approach, but does not validate construction schedule.",
+      "confidence": "medium"
+    },
+    {
+      "id": "src-003",
+      "title": "HALEU supply market note",
+      "sourceType": "public_source_verified",
+      "publisher": "Market intelligence sample",
+      "date": "2026-02-05",
+      "url": "https://example.com/haleu-market-note",
+      "excerpt": "Describes supply scarcity, reservation behavior, and schedule risk for advanced reactor first cores.",
+      "confidence": "high"
+    },
+    {
+      "id": "src-004",
+      "title": "Regulatory readiness checklist",
+      "sourceType": "public_source_verified",
+      "publisher": "Agency guidance sample",
+      "date": "2025-08-19",
+      "url": "https://example.com/readiness-checklist",
+      "excerpt": "Lists licensing artifacts that would support a higher confidence project-readiness finding.",
+      "confidence": "high"
+    },
+    {
+      "id": "src-005",
+      "title": "Strategic partner diligence notes",
+      "sourceType": "internal_source_verified",
+      "publisher": "Internal diligence sample",
+      "date": "2026-05-02",
+      "excerpt": "Indicates partner conversations are active, but not yet converted into binding project finance or offtake evidence.",
+      "confidence": "medium"
+    },
+    {
+      "id": "src-006",
+      "title": "Schedule claims reconciliation",
+      "sourceType": "inferred",
+      "publisher": "Copilot synthesis",
+      "date": "2026-05-17",
+      "excerpt": "Compares uploaded schedule claims against public evidence gaps and flags missing proof points.",
+      "confidence": "low"
+    }
+  ]
+}
