@@ -2,41 +2,82 @@
 
 import { useRef, useState } from "react";
 import { Check, Clipboard, ListChecks } from "lucide-react";
-import type { DeploymentLayerFinding, DetectedClaim, FirstPassIcMemo, MemoDocumentCoverageItem, MemoRelevantDocument, MemoSourceCoverage, ProjectCounterpartyProfile, PublicEvidenceNote } from "@/types/core";
+import type { DeploymentLayerFinding, DetectedClaim, FirstPassIcMemo, EvidenceLedger, MemoDocumentCoverageItem, MemoRelevantDocument, MemoSourceCoverage, ProjectCounterpartyProfile, PublicEvidenceNote } from "@/types/core";
 
 function list(items: string[]) {
   return items.map((item) => `- ${item}`).join("\n");
 }
 
-export function icMemoMarkdown(memo: FirstPassIcMemo, publicEvidenceNotes: PublicEvidenceNote[] = [], sourceCoverage: MemoSourceCoverage = [], detectedClaims: DetectedClaim[] = [], layerFindings: DeploymentLayerFinding[] = [], documentCoverage: MemoDocumentCoverageItem[] = [], relevantDocuments: MemoRelevantDocument[] = []) {
-  const publicNotes = publicEvidenceNotes.length
-    ? list(publicEvidenceNotes.map((note) => `${note.title} (${note.organization ?? note.agency}, ${note.sourceCategory}) - Establishes: ${note.whatItEstablishes ?? note.relevance} Does not establish: ${note.whatItDoesNotEstablish ?? "Target-specific bankability or private commitments."}`))
-    : "- No public source in the current corpus supports this claim. Treat as unsupported unless the counterparty provides evidence.";
-  const coverageNotes = sourceCoverage.length
-    ? list(sourceCoverage.map((item) => `${item.layer}: ${item.status} - ${item.note}`))
-    : "- No deployment-layer coverage generated.";
-  const detectedClaimNotes = detectedClaims.length
-    ? list(detectedClaims.map((claim) => `${claim.label} (${claim.triggeredKeywords.join(", ")})`))
-    : "- No major claim types detected.";
-  const layerFindingNotes = layerFindings.length
-    ? list(layerFindings.map((item) => `${item.layer}: ${item.status} - ${item.finding} Required evidence: ${item.requiredEvidence}`))
-    : coverageNotes;
-  const missingNotes = layerFindings.filter((item) => item.status === "unsupported").length
-    ? list(layerFindings.filter((item) => item.status === "unsupported").map((item) => `${item.layer}: ${item.requiredEvidence}`))
-    : list(memo.whatIsNotYetEvidenced);
-  const privateDiligenceNotes = layerFindings.filter((item) => item.status === "private diligence required" || item.status === "cannot know from public docs").length
-    ? list(layerFindings.filter((item) => item.status === "private diligence required" || item.status === "cannot know from public docs").map((item) => `${item.layer}: ${item.requiredEvidence}`))
-    : "- Commercial, EPC, financing, and confidential counterparty materials may require permissioned diligence.";
-  const documentCoverageNotes = documentCoverage.length
-    ? list(documentCoverage.map((item) => `${item.layer}: Corpus coverage: ${item.corpusCoverage}; Target-specific support: ${item.targetSpecificSupport}. ${item.conclusion}${item.topDocuments.length ? ` Top docs: ${item.topDocuments.map((doc) => `#${doc.rank} ${doc.title}`).join(" | ")}` : ""}`))
+export function icMemoMarkdown(
+  memo: FirstPassIcMemo,
+  publicEvidenceNotes: PublicEvidenceNote[] = [],
+  sourceCoverage: MemoSourceCoverage = [],
+  detectedClaims: DetectedClaim[] = [],
+  layerFindings: DeploymentLayerFinding[] = [],
+  documentCoverage: MemoDocumentCoverageItem[] = [],
+  relevantDocuments: MemoRelevantDocument[] = [],
+  evidenceLedger?: EvidenceLedger,
+) {
+  const atomicClaimNotes = evidenceLedger?.atomicClaims.length
+    ? list(evidenceLedger.atomicClaims.map((claim) => `${claim.text} — ${claim.evidenceStatus.replaceAll("_", " ")}`))
+    : detectedClaims.length
+      ? list(detectedClaims.map((claim) => `${claim.label} (${claim.triggeredKeywords.join(", ")})`))
+      : "- No atomic claims detected.";
+  const ledgerNotes = evidenceLedger?.atomicClaims.length
+    ? list(evidenceLedger.atomicClaims.map((claim) => `${claim.text}: ${claim.evidenceStatus.replaceAll("_", " ")}; required evidence: ${claim.requiredEvidence}; does not prove: ${claim.whatThisDoesNotProve}`))
+    : "- No evidence ledger generated.";
+  const documentCoverageNotes = (evidenceLedger?.deploymentLayerSummary ?? documentCoverage).length
+    ? list((evidenceLedger?.deploymentLayerSummary ?? documentCoverage).map((item) => `${item.layer}: Corpus coverage: ${item.corpusCoverage}; Target-specific support: ${item.targetSpecificSupport}. ${item.conclusion}`))
     : "- No document coverage generated.";
-  const relevantDocumentNotes = relevantDocuments.length
-    ? list(relevantDocuments.map((document) => `#${document.rank} ${document.title} (${document.documentFamily}, ${document.benchmarkValue}) - ${document.whyItMatters}`))
-    : "- No ranked manifest documents matched the detected claim layers.";
+  const missingNotes = evidenceLedger?.topMissingEvidence.length
+    ? list(evidenceLedger.topMissingEvidence)
+    : layerFindings.filter((item) => item.status === "unsupported").length
+      ? list(layerFindings.filter((item) => item.status === "unsupported").map((item) => `${item.layer}: ${item.requiredEvidence}`))
+      : list(memo.whatIsNotYetEvidenced);
+  const verdictChangeNotes = evidenceLedger?.whatWouldChangeVerdict.length
+    ? list(evidenceLedger.whatWouldChangeVerdict)
+    : list(memo.whatMustBeTrue);
+  const chunkNotes = evidenceLedger?.atomicClaims.flatMap((claim) => claim.matchedChunks.map((chunk) => `#${chunk.rank} ${chunk.documentTitle}: ${chunk.excerpt} Relevance: ${chunk.relevanceReason} Does not prove: ${chunk.doesNotProve}`)) ?? [];
+  const relevantChunkNotes = chunkNotes.length
+    ? list(Array.from(new Set(chunkNotes)).slice(0, 6))
+    : "- No chunk-backed evidence matched the atomic claims.";
 
-  return `# First-Pass IC Memo\n\nTarget: ${memo.target}\nUser type: ${memo.userType ?? "Not specified"}\nDecision question: ${memo.decision}\nVerdict: ${memo.verdict}\nConfidence: ${memo.confidence}\n\n## Executive summary\n${memo.thesis}\n\n## Situation\n${memo.situation}\n\n## Detected claims\n${detectedClaimNotes}\n\n## Evidence coverage by deployment layer\n${coverageNotes}\n\n## What is evidenced\n${list(memo.whatIsEvidenced)}\n\n## Document coverage\n${documentCoverageNotes}\n\n## Relevant documents\n${relevantDocumentNotes}\n\n## What is missing\n${missingNotes}\n\n## What requires private diligence\n${privateDiligenceNotes}\n\n## Deployment-layer findings\n${layerFindingNotes}\n\n## Major kill risks\n${list(memo.majorKillRisks)}\n\n## What must be true\n${list(memo.whatMustBeTrue)}\n\n## Diligence questions\n${list(memo.diligenceQuestions)}\n\n## Relevant public evidence notes\n${publicNotes}\n\n## Recommended next step\n${memo.recommendedNextStep}\n\n## Evidence notes\n${list(memo.sourcesAndEvidenceNotes)}\n`;
+  return `# First-Pass IC Memo
+
+Target: ${memo.target}
+User type: ${memo.userType ?? "Not specified"}
+Decision question: ${memo.decision}
+Verdict: ${memo.verdict}
+Confidence: ${memo.confidence}
+
+## Executive summary
+${memo.thesis}
+
+## Atomic claims
+${atomicClaimNotes}
+
+## Evidence ledger
+${ledgerNotes}
+
+## Evidence coverage by deployment layer
+${documentCoverageNotes}
+
+## Top missing evidence
+${missingNotes}
+
+## What would change the verdict
+${verdictChangeNotes}
+
+## Diligence questions
+${list(memo.diligenceQuestions)}
+
+## Relevant chunk-backed evidence
+${relevantChunkNotes}
+
+## Recommended next step
+${memo.recommendedNextStep}
+`;
 }
-
 async function copyText(text: string, fallbackElement: HTMLTextAreaElement | null) {
   try {
     if (navigator.clipboard?.writeText) {
@@ -101,7 +142,7 @@ function CopyBlock({
 
 export function ExportPanel({ profile }: { profile: ProjectCounterpartyProfile }) {
   const memo = profile.claimToIcMemo.firstPassIcMemo;
-  const memoMarkdown = icMemoMarkdown(memo, profile.claimToIcMemo.publicEvidenceNotes ?? [], profile.claimToIcMemo.sourceCoverage ?? [], profile.claimToIcMemo.detectedClaims ?? [], profile.claimToIcMemo.deploymentLayerFindings ?? [], profile.claimToIcMemo.documentCoverage ?? [], profile.claimToIcMemo.relevantDocuments ?? []);
+  const memoMarkdown = icMemoMarkdown(memo, profile.claimToIcMemo.publicEvidenceNotes ?? [], profile.claimToIcMemo.sourceCoverage ?? [], profile.claimToIcMemo.detectedClaims ?? [], profile.claimToIcMemo.deploymentLayerFindings ?? [], profile.claimToIcMemo.documentCoverage ?? [], profile.claimToIcMemo.relevantDocuments ?? [], profile.claimToIcMemo.evidenceLedger);
   const questions = memo.diligenceQuestions.map((question, index) => `${index + 1}. ${question}`).join("\n");
 
   return (

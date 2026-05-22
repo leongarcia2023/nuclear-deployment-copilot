@@ -1,0 +1,630 @@
+[
+  {
+    "id": "shuffle_data_center_power",
+    "target": "Shuffle Infrastructure",
+    "user_type": "Investor",
+    "decision_question": "Is this worth deeper diligence?",
+    "claim_text": "Shuffle Infrastructure claims it can develop 300 MW behind-the-meter AI data center campuses with near-term bridge power and future nuclear baseload integration.",
+    "expected_atomic_claim_types": [
+      "data_center_power_claim",
+      "behind_the_meter_claim",
+      "bridge_power_claim",
+      "nuclear_integration_claim"
+    ],
+    "expected_deployment_layers": [
+      "Site / permitting",
+      "Interconnection / power delivery",
+      "Bridge power / phased energization",
+      "Offtake / customer",
+      "Financing"
+    ],
+    "expected_relevant_documents": [
+      "FERC Order",
+      "Constellation"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Missing",
+      "Private diligence required"
+    ],
+    "expected_top_missing_evidence": [
+      "site",
+      "customer",
+      "power"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "haleu_first_core_reloads",
+    "target": "Reactor Developer",
+    "user_type": "Fuel-cycle supplier",
+    "decision_question": "Is this a credible fuel-cycle customer?",
+    "claim_text": "A reactor developer claims it has secured HALEU supply for first core and reloads and can begin deployment by 2031.",
+    "expected_atomic_claim_types": [
+      "HALEU_claim",
+      "fuel_cycle_claim",
+      "deployment_timeline_claim"
+    ],
+    "expected_deployment_layers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication",
+      "Transportation / safeguards",
+      "Licensing / NRC"
+    ],
+    "expected_relevant_documents": [
+      "HALEU",
+      "Centrus",
+      "Criticality"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Missing",
+      "Private diligence required"
+    ],
+    "expected_top_missing_evidence": [
+      "Assay",
+      "fabrication",
+      "Transportation"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "preapp_to_2030",
+    "target": "Reactor Developer",
+    "user_type": "Investor",
+    "decision_question": "Is this deployment timeline believable?",
+    "claim_text": "A reactor developer claims it can move from pre-application engagement to commercial operation by 2030.",
+    "expected_atomic_claim_types": [
+      "NRC_engagement_claim",
+      "deployment_timeline_claim"
+    ],
+    "expected_deployment_layers": [
+      "Licensing / NRC",
+      "Site / permitting",
+      "EPC / construction",
+      "Financing"
+    ],
+    "expected_relevant_documents": [
+      "LIC-116",
+      "NuScale",
+      "ARCAP",
+      "Long Mott"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Partially supported",
+      "Private diligence required"
+    ],
+    "expected_top_missing_evidence": [
+      "Named license applicant",
+      "site",
+      "EPC"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "oklo_data_center_offtake",
+    "target": "Oklo",
+    "user_type": "Investor",
+    "decision_question": "Is this partner/customer credible?",
+    "claim_text": "Oklo says it has a multi-gigawatt data center offtake pipeline and can deploy advanced reactors before 2032.",
+    "expected_atomic_claim_types": [
+      "data_center_power_claim",
+      "offtake_claim",
+      "deployment_timeline_claim",
+      "nuclear_integration_claim"
+    ],
+    "expected_deployment_layers": [
+      "Offtake / customer",
+      "Financing",
+      "Licensing / NRC"
+    ],
+    "expected_relevant_documents": [
+      "FERC",
+      "Constellation",
+      "NuScale"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required",
+      "Missing"
+    ],
+    "expected_top_missing_evidence": [
+      "offtake",
+      "license",
+      "EPC"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "kairos_construction_permit",
+    "target": "Kairos",
+    "user_type": "Strategic partner / incumbent",
+    "decision_question": "Is this deployment timeline believable?",
+    "claim_text": "Kairos claims its NRC construction permit precedent supports a repeatable commercial deployment timeline.",
+    "expected_atomic_claim_types": [
+      "licensing_claim",
+      "deployment_timeline_claim"
+    ],
+    "expected_deployment_layers": [
+      "Licensing / NRC",
+      "Site / permitting",
+      "EPC / construction"
+    ],
+    "expected_relevant_documents": [
+      "Hermes",
+      "Kairos",
+      "NuScale"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Partially supported",
+      "Private diligence required"
+    ],
+    "expected_top_missing_evidence": [
+      "site",
+      "EPC",
+      "commercial operation"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "terrapower_kemmerer",
+    "target": "TerraPower",
+    "user_type": "Investor",
+    "decision_question": "Is this project/partner credible?",
+    "claim_text": "TerraPower claims Natrium can reach commercial operation after the Kemmerer construction permit process and DOE-backed demonstration work.",
+    "expected_atomic_claim_types": [
+      "licensing_claim",
+      "deployment_timeline_claim",
+      "financing_claim"
+    ],
+    "expected_deployment_layers": [
+      "Licensing / NRC",
+      "Financing",
+      "EPC / construction"
+    ],
+    "expected_relevant_documents": [
+      "Kemmerer",
+      "DOE"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required",
+      "Partially supported"
+    ],
+    "expected_top_missing_evidence": [
+      "financing",
+      "EPC",
+      "license"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "nuscale_next_project",
+    "target": "NuScale",
+    "user_type": "Investor",
+    "decision_question": "Is this worth deeper diligence?",
+    "claim_text": "NuScale claims its design certification and new development partnerships make the next VOYGR deployment financeable.",
+    "expected_atomic_claim_types": [
+      "licensing_claim",
+      "financing_claim"
+    ],
+    "expected_deployment_layers": [
+      "Licensing / NRC",
+      "Financing",
+      "Offtake / customer"
+    ],
+    "expected_relevant_documents": [
+      "NuScale",
+      "RAI"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required",
+      "Partially supported"
+    ],
+    "expected_top_missing_evidence": [
+      "offtake",
+      "financing",
+      "EPC"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "centrus_haleu_capacity",
+    "target": "Centrus",
+    "user_type": "Reactor developer",
+    "decision_question": "Is this partner/customer credible?",
+    "claim_text": "Centrus claims DOE awards and its American Centrifuge Plant support scaled HALEU enrichment capacity.",
+    "expected_atomic_claim_types": [
+      "HALEU_claim",
+      "fuel_cycle_claim",
+      "financing_claim"
+    ],
+    "expected_deployment_layers": [
+      "Fuel supply / HALEU",
+      "Financing"
+    ],
+    "expected_relevant_documents": [
+      "Centrus",
+      "HALEU"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required",
+      "Missing"
+    ],
+    "expected_top_missing_evidence": [
+      "quantity",
+      "delivery",
+      "allocation"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "triso_x_fabrication",
+    "target": "TRISO-X",
+    "user_type": "Fuel-cycle supplier",
+    "decision_question": "Is this partner/customer credible?",
+    "claim_text": "TRISO-X claims its fuel fabrication facility licensing path can support advanced reactor first cores.",
+    "expected_atomic_claim_types": [
+      "fuel_cycle_claim",
+      "licensing_claim"
+    ],
+    "expected_deployment_layers": [
+      "Fuel fabrication",
+      "Licensing / NRC",
+      "Transportation / safeguards"
+    ],
+    "expected_relevant_documents": [
+      "TRISO-X",
+      "RAI"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Missing",
+      "Partially supported"
+    ],
+    "expected_top_missing_evidence": [
+      "fabrication",
+      "first core",
+      "transport"
+    ],
+    "expected_verdict": "Monitor"
+  },
+  {
+    "id": "microsoft_nuclear_power",
+    "target": "Microsoft",
+    "user_type": "Data center power buyer",
+    "decision_question": "Is this partner/customer credible?",
+    "claim_text": "Microsoft claims long-term nuclear power procurement can support AI data center load growth.",
+    "expected_atomic_claim_types": [
+      "data_center_power_claim",
+      "offtake_claim",
+      "nuclear_integration_claim"
+    ],
+    "expected_deployment_layers": [
+      "Offtake / customer",
+      "Interconnection / power delivery",
+      "Financing"
+    ],
+    "expected_relevant_documents": [
+      "Constellation",
+      "FERC"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required"
+    ],
+    "expected_top_missing_evidence": [
+      "customer",
+      "power delivery",
+      "contract"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "aws_susquehanna_colocation",
+    "target": "AWS",
+    "user_type": "Investor",
+    "decision_question": "Is this partner/customer credible?",
+    "claim_text": "AWS-linked nuclear co-location claims imply large-load data center power can be delivered behind the meter from an existing nuclear plant.",
+    "expected_atomic_claim_types": [
+      "data_center_power_claim",
+      "behind_the_meter_claim",
+      "offtake_claim"
+    ],
+    "expected_deployment_layers": [
+      "Interconnection / power delivery",
+      "Offtake / customer"
+    ],
+    "expected_relevant_documents": [
+      "FERC",
+      "Talen",
+      "Susquehanna"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required",
+      "Missing"
+    ],
+    "expected_top_missing_evidence": [
+      "interconnection",
+      "offtake"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "blue_energy_shipyard",
+    "target": "Blue Energy",
+    "user_type": "Strategic partner / incumbent",
+    "decision_question": "Is this deployment timeline believable?",
+    "claim_text": "Blue Energy claims modular shipyard construction can reduce EPC risk and accelerate first power by 2031.",
+    "expected_atomic_claim_types": [
+      "EPC_construction_claim",
+      "deployment_timeline_claim"
+    ],
+    "expected_deployment_layers": [
+      "EPC / construction",
+      "Site / permitting",
+      "Licensing / NRC",
+      "Financing"
+    ],
+    "expected_relevant_documents": [
+      "Vogtle",
+      "NuScale",
+      "Long Mott"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required",
+      "Missing"
+    ],
+    "expected_top_missing_evidence": [
+      "EPC",
+      "schedule",
+      "site"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "last_energy_ppas",
+    "target": "Last Energy",
+    "user_type": "Investor",
+    "decision_question": "Is this worth deeper diligence?",
+    "claim_text": "Last Energy claims signed PPAs and modular construction allow fast deployment of microreactors for industrial customers.",
+    "expected_atomic_claim_types": [
+      "offtake_claim",
+      "EPC_construction_claim",
+      "deployment_timeline_claim",
+      "nuclear_integration_claim"
+    ],
+    "expected_deployment_layers": [
+      "Offtake / customer",
+      "EPC / construction",
+      "Licensing / NRC"
+    ],
+    "expected_relevant_documents": [
+      "NuScale",
+      "Long Mott"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required"
+    ],
+    "expected_top_missing_evidence": [
+      "PPA",
+      "EPC",
+      "license"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "aalo_factory_deployment",
+    "target": "Aalo",
+    "user_type": "Investor",
+    "decision_question": "Is this deployment timeline believable?",
+    "claim_text": "Aalo claims factory-built reactors can begin commercial deployment by 2030 after NRC engagement.",
+    "expected_atomic_claim_types": [
+      "NRC_engagement_claim",
+      "deployment_timeline_claim",
+      "EPC_construction_claim",
+      "nuclear_integration_claim"
+    ],
+    "expected_deployment_layers": [
+      "Licensing / NRC",
+      "EPC / construction",
+      "Financing"
+    ],
+    "expected_relevant_documents": [
+      "LIC-116",
+      "ARCAP",
+      "NuScale"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Partially supported",
+      "Private diligence required"
+    ],
+    "expected_top_missing_evidence": [
+      "NRC",
+      "EPC",
+      "financing"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "radiant_mobile_microreactor",
+    "target": "Radiant",
+    "user_type": "Strategic partner / incumbent",
+    "decision_question": "Is this partner/customer credible?",
+    "claim_text": "Radiant claims its mobile microreactor can serve remote industrial loads with a compact fuel and operations model.",
+    "expected_atomic_claim_types": [
+      "nuclear_integration_claim",
+      "fuel_cycle_claim"
+    ],
+    "expected_deployment_layers": [
+      "Fuel supply / HALEU",
+      "Operations / waste",
+      "Transportation / safeguards"
+    ],
+    "expected_relevant_documents": [
+      "HALEU",
+      "Transportation"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Missing",
+      "Cannot know from public docs"
+    ],
+    "expected_top_missing_evidence": [
+      "fuel",
+      "operator",
+      "transport"
+    ],
+    "expected_verdict": "Monitor"
+  },
+  {
+    "id": "deep_fission_timeline",
+    "target": "Deep Fission",
+    "user_type": "Investor",
+    "decision_question": "Is this deployment timeline believable?",
+    "claim_text": "Deep Fission claims subsurface nuclear deployment can reach first power by 2031 with NRC engagement underway.",
+    "expected_atomic_claim_types": [
+      "NRC_engagement_claim",
+      "deployment_timeline_claim",
+      "nuclear_integration_claim"
+    ],
+    "expected_deployment_layers": [
+      "Licensing / NRC",
+      "Site / permitting",
+      "EPC / construction"
+    ],
+    "expected_relevant_documents": [
+      "LIC-116",
+      "ARCAP",
+      "NuScale"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Partially supported",
+      "Missing"
+    ],
+    "expected_top_missing_evidence": [
+      "site",
+      "NRC",
+      "EPC"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "westinghouse_ap300_customer",
+    "target": "Westinghouse",
+    "user_type": "Fuel-cycle supplier",
+    "decision_question": "Is this a credible fuel-cycle customer?",
+    "claim_text": "Westinghouse claims AP300 customer interest can convert into fuel demand and deployment before the early 2030s.",
+    "expected_atomic_claim_types": [
+      "fuel_cycle_claim",
+      "deployment_timeline_claim",
+      "offtake_claim"
+    ],
+    "expected_deployment_layers": [
+      "Fuel supply / HALEU",
+      "Offtake / customer",
+      "Financing"
+    ],
+    "expected_relevant_documents": [
+      "NuScale",
+      "Constellation"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required",
+      "Missing"
+    ],
+    "expected_top_missing_evidence": [
+      "customer",
+      "fuel",
+      "schedule"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "ge_hitachi_bwrx",
+    "target": "GE Hitachi",
+    "user_type": "Strategic partner / incumbent",
+    "decision_question": "Is this deployment timeline believable?",
+    "claim_text": "GE Hitachi claims BWRX-300 licensing precedents support near-term customer deployment and EPC readiness.",
+    "expected_atomic_claim_types": [
+      "licensing_claim",
+      "deployment_timeline_claim",
+      "EPC_construction_claim",
+      "offtake_claim"
+    ],
+    "expected_deployment_layers": [
+      "Licensing / NRC",
+      "EPC / construction",
+      "Offtake / customer"
+    ],
+    "expected_relevant_documents": [
+      "BWRX",
+      "NuScale"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required",
+      "Partially supported"
+    ],
+    "expected_top_missing_evidence": [
+      "customer",
+      "EPC",
+      "docket"
+    ],
+    "expected_verdict": "Diligence Required"
+  },
+  {
+    "id": "curio_waste_recycling",
+    "target": "Curio",
+    "user_type": "Investor",
+    "decision_question": "Is this worth deeper diligence?",
+    "claim_text": "Curio claims nuclear waste recycling can create a fuel-cycle business with future advanced reactor demand.",
+    "expected_atomic_claim_types": [
+      "fuel_cycle_claim",
+      "nuclear_integration_claim"
+    ],
+    "expected_deployment_layers": [
+      "Fuel supply / HALEU",
+      "Operations / waste",
+      "Transportation / safeguards"
+    ],
+    "expected_relevant_documents": [
+      "HALEU",
+      "waste"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Cannot know from public docs",
+      "Missing"
+    ],
+    "expected_top_missing_evidence": [
+      "fuel-cycle",
+      "waste",
+      "license"
+    ],
+    "expected_verdict": "Monitor"
+  },
+  {
+    "id": "palisades_restart_power_buyer",
+    "target": "Palisades restart",
+    "user_type": "Data center power buyer",
+    "decision_question": "Is this partner/customer credible?",
+    "claim_text": "The Palisades restart is presented as a precedent for supplying firm nuclear power to large industrial and data center loads.",
+    "expected_atomic_claim_types": [
+      "data_center_power_claim",
+      "offtake_claim",
+      "nuclear_integration_claim"
+    ],
+    "expected_deployment_layers": [
+      "Offtake / customer",
+      "Operations / waste",
+      "Financing"
+    ],
+    "expected_relevant_documents": [
+      "Palisades",
+      "Constellation",
+      "Talen"
+    ],
+    "expected_target_specific_support_statuses": [
+      "Private diligence required",
+      "Cannot know from public docs"
+    ],
+    "expected_top_missing_evidence": [
+      "offtake",
+      "operations",
+      "financing"
+    ],
+    "expected_verdict": "Diligence Required"
+  }
+]

@@ -1,0 +1,4035 @@
+{
+  "generated_at": "2026-05-22T02:57:55.083Z",
+  "total_cases": 20,
+  "passed": 20,
+  "failed": 0,
+  "results": [
+    {
+      "id": "shuffle_data_center_power",
+      "target": "Shuffle Infrastructure",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: customer"
+      ],
+      "detected_claim_types": [
+        "data_center_power_claim",
+        "behind_the_meter_claim",
+        "bridge_power_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "data_center_power_claim",
+        "behind_the_meter_claim",
+        "bridge_power_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Constellation Loan Guarantee Agreement Exhibit for Crane",
+        "Constellation Energy 2025 Annual Report",
+        "DOE Final HALEU EIS, Volume 1",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "Talen Energy 2025 Annual Report to Shareholders",
+        "Talen Energy 2024 Form 10-K",
+        "PJM Large Load Additions Workshop Presentation",
+        "Dominion GS-5 Large Load Rate Class Report",
+        "Oklo and Meta Agreement Announcement",
+        "Georgia PSC Data Centers Rule Media Advisory"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "Constellation Loan Guarantee Agreement Exhibit for Crane",
+          "rank": 8,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "behind_the_meter_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "behind_the_meter_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "behind_the_meter_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "bridge_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "bridge_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "bridge_power_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "Bridge power / phased energization",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "private_diligence_required",
+        "user_note_only"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Interconnection queue position or islanded operating basis, power-delivery design, substation/transmission scope, and energization milestones. Site-control documents, land rights, permit matrix, local approvals, environmental constraints, and schedule-critical conditions. Operator model, staffing, maintenance, security, spent fuel handling, waste plan, and long-term responsibility."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "haleu_first_core_reloads",
+      "target": "Reactor Developer",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: Transportation"
+      ],
+      "detected_claim_types": [
+        "fuel_cycle_claim",
+        "HALEU_claim",
+        "deployment_timeline_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "fuel_cycle_claim",
+        "HALEU_claim",
+        "deployment_timeline_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "DOE Final HALEU EIS, Volume 1",
+        "High Assay Low Enriched Uranium Transportation Packages",
+        "DOE HALEU Allocation Process",
+        "Acceptance of the TRISO-X License Application for a Fuel Fabrication Facility",
+        "Fuel Qualification Methodology for Kairos FHR, KP-TR-011",
+        "Centrus First Quarter 2026 Results",
+        "Louisiana Energy Services Final Audit Report"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-6",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-6",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-6",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-7",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-7",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "Site / permitting",
+        "EPC / construction",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Assay, form, quantity, delivery window, supplier allocation/reservation, and fallback case if fuel slips. Named fabrication route, licensed facility status, qualification plan, interface owner, and capacity reservation. Package/criticality basis, safeguards category, storage plan, logistics owner, and responsible licensee mapping."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "preapp_to_2030",
+      "target": "Reactor Developer",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing document: ARCAP",
+        "missing top evidence item: site",
+        "missing top evidence item: EPC"
+      ],
+      "detected_claim_types": [
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DOE Final HALEU EIS, Volume 1",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Kemmerer Power Station Unit 1 Final Safety Evaluation",
+        "TerraPower Draft PSAR Readiness Assessment for Kemmerer Unit 1",
+        "Draft Safety Evaluation for Clinch River Construction Permit Application",
+        "Safety Evaluation for Hermes Construction Permit Application",
+        "Acceptance for Docketing of Long Mott Construction Permit Application",
+        "Draft Pre-application Engagement to Optimize Advanced Reactor Application Reviews",
+        "Regulatory Engagement Plan for Kemmerer Unit 1 Site"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "EPC / construction",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Partially supported",
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Named license applicant, reactor vendor, licensing path, public NRC docket or pre-application record, and responsibility for regulatory risk."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "oklo_data_center_offtake",
+      "target": "Oklo",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing document: NuScale",
+        "missing top evidence item: offtake",
+        "missing top evidence item: license",
+        "missing top evidence item: EPC"
+      ],
+      "detected_claim_types": [
+        "data_center_power_claim",
+        "deployment_timeline_claim",
+        "offtake_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "data_center_power_claim",
+        "deployment_timeline_claim",
+        "offtake_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Talen Energy 2025 Annual Report to Shareholders",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "Constellation Energy 2025 Annual Report",
+        "DOE Final HALEU EIS, Volume 1",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "Oklo and Meta Agreement Announcement",
+        "Talen Energy 2024 Form 10-K",
+        "Oklo 2025 Form 10-K",
+        "Dominion GS-5 Large Load Rate Class Report"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "Talen Energy 2025 Annual Report to Shareholders",
+          "rank": 3,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Power delivery / interconnection",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "kairos_construction_permit",
+      "target": "Kairos",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: EPC",
+        "missing top evidence item: commercial operation"
+      ],
+      "detected_claim_types": [
+        "licensing_claim",
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "site_control_claim",
+        "EPC_construction_claim"
+      ],
+      "atomic_claim_types": [
+        "licensing_claim",
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "site_control_claim",
+        "EPC_construction_claim"
+      ],
+      "matched_documents": [
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "Constellation Energy 2025 Annual Report",
+        "Talen Energy 2025 Annual Report to Shareholders",
+        "Final EIS for the Proposed Palisades Nuclear Restart Project",
+        "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+        "Kairos Hermes Construction Permit Issuance Record",
+        "NUREG-2268 Final EIS for Kemmerer Power Station Unit 1",
+        "Safety Evaluation for Hermes Construction Permit Application",
+        "Acceptance for Docketing of Long Mott Construction Permit Application"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "site_control_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "site_control_claim",
+          "document_title": "Talen Energy 2025 Annual Report to Shareholders",
+          "rank": 3,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Power delivery / interconnection",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "site_control_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+          "rank": 6,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "EPC / construction",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required",
+        "user_note_only"
+      ],
+      "target_specific_support_statuses": [
+        "Partially supported",
+        "Missing",
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [
+        "Named license applicant, reactor vendor, licensing path, public NRC docket or pre-application record, and responsibility for regulatory risk.",
+        "Site-control documents, land rights, permit matrix, local approvals, environmental constraints, and schedule-critical conditions. Interconnection queue position or islanded operating basis, power-delivery design, substation/transmission scope, and energization milestones."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "terrapower_kemmerer",
+      "target": "TerraPower",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: financing",
+        "missing top evidence item: EPC"
+      ],
+      "detected_claim_types": [
+        "licensing_claim",
+        "deployment_timeline_claim",
+        "site_control_claim",
+        "financing_claim",
+        "EPC_construction_claim"
+      ],
+      "atomic_claim_types": [
+        "licensing_claim",
+        "deployment_timeline_claim",
+        "site_control_claim",
+        "financing_claim",
+        "EPC_construction_claim"
+      ],
+      "matched_documents": [
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "Constellation Energy 2025 Annual Report",
+        "Talen Energy 2025 Annual Report to Shareholders",
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Final EIS for the Proposed Palisades Nuclear Restart Project",
+        "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+        "Kemmerer Power Station Unit 1 Final Safety Evaluation",
+        "NUREG-2268 Final EIS for Kemmerer Power Station Unit 1",
+        "TerraPower Draft PSAR Readiness Assessment for Kemmerer Unit 1"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "site_control_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "site_control_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "site_control_claim",
+          "document_title": "Talen Energy 2025 Annual Report to Shareholders",
+          "rank": 3,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Power delivery / interconnection",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "financing_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "financing_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "financing_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+          "rank": 6,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required",
+        "user_note_only"
+      ],
+      "target_specific_support_statuses": [
+        "Partially supported",
+        "Missing",
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [
+        "Named license applicant, reactor vendor, licensing path, public NRC docket or pre-application record, and responsibility for regulatory risk.",
+        "Site-control documents, land rights, permit matrix, local approvals, environmental constraints, and schedule-critical conditions. Interconnection queue position or islanded operating basis, power-delivery design, substation/transmission scope, and energization milestones."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "nuscale_next_project",
+      "target": "NuScale",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: offtake",
+        "missing top evidence item: financing",
+        "missing top evidence item: EPC"
+      ],
+      "detected_claim_types": [
+        "licensing_claim",
+        "deployment_timeline_claim",
+        "financing_claim"
+      ],
+      "atomic_claim_types": [
+        "licensing_claim",
+        "deployment_timeline_claim",
+        "financing_claim"
+      ],
+      "matched_documents": [
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Constellation Energy 2025 Annual Report",
+        "NuScale 8-K on ENTRA1 Partnership Milestones Agreement",
+        "NuScale First Quarter 2025 Earnings Transcript",
+        "BWRX-300 Advanced Civil Construction and Design Approach",
+        "Oklo 2025 Form 10-K",
+        "Long Mott Review Schedule and Resource Estimate",
+        "Safety Evaluation for Hermes Construction Permit Application"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "financing_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "financing_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "financing_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Partially supported",
+        "Missing",
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [
+        "Named license applicant, reactor vendor, licensing path, public NRC docket or pre-application record, and responsibility for regulatory risk."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "centrus_haleu_capacity",
+      "target": "Centrus",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "none"
+      ],
+      "detected_claim_types": [
+        "HALEU_claim",
+        "financing_claim",
+        "fuel_cycle_claim"
+      ],
+      "atomic_claim_types": [
+        "HALEU_claim",
+        "financing_claim",
+        "fuel_cycle_claim"
+      ],
+      "matched_documents": [
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "High Assay Low Enriched Uranium Transportation Packages",
+        "DOE Final HALEU EIS, Volume 1",
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Constellation Energy 2025 Annual Report",
+        "Centrus Awarded $900 Million to Expand Uranium Enrichment in Ohio",
+        "DOE Awards $2.7 Billion to Restore American Uranium Enrichment",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "Centrus Energy 2025 Annual Report",
+        "Centrus First Quarter 2026 Results",
+        "Urenco 2025 Annual Report",
+        "Orano Annual Activity Report 2025"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "High Assay Low Enriched Uranium Transportation Packages",
+          "rank": 14,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "financing_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "financing_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "financing_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "Offtake / customer",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [
+        "Assay, form, quantity, delivery window, supplier allocation/reservation, and fallback case if fuel slips. Named fabrication route, licensed facility status, qualification plan, interface owner, and capacity reservation. Package/criticality basis, safeguards category, storage plan, logistics owner, and responsible licensee mapping."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "triso_x_fabrication",
+      "target": "TRISO-X",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: first core",
+        "missing top evidence item: transport"
+      ],
+      "detected_claim_types": [
+        "fuel_cycle_claim",
+        "licensing_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "fuel_cycle_claim",
+        "licensing_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "DOE Final HALEU EIS, Volume 1",
+        "Acceptance of the TRISO-X License Application for a Fuel Fabrication Facility",
+        "Fuel Qualification Methodology for Kairos FHR, KP-TR-011",
+        "TRISO-X Programmatic RAI Set 1",
+        "NRC Feedback on X-energy Quality Assurance Program Description",
+        "TRISO-X Radiological Review RAI",
+        "KP-FHR Fuel Performance Methodology, KP-TR-010",
+        "Kairos Quality Assurance Program, KP-TR-007"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "licensing_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "EPC / construction",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Partially supported",
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Assay, form, quantity, delivery window, supplier allocation/reservation, and fallback case if fuel slips. Named fabrication route, licensed facility status, qualification plan, interface owner, and capacity reservation. Package/criticality basis, safeguards category, storage plan, logistics owner, and responsible licensee mapping.",
+        "Named license applicant, reactor vendor, licensing path, public NRC docket or pre-application record, and responsibility for regulatory risk."
+      ],
+      "verdict": "Monitor"
+    },
+    {
+      "id": "microsoft_nuclear_power",
+      "target": "Microsoft",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: customer",
+        "missing top evidence item: power delivery",
+        "missing top evidence item: contract"
+      ],
+      "detected_claim_types": [
+        "data_center_power_claim",
+        "offtake_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "data_center_power_claim",
+        "offtake_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Constellation Loan Guarantee Agreement Exhibit for Crane",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "DOE Final HALEU EIS, Volume 1",
+        "Constellation Energy 2025 Annual Report",
+        "Talen Energy 2025 Annual Report to Shareholders",
+        "Talen Energy 2024 Form 10-K",
+        "PJM Large Load Additions Workshop Presentation",
+        "Oklo and Meta Agreement Announcement",
+        "Dominion GS-5 Large Load Rate Class Report",
+        "Georgia PSC Data Centers Rule Media Advisory"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "Constellation Loan Guarantee Agreement Exhibit for Crane",
+          "rank": 8,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "offtake_claim",
+          "document_title": "Constellation Loan Guarantee Agreement Exhibit for Crane",
+          "rank": 8,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "aws_susquehanna_colocation",
+      "target": "AWS",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: offtake"
+      ],
+      "detected_claim_types": [
+        "data_center_power_claim",
+        "behind_the_meter_claim",
+        "offtake_claim",
+        "site_control_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "data_center_power_claim",
+        "behind_the_meter_claim",
+        "offtake_claim",
+        "site_control_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Talen Energy 2025 Annual Report to Shareholders",
+        "Constellation Loan Guarantee Agreement Exhibit for Crane",
+        "Constellation Energy 2025 Annual Report",
+        "DOE Final HALEU EIS, Volume 1",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+        "Talen Energy 2024 Form 10-K",
+        "PJM Large Load Additions Workshop Presentation",
+        "Oklo and Meta Agreement Announcement",
+        "Dominion GS-5 Large Load Rate Class Report",
+        "Georgia PSC Data Centers Rule Media Advisory"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "Talen Energy 2025 Annual Report to Shareholders",
+          "rank": 3,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Power delivery / interconnection",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "behind_the_meter_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "behind_the_meter_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "behind_the_meter_claim",
+          "document_title": "Talen Energy 2025 Annual Report to Shareholders",
+          "rank": 3,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Power delivery / interconnection",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "Constellation Loan Guarantee Agreement Exhibit for Crane",
+          "rank": 8,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "site_control_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "site_control_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "site_control_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-6",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-6",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-6",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "private_diligence_required",
+        "user_note_only"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Interconnection queue position or islanded operating basis, power-delivery design, substation/transmission scope, and energization milestones. Site-control documents, land rights, permit matrix, local approvals, environmental constraints, and schedule-critical conditions. Operator model, staffing, maintenance, security, spent fuel handling, waste plan, and long-term responsibility.",
+        "Site-control documents, land rights, permit matrix, local approvals, environmental constraints, and schedule-critical conditions. Interconnection queue position or islanded operating basis, power-delivery design, substation/transmission scope, and energization milestones."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "blue_energy_shipyard",
+      "target": "Blue Energy",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing document: Vogtle",
+        "missing top evidence item: EPC",
+        "missing top evidence item: schedule",
+        "missing top evidence item: site"
+      ],
+      "detected_claim_types": [
+        "deployment_timeline_claim",
+        "EPC_construction_claim"
+      ],
+      "atomic_claim_types": [
+        "deployment_timeline_claim",
+        "EPC_construction_claim"
+      ],
+      "matched_documents": [
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "Kemmerer Power Station Unit 1 Final Safety Evaluation",
+        "Final EIS for the Proposed Palisades Nuclear Restart Project",
+        "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+        "DOE FY 2024 Annual Performance Report",
+        "NRC Feedback on X-energy Quality Assurance Program Description",
+        "Draft Safety Evaluation for Clinch River Construction Permit Application",
+        "X-energy Quality Assurance Program Description, Revision 3",
+        "NuScale First Quarter 2025 Earnings Transcript",
+        "Constellation Energy 2025 Annual Report",
+        "Long Mott General Audit Plan",
+        "BWX Technologies 2025 Annual Report"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Kemmerer Power Station Unit 1 Final Safety Evaluation",
+          "rank": 22,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity",
+            "EPC / construction"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+          "rank": 6,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "DOE FY 2024 Annual Performance Report",
+          "rank": 7,
+          "deployment_layers": [
+            "Financing / bankability"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "EPC / construction",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "last_energy_ppas",
+      "target": "Last Energy",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing document: NuScale",
+        "missing top evidence item: PPA",
+        "missing top evidence item: EPC",
+        "missing top evidence item: license"
+      ],
+      "detected_claim_types": [
+        "deployment_timeline_claim",
+        "offtake_claim",
+        "EPC_construction_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "deployment_timeline_claim",
+        "offtake_claim",
+        "EPC_construction_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Constellation Energy 2025 Annual Report",
+        "Final EIS for the Proposed Palisades Nuclear Restart Project",
+        "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+        "DOE Final HALEU EIS, Volume 1",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Acceptance for Docketing of Long Mott Construction Permit Application",
+        "NRC Feedback on X-energy Quality Assurance Program Description",
+        "Safety Evaluation for Hermes Construction Permit Application",
+        "BWX Technologies 2025 Annual Report"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "offtake_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+          "rank": 6,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "aalo_factory_deployment",
+      "target": "Aalo",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: EPC",
+        "missing top evidence item: financing"
+      ],
+      "detected_claim_types": [
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "EPC_construction_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "EPC_construction_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "Final EIS for the Proposed Palisades Nuclear Restart Project",
+        "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+        "DOE Final HALEU EIS, Volume 1",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Kemmerer Power Station Unit 1 Final Safety Evaluation",
+        "TerraPower Draft PSAR Readiness Assessment for Kemmerer Unit 1",
+        "NUREG-2268 Final EIS for Kemmerer Power Station Unit 1",
+        "Safety Evaluation for Hermes Construction Permit Application"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+          "rank": 6,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "EPC / construction",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Partially supported",
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Named license applicant, reactor vendor, licensing path, public NRC docket or pre-application record, and responsibility for regulatory risk."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "radiant_mobile_microreactor",
+      "target": "Radiant",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: operator",
+        "missing top evidence item: transport"
+      ],
+      "detected_claim_types": [
+        "fuel_cycle_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "fuel_cycle_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "DOE Final HALEU EIS, Volume 1",
+        "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+        "DOE/NRC Criticality Safety for Commercial-Scale HALEU Fuel Cycle and Transportation",
+        "BWX Technologies 2025 Annual Report",
+        "Acceptance of the TRISO-X License Application for a Fuel Fabrication Facility",
+        "High Assay Low Enriched Uranium Transportation Packages",
+        "Fuel Qualification Methodology for Kairos FHR, KP-TR-011",
+        "Non-LWR Fuel Cycle Environmental Data"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "EPC / construction",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Assay, form, quantity, delivery window, supplier allocation/reservation, and fallback case if fuel slips. Named fabrication route, licensed facility status, qualification plan, interface owner, and capacity reservation. Package/criticality basis, safeguards category, storage plan, logistics owner, and responsible licensee mapping."
+      ],
+      "verdict": "Monitor"
+    },
+    {
+      "id": "deep_fission_timeline",
+      "target": "Deep Fission",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: site",
+        "missing top evidence item: EPC"
+      ],
+      "detected_claim_types": [
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "DOE Final HALEU EIS, Volume 1",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+        "Kemmerer Power Station Unit 1 Final Safety Evaluation",
+        "NUREG-2268 Final EIS for Kemmerer Power Station Unit 1",
+        "Safety Evaluation for Hermes Construction Permit Application",
+        "Constellation Energy 2025 Annual Report",
+        "Acceptance for Docketing of Long Mott Construction Permit Application"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "EPC / construction",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Partially supported",
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Named license applicant, reactor vendor, licensing path, public NRC docket or pre-application record, and responsibility for regulatory risk."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "westinghouse_ap300_customer",
+      "target": "Westinghouse",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: customer",
+        "missing top evidence item: schedule"
+      ],
+      "detected_claim_types": [
+        "fuel_cycle_claim",
+        "deployment_timeline_claim",
+        "offtake_claim"
+      ],
+      "atomic_claim_types": [
+        "fuel_cycle_claim",
+        "deployment_timeline_claim",
+        "offtake_claim"
+      ],
+      "matched_documents": [
+        "DOE Final HALEU EIS, Volume 1",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Constellation Energy 2025 Annual Report",
+        "Acceptance of the TRISO-X License Application for a Fuel Fabrication Facility",
+        "BWX Technologies 2025 Annual Report",
+        "Centrus Awarded $900 Million to Expand Uranium Enrichment in Ohio",
+        "High Assay Low Enriched Uranium Transportation Packages",
+        "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+        "Orano Annual Activity Report 2025"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "Site / permitting",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [
+        "Assay, form, quantity, delivery window, supplier allocation/reservation, and fallback case if fuel slips. Named fabrication route, licensed facility status, qualification plan, interface owner, and capacity reservation. Package/criticality basis, safeguards category, storage plan, logistics owner, and responsible licensee mapping."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "ge_hitachi_bwrx",
+      "target": "GE Hitachi",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: customer",
+        "missing top evidence item: EPC"
+      ],
+      "detected_claim_types": [
+        "licensing_claim",
+        "deployment_timeline_claim",
+        "offtake_claim",
+        "EPC_construction_claim"
+      ],
+      "atomic_claim_types": [
+        "licensing_claim",
+        "deployment_timeline_claim",
+        "offtake_claim",
+        "EPC_construction_claim"
+      ],
+      "matched_documents": [
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Constellation Energy 2025 Annual Report",
+        "Final EIS for the Proposed Palisades Nuclear Restart Project",
+        "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+        "TerraPower Draft PSAR Readiness Assessment for Kemmerer Unit 1",
+        "Safety Evaluation for Hermes Construction Permit Application",
+        "BWRX-300 Reactor Pressure Vessel Isolation and Overpressure Protection, NEDO-33910P-A",
+        "Draft Safety Evaluation for Clinch River Construction Permit Application"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "licensing_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "Final EIS for the Proposed Palisades Nuclear Restart Project",
+          "rank": 5,
+          "deployment_layers": [
+            "Site / permitting",
+            "Financing / bankability",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "EPC_construction_claim",
+          "document_title": "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+          "rank": 6,
+          "deployment_layers": [
+            "Financing / bankability",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Partially supported",
+        "Missing",
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [
+        "Named license applicant, reactor vendor, licensing path, public NRC docket or pre-application record, and responsibility for regulatory risk."
+      ],
+      "verdict": "Diligence Required"
+    },
+    {
+      "id": "curio_waste_recycling",
+      "target": "Curio",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing document: waste",
+        "missing top evidence item: fuel-cycle",
+        "missing top evidence item: waste"
+      ],
+      "detected_claim_types": [
+        "fuel_cycle_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "fuel_cycle_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "DOE Final HALEU EIS, Volume 1",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+        "Framatome 2025 Financial Results",
+        "BWX Technologies 2025 Annual Report",
+        "Fuel Qualification Methodology for Kairos FHR, KP-TR-011",
+        "DOE HALEU Allocation Process",
+        "Acceptance of the TRISO-X License Application for a Fuel Fabrication Facility",
+        "High Assay Low Enriched Uranium Transportation Packages"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "EPC / construction",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source",
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Assay, form, quantity, delivery window, supplier allocation/reservation, and fallback case if fuel slips. Named fabrication route, licensed facility status, qualification plan, interface owner, and capacity reservation. Package/criticality basis, safeguards category, storage plan, logistics owner, and responsible licensee mapping."
+      ],
+      "verdict": "Monitor"
+    },
+    {
+      "id": "palisades_restart_power_buyer",
+      "target": "Palisades restart",
+      "passed": true,
+      "pass_fail_notes": [
+        "pass"
+      ],
+      "advisory_notes": [
+        "missing top evidence item: offtake",
+        "missing top evidence item: operations",
+        "missing top evidence item: financing"
+      ],
+      "detected_claim_types": [
+        "data_center_power_claim",
+        "offtake_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "data_center_power_claim",
+        "offtake_claim",
+        "nuclear_integration_claim"
+      ],
+      "matched_documents": [
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Talen Energy 2025 Annual Report to Shareholders",
+        "Constellation Energy 2025 Annual Report",
+        "DOE Final HALEU EIS, Volume 1",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+        "Talen Energy 2024 Form 10-K",
+        "PJM Large Load Additions Workshop Presentation",
+        "Dominion GS-5 Large Load Rate Class Report",
+        "Final EIS for the Proposed Palisades Nuclear Restart Project",
+        "Oklo and Meta Agreement Announcement"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "Talen Energy 2025 Annual Report to Shareholders",
+          "rank": 3,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Power delivery / interconnection",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "offtake_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing",
+        "Operations / waste"
+      ],
+      "evidence_statuses": [
+        "private_diligence_required"
+      ],
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [],
+      "verdict": "Diligence Required"
+    }
+  ]
+}

@@ -31,48 +31,64 @@ function displayUrl(value: string) {
   }
 }
 
-function DetectedClaims({ profile }: { profile: ProjectCounterpartyProfile }) {
-  const claims = profile.claimToIcMemo.detectedClaims ?? [];
+function readableStatus(value: string) {
+  return value.replaceAll("_", " ");
+}
+
+function AtomicClaims({ profile }: { profile: ProjectCounterpartyProfile }) {
+  const claims = profile.claimToIcMemo.evidenceLedger?.atomicClaims ?? [];
 
   if (!claims.length) {
-    return <p className="border border-[#d9d3c8] bg-white p-4 text-base leading-7 text-[#63615b]">No major claim types were detected from the current note.</p>;
+    return <p className="border border-[#d9d3c8] bg-white p-4 text-base leading-7 text-[#63615b]">No atomic claims were extracted from the current note.</p>;
   }
 
   return (
-    <div className="flex flex-wrap gap-2">
-      {claims.map((claim) => (
-        <span key={claim.claimType} className="border border-[#bfb6a7] bg-white px-3 py-2 text-base font-semibold text-[#3f3d38]">
-          {claim.label}
-        </span>
+    <div className="space-y-3">
+      {claims.slice(0, 8).map((claim) => (
+        <article key={claim.id} className="border border-[#d9d3c8] bg-white p-4">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <h3 className="text-lg font-semibold leading-7">{claim.text}</h3>
+            <span className="shrink-0 text-base font-semibold capitalize text-[#7b5b25]">{readableStatus(claim.evidenceStatus)}</span>
+          </div>
+          <p className="mt-2 text-base leading-7 text-[#63615b]">Layers: {claim.deploymentLayers.join(", ") || "Unclear"}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function EvidenceLedgerView({ profile }: { profile: ProjectCounterpartyProfile }) {
+  const claims = profile.claimToIcMemo.evidenceLedger?.atomicClaims ?? [];
+
+  if (!claims.length) return null;
+
+  return (
+    <div className="space-y-3">
+      {claims.slice(0, 8).map((claim) => (
+        <article key={`ledger-${claim.id}`} className="border border-[#d9d3c8] bg-white p-4">
+          <h3 className="text-lg font-semibold leading-7">{claim.text}</h3>
+          <p className="mt-2 text-base leading-7 text-[#4a4842]"><span className="font-semibold">Evidence status:</span> {readableStatus(claim.evidenceStatus)} · Confidence: {claim.confidence}</p>
+          <p className="mt-2 text-base leading-7 text-[#63615b]"><span className="font-semibold">Required evidence:</span> {claim.requiredEvidence}</p>
+          <p className="mt-2 text-base leading-7 text-[#63615b]"><span className="font-semibold">Does not prove:</span> {claim.whatThisDoesNotProve}</p>
+        </article>
       ))}
     </div>
   );
 }
 
 function EvidenceCoverageList({ profile }: { profile: ProjectCounterpartyProfile }) {
-  const coverage = profile.claimToIcMemo.sourceCoverage ?? [];
-  const findings = profile.claimToIcMemo.deploymentLayerFindings ?? [];
+  const coverage = profile.claimToIcMemo.evidenceLedger?.deploymentLayerSummary ?? profile.claimToIcMemo.documentCoverage ?? [];
 
-  if (!coverage.length && !findings.length) return null;
+  if (!coverage.length) return null;
 
   return (
     <div className="grid gap-3 sm:grid-cols-2">
-      {coverage.length ? coverage.map((item) => (
-        <article key={item.id} className="border border-[#d9d3c8] bg-white p-4">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-            <h3 className="text-lg font-semibold leading-7">{item.layer}</h3>
-            <span className="text-base font-semibold text-[#7b5b25]">{item.status}</span>
-          </div>
-          <p className="mt-2 text-base leading-7 text-[#4a4842]">{item.note}</p>
-        </article>
-      )) : findings.map((item) => (
+      {coverage.map((item) => (
         <article key={item.layer} className="border border-[#d9d3c8] bg-white p-4">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-            <h3 className="text-lg font-semibold leading-7">{item.layer}</h3>
-            <span className="text-base font-semibold capitalize text-[#7b5b25]">{item.status}</span>
-          </div>
-          <p className="mt-2 text-base leading-7 text-[#4a4842]">{item.finding}</p>
-          <p className="mt-2 text-base leading-7 text-[#63615b]">Required evidence: {item.requiredEvidence}</p>
+          <h3 className="text-lg font-semibold leading-7">{item.layer}</h3>
+          <p className="mt-2 text-base leading-7 text-[#4a4842]"><span className="font-semibold">Corpus coverage:</span> {item.corpusCoverage}</p>
+          <p className="mt-1 text-base leading-7 text-[#4a4842]"><span className="font-semibold">Target-specific support:</span> {item.targetSpecificSupport}</p>
+          <p className="mt-2 text-base leading-7 text-[#63615b]">{item.conclusion}</p>
         </article>
       ))}
     </div>
@@ -105,6 +121,34 @@ function PublicEvidenceNotes({ profile }: { profile: ProjectCounterpartyProfile 
             Open public source: {note.organization ?? note.agency} · {note.dateOrStatus ?? note.sourceName}
           </a>
           <p className="mt-1 break-all text-sm leading-6 text-[#63615b]">{displayUrl(note.sourceUrl)}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+
+function ChunkBackedEvidence({ profile }: { profile: ProjectCounterpartyProfile }) {
+  const chunks = profile.claimToIcMemo.evidenceLedger?.atomicClaims.flatMap((claim) => claim.matchedChunks.map((chunk) => ({ ...chunk, claimText: claim.text }))) ?? [];
+  const unique = chunks.filter((chunk, index, array) => array.findIndex((item) => item.chunkId === chunk.chunkId) === index).slice(0, 6);
+
+  if (!unique.length) {
+    return <p className="border border-[#d9d3c8] bg-white p-4 text-base leading-7 text-[#4a4842]">No chunk-backed excerpts matched the atomic claims. Treat the memo as unsupported until the counterparty provides evidence.</p>;
+  }
+
+  return (
+    <div className="space-y-3">
+      {unique.map((chunk) => (
+        <article key={chunk.chunkId} className="border border-[#d9d3c8] bg-white p-4">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <h3 className="text-lg font-semibold leading-7">#{chunk.rank} {chunk.documentTitle}</h3>
+            <span className="text-base font-semibold text-[#7b5b25]">{chunk.deploymentLayers.slice(0, 2).join(", ")}</span>
+          </div>
+          <p className="mt-3 text-base leading-7 text-[#3f3d38]">{chunk.excerpt}</p>
+          <p className="mt-2 text-base leading-7 text-[#63615b]"><span className="font-semibold">Related atomic claim:</span> {chunk.claimText}</p>
+          <p className="mt-2 text-base leading-7 text-[#63615b]"><span className="font-semibold">Deployment layer:</span> {chunk.deploymentLayers.slice(0, 2).join(", ")}</p>
+          <p className="mt-2 text-base leading-7 text-[#63615b]"><span className="font-semibold">Why it matters:</span> {chunk.relevanceReason}</p>
+          <p className="mt-2 text-base leading-7 text-[#63615b]"><span className="font-semibold">Does not prove:</span> {chunk.doesNotProve}</p>
         </article>
       ))}
     </div>
@@ -163,58 +207,32 @@ function AnalysisDebug({ profile }: { profile: ProjectCounterpartyProfile }) {
 
 export function DiligenceMemo({ profile }: { profile: ProjectCounterpartyProfile }) {
   const memo = profile.claimToIcMemo.firstPassIcMemo;
-  const tree = profile.claimToIcMemo.whatMustBeTrue;
+  const ledger = profile.claimToIcMemo.evidenceLedger;
 
   return (
     <article className="border border-[#d9d3c8] bg-[#fbfaf7] p-6 sm:p-8">
       <div className="space-y-10">
         <MemoSection title="Executive Summary">
           <p>{profile.claimToIcMemo.oneLineJudgment}</p>
-          <p className="mt-4 text-base leading-7 text-[#63615b]">
-            Current public evidence does or does not support this deployment claim across the relevant deployment layers. NRC materials are one input, not a complete deployability answer.
-          </p>
           {profile.claimToIcMemo.confidenceRationale ? (
             <p className="mt-3 text-base leading-7 text-[#63615b]">{profile.claimToIcMemo.confidenceRationale}</p>
           ) : null}
         </MemoSection>
 
-        <MemoSection title="Situation">
-          <p>{memo.situation}</p>
-        </MemoSection>
-
-        <MemoSection title="Claim types detected">
-          <DetectedClaims profile={profile} />
-        </MemoSection>
-
-        <MemoSection title="What is evidenced">
-          <Bullets items={memo.whatIsEvidenced} />
-        </MemoSection>
-
-        <MemoSection title="What is not yet evidenced">
-          <Bullets items={memo.whatIsNotYetEvidenced} />
+        <MemoSection title="Top missing evidence">
+          <Bullets items={(ledger?.topMissingEvidence.length ? ledger.topMissingEvidence : memo.whatIsNotYetEvidenced).slice(0, 5)} />
         </MemoSection>
 
         <MemoSection title="Evidence coverage by deployment layer">
           <EvidenceCoverageList profile={profile} />
         </MemoSection>
 
-        <MemoSection title="What must be true">
-          <div className="space-y-4">
-            {tree.map((item, index) => (
-              <article key={item.id} className="border border-[#d9d3c8] bg-white p-4">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                  <h3 className="text-lg font-semibold leading-7">{index + 1}. {item.statement}</h3>
-                  <span className="text-base font-semibold capitalize text-[#7b5b25]">{item.status}</span>
-                </div>
-                <p className="mt-3 text-base leading-7 text-[#4a4842]">{item.whyItMatters}</p>
-                <p className="mt-2 text-base leading-7 text-[#63615b]">Required evidence: {item.requiredEvidence}</p>
-              </article>
-            ))}
-          </div>
+        <MemoSection title="Chunk-backed evidence">
+          <ChunkBackedEvidence profile={profile} />
         </MemoSection>
 
-        <MemoSection title="Major kill risks">
-          <Bullets items={memo.majorKillRisks} />
+        <MemoSection title="What would change the verdict">
+          <Bullets items={(ledger?.whatWouldChangeVerdict.length ? ledger.whatWouldChangeVerdict : memo.whatMustBeTrue).slice(0, 8)} />
         </MemoSection>
 
         <MemoSection title="Diligence questions">
@@ -230,18 +248,6 @@ export function DiligenceMemo({ profile }: { profile: ProjectCounterpartyProfile
 
         <MemoSection title="Recommended next step">
           <p>{memo.recommendedNextStep}</p>
-        </MemoSection>
-
-        <MemoSection title="Evidence notes">
-          <Bullets items={memo.sourcesAndEvidenceNotes} />
-        </MemoSection>
-
-        <MemoSection title="Relevant Documents">
-          <RelevantDocuments profile={profile} />
-        </MemoSection>
-
-        <MemoSection title="Public evidence notes">
-          <PublicEvidenceNotes profile={profile} />
         </MemoSection>
 
         <AnalysisDebug profile={profile} />

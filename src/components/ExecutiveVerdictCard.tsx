@@ -20,7 +20,7 @@ export function ExecutiveVerdictCard({ profile }: { profile: ProjectCounterparty
   const topKillRisks = memo.firstPassIcMemo.majorKillRisks.slice(0, 3);
 
   async function handleCopy() {
-    const ok = await copyMemo(icMemoMarkdown(memo.firstPassIcMemo, memo.publicEvidenceNotes ?? [], memo.sourceCoverage ?? [], memo.detectedClaims ?? [], memo.deploymentLayerFindings ?? [], memo.documentCoverage ?? [], memo.relevantDocuments ?? []));
+    const ok = await copyMemo(icMemoMarkdown(memo.firstPassIcMemo, memo.publicEvidenceNotes ?? [], memo.sourceCoverage ?? [], memo.detectedClaims ?? [], memo.deploymentLayerFindings ?? [], memo.documentCoverage ?? [], memo.relevantDocuments ?? [], memo.evidenceLedger));
     setCopied(ok);
     window.setTimeout(() => setCopied(false), 2200);
   }

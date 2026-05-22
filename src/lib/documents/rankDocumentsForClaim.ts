@@ -5,6 +5,7 @@ import type { DocumentChunk, DocumentCoverageByLayer, DocumentCoverageStatus, Do
 import type { DeploymentLayerFinding, DetectedClaim } from "@/types/core";
 
 const chunksPath = path.join(process.cwd(), "corpus", "chunks", "document_chunks.jsonl");
+let cachedChunks: DocumentChunk[] | null = null;
 
 const layerAliases: Record<string, string[]> = {
   "Interconnection / power delivery": ["Power delivery / interconnection", "Interconnection / power delivery", "co-location", "colocation", "large load"],
@@ -33,17 +34,26 @@ const claimTerms: Record<string, string[]> = {
   financing_claim: ["financing", "Title 17", "loan guarantee", "LPO", "bankability", "capital"],
   EPC_construction_claim: ["EPC", "construction", "Vogtle", "construction monitoring", "contractor"],
   bridge_power_claim: ["bridge power", "initial energization", "phased", "gas", "turbine"],
-  nuclear_integration_claim: ["reactor", "nuclear", "SMR", "advanced reactor", "licensing", "fuel"],
+  nuclear_integration_claim: ["reactor", "nuclear", "SMR", "advanced reactor", "baseload"],
 };
 
 function normalize(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+function includesPhrase(haystack: string, phrase: string) {
+  const normalizedPhrase = normalize(phrase);
+  if (!normalizedPhrase) return false;
+  return ` ${normalize(haystack)} `.includes(` ${normalizedPhrase} `);
+}
+
 function hasOverlap(left: string, right: string) {
   const a = normalize(left);
   const b = normalize(right);
-  return a.includes(b) || b.includes(a);
+  return a === b || a.includes(b) || b.includes(a);
 }
 
 function layerMatches(documentLayer: string, layer: string) {
@@ -56,7 +66,7 @@ function textForDocument(document: DocumentManifestItem) {
 }
 
 function textForChunk(chunk: DocumentChunk) {
-  return [chunk.title, chunk.document_family, chunk.text, ...chunk.memo_sections_supported, ...chunk.deployment_layers].join(" ");
+  return [chunk.title, chunk.document_family, chunk.text.slice(0, 2200), ...chunk.memo_sections_supported, ...chunk.deployment_layers].join(" ");
 }
 
 function matchedClaimTypes(text: string, claims: DetectedClaim[]) {
@@ -64,22 +74,39 @@ function matchedClaimTypes(text: string, claims: DetectedClaim[]) {
   return claims
     .filter((claim) => {
       const terms = [...(claimTerms[claim.claimType] ?? []), claim.label, ...claim.triggeredKeywords].map(normalize).filter(Boolean);
-      return terms.some((term) => normalizedText.includes(term));
+      return terms.some((term) => includesPhrase(normalizedText, term));
     })
     .map((claim) => claim.claimType);
 }
 
 function scoreBase(rank: number, benchmarkValue: string, includedIn?: string[]) {
-  const rankBoost = Math.max(0, 151 - rank) / 25;
-  const benchmarkBoost = benchmarkValue === "strong" ? 5 : benchmarkValue === "moderate" ? 2.5 : 1;
-  const tierBoost = includedIn?.includes("top_25_one_day_prototype") ? 4 : includedIn?.includes("top_75_credible_mvp") ? 2 : 0.5;
+  const rankBoost = Math.max(0, 151 - rank) / 50;
+  const benchmarkBoost = benchmarkValue === "strong" ? 4 : benchmarkValue === "moderate" ? 2 : 0.5;
+  const tierBoost = includedIn?.includes("top_25_one_day_prototype") ? 2 : includedIn?.includes("top_75_credible_mvp") ? 1 : 0.25;
   return rankBoost + benchmarkBoost + tierBoost;
 }
 
-function scoreDocument(document: DocumentManifestItem, claims: DetectedClaim[], layers: string[]): RankedDocument {
-  const matchedLayers = layers.filter((layer) => document.deployment_layers.some((docLayer) => layerMatches(docLayer, layer)) || layerAliases[layer]?.some((alias) => hasOverlap(textForDocument(document), alias)));
+function targetTerms(targetText?: string) {
+  if (!targetText) return [];
+  const normalized = normalize(targetText);
+  const words = normalized.split(" ").filter((word) => word.length > 3 && !["claims", "claim", "reactor", "developer", "project", "company"].includes(word));
+  return [normalized, ...words].filter(Boolean);
+}
+
+function targetScore(text: string, targetText?: string) {
+  return targetTerms(targetText).filter((term) => includesPhrase(text, term)).length * 45;
+}
+
+function memoSectionScore(text: string, claims: DetectedClaim[]) {
+  const sections = claims.flatMap((claim) => claimTerms[claim.claimType] ?? []);
+  return sections.filter((term) => includesPhrase(text, term)).length * 10;
+}
+
+function scoreDocument(document: DocumentManifestItem, claims: DetectedClaim[], layers: string[], targetText?: string): RankedDocument {
+  const matchedLayers = layers.filter((layer) => document.deployment_layers.some((docLayer) => layerMatches(docLayer, layer)) || layerAliases[layer]?.some((alias) => includesPhrase(textForDocument(document), alias)));
   const matchedClaims = matchedClaimTypes(textForDocument(document), claims);
-  const relevance_score = matchedLayers.length * 7 + matchedClaims.length * 5 + scoreBase(document.rank, document.benchmark_value, document.included_in);
+  const text = textForDocument(document);
+  const relevance_score = targetScore(text, targetText) + matchedClaims.length * 45 + matchedLayers.length * 14 + memoSectionScore(text, claims) + scoreBase(document.rank, document.benchmark_value, document.included_in);
   return { ...document, relevance_score, matched_layers: matchedLayers, matched_claim_types: matchedClaims };
 }
 
@@ -88,11 +115,11 @@ function excerptFrom(text: string) {
   return sentences.slice(0, 4).join(" ").trim().slice(0, 900);
 }
 
-function scoreChunk(chunk: DocumentChunk, claims: DetectedClaim[], layers: string[]): RankedChunk {
+function scoreChunk(chunk: DocumentChunk, claims: DetectedClaim[], layers: string[], targetText?: string): RankedChunk {
   const text = textForChunk(chunk);
-  const matchedLayers = layers.filter((layer) => chunk.deployment_layers.some((docLayer) => layerMatches(docLayer, layer)) || layerAliases[layer]?.some((alias) => hasOverlap(text, alias)));
+  const matchedLayers = layers.filter((layer) => chunk.deployment_layers.some((docLayer) => layerMatches(docLayer, layer)) || layerAliases[layer]?.some((alias) => includesPhrase(text, alias)));
   const matchedClaims = matchedClaimTypes(text, claims);
-  const relevance_score = matchedLayers.length * 8 + matchedClaims.length * 6 + scoreBase(chunk.rank, chunk.benchmark_value);
+  const relevance_score = targetScore(text, targetText) + matchedClaims.length * 50 + matchedLayers.length * 14 + memoSectionScore(text, claims) + scoreBase(chunk.rank, chunk.benchmark_value);
   return { ...chunk, relevance_score, matched_layers: matchedLayers, matched_claim_types: matchedClaims, excerpt: excerptFrom(chunk.text) };
 }
 
@@ -126,23 +153,26 @@ function loadChunks(): DocumentChunk[] {
 export function rankDocumentsForClaim(input: {
   detectedClaims: DetectedClaim[];
   deploymentLayerFindings: DeploymentLayerFinding[];
+  targetText?: string;
   limit?: number;
 }) {
   const documents = loadDocumentManifest();
   const chunks = loadChunks();
   const layers = input.deploymentLayerFindings.map((finding) => finding.layer);
   const rankedDocuments = documents
-    .map((document) => scoreDocument(document, input.detectedClaims, layers))
+    .map((document) => scoreDocument(document, input.detectedClaims, layers, input.targetText))
     .filter((document) => document.relevance_score > 0 && (document.matched_layers.length > 0 || document.matched_claim_types.length > 0))
     .sort((a, b) => b.relevance_score - a.relevance_score || a.rank - b.rank);
   const rankedChunks = chunks
-    .map((chunk) => scoreChunk(chunk, input.detectedClaims, layers))
+    .map((chunk) => scoreChunk(chunk, input.detectedClaims, layers, input.targetText))
     .filter((chunk) => chunk.relevance_score > 0 && (chunk.matched_layers.length > 0 || chunk.matched_claim_types.length > 0))
     .sort((a, b) => b.relevance_score - a.relevance_score || a.rank - b.rank || a.chunk_index - b.chunk_index);
 
+  const diverseRankedChunks = rankedChunks.filter((chunk, index, array) => array.slice(0, index).filter((item) => item.rank === chunk.rank).length < 2);
+
   const documentCoverage = layers.map((layer) => {
     const topDocuments = rankedDocuments.filter((document) => document.matched_layers.includes(layer)).slice(0, 3);
-    const topChunks = rankedChunks.filter((chunk) => chunk.matched_layers.includes(layer)).slice(0, 3);
+    const topChunks = diverseRankedChunks.filter((chunk) => chunk.matched_layers.includes(layer)).slice(0, 3);
     const corpus = corpusCoverage(topDocuments, topChunks);
     const support = targetSupport(input.deploymentLayerFindings.find((finding) => finding.layer === layer)?.status);
     return {
@@ -154,12 +184,12 @@ export function rankDocumentsForClaim(input: {
       topDocuments,
     } satisfies DocumentCoverageByLayer;
   });
-  const chunkDocumentRanks = new Set(rankedChunks.map((chunk) => chunk.rank));
+  const chunkDocumentRanks = new Set(diverseRankedChunks.map((chunk) => chunk.rank));
 
   return {
     relevantDocuments: rankedDocuments.slice(0, input.limit ?? 8),
     manifestOnlyDocuments: rankedDocuments.filter((document) => !chunkDocumentRanks.has(document.rank)).slice(0, 3),
-    chunkEvidence: rankedChunks.slice(0, 6),
+    chunkEvidence: diverseRankedChunks.slice(0, 80),
     documentCoverage,
   };
 }

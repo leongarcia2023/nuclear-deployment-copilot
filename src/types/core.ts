@@ -75,6 +75,53 @@ export interface DeploymentLayerFinding {
   requiredEvidence: string;
 }
 
+
+export type AtomicClaimTargetSpecificity = "target_specific" | "general_market_claim" | "precedent_claim" | "unclear";
+
+export type AtomicClaimEvidenceStatus =
+  | "supported_by_public_source"
+  | "partially_supported_by_public_source"
+  | "user_note_only"
+  | "inferred"
+  | "missing"
+  | "private_diligence_required"
+  | "cannot_know_from_public_docs";
+
+export interface MatchedChunk {
+  chunkId: string;
+  documentId: string;
+  documentTitle: string;
+  rank: number;
+  deploymentLayers: string[];
+  excerpt: string;
+  relevanceReason: string;
+  doesNotProve: string;
+}
+
+export interface AtomicClaim {
+  id: string;
+  text: string;
+  claimType: string;
+  deploymentLayers: string[];
+  triggeredBy: string[];
+  targetSpecificity: AtomicClaimTargetSpecificity;
+  evidenceStatus: AtomicClaimEvidenceStatus;
+  confidence: "high" | "medium" | "low";
+  requiredEvidence: string;
+  whyItMatters: string;
+  matchedChunks: MatchedChunk[];
+  matchedManifestDocs: MemoRelevantDocument[];
+  whatThisDoesNotProve: string;
+}
+
+export interface EvidenceLedger {
+  atomicClaims: AtomicClaim[];
+  deploymentLayerSummary: MemoDocumentCoverageItem[];
+  topMissingEvidence: string[];
+  privateDiligenceRequired: string[];
+  whatWouldChangeVerdict: string[];
+}
+
 export interface AnalysisDebug {
   detectedCompanyProfile: string | null;
   companyCategory: string;
@@ -98,6 +145,7 @@ export interface MemoResult {
   manifestOnlyDocuments?: MemoRelevantDocument[];
   chunkEvidence?: MemoChunkEvidence[];
   documentCoverage?: MemoDocumentCoverageItem[];
+  evidenceLedger?: EvidenceLedger;
   unsupportedLayers?: string[];
   privateDiligenceLayers?: string[];
   firstPassIcMemo: FirstPassIcMemo;
@@ -324,6 +372,7 @@ export interface ClaimToIcMemo {
   manifestOnlyDocuments?: MemoRelevantDocument[];
   chunkEvidence?: MemoChunkEvidence[];
   documentCoverage?: MemoDocumentCoverageItem[];
+  evidenceLedger?: EvidenceLedger;
   unsupportedLayers?: string[];
   privateDiligenceLayers?: string[];
   confidenceRationale?: string;
