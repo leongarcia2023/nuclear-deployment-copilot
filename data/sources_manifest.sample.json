@@ -1,63 +1,450 @@
 {
-  "corpusId": "nuclear-deployment-demo-corpus",
-  "generatedAt": "2026-05-17",
+  "corpusId": "nuclear-public-source-seed-v1",
+  "generatedAt": "2026-05-18",
+  "scope": "Curated official public sources and benchmark precedents for deterministic v2 demo retrieval.",
   "sources": [
     {
-      "id": "src-001",
-      "title": "Aurora AAP-80 Project Overview for Strategic Fuel Partners",
-      "sourceType": "uploaded_document_claimed",
-      "publisher": "Uploaded memo",
-      "date": "2026-04-24",
-      "excerpt": "Claims first-core HALEU demand, target commercial operation window, preferred fabrication pathway, and non-binding host site evaluation.",
-      "confidence": "medium"
+      "id": "nrc-advanced-reactors-overview",
+      "source_name": "NRC Advanced Reactors overview",
+      "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced",
+      "agency": "NRC",
+      "doc_type": "overview",
+      "date_or_status": "Page updated April 1, 2026",
+      "topic_tags": [
+        "advanced reactors",
+        "smr",
+        "licensing",
+        "nrc"
+      ],
+      "relevance_modules": [
+        "licensing_path",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "Defines the NRC advanced reactor context and points users to applicant, pre-applicant, guidance, and project information pages.",
+      "source_category": "NRC / licensing"
     },
     {
-      "id": "src-002",
-      "title": "Pre-application meeting summary",
-      "sourceType": "public_source_verified",
-      "publisher": "Regulatory docket sample",
-      "date": "2025-11-12",
-      "url": "https://example.com/regulatory-docket",
-      "excerpt": "Confirms public interaction around reactor concept and licensing approach, but does not validate construction schedule.",
-      "confidence": "medium"
+      "id": "nrc-advanced-reactor-applications",
+      "source_name": "NRC Advanced Reactor Application Projects",
+      "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/applicant-projects.html",
+      "agency": "NRC",
+      "doc_type": "project_page",
+      "date_or_status": "Current NRC application project index",
+      "topic_tags": [
+        "application",
+        "construction permit",
+        "licensing status",
+        "nrc"
+      ],
+      "relevance_modules": [
+        "licensing_path",
+        "timeline_credibility",
+        "benchmark_precedent"
+      ],
+      "why_it_matters": "Submitted and docketed applications are stronger public evidence than generic engagement or vendor claims.",
+      "source_category": "Public benchmarks"
     },
     {
-      "id": "src-003",
-      "title": "HALEU supply market note",
-      "sourceType": "public_source_verified",
-      "publisher": "Market intelligence sample",
-      "date": "2026-02-05",
-      "url": "https://example.com/haleu-market-note",
-      "excerpt": "Describes supply scarcity, reservation behavior, and schedule risk for advanced reactor first cores.",
-      "confidence": "high"
+      "id": "nrc-pre-application-process",
+      "source_name": "NRC Pre-Application Process",
+      "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/new-app/general-guidance/pre-app-process.html",
+      "agency": "NRC",
+      "doc_type": "process",
+      "date_or_status": "NRC prospective applicant guidance",
+      "topic_tags": [
+        "pre-application",
+        "regulatory engagement",
+        "white paper",
+        "topical report",
+        "readiness assessment"
+      ],
+      "relevance_modules": [
+        "licensing_path",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "Pre-application engagement can be useful but is not the same as a submitted, accepted, or approved application.",
+      "source_category": "NRC / licensing"
     },
     {
-      "id": "src-004",
-      "title": "Regulatory readiness checklist",
-      "sourceType": "public_source_verified",
-      "publisher": "Agency guidance sample",
-      "date": "2025-08-19",
-      "url": "https://example.com/readiness-checklist",
-      "excerpt": "Lists licensing artifacts that would support a higher confidence project-readiness finding.",
-      "confidence": "high"
+      "id": "nrc-readiness-assessment",
+      "source_name": "NRC Readiness Assessment",
+      "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/new-app/general-guidance/pre-app-process/readiness-review",
+      "agency": "NRC",
+      "doc_type": "process",
+      "date_or_status": "NRC voluntary readiness assessment guidance",
+      "topic_tags": [
+        "readiness assessment",
+        "information gaps",
+        "acceptance review",
+        "draft application"
+      ],
+      "relevance_modules": [
+        "licensing_path",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "A readiness assessment can surface application gaps but does not predetermine NRC acceptance or regulatory determinations.",
+      "source_category": "NRC / licensing"
     },
     {
-      "id": "src-005",
-      "title": "Strategic partner diligence notes",
-      "sourceType": "internal_source_verified",
-      "publisher": "Internal diligence sample",
-      "date": "2026-05-02",
-      "excerpt": "Indicates partner conversations are active, but not yet converted into binding project finance or offtake evidence.",
-      "confidence": "medium"
+      "id": "nrc-arcap-ticap",
+      "source_name": "NRC ARCAP / TI-CAP guidance",
+      "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/modernizing/guidance/advanced-reactor-content-of-application-project.html",
+      "agency": "NRC",
+      "doc_type": "guidance",
+      "date_or_status": "ARCAP/TI-CAP guidance issued through 2024",
+      "topic_tags": [
+        "arcap",
+        "ti-cap",
+        "application content",
+        "guidance",
+        "non-light-water reactor"
+      ],
+      "relevance_modules": [
+        "licensing_path",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "Technology-inclusive application guidance shows the content burden behind credible advanced reactor licensing claims.",
+      "source_category": "NRC / licensing"
     },
     {
-      "id": "src-006",
-      "title": "Schedule claims reconciliation",
-      "sourceType": "inferred",
-      "publisher": "Copilot synthesis",
-      "date": "2026-05-17",
-      "excerpt": "Compares uploaded schedule claims against public evidence gaps and flags missing proof points.",
-      "confidence": "low"
+      "id": "nrc-advanced-reactor-application-guidance",
+      "source_name": "NRC Advanced Reactor Application Guidance",
+      "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/new-app/general-guidance.html",
+      "agency": "NRC",
+      "doc_type": "guidance",
+      "date_or_status": "NRC advanced reactor applicant guidance",
+      "topic_tags": [
+        "application guidance",
+        "part 50",
+        "part 52",
+        "part 53",
+        "advanced reactor"
+      ],
+      "relevance_modules": [
+        "licensing_path",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "Credible deployment timelines need a licensing strategy that maps to actual NRC application pathways and guidance.",
+      "source_category": "NRC / licensing"
+    },
+    {
+      "id": "nrc-haleu-overview",
+      "source_name": "NRC HALEU overview",
+      "source_url": "https://www.nrc.gov/materials/new-fuels/haleu.html",
+      "agency": "NRC",
+      "doc_type": "fuel_cycle",
+      "date_or_status": "Page updated for NRC new fuels program",
+      "topic_tags": [
+        "haleu",
+        "new fuels",
+        "fuel cycle",
+        "advanced reactor fuel"
+      ],
+      "relevance_modules": [
+        "fuel_supply_haleu",
+        "transportation_safeguards_storage",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "HALEU claims require evidence across production, utilization, storage, and transportation, not just generic fuel need.",
+      "source_category": "Fuel-cycle / fabrication"
+    },
+    {
+      "id": "nrc-new-fuels-transportation",
+      "source_name": "NRC Transportation of New Fuels",
+      "source_url": "https://www.nrc.gov/materials/new-fuels/transportation",
+      "agency": "NRC",
+      "doc_type": "fuel_cycle",
+      "date_or_status": "Page reviewed July 18, 2024",
+      "topic_tags": [
+        "transportation",
+        "haleu",
+        "criticality",
+        "package certification",
+        "new fuels"
+      ],
+      "relevance_modules": [
+        "fuel_supply_haleu",
+        "transportation_safeguards_storage"
+      ],
+      "why_it_matters": "Fuel availability is not bankable without a compliant transportation path and package/criticality evidence.",
+      "source_category": "Fuel-cycle / fabrication"
+    },
+    {
+      "id": "nrc-new-fuels-security-safeguards",
+      "source_name": "NRC Security & Safeguards of New Fuels",
+      "source_url": "https://www.nrc.gov/materials/new-fuels/security-safeguards",
+      "agency": "NRC",
+      "doc_type": "fuel_cycle",
+      "date_or_status": "Page reviewed July 18, 2024",
+      "topic_tags": [
+        "security",
+        "safeguards",
+        "material control accounting",
+        "haleu",
+        "category ii"
+      ],
+      "relevance_modules": [
+        "fuel_supply_haleu",
+        "transportation_safeguards_storage"
+      ],
+      "why_it_matters": "HALEU enrichment and quantity can trigger material control, accounting, and physical security requirements.",
+      "source_category": "Fuel-cycle / fabrication"
+    },
+    {
+      "id": "nrc-new-fuels-storage-disposal",
+      "source_name": "NRC Storage and Disposal of New Fuels",
+      "source_url": "https://www.nrc.gov/materials/new-fuels/storage-disposal",
+      "agency": "NRC",
+      "doc_type": "fuel_cycle",
+      "date_or_status": "Page reviewed July 18, 2024",
+      "topic_tags": [
+        "storage",
+        "disposal",
+        "spent fuel",
+        "triso",
+        "metal fuel",
+        "new fuels"
+      ],
+      "relevance_modules": [
+        "fuel_supply_haleu",
+        "transportation_safeguards_storage"
+      ],
+      "why_it_matters": "Back-end storage and disposal assumptions are part of fuel-cycle credibility for advanced reactor projects.",
+      "source_category": "Fuel-cycle / fabrication"
+    },
+    {
+      "id": "nrc-new-fuels-safety",
+      "source_name": "NRC Safety of New Fuels",
+      "source_url": "https://www.nrc.gov/materials/new-fuels/safety",
+      "agency": "NRC",
+      "doc_type": "fuel_cycle",
+      "date_or_status": "NRC new fuels safety page",
+      "topic_tags": [
+        "safety",
+        "new fuels",
+        "fuel qualification",
+        "haleu"
+      ],
+      "relevance_modules": [
+        "fuel_supply_haleu",
+        "licensing_path"
+      ],
+      "why_it_matters": "Novel fuel safety and qualification evidence can become a gating item for advanced reactor deployment.",
+      "source_category": "Fuel-cycle / fabrication"
+    },
+    {
+      "id": "doe-haleu-availability-program",
+      "source_name": "DOE HALEU Availability Program",
+      "source_url": "https://www.energy.gov/infrastructure/availability-high-assay-low-enriched-uranium-haleu",
+      "agency": "DOE",
+      "doc_type": "program",
+      "date_or_status": "DOE program under Energy Act of 2020",
+      "topic_tags": [
+        "haleu availability",
+        "doe",
+        "supply chain",
+        "advanced reactors"
+      ],
+      "relevance_modules": [
+        "fuel_supply_haleu",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "DOE HALEU support is market context, but it does not by itself prove a specific project has secured fuel on schedule.",
+      "source_category": "DOE / HALEU"
+    },
+    {
+      "id": "doe-haleu-allocation-process",
+      "source_name": "DOE HALEU Allocation Process",
+      "source_url": "https://www.energy.gov/ne/us-department-energy-haleu-allocation-process",
+      "agency": "DOE",
+      "doc_type": "program",
+      "date_or_status": "DOE allocation process and conditional selections",
+      "topic_tags": [
+        "haleu allocation",
+        "conditional selection",
+        "doe",
+        "fuel demand"
+      ],
+      "relevance_modules": [
+        "fuel_supply_haleu",
+        "commercial_offtake",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "Conditional HALEU allocations can support diligence but should not be confused with complete commercial fuel-cycle readiness.",
+      "source_category": "DOE / HALEU"
+    },
+    {
+      "id": "doe-haleu-consortium",
+      "source_name": "DOE HALEU Consortium",
+      "source_url": "https://www.energy.gov/ne/us-department-energy-haleu-consortium",
+      "agency": "DOE",
+      "doc_type": "program",
+      "date_or_status": "DOE consortium for HALEU demand and supply coordination",
+      "topic_tags": [
+        "haleu consortium",
+        "demand estimates",
+        "advanced reactor demonstration",
+        "doe"
+      ],
+      "relevance_modules": [
+        "fuel_supply_haleu",
+        "commercial_offtake"
+      ],
+      "why_it_matters": "Consortium participation and demand estimates are helpful signals but not the same as a binding supply agreement.",
+      "source_category": "DOE / HALEU"
+    },
+    {
+      "id": "nrc-nuscale-us600",
+      "source_name": "NuScale US600 design certification",
+      "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/past-license-activities/nuscale.html",
+      "agency": "NRC",
+      "doc_type": "benchmark",
+      "date_or_status": "NRC completed safety review; page reviewed February 11, 2025",
+      "topic_tags": [
+        "nuscale",
+        "design certification",
+        "smr",
+        "us600",
+        "rai"
+      ],
+      "relevance_modules": [
+        "benchmark_precedent",
+        "licensing_path",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "NuScale demonstrates that NRC design certification can be achieved, while project commercialization remains separate diligence.",
+      "source_category": "Public benchmarks"
+    },
+    {
+      "id": "nrc-nuscale-rais",
+      "source_name": "NuScale US600 application documents and RAIs",
+      "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/past-license-activities/nuscale/documents",
+      "agency": "NRC",
+      "doc_type": "benchmark",
+      "date_or_status": "Application review documents and RAIs",
+      "topic_tags": [
+        "nuscale",
+        "requests for additional information",
+        "application documents",
+        "fsar"
+      ],
+      "relevance_modules": [
+        "benchmark_precedent",
+        "licensing_path"
+      ],
+      "why_it_matters": "RAIs show the depth of NRC information exchange behind a mature licensing record.",
+      "source_category": "Public benchmarks"
+    },
+    {
+      "id": "nrc-kairos-hermes",
+      "source_name": "Kairos Hermes construction permit",
+      "source_url": "https://www.nrc.gov/reactors/non-power/new-facility-licensing/hermes-kairos",
+      "agency": "NRC",
+      "doc_type": "benchmark",
+      "date_or_status": "Construction permit issued December 14, 2023",
+      "topic_tags": [
+        "kairos",
+        "hermes",
+        "construction permit",
+        "test reactor",
+        "haleu",
+        "triso"
+      ],
+      "relevance_modules": [
+        "benchmark_precedent",
+        "licensing_path",
+        "fuel_supply_haleu",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "Hermes is a public precedent for an advanced test reactor construction permit, but it is not the same risk profile as commercial power deployment.",
+      "source_category": "Public benchmarks"
+    },
+    {
+      "id": "nrc-terrapower-kemmerer",
+      "source_name": "TerraPower / Natrium Kemmerer construction permit application",
+      "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/applicant-projects/terrapower",
+      "agency": "NRC",
+      "doc_type": "benchmark",
+      "date_or_status": "Application tendered March 28, 2024; NRC review milestones posted",
+      "topic_tags": [
+        "terrapower",
+        "natrium",
+        "kemmerer",
+        "construction permit",
+        "ardp",
+        "fuel qualification"
+      ],
+      "relevance_modules": [
+        "benchmark_precedent",
+        "licensing_path",
+        "fuel_supply_haleu",
+        "timeline_credibility"
+      ],
+      "why_it_matters": "Kemmerer shows what a public construction permit application record and NRC review schedule look like for an advanced reactor demonstration.",
+      "source_category": "Public benchmarks"
+    },
+    {
+      "id": "nrc-triso-x",
+      "source_name": "TRISO-X fuel fabrication facility / RAIs",
+      "source_url": "https://www.nrc.gov/info-finder/fc/triso-x.html",
+      "agency": "NRC",
+      "doc_type": "benchmark",
+      "date_or_status": "Facility status: Licensing Application",
+      "topic_tags": [
+        "triso-x",
+        "fuel fabrication",
+        "rai",
+        "category ii",
+        "haleu"
+      ],
+      "relevance_modules": [
+        "benchmark_precedent",
+        "fuel_supply_haleu",
+        "transportation_safeguards_storage",
+        "fuel_fabrication"
+      ],
+      "why_it_matters": "TRISO-X illustrates that fuel fabrication capacity has its own licensing record, RAIs, safeguards, and facility-specific execution risk.",
+      "source_category": "Public benchmarks"
+    },
+    {
+      "id": "nrc-fuel-fabrication",
+      "source_name": "NRC fuel fabrication page",
+      "source_url": "https://www.nrc.gov/materials/fuel-cycle-fac/fuel-fab",
+      "agency": "NRC",
+      "doc_type": "fuel_cycle",
+      "date_or_status": "NRC fuel-cycle facility overview",
+      "topic_tags": [
+        "fuel fabrication",
+        "category ii",
+        "category iii",
+        "fuel cycle facility",
+        "uranium"
+      ],
+      "relevance_modules": [
+        "fuel_supply_haleu",
+        "transportation_safeguards_storage",
+        "fuel_fabrication"
+      ],
+      "why_it_matters": "Fabrication is a separate regulated bottleneck from reactor licensing and enrichment availability.",
+      "source_category": "Fuel-cycle / fabrication"
     }
+  ],
+  "sourceCategories": [
+    "NRC / licensing",
+    "DOE / HALEU",
+    "Fuel-cycle / fabrication",
+    "Financing / DOE LPO",
+    "Interconnection / FERC / ISO",
+    "Siting / permitting",
+    "Offtake / commercial",
+    "EPC / construction",
+    "Company filings / investor materials",
+    "Public benchmarks"
+  ],
+  "plannedAnalysisPipeline": [
+    "claim extraction",
+    "source retrieval",
+    "evidence classification",
+    "memo synthesis"
   ]
 }

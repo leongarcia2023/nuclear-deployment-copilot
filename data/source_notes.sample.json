@@ -1,0 +1,820 @@
+[
+  {
+    "id": "nrc-advanced-reactors-overview",
+    "title": "NRC Advanced Reactors overview",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced",
+    "source_type": "NRC licensing",
+    "deployment_layers": [
+      "Licensing / NRC"
+    ],
+    "topic_tags": [
+      "advanced reactors",
+      "licensing",
+      "SMR"
+    ],
+    "companies_relevant": [
+      "reactor_developer"
+    ],
+    "claim_types_relevant": [
+      "licensing_claim",
+      "deployment_timeline_claim",
+      "nuclear_integration_claim"
+    ],
+    "source_summary": "NRC overview of advanced reactor activities and regulatory context.",
+    "what_it_establishes": "NRC is actively preparing for and reviewing advanced reactor technologies.",
+    "what_it_does_not_establish": "It does not establish that a specific company has a docketed application, approved design, site, customer, or schedule.",
+    "why_it_matters": "Useful context, but not project proof.",
+    "evidence_strength": "contextual",
+    "date_or_status": "Current NRC overview"
+  },
+  {
+    "id": "nrc-pre-application-process",
+    "title": "NRC Pre-Application Process",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/new-app/general-guidance/pre-app-process.html",
+    "source_type": "NRC pre-application",
+    "deployment_layers": [
+      "Licensing / NRC"
+    ],
+    "topic_tags": [
+      "pre-application",
+      "regulatory engagement",
+      "white paper"
+    ],
+    "companies_relevant": [
+      "reactor_developer"
+    ],
+    "claim_types_relevant": [
+      "NRC_engagement_claim",
+      "licensing_claim"
+    ],
+    "source_summary": "NRC guidance describing pre-application interactions before formal applications.",
+    "what_it_establishes": "Pre-application engagement can identify issues and prepare applicants.",
+    "what_it_does_not_establish": "It is not the same as docketing, approval, or construction authorization.",
+    "why_it_matters": "Pre-application claims should be diligence-weighted below submitted applications.",
+    "evidence_strength": "moderate",
+    "date_or_status": "NRC guidance"
+  },
+  {
+    "id": "nrc-readiness-assessment",
+    "title": "NRC Readiness Assessment",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/new-app/general-guidance/pre-app-process/readiness-review",
+    "source_type": "NRC pre-application",
+    "deployment_layers": [
+      "Licensing / NRC"
+    ],
+    "topic_tags": [
+      "readiness assessment",
+      "application readiness"
+    ],
+    "companies_relevant": [
+      "reactor_developer"
+    ],
+    "claim_types_relevant": [
+      "NRC_engagement_claim",
+      "deployment_timeline_claim"
+    ],
+    "source_summary": "NRC voluntary readiness assessment process for draft applications.",
+    "what_it_establishes": "Can surface information gaps and support NRC/applicant planning.",
+    "what_it_does_not_establish": "Does not predetermine application acceptance, docketing, or regulatory findings.",
+    "why_it_matters": "Helps classify readiness evidence without overstating it.",
+    "evidence_strength": "moderate",
+    "date_or_status": "NRC guidance"
+  },
+  {
+    "id": "nrc-arcap-ticap",
+    "title": "NRC ARCAP / TI-CAP guidance",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/modernizing/guidance/advanced-reactor-content-of-application-project.html",
+    "source_type": "NRC licensing",
+    "deployment_layers": [
+      "Licensing / NRC"
+    ],
+    "topic_tags": [
+      "ARCAP",
+      "TI-CAP",
+      "application content"
+    ],
+    "companies_relevant": [
+      "reactor_developer"
+    ],
+    "claim_types_relevant": [
+      "licensing_claim",
+      "deployment_timeline_claim"
+    ],
+    "source_summary": "Technology-inclusive application guidance for advanced reactor licensing content.",
+    "what_it_establishes": "Advanced reactor applications require structured safety and licensing content.",
+    "what_it_does_not_establish": "Does not establish that a specific project has produced or submitted that content.",
+    "why_it_matters": "Shows why generic regulatory engagement is not enough for bankable timing.",
+    "evidence_strength": "contextual",
+    "date_or_status": "Guidance through 2024"
+  },
+  {
+    "id": "nrc-advanced-pre-app-activities",
+    "title": "NRC advanced reactor pre-application activities",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/pre-application-activities.html",
+    "source_type": "NRC pre-application",
+    "deployment_layers": [
+      "Licensing / NRC"
+    ],
+    "topic_tags": [
+      "pre-application",
+      "applicant projects",
+      "public engagement"
+    ],
+    "companies_relevant": [
+      "Oklo",
+      "Kairos",
+      "TerraPower",
+      "X-energy"
+    ],
+    "claim_types_relevant": [
+      "NRC_engagement_claim",
+      "licensing_claim"
+    ],
+    "source_summary": "NRC page listing advanced reactor pre-application activity where available.",
+    "what_it_establishes": "Public NRC engagement exists for listed projects or concepts.",
+    "what_it_does_not_establish": "Does not prove commercial deployment, site readiness, customer demand, or financing.",
+    "why_it_matters": "Useful for separating public engagement from formal application maturity.",
+    "evidence_strength": "moderate",
+    "date_or_status": "NRC public project information"
+  },
+  {
+    "id": "nrc-haleu-overview",
+    "title": "NRC HALEU overview",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/materials/new-fuels/haleu.html",
+    "source_type": "DOE HALEU",
+    "deployment_layers": [
+      "Fuel supply / HALEU",
+      "Transportation / safeguards"
+    ],
+    "topic_tags": [
+      "HALEU",
+      "new fuels",
+      "advanced reactors"
+    ],
+    "companies_relevant": [
+      "Oklo",
+      "Kairos",
+      "TerraPower",
+      "X-energy",
+      "Centrus"
+    ],
+    "claim_types_relevant": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "source_summary": "NRC overview of HALEU and new fuel regulatory needs.",
+    "what_it_establishes": "HALEU production, use, storage, and transportation are regulated topics.",
+    "what_it_does_not_establish": "Does not establish that a project has secured HALEU supply or fuel fabrication.",
+    "why_it_matters": "Supports treating HALEU as a deployment dependency.",
+    "evidence_strength": "moderate",
+    "date_or_status": "NRC new fuels page"
+  },
+  {
+    "id": "nrc-new-fuels-transportation",
+    "title": "NRC Transportation of New Fuels",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/materials/new-fuels/transportation",
+    "source_type": "transportation / safeguards",
+    "deployment_layers": [
+      "Transportation / safeguards",
+      "Fuel supply / HALEU"
+    ],
+    "topic_tags": [
+      "transportation",
+      "criticality",
+      "new fuels"
+    ],
+    "companies_relevant": [
+      "reactor_developer",
+      "fuel_cycle_supplier"
+    ],
+    "claim_types_relevant": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "source_summary": "NRC page on transportation considerations for new fuels.",
+    "what_it_establishes": "Transportation and criticality/package review can matter for HALEU-containing fuels.",
+    "what_it_does_not_establish": "Does not prove any project has a transport package, route, or logistics plan.",
+    "why_it_matters": "First-core timing can fail on logistics, not just enrichment.",
+    "evidence_strength": "moderate",
+    "date_or_status": "Reviewed July 18, 2024"
+  },
+  {
+    "id": "nrc-new-fuels-security-safeguards",
+    "title": "NRC Security & Safeguards of New Fuels",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/materials/new-fuels/security-safeguards",
+    "source_type": "transportation / safeguards",
+    "deployment_layers": [
+      "Transportation / safeguards",
+      "Fuel fabrication"
+    ],
+    "topic_tags": [
+      "security",
+      "safeguards",
+      "material control"
+    ],
+    "companies_relevant": [
+      "TRISO-X",
+      "Centrus",
+      "fuel_cycle_supplier"
+    ],
+    "claim_types_relevant": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "source_summary": "NRC page on safeguards and physical security for new fuels.",
+    "what_it_establishes": "HALEU enrichment and quantities can trigger safeguards and material-control obligations.",
+    "what_it_does_not_establish": "Does not establish a facility-specific safeguards plan or approval.",
+    "why_it_matters": "Security scope can be a hidden schedule and cost dependency.",
+    "evidence_strength": "moderate",
+    "date_or_status": "Reviewed July 18, 2024"
+  },
+  {
+    "id": "nrc-new-fuels-storage-disposal",
+    "title": "NRC Storage and Disposal of New Fuels",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/materials/new-fuels/storage-disposal",
+    "source_type": "storage / waste",
+    "deployment_layers": [
+      "Operations / waste",
+      "Transportation / safeguards"
+    ],
+    "topic_tags": [
+      "storage",
+      "disposal",
+      "spent fuel"
+    ],
+    "companies_relevant": [
+      "reactor_developer"
+    ],
+    "claim_types_relevant": [
+      "nuclear_integration_claim",
+      "fuel_cycle_claim"
+    ],
+    "source_summary": "NRC page on storage/disposal considerations for advanced fuels.",
+    "what_it_establishes": "Advanced fuel concepts require storage, transport, and disposal analysis.",
+    "what_it_does_not_establish": "Does not prove a project has an operating or waste strategy.",
+    "why_it_matters": "Keeps operations/waste visible in deployment diligence.",
+    "evidence_strength": "contextual",
+    "date_or_status": "Reviewed July 18, 2024"
+  },
+  {
+    "id": "doe-haleu-availability",
+    "title": "DOE HALEU Availability Program",
+    "organization": "DOE",
+    "source_url": "https://www.energy.gov/infrastructure/availability-high-assay-low-enriched-uranium-haleu",
+    "source_type": "DOE HALEU",
+    "deployment_layers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication"
+    ],
+    "topic_tags": [
+      "HALEU",
+      "DOE",
+      "supply chain"
+    ],
+    "companies_relevant": [
+      "Centrus",
+      "Oklo",
+      "TerraPower",
+      "X-energy"
+    ],
+    "claim_types_relevant": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "source_summary": "DOE program intended to support domestic HALEU availability.",
+    "what_it_establishes": "The federal government recognizes HALEU availability as important to advanced reactors.",
+    "what_it_does_not_establish": "Does not prove a named company has binding allocation, delivery, fabrication, or transport.",
+    "why_it_matters": "Useful market support, but not project-specific fuel proof.",
+    "evidence_strength": "moderate",
+    "date_or_status": "DOE program"
+  },
+  {
+    "id": "doe-haleu-allocation",
+    "title": "DOE HALEU allocation process",
+    "organization": "DOE",
+    "source_url": "https://www.energy.gov/ne/us-department-energy-haleu-allocation-process",
+    "source_type": "DOE HALEU",
+    "deployment_layers": [
+      "Fuel supply / HALEU"
+    ],
+    "topic_tags": [
+      "allocation",
+      "enrichment",
+      "HALEU"
+    ],
+    "companies_relevant": [
+      "Centrus",
+      "Oklo",
+      "TerraPower",
+      "X-energy"
+    ],
+    "claim_types_relevant": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "source_summary": "DOE materials on requesting/allocating HALEU where available.",
+    "what_it_establishes": "Conditional allocation or request processes may be relevant to fuel access.",
+    "what_it_does_not_establish": "Does not equal complete commercial fuel readiness or project bankability.",
+    "why_it_matters": "Helps distinguish program signals from binding supply.",
+    "evidence_strength": "moderate",
+    "date_or_status": "DOE allocation process"
+  },
+  {
+    "id": "doe-haleu-enrichment-services",
+    "title": "DOE HALEU enrichment services procurement",
+    "organization": "DOE",
+    "source_url": "https://www.energy.gov/ne/articles/doe-announces-contracts-produce-haleu-fuel-advanced-nuclear-reactors",
+    "source_type": "DOE HALEU",
+    "deployment_layers": [
+      "Fuel supply / HALEU"
+    ],
+    "topic_tags": [
+      "enrichment services",
+      "domestic supply",
+      "HALEU"
+    ],
+    "companies_relevant": [
+      "Centrus",
+      "General Matter"
+    ],
+    "claim_types_relevant": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "source_summary": "Public DOE materials on HALEU production/enrichment support.",
+    "what_it_establishes": "DOE is procuring/supporting enrichment services to build supply.",
+    "what_it_does_not_establish": "Does not establish specific project delivery windows or customer reservations.",
+    "why_it_matters": "Relevant to fuel-cycle market capacity, not individual demand certainty.",
+    "evidence_strength": "contextual",
+    "date_or_status": "DOE public announcement"
+  },
+  {
+    "id": "nuscale-design-certification",
+    "title": "NuScale design certification / review precedent",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/past-license-activities/nuscale.html",
+    "source_type": "NRC RAI / review precedent",
+    "deployment_layers": [
+      "Licensing / NRC"
+    ],
+    "topic_tags": [
+      "NuScale",
+      "design certification",
+      "RAI"
+    ],
+    "companies_relevant": [
+      "NuScale"
+    ],
+    "claim_types_relevant": [
+      "licensing_claim",
+      "deployment_timeline_claim"
+    ],
+    "source_summary": "NRC page for completed NuScale SMR design certification review.",
+    "what_it_establishes": "A mature design review can generate extensive public NRC evidence.",
+    "what_it_does_not_establish": "Does not prove project financing, customer commitment, EPC delivery, or commercial success.",
+    "why_it_matters": "Benchmark: licensing progress is necessary but insufficient.",
+    "evidence_strength": "strong",
+    "date_or_status": "NRC completed safety review"
+  },
+  {
+    "id": "nuscale-rai-documents",
+    "title": "NuScale RAI/application document precedent",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/past-license-activities/nuscale/documents",
+    "source_type": "NRC RAI / review precedent",
+    "deployment_layers": [
+      "Licensing / NRC"
+    ],
+    "topic_tags": [
+      "RAI",
+      "application documents",
+      "safety review"
+    ],
+    "companies_relevant": [
+      "NuScale"
+    ],
+    "claim_types_relevant": [
+      "licensing_claim",
+      "NRC_engagement_claim"
+    ],
+    "source_summary": "NRC documents for NuScale application review including RAIs and evaluations.",
+    "what_it_establishes": "Serious licensing reviews leave detailed public document trails.",
+    "what_it_does_not_establish": "Does not prove any new project using that design is financeable.",
+    "why_it_matters": "Useful benchmark for evidence depth.",
+    "evidence_strength": "strong",
+    "date_or_status": "NRC document set"
+  },
+  {
+    "id": "kairos-hermes-cp",
+    "title": "Kairos Hermes construction permit",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/reactors/non-power/new-facility-licensing/hermes-kairos",
+    "source_type": "public benchmark",
+    "deployment_layers": [
+      "Licensing / NRC",
+      "Fuel supply / HALEU"
+    ],
+    "topic_tags": [
+      "Kairos",
+      "Hermes",
+      "construction permit",
+      "TRISO"
+    ],
+    "companies_relevant": [
+      "Kairos"
+    ],
+    "claim_types_relevant": [
+      "licensing_claim",
+      "HALEU_claim",
+      "deployment_timeline_claim"
+    ],
+    "source_summary": "NRC issued a construction permit for Kairos Hermes test reactor.",
+    "what_it_establishes": "Shows public permit precedent for an advanced test reactor.",
+    "what_it_does_not_establish": "Does not establish commercial power deployment, customer offtake, or campus-scale economics.",
+    "why_it_matters": "Important benchmark, with scope limitations.",
+    "evidence_strength": "strong",
+    "date_or_status": "Construction permit issued Dec. 14, 2023"
+  },
+  {
+    "id": "terrapower-kemmerer-cpa",
+    "title": "TerraPower Natrium / Kemmerer NRC materials",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/applicant-projects/terrapower",
+    "source_type": "public benchmark",
+    "deployment_layers": [
+      "Licensing / NRC",
+      "Fuel supply / HALEU",
+      "Financing"
+    ],
+    "topic_tags": [
+      "TerraPower",
+      "Natrium",
+      "Kemmerer",
+      "ARDP"
+    ],
+    "companies_relevant": [
+      "TerraPower"
+    ],
+    "claim_types_relevant": [
+      "licensing_claim",
+      "HALEU_claim",
+      "deployment_timeline_claim",
+      "financing_claim"
+    ],
+    "source_summary": "NRC public materials for Kemmerer construction permit application.",
+    "what_it_establishes": "A public application record and review schedule can be inspected.",
+    "what_it_does_not_establish": "Does not resolve fuel availability, cost, construction, or customer risks.",
+    "why_it_matters": "Benchmark for what public regulatory maturity looks like.",
+    "evidence_strength": "strong",
+    "date_or_status": "Application tendered March 28, 2024"
+  },
+  {
+    "id": "triso-x-fuel-fab",
+    "title": "TRISO-X fuel fabrication review / RAIs",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/info-finder/fc/triso-x.html",
+    "source_type": "fuel fabrication",
+    "deployment_layers": [
+      "Fuel fabrication",
+      "Transportation / safeguards"
+    ],
+    "topic_tags": [
+      "TRISO-X",
+      "fuel fabrication",
+      "RAI",
+      "safeguards"
+    ],
+    "companies_relevant": [
+      "TRISO-X",
+      "X-energy"
+    ],
+    "claim_types_relevant": [
+      "fuel_cycle_claim",
+      "HALEU_claim",
+      "licensing_claim"
+    ],
+    "source_summary": "NRC page for TRISO-X fuel fabrication facility licensing application.",
+    "what_it_establishes": "Fuel fabrication has its own licensing, RAI, safeguards, and facility execution path.",
+    "what_it_does_not_establish": "Does not prove reactor deployment demand or facility capacity on a specific schedule.",
+    "why_it_matters": "Fabrication is a separate bottleneck from reactor licensing.",
+    "evidence_strength": "strong",
+    "date_or_status": "Facility status: Licensing Application"
+  },
+  {
+    "id": "nrc-fuel-fab-page",
+    "title": "NRC fuel fabrication facilities page",
+    "organization": "NRC",
+    "source_url": "https://www.nrc.gov/materials/fuel-cycle-fac/fuel-fab",
+    "source_type": "fuel fabrication",
+    "deployment_layers": [
+      "Fuel fabrication",
+      "Transportation / safeguards"
+    ],
+    "topic_tags": [
+      "fuel fabrication",
+      "Category II",
+      "HALEU"
+    ],
+    "companies_relevant": [
+      "TRISO-X",
+      "Centrus",
+      "General Matter"
+    ],
+    "claim_types_relevant": [
+      "fuel_cycle_claim",
+      "HALEU_claim"
+    ],
+    "source_summary": "NRC overview of regulated fuel fabrication facilities and categories.",
+    "what_it_establishes": "Fuel fabrication is independently regulated and can involve Category II requirements.",
+    "what_it_does_not_establish": "Does not establish a specific supplier has available qualified capacity.",
+    "why_it_matters": "Supports diligence on fabrication route and safeguards.",
+    "evidence_strength": "moderate",
+    "date_or_status": "NRC facility overview"
+  },
+  {
+    "id": "palisades-restart",
+    "title": "Palisades restart public precedent",
+    "organization": "DOE/NRC",
+    "source_url": "https://www.energy.gov/lpo/articles/doe-lpo-announces-conditional-commitment-palisades-nuclear-plant-restart",
+    "source_type": "DOE financing",
+    "deployment_layers": [
+      "Financing",
+      "Licensing / NRC",
+      "Operations / waste"
+    ],
+    "topic_tags": [
+      "Palisades",
+      "restart",
+      "DOE LPO",
+      "policy"
+    ],
+    "companies_relevant": [
+      "public benchmark"
+    ],
+    "claim_types_relevant": [
+      "financing_claim",
+      "licensing_claim"
+    ],
+    "source_summary": "Public DOE LPO materials around Palisades restart financing.",
+    "what_it_establishes": "Government financing can support nuclear restart economics/policy goals.",
+    "what_it_does_not_establish": "Restart precedent is not the same as new-build SMR or data center campus delivery.",
+    "why_it_matters": "Useful financing/policy benchmark with limited transferability.",
+    "evidence_strength": "moderate",
+    "date_or_status": "DOE LPO conditional commitment"
+  },
+  {
+    "id": "vogtle-construction",
+    "title": "Vogtle construction / financing precedent",
+    "organization": "DOE",
+    "source_url": "https://www.energy.gov/lpo/vogtle",
+    "source_type": "EPC / construction",
+    "deployment_layers": [
+      "EPC / construction",
+      "Financing"
+    ],
+    "topic_tags": [
+      "Vogtle",
+      "construction",
+      "loan guarantee",
+      "cost overrun"
+    ],
+    "companies_relevant": [
+      "public benchmark",
+      "Westinghouse"
+    ],
+    "claim_types_relevant": [
+      "EPC_construction_claim",
+      "financing_claim"
+    ],
+    "source_summary": "DOE LPO page on Vogtle loan guarantees and large nuclear construction.",
+    "what_it_establishes": "Large nuclear construction can require major financing support and long execution.",
+    "what_it_does_not_establish": "Does not prove advanced reactor modular construction will be easier or financeable.",
+    "why_it_matters": "Keeps construction and financing risk visible.",
+    "evidence_strength": "contextual",
+    "date_or_status": "DOE LPO project page"
+  },
+  {
+    "id": "doe-lpo-application",
+    "title": "DOE LPO application process",
+    "organization": "DOE LPO",
+    "source_url": "https://www.energy.gov/lpo/application-process",
+    "source_type": "DOE financing",
+    "deployment_layers": [
+      "Financing"
+    ],
+    "topic_tags": [
+      "DOE LPO",
+      "loan guarantee",
+      "application"
+    ],
+    "companies_relevant": [
+      "reactor_developer",
+      "data_center_power_infrastructure"
+    ],
+    "claim_types_relevant": [
+      "financing_claim"
+    ],
+    "source_summary": "DOE LPO application process information.",
+    "what_it_establishes": "Federal debt support has process, eligibility, diligence, and conditions.",
+    "what_it_does_not_establish": "Does not prove any company has applied, been approved, or can close financing.",
+    "why_it_matters": "Useful for testing financing claims.",
+    "evidence_strength": "contextual",
+    "date_or_status": "DOE LPO process"
+  },
+  {
+    "id": "title-17-clean-energy",
+    "title": "Title 17 clean energy financing",
+    "organization": "DOE LPO",
+    "source_url": "https://www.energy.gov/lpo/title-17-clean-energy-financing",
+    "source_type": "DOE financing",
+    "deployment_layers": [
+      "Financing"
+    ],
+    "topic_tags": [
+      "Title 17",
+      "loan guarantee",
+      "clean energy"
+    ],
+    "companies_relevant": [
+      "reactor_developer",
+      "data_center_power_infrastructure"
+    ],
+    "claim_types_relevant": [
+      "financing_claim"
+    ],
+    "source_summary": "DOE LPO Title 17 financing overview.",
+    "what_it_establishes": "Nuclear and related clean-energy projects may fit federal financing pathways.",
+    "what_it_does_not_establish": "Does not establish committed project capital.",
+    "why_it_matters": "Helps separate financing eligibility from financing evidence.",
+    "evidence_strength": "contextual",
+    "date_or_status": "DOE LPO program page"
+  },
+  {
+    "id": "ferc-generator-interconnection",
+    "title": "FERC generator interconnection reform/orders",
+    "organization": "FERC",
+    "source_url": "https://www.ferc.gov/industries-data/electric/electric-transmission/generator-interconnection",
+    "source_type": "interconnection / power delivery",
+    "deployment_layers": [
+      "Interconnection / power delivery"
+    ],
+    "topic_tags": [
+      "interconnection",
+      "queue",
+      "transmission",
+      "large load"
+    ],
+    "companies_relevant": [
+      "data_center_power_infrastructure",
+      "Microsoft",
+      "AWS"
+    ],
+    "claim_types_relevant": [
+      "data_center_power_claim",
+      "behind_the_meter_claim",
+      "site_control_claim"
+    ],
+    "source_summary": "FERC materials on interconnection processes and reforms.",
+    "what_it_establishes": "Interconnection queues/process can be material to power delivery.",
+    "what_it_does_not_establish": "Does not prove a specific site has interconnection rights or islanded authority.",
+    "why_it_matters": "Large-load claims need power-delivery evidence.",
+    "evidence_strength": "contextual",
+    "date_or_status": "FERC public materials"
+  },
+  {
+    "id": "ercot-large-load",
+    "title": "ERCOT large load interconnection context",
+    "organization": "ERCOT",
+    "source_url": "https://www.ercot.com/gridinfo/resource",
+    "source_type": "interconnection / power delivery",
+    "deployment_layers": [
+      "Interconnection / power delivery",
+      "Site / permitting"
+    ],
+    "topic_tags": [
+      "large load",
+      "grid",
+      "interconnection"
+    ],
+    "companies_relevant": [
+      "data_center_power_infrastructure"
+    ],
+    "claim_types_relevant": [
+      "data_center_power_claim",
+      "site_control_claim"
+    ],
+    "source_summary": "Public grid/operator materials relevant to load/resource interconnection context.",
+    "what_it_establishes": "Power delivery depends on grid-region rules and queue realities.",
+    "what_it_does_not_establish": "Does not prove a claimed campus can energize.",
+    "why_it_matters": "Good placeholder for future ISO/RTO source expansion.",
+    "evidence_strength": "contextual",
+    "date_or_status": "Public grid/operator source"
+  },
+  {
+    "id": "company-investor-materials-placeholder",
+    "title": "Public company investor materials / filings",
+    "organization": "Public company",
+    "source_url": "https://www.sec.gov/edgar/search/",
+    "source_type": "company filing",
+    "deployment_layers": [
+      "Financing",
+      "Offtake / customer",
+      "EPC / construction"
+    ],
+    "topic_tags": [
+      "SEC",
+      "investor materials",
+      "risk factors"
+    ],
+    "companies_relevant": [
+      "Oklo",
+      "NuScale",
+      "Centrus",
+      "Microsoft",
+      "AWS"
+    ],
+    "claim_types_relevant": [
+      "financing_claim",
+      "offtake_claim",
+      "EPC_construction_claim"
+    ],
+    "source_summary": "Public filings/investor materials can disclose risk factors, contracts, liquidity, and commercial status.",
+    "what_it_establishes": "Company documents can support or weaken claimed commercial readiness.",
+    "what_it_does_not_establish": "They may omit confidential contracts, pricing, private NRC feedback, and non-public customer terms.",
+    "why_it_matters": "Use as public-source evidence, not truth serum.",
+    "evidence_strength": "moderate",
+    "date_or_status": "Source-library scaffold"
+  },
+  {
+    "id": "microsoft-nuclear-power-public",
+    "title": "Microsoft nuclear power public sourcing context",
+    "organization": "Microsoft",
+    "source_url": "https://news.microsoft.com/",
+    "source_type": "offtake / commercial",
+    "deployment_layers": [
+      "Offtake / customer",
+      "Interconnection / power delivery"
+    ],
+    "topic_tags": [
+      "Microsoft",
+      "data center",
+      "power buyer",
+      "offtake"
+    ],
+    "companies_relevant": [
+      "Microsoft"
+    ],
+    "claim_types_relevant": [
+      "data_center_power_claim",
+      "offtake_claim",
+      "nuclear_integration_claim"
+    ],
+    "source_summary": "Public corporate materials may describe energy procurement and nuclear interest.",
+    "what_it_establishes": "Can establish public buyer interest or announced strategy.",
+    "what_it_does_not_establish": "Does not prove a specific project PPA, pricing, credit, or deliverability.",
+    "why_it_matters": "Power-buyer claims need contract evidence.",
+    "evidence_strength": "weak",
+    "date_or_status": "Public company materials placeholder"
+  },
+  {
+    "id": "aws-nuclear-power-public",
+    "title": "AWS nuclear/data center power public sourcing context",
+    "organization": "AWS",
+    "source_url": "https://aws.amazon.com/news/",
+    "source_type": "offtake / commercial",
+    "deployment_layers": [
+      "Offtake / customer",
+      "Interconnection / power delivery"
+    ],
+    "topic_tags": [
+      "AWS",
+      "data center",
+      "power buyer",
+      "offtake"
+    ],
+    "companies_relevant": [
+      "AWS",
+      "Amazon"
+    ],
+    "claim_types_relevant": [
+      "data_center_power_claim",
+      "offtake_claim",
+      "nuclear_integration_claim"
+    ],
+    "source_summary": "Public AWS/Amazon materials may describe energy procurement and nuclear-related interest.",
+    "what_it_establishes": "Can establish public buyer interest or announced strategy.",
+    "what_it_does_not_establish": "Does not prove a specific project PPA, pricing, credit, or deliverability.",
+    "why_it_matters": "Power-buyer claims need contract evidence.",
+    "evidence_strength": "weak",
+    "date_or_status": "Public company materials placeholder"
+  }
+]
