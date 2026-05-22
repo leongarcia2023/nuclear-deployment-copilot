@@ -28,7 +28,7 @@ export function icMemoMarkdown(memo: FirstPassIcMemo, publicEvidenceNotes: Publi
     ? list(layerFindings.filter((item) => item.status === "private diligence required" || item.status === "cannot know from public docs").map((item) => `${item.layer}: ${item.requiredEvidence}`))
     : "- Commercial, EPC, financing, and confidential counterparty materials may require permissioned diligence.";
   const documentCoverageNotes = documentCoverage.length
-    ? list(documentCoverage.map((item) => `${item.layer}: ${item.status} - ${item.matchedCount} matched manifest docs${item.topDocuments.length ? `; top docs: ${item.topDocuments.map((doc) => `#${doc.rank} ${doc.title}`).join(" | ")}` : ""}`))
+    ? list(documentCoverage.map((item) => `${item.layer}: Corpus coverage: ${item.corpusCoverage}; Target-specific support: ${item.targetSpecificSupport}. ${item.conclusion}${item.topDocuments.length ? ` Top docs: ${item.topDocuments.map((doc) => `#${doc.rank} ${doc.title}`).join(" | ")}` : ""}`))
     : "- No document coverage generated.";
   const relevantDocumentNotes = relevantDocuments.length
     ? list(relevantDocuments.map((document) => `#${document.rank} ${document.title} (${document.documentFamily}, ${document.benchmarkValue}) - ${document.whyItMatters}`))

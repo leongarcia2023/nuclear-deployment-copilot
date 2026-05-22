@@ -291,7 +291,9 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
   const relevantDocuments = documentMatch.relevantDocuments.map(toMemoRelevantDocument);
   const documentCoverage = documentMatch.documentCoverage.map((item) => ({
     layer: item.layer,
-    status: item.status,
+    corpusCoverage: item.corpusCoverage,
+    targetSpecificSupport: item.targetSpecificSupport,
+    conclusion: item.conclusion,
     matchedCount: item.matchedCount,
     topDocuments: item.topDocuments.map(toMemoRelevantDocument),
   }));
