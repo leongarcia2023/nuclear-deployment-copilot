@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated corpus artifacts
+corpus/raw/
+corpus/text/
+data/download_report.json
+data/extraction_report.json
+data/chunk_report.json
+data/corpus_audit_report.json
+data/document_validation_report.json
+data/planned_ingest_report.json

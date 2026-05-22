@@ -1,12 +1,13 @@
 import type { EvidenceStatus, ReadinessBand } from "@/types/core";
 
 const statusLabels: Record<EvidenceStatus, string> = {
-  public_source_verified: "Public verified",
+  public_source_verified: "Public source",
+  sanitized_user_note: "User note",
   uploaded_document_claimed: "Uploaded claim",
   internal_source_verified: "Internal verified",
   inferred: "Inferred",
   missing: "Missing",
-  unknowable_from_public_docs: "Not public",
+  unknowable_from_public_docs: "Cannot know from public docs",
 };
 
 const bandLabels: Record<ReadinessBand, string> = {

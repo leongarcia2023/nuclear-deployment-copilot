@@ -2,7 +2,7 @@
   "id": "aurora-advanced-power-haleu-readiness",
   "projectName": "Aurora Advanced Power Demonstration Unit 1",
   "companyName": "Aurora Advanced Power",
-  "uploadedMemoTitle": "Aurora AAP-80 Project Overview for Strategic Fuel Partners",
+  "uploadedMemoTitle": "Sanitized Aurora AAP-80 Public-Source Diligence Notes",
   "userModeDefault": "fuel-cycle supplier",
   "oneLineAssessment": {
     "value": "A plausible medium-term HALEU customer, but not yet a bankable fuel reservation counterparty until site control, licensing schedule, offtake structure, and first-core assay/specification evidence are produced.",
@@ -16,12 +16,12 @@
   "profileHeader": {
     "reactorType": {
       "value": "80 MWe sodium-cooled fast reactor concept",
-      "status": "uploaded_document_claimed",
+      "status": "sanitized_user_note",
       "evidenceIds": ["src-001"]
     },
     "fuelNeed": {
       "value": "HALEU metal fuel, target 12-16 metric tons for first core plus reload qualification lots",
-      "status": "uploaded_document_claimed",
+      "status": "sanitized_user_note",
       "evidenceIds": ["src-001"]
     },
     "firstFuelDate": {
@@ -31,7 +31,7 @@
     },
     "deploymentSite": {
       "value": "Western U.S. industrial host site under non-binding site evaluation",
-      "status": "uploaded_document_claimed",
+      "status": "sanitized_user_note",
       "evidenceIds": ["src-001"]
     },
     "commercialStage": {
@@ -47,7 +47,7 @@
       "score": 72,
       "maxScore": 100,
       "band": "conditional",
-      "status": "uploaded_document_claimed",
+      "status": "sanitized_user_note",
       "rationale": "Memo includes assay range, form factor, and first-core estimate, but lacks signed fuel design authority, qualification basis, or supplier-facing specification package.",
       "evidenceIds": ["src-001"]
     },
@@ -67,7 +67,7 @@
       "score": 51,
       "maxScore": 100,
       "band": "speculative",
-      "status": "uploaded_document_claimed",
+      "status": "sanitized_user_note",
       "rationale": "A host site is described, but site control, interconnection, end-customer offtake, and state-level incentives are not evidenced in public documents.",
       "evidenceIds": ["src-001", "src-006"]
     },
@@ -118,7 +118,7 @@
       "dependency": "Metal fuel fabrication capacity",
       "needBy": "2029 qualification lots",
       "exposure": "critical",
-      "status": "uploaded_document_claimed",
+      "status": "sanitized_user_note",
       "currentEvidence": "Memo names a preferred fabrication partner, but no executable agreement is provided.",
       "proofNeeded": "Signed fabrication MOU or services agreement with qualification schedule, safeguards scope, and capacity allocation.",
       "evidenceIds": ["src-001"]
@@ -146,7 +146,7 @@
     {
       "id": "eq-fuel-demand",
       "claim": "First-core HALEU demand is material to suppliers.",
-      "status": "uploaded_document_claimed",
+      "status": "sanitized_user_note",
       "sourceIds": ["src-001"],
       "quality": "thin",
       "diligenceImplication": "Require technical appendix and fuel design authority confirmation."
@@ -172,6 +172,10 @@
     {
       "id": "unk-001",
       "unknown": "Whether Aurora has budget authority to sign a fuel reservation before licensing certainty.",
+      "whyItMatters": "A supplier needs to know whether stated demand can become a binding reservation rather than an option on scarce capacity.",
+      "whoShouldAnswer": "CFO or board-authorized commercial lead",
+      "requiredEvidence": "Board-approved procurement authority, credit support, cancellation terms, and financing condition precedent.",
+      "evidenceTier": "missing",
       "status": "missing",
       "severity": "high",
       "owner": "Commercial diligence",
@@ -180,7 +184,11 @@
     {
       "id": "unk-002",
       "unknown": "Whether the claimed host site can accept nuclear construction and security envelope on the proposed schedule.",
-      "status": "uploaded_document_claimed",
+      "whyItMatters": "Fuel demand timing is not credible if the site, permits, security envelope, and host-customer posture are not real.",
+      "whoShouldAnswer": "Project development lead and host-site sponsor",
+      "requiredEvidence": "Site control, permitting matrix, community engagement record, interconnection status, and host-customer authorization.",
+      "evidenceTier": "sanitized_user_note",
+      "status": "sanitized_user_note",
       "severity": "high",
       "owner": "Site diligence",
       "nextStep": "Ask for site control, permitting matrix, community engagement record, and interconnection status."
@@ -188,14 +196,22 @@
     {
       "id": "unk-003",
       "unknown": "Final enrichment assay, chemical form, and acceptance criteria for first reload batch.",
+      "whyItMatters": "Fuel-cycle suppliers cannot underwrite production, conversion, deconversion, or fabrication interfaces from generic HALEU demand.",
+      "whoShouldAnswer": "Fuel design authority and fabrication partner",
+      "requiredEvidence": "Permissioned fuel specification package, interface control document, and qualification schedule.",
+      "evidenceTier": "unknowable_from_public_docs",
       "status": "unknowable_from_public_docs",
       "severity": "medium",
       "owner": "Technical interface",
-      "nextStep": "Set up confidential fuel specification review with export-control screening."
+      "nextStep": "Set up a sanitized fuel specification review with export-control screening before any confidential exchange."
     },
     {
       "id": "unk-004",
       "unknown": "Whether alternate HALEU supply can cover delay in domestic enrichment ramp.",
+      "whyItMatters": "Supply-chain fragility can turn a credible project into an inventory or delivery-risk problem.",
+      "whoShouldAnswer": "Fuel procurement lead and supplier commercial team",
+      "requiredEvidence": "Assay-specific delay cases, substitution constraints, and public or permissioned supplier capacity assumptions.",
+      "evidenceTier": "inferred",
       "status": "inferred",
       "severity": "medium",
       "owner": "Supply planning",
@@ -217,7 +233,7 @@
       "whyItMatters": "Supplier risk changes materially if the developer cannot close technical interfaces.",
       "expectedEvidence": "Fuel design control document, fabrication partner agreement, and qualification plan.",
       "priority": "must-answer",
-      "status": "uploaded_document_claimed"
+      "status": "sanitized_user_note"
     },
     {
       "id": "q-003",
@@ -235,6 +251,17 @@
       "priority": "important",
       "status": "unknowable_from_public_docs"
     }
+  ],
+  "cannotKnowFromPublicDocs": [
+    "Binding fuel supply agreements",
+    "Private pricing terms",
+    "Real customer/offtake status",
+    "EPC bid quality",
+    "Internal NRC feedback",
+    "Private supplier capacity",
+    "Management dysfunction",
+    "Non-public government commitments",
+    "Confidential MOU terms"
   ],
   "recommendedAction": {
     "decision": "advance with conditions",
@@ -270,11 +297,11 @@
   "sources": [
     {
       "id": "src-001",
-      "title": "Aurora AAP-80 Project Overview for Strategic Fuel Partners",
-      "sourceType": "uploaded_document_claimed",
-      "publisher": "Uploaded memo",
+      "title": "Sanitized Aurora AAP-80 project notes",
+      "sourceType": "sanitized_user_note",
+      "publisher": "User-provided sanitized notes",
       "date": "2026-04-24",
-      "excerpt": "Claims first-core HALEU demand, target commercial operation window, preferred fabrication pathway, and non-binding host site evaluation.",
+      "excerpt": "Non-confidential notes claim first-core HALEU demand, target commercial operation window, preferred fabrication pathway, and non-binding host site evaluation.",
       "confidence": "medium"
     },
     {
@@ -322,8 +349,181 @@
       "sourceType": "inferred",
       "publisher": "Copilot synthesis",
       "date": "2026-05-17",
-      "excerpt": "Compares uploaded schedule claims against public evidence gaps and flags missing proof points.",
+      "excerpt": "Compares sanitized schedule claims against public evidence gaps and flags missing proof points.",
       "confidence": "low"
     }
-  ]
+  ],
+  "claimToIcMemo": {
+    "verdict": "Diligence Required",
+    "confidence": "Medium",
+    "oneLineJudgment": "Diligence required. Treat as potentially interesting but not yet bankable; fuel availability, licensing maturity, EPC responsibility, binding offtake evidence, and timeline compatibility remain unresolved.",
+    "recommendedNextAction": "Take the meeting only if the counterparty can provide a public-source pack or sanitized diligence room index covering fuel, licensing, offtake, EPC, and site milestones.",
+    "unsupportedClaims": [
+      {
+        "id": "claim-001",
+        "claim": "300 MW behind-the-meter nuclear-powered data center campus can be delivered by 2031.",
+        "evidenceTier": "inferred",
+        "whyItMatters": "The timeline drives valuation, customer urgency, and whether near-term development capital is justified.",
+        "requiredEvidence": "Integrated schedule tied to NRC pathway, site control, EPC scope, fuel delivery, financing, and offtake milestones."
+      },
+      {
+        "id": "claim-002",
+        "claim": "HALEU fuel will be available on the claimed schedule.",
+        "evidenceTier": "missing",
+        "whyItMatters": "Fuel availability can become the gating item even if the reactor and customer story are credible.",
+        "requiredEvidence": "Assay-specific fuel supply plan, fabrication route, reservation authority, and contingency case."
+      },
+      {
+        "id": "claim-003",
+        "claim": "Long-term data center offtake is real and financeable.",
+        "evidenceTier": "sanitized_user_note",
+        "whyItMatters": "A non-binding customer narrative does not support project finance or capacity reservation.",
+        "requiredEvidence": "Term sheet status, credit support, pricing framework, curtailment terms, and customer approval path."
+      },
+      {
+        "id": "claim-004",
+        "claim": "NRC engagement is advanced enough to support the 2031 date.",
+        "evidenceTier": "public_source_verified",
+        "whyItMatters": "Regulatory maturity is the difference between a plausible development story and an investable schedule.",
+        "requiredEvidence": "Public docket record, pre-application artifacts, licensing strategy, and milestone map."
+      },
+      {
+        "id": "claim-005",
+        "claim": "Strategic fuel-cycle and EPC partnerships will be signed soon.",
+        "evidenceTier": "inferred",
+        "whyItMatters": "Partnership expectations can mask missing execution responsibility and cost risk.",
+        "requiredEvidence": "Signed or near-final LOIs, scope matrix, risk allocation, cancellation terms, and board authorization."
+      }
+    ],
+    "timelineCredibility": {
+      "title": "Timeline credibility",
+      "assessment": "2031 is possible only under a very compressed path. Public evidence does not yet connect licensing, site, fuel, EPC, offtake, and financing milestones into an executable calendar.",
+      "evidenceTier": "inferred"
+    },
+    "fuelCycleReadiness": {
+      "title": "Fuel-cycle readiness",
+      "assessment": "The HALEU claim is strategically important but not bankable without assay, form, fabrication, reservation authority, and delivery-window evidence.",
+      "evidenceTier": "missing"
+    },
+    "regulatoryMaturity": {
+      "title": "Regulatory / NRC status",
+      "assessment": "Public regulatory engagement is a positive signal, but it is not equivalent to a mature licensing path capable of supporting a 2031 deployment date.",
+      "evidenceTier": "public_source_verified"
+    },
+    "commercialOfftakeCredibility": {
+      "title": "Commercial / offtake credibility",
+      "assessment": "Data center offtake is the right demand narrative, but financeability depends on binding terms, credit, deliverability, pricing, and curtailment obligations that are not public.",
+      "evidenceTier": "unknowable_from_public_docs"
+    },
+    "whatMustBeTrue": [
+      {
+        "id": "mbt-001",
+        "statement": "NRC path supports the claimed deployment date.",
+        "status": "plausible",
+        "whyItMatters": "Without a credible licensing path, the 2031 campus date is a commercial aspiration rather than an underwriting case.",
+        "requiredEvidence": "Public docket artifacts, licensing milestone map, safety case readiness, and regulatory engagement record."
+      },
+      {
+        "id": "mbt-002",
+        "statement": "Fuel supply and fabrication are available on time.",
+        "status": "unsupported",
+        "whyItMatters": "HALEU availability and fabrication capacity can gate deployment even when demand is real.",
+        "requiredEvidence": "Fuel reservation term sheet, assay-specific supply plan, fabrication partner scope, and contingency plan."
+      },
+      {
+        "id": "mbt-003",
+        "statement": "The offtake/customer agreement is binding or financeable.",
+        "status": "private diligence required",
+        "whyItMatters": "Project finance depends on enforceable customer commitments, not stated demand for data center power.",
+        "requiredEvidence": "Signed term sheet or contract, credit support, pricing framework, and customer approval evidence."
+      },
+      {
+        "id": "mbt-004",
+        "statement": "EPC/construction risk is wrapped or otherwise credible.",
+        "status": "unsupported",
+        "whyItMatters": "Construction responsibility and cost overrun exposure determine whether the project can be financed.",
+        "requiredEvidence": "EPC scope matrix, contractor credentials, risk allocation, cost estimate basis, and schedule contingency."
+      },
+      {
+        "id": "mbt-005",
+        "statement": "Site, permitting, and political risks are manageable.",
+        "status": "unsupported",
+        "whyItMatters": "A behind-the-meter campus still needs site control, interconnection, permits, security, and local acceptance.",
+        "requiredEvidence": "Site control, permit matrix, interconnection status, local stakeholder record, and security envelope plan."
+      },
+      {
+        "id": "mbt-006",
+        "statement": "Financing assumptions match the project's maturity.",
+        "status": "private diligence required",
+        "whyItMatters": "Capital should not be priced as infrastructure if the project is still venture-stage development risk.",
+        "requiredEvidence": "Sources and uses, milestone financing plan, customer credit support, grants, and downside funding case."
+      }
+    ],
+    "relevantPrecedents": [
+      {
+        "companyOrProject": "NuScale / VOYGR",
+        "relevance": "NRC design certification can coexist with commercial project cancellation risk."
+      },
+      {
+        "companyOrProject": "Kairos / Hermes",
+        "relevance": "Test reactor licensing path provides a regulatory precedent, but not direct evidence for commercial campus deployment."
+      },
+      {
+        "companyOrProject": "TerraPower / Natrium",
+        "relevance": "DOE-backed advanced reactor demonstration highlights the importance of fuel-cycle dependencies."
+      },
+      {
+        "companyOrProject": "Palisades restart",
+        "relevance": "Restart precedent is relevant to regulatory and financing confidence, but differs materially from new-build SMR risk."
+      }
+    ],
+    "firstPassIcMemo": {
+      "target": "SMR + data center power campus claim",
+      "decision": "Is this worth deeper diligence?",
+      "verdict": "Diligence Required",
+      "confidence": "Medium",
+      "situation": "A developer claims it can deliver a 300 MW behind-the-meter nuclear-powered data center campus by 2031 using advanced reactors, HALEU fuel, and long-term data center offtake.",
+      "thesis": "The opportunity is directionally aligned with data center load growth and strategic nuclear demand, but the public evidence does not yet support treating the timeline or fuel demand as bankable.",
+      "whatIsEvidenced": [
+        "Public regulatory engagement can be a positive signal when tied to docket artifacts.",
+        "HALEU scarcity and advanced-reactor fuel-cycle constraints are real diligence issues.",
+        "Data center power demand creates a plausible customer pull narrative."
+      ],
+      "whatIsNotYetEvidenced": [
+        "Binding fuel supply or fabrication pathway.",
+        "Financeable data center offtake.",
+        "EPC responsibility, cost wrap, or construction schedule basis.",
+        "Site control and permitting path adequate for 2031.",
+        "NRC maturity sufficient for the claimed deployment date."
+      ],
+      "majorKillRisks": [
+        "Fuel availability slips beyond the claimed commercial date.",
+        "Regulatory timeline does not support deployment by 2031.",
+        "Offtake is non-binding or not financeable.",
+        "EPC scope is not credible or exposes uncapped construction risk.",
+        "Project is priced as infrastructure despite venture-stage execution risk."
+      ],
+      "whatMustBeTrue": [
+        "NRC path supports the claimed deployment date.",
+        "Fuel supply and fabrication are available on time.",
+        "The offtake/customer agreement is binding or financeable.",
+        "EPC/construction risk is wrapped or otherwise credible.",
+        "Site, permitting, and political risks are manageable.",
+        "Financing assumptions match the project's maturity."
+      ],
+      "diligenceQuestions": [
+        "What public NRC artifacts support the claimed 2031 deployment path?",
+        "What HALEU assay, form, quantity, supplier, and fabrication route are assumed?",
+        "Is the data center offtake binding, exclusive, credit-supported, and financeable?",
+        "Who owns EPC scope, cost overrun risk, schedule liquidated damages, and commissioning risk?",
+        "What site control, interconnection, local permitting, and security milestones are complete?"
+      ],
+      "recommendedNextStep": "Proceed to a focused diligence call only if the company can provide a sanitized source pack and permissioned evidence index for fuel, NRC, offtake, EPC, site, and financing assumptions.",
+      "sourcesAndEvidenceNotes": [
+        "Public sources can support broad regulatory and market context.",
+        "Sanitized user notes can frame claims but should not be treated as proof.",
+        "Private contracts, pricing, internal NRC feedback, and confidential MOU terms cannot be verified from public documents."
+      ]
+    }
+  }
 }

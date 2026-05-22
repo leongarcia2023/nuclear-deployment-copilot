@@ -7,7 +7,12 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docs:validate": "node --import tsx scripts/validate-document-manifest.ts",
+    "docs:download:top25": "node --import tsx scripts/download-top-documents.ts --limit 25",
+    "docs:extract": "node --import tsx scripts/extract-document-text.ts",
+    "docs:chunk": "node --import tsx scripts/chunk-documents.ts",
+    "docs:audit": "node --import tsx scripts/audit-document-corpus.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,11 +22,16 @@
     "@types/node": "^25.8.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "cheerio": "^1.2.0",
     "lucide-react": "^1.16.0",
     "next": "^16.2.6",
+    "pdf-parse": "^2.4.5",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.22.3"
   }
 }

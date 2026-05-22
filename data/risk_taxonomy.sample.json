@@ -17,7 +17,7 @@
       "description": "The project timeline depends on a site that is not independently verified.",
       "negativeSignals": ["Non-binding host language", "No permit matrix", "No interconnection status"],
       "proofSignals": ["Site control document", "Host customer agreement", "State/local permit map", "Security envelope plan"],
-      "defaultStatus": "uploaded_document_claimed"
+      "defaultStatus": "sanitized_user_note"
     },
     {
       "id": "risk-finance",

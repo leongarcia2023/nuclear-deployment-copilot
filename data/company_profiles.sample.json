@@ -1,0 +1,189 @@
+[
+  {
+    "name": "Shuffle Infrastructure",
+    "aliases": ["Shuffle", "Shuffle Infrastructure"],
+    "category": "data_center_power_infrastructure",
+    "deployment_relevance": ["behind-the-meter data center power campuses", "large-load power procurement", "phased power strategy", "potential long-term nuclear baseload integration"],
+    "default_user_types": ["Investor", "Data center power buyer", "Strategic partner / incumbent"],
+    "likely_claim_types": ["data_center_power_claim", "behind_the_meter_claim", "offtake_claim", "site_control_claim", "bridge_power_claim", "nuclear_integration_claim", "timeline_claim"],
+    "key_bottlenecks": ["site control", "near-term power availability", "customer/offtake credibility", "bridge power economics", "nuclear vendor selection", "NRC licensing responsibility", "EPC/construction execution", "interconnection or islanded operation assumptions", "transition from bridge power to nuclear baseload"],
+    "default_diligence_questions": ["Which sites are controlled and what rights are secured?", "What power source supports initial energization?", "Is the customer/offtake agreement binding or preliminary?", "Is nuclear in the base case or upside case?", "Which reactor vendor or technology would supply nuclear baseload?", "Who owns NRC licensing and construction risk?", "What happens if nuclear slips 5-10 years?", "What evidence supports the claimed MW scale and timeline?"],
+    "what_to_diligence_next": "Validate site control, initial power supply, customer/offtake commitments, bridge-power economics, nuclear vendor path, and who owns licensing/construction risk."
+  },
+  {
+    "name": "Oklo",
+    "aliases": ["Oklo", "Oklo Inc", "Aurora"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["advanced reactor deployment", "microreactor/powerhouse projects", "potential HALEU demand"],
+    "default_user_types": ["Investor", "Fuel-cycle supplier", "Data center power buyer"],
+    "likely_claim_types": ["deployment_timeline_claim", "licensing_claim", "NRC_engagement_claim", "HALEU_claim", "offtake_claim"],
+    "key_bottlenecks": ["licensing maturity", "fuel availability", "site readiness", "customer contracts", "first-of-a-kind execution"],
+    "default_diligence_questions": ["Which NRC milestones are complete?", "What fuel supply path supports first core?", "Which sites are committed?", "Which customers are binding?", "What milestone would move the deployment date?"],
+    "what_to_diligence_next": "Validate licensing path, fuel supply, customer commitments, and first project execution plan."
+  },
+  {
+    "name": "Kairos",
+    "aliases": ["Kairos", "Kairos Power", "Hermes"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["test reactor precedent", "advanced reactor licensing", "TRISO/HALEU fuel path"],
+    "default_user_types": ["Investor", "Strategic partner / incumbent", "Fuel-cycle supplier"],
+    "likely_claim_types": ["licensing_claim", "NRC_engagement_claim", "HALEU_claim", "deployment_timeline_claim"],
+    "key_bottlenecks": ["test-to-commercial translation", "fuel fabrication", "licensing scope", "supply chain", "construction execution"],
+    "default_diligence_questions": ["How does Hermes de-risk the commercial design?", "What fuel fabrication path is committed?", "What licensing step gates commercial deployment?", "What construction lessons transfer?"],
+    "what_to_diligence_next": "Separate test reactor evidence from commercial deployment evidence."
+  },
+  {
+    "name": "TerraPower",
+    "aliases": ["TerraPower", "Natrium", "Kemmerer"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["DOE-backed advanced reactor demonstration", "sodium fast reactor", "HALEU/fuel dependency"],
+    "default_user_types": ["Investor", "Fuel-cycle supplier", "Strategic partner / incumbent"],
+    "likely_claim_types": ["licensing_claim", "HALEU_claim", "deployment_timeline_claim", "EPC_construction_claim", "financing_claim"],
+    "key_bottlenecks": ["NRC review", "fuel availability", "demonstration execution", "construction cost", "schedule integration"],
+    "default_diligence_questions": ["What is the current NRC review schedule?", "How is HALEU secured?", "What construction scope is fixed?", "What DOE milestones matter?"],
+    "what_to_diligence_next": "Validate NRC review status, fuel path, DOE milestone obligations, and construction risk allocation."
+  },
+  {
+    "name": "X-energy",
+    "aliases": ["X-energy", "X energy", "Xe-100", "TRISO-X"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["HTGR deployment", "TRISO fuel fabrication", "industrial/customer-backed projects"],
+    "default_user_types": ["Investor", "Fuel-cycle supplier", "Strategic partner / incumbent"],
+    "likely_claim_types": ["fuel_cycle_claim", "HALEU_claim", "offtake_claim", "deployment_timeline_claim", "EPC_construction_claim"],
+    "key_bottlenecks": ["TRISO fuel fabrication", "customer commitment", "NRC licensing", "construction execution"],
+    "default_diligence_questions": ["What is the TRISO-X licensing/fabrication status?", "Which customers are binding?", "What NRC application path is active?", "Who owns EPC risk?"],
+    "what_to_diligence_next": "Diligence the link between reactor deployment claims and TRISO-X fuel facility readiness."
+  },
+  {
+    "name": "NuScale",
+    "aliases": ["NuScale", "VOYGR", "NuScale Power"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["SMR design certification precedent", "commercial project cancellation precedent"],
+    "default_user_types": ["Investor", "Strategic partner / incumbent", "Data center power buyer"],
+    "likely_claim_types": ["licensing_claim", "deployment_timeline_claim", "offtake_claim", "financing_claim"],
+    "key_bottlenecks": ["customer economics", "project financing", "EPC execution", "commercial demand"],
+    "default_diligence_questions": ["What customer commitment is binding?", "How does design certification translate to project bankability?", "What changed since prior project cancellations?", "Who owns cost overrun risk?"],
+    "what_to_diligence_next": "Separate certified design evidence from project-specific customer, cost, and construction evidence."
+  },
+  {
+    "name": "Centrus",
+    "aliases": ["Centrus", "Centrus Energy", "American Centrifuge"],
+    "category": "fuel_cycle_supplier",
+    "deployment_relevance": ["HALEU production", "fuel-cycle supply", "advanced reactor dependency"],
+    "default_user_types": ["Investor", "Fuel-cycle supplier", "Strategic partner / incumbent"],
+    "likely_claim_types": ["fuel_cycle_claim", "HALEU_claim", "financing_claim"],
+    "key_bottlenecks": ["capacity scale-up", "DOE support", "customer commitments", "enrichment economics"],
+    "default_diligence_questions": ["What capacity is committed versus optional?", "Which customers are binding?", "What DOE support is in place?", "What schedule supports delivery?"],
+    "what_to_diligence_next": "Validate capacity, customer commitments, government support, and delivery schedule."
+  },
+  {
+    "name": "TRISO-X",
+    "aliases": ["TRISO-X", "TRISO X"],
+    "category": "fuel_fabrication_supplier",
+    "deployment_relevance": ["TRISO fuel fabrication", "HALEU fuel facility licensing", "Xe-100 supply chain"],
+    "default_user_types": ["Fuel-cycle supplier", "Investor", "Strategic partner / incumbent"],
+    "likely_claim_types": ["fuel_cycle_claim", "HALEU_claim", "licensing_claim", "NRC_engagement_claim"],
+    "key_bottlenecks": ["facility licensing", "safeguards", "fabrication qualification", "capacity scale-up"],
+    "default_diligence_questions": ["What NRC RAIs remain open?", "What capacity is licensed and when?", "What qualification evidence exists?", "Which reactor deployments depend on this facility?"],
+    "what_to_diligence_next": "Validate fuel facility licensing, safeguards, qualification, and capacity ramp."
+  },
+  {
+    "name": "General Matter",
+    "aliases": ["General Matter"],
+    "category": "fuel_cycle_supplier",
+    "deployment_relevance": ["fuel-cycle supply", "HALEU market development", "reactor customer diligence"],
+    "default_user_types": ["Fuel-cycle supplier", "Investor"],
+    "likely_claim_types": ["fuel_cycle_claim", "HALEU_claim", "financing_claim"],
+    "key_bottlenecks": ["capacity", "customer credibility", "feedstock", "commercial terms"],
+    "default_diligence_questions": ["Which customer demand is binding?", "What capacity is financeable?", "What feedstock path is secured?", "What delivery windows are committed?"],
+    "what_to_diligence_next": "Validate customer demand, capacity plan, feedstock, and reservation terms."
+  },
+  {
+    "name": "Blue Energy",
+    "aliases": ["Blue Energy"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["SMR project development", "modular construction", "industrial power"],
+    "default_user_types": ["Investor", "Data center power buyer"],
+    "likely_claim_types": ["deployment_timeline_claim", "EPC_construction_claim", "offtake_claim", "site_control_claim"],
+    "key_bottlenecks": ["project execution", "customer contracts", "site readiness", "licensing path"],
+    "default_diligence_questions": ["Which site is controlled?", "Who is the reactor vendor?", "What customer is binding?", "Who owns construction risk?"],
+    "what_to_diligence_next": "Validate project-specific site, customer, vendor, and construction evidence."
+  },
+  {
+    "name": "Last Energy",
+    "aliases": ["Last Energy"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["micro-nuclear project development", "industrial power", "European/US project pipeline"],
+    "default_user_types": ["Investor", "Data center power buyer"],
+    "likely_claim_types": ["deployment_timeline_claim", "offtake_claim", "site_control_claim", "financing_claim"],
+    "key_bottlenecks": ["licensing", "project finance", "customer contracts", "repeatability"],
+    "default_diligence_questions": ["Which projects have binding customers?", "What licensing path applies?", "How is construction financed?", "What repeatability evidence exists?"],
+    "what_to_diligence_next": "Validate the difference between pipeline claims and project-level bankability."
+  },
+  {
+    "name": "Aalo",
+    "aliases": ["Aalo", "Aalo Atomics"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["microreactor development", "data center/industrial power narrative"],
+    "default_user_types": ["Investor", "Data center power buyer"],
+    "likely_claim_types": ["deployment_timeline_claim", "licensing_claim", "data_center_power_claim"],
+    "key_bottlenecks": ["licensing maturity", "first deployment evidence", "fuel path", "customer/site evidence"],
+    "default_diligence_questions": ["What is the NRC path?", "Which site is first?", "What fuel path supports deployment?", "Which customer is committed?"],
+    "what_to_diligence_next": "Validate first-unit licensing, site, fuel, and customer evidence."
+  },
+  {
+    "name": "Radiant",
+    "aliases": ["Radiant", "Radiant Nuclear", "Kaleidos"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["portable microreactor", "remote/data center power potential", "HALEU dependency"],
+    "default_user_types": ["Investor", "Strategic partner / incumbent", "Data center power buyer"],
+    "likely_claim_types": ["deployment_timeline_claim", "HALEU_claim", "licensing_claim", "data_center_power_claim"],
+    "key_bottlenecks": ["licensing path", "fuel qualification", "customer use case", "manufacturing scale"],
+    "default_diligence_questions": ["What licensing milestone is next?", "What fuel supply is secured?", "Which customer use case is binding?", "What manufacturing evidence exists?"],
+    "what_to_diligence_next": "Validate licensing, fuel, manufacturing, and customer evidence."
+  },
+  {
+    "name": "Curio",
+    "aliases": ["Curio", "Curio Solutions"],
+    "category": "fuel_cycle_supplier",
+    "deployment_relevance": ["recycling/fuel-cycle services", "waste and advanced fuel-cycle claims"],
+    "default_user_types": ["Investor", "Fuel-cycle supplier", "Strategic partner / incumbent"],
+    "likely_claim_types": ["fuel_cycle_claim", "financing_claim", "licensing_claim"],
+    "key_bottlenecks": ["regulatory path", "facility licensing", "commercial demand", "technology validation"],
+    "default_diligence_questions": ["What facility license is needed?", "Which customers are binding?", "What technology validation exists?", "What financing supports scale-up?"],
+    "what_to_diligence_next": "Validate facility path, technology evidence, customer demand, and economics."
+  },
+  {
+    "name": "Deep Fission",
+    "aliases": ["Deep Fission"],
+    "category": "reactor_developer",
+    "deployment_relevance": ["novel siting concept", "advanced reactor deployment", "subsurface construction claims"],
+    "default_user_types": ["Investor", "Strategic partner / incumbent"],
+    "likely_claim_types": ["deployment_timeline_claim", "licensing_claim", "site_control_claim", "EPC_construction_claim"],
+    "key_bottlenecks": ["licensing novelty", "siting evidence", "construction method", "operations/safety case"],
+    "default_diligence_questions": ["What NRC path applies to the siting model?", "What site rights exist?", "What construction evidence supports the concept?", "What safety case has been reviewed?"],
+    "what_to_diligence_next": "Validate licensing feasibility, siting rights, construction method, and safety case."
+  },
+  {
+    "name": "Westinghouse",
+    "aliases": ["Westinghouse", "AP1000", "eVinci"],
+    "category": "incumbent_oem",
+    "deployment_relevance": ["large reactor OEM", "microreactor development", "fuel/services incumbent"],
+    "default_user_types": ["Strategic partner / incumbent", "Investor", "Data center power buyer"],
+    "likely_claim_types": ["EPC_construction_claim", "licensing_claim", "deployment_timeline_claim", "offtake_claim"],
+    "key_bottlenecks": ["project execution", "customer financeability", "supply chain", "regulatory scope"],
+    "default_diligence_questions": ["Which technology is in scope?", "What project contracts are binding?", "Who owns EPC risk?", "What licensing path applies?"],
+    "what_to_diligence_next": "Validate project-specific commitments rather than relying on incumbent credibility alone."
+  },
+  {
+    "name": "GE Hitachi",
+    "aliases": ["GE Hitachi", "GEH", "BWRX-300"],
+    "category": "incumbent_oem",
+    "deployment_relevance": ["SMR OEM", "BWRX-300 deployments", "strategic supplier"],
+    "default_user_types": ["Strategic partner / incumbent", "Investor", "Data center power buyer"],
+    "likely_claim_types": ["licensing_claim", "deployment_timeline_claim", "EPC_construction_claim", "offtake_claim"],
+    "key_bottlenecks": ["project customer commitment", "site/licensing", "supply chain", "construction execution"],
+    "default_diligence_questions": ["Which customer project is binding?", "What licensing status applies by jurisdiction?", "Who wraps construction risk?", "What supply chain is committed?"],
+    "what_to_diligence_next": "Validate project-level evidence for each claimed deployment."
+  }
+]

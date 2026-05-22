@@ -1,0 +1,112 @@
+[
+  {
+    "id": "mi-nuscale-voygr",
+    "projectCompany": "NuScale / VOYGR",
+    "category": "SMR developer",
+    "geography": "United States / global",
+    "reactorOrFuelCycleType": "Light-water SMR",
+    "announcedTimeline": "Multiple announced deployments shifted or cancelled",
+    "publicStatus": "NRC design certification achieved; commercial project execution remains mixed",
+    "keyDependency": "Customer commitment, project economics, EPC execution",
+    "diligenceRelevance": "Useful precedent that regulatory progress does not eliminate commercial cancellation risk."
+  },
+  {
+    "id": "mi-terrapower-natrium",
+    "projectCompany": "TerraPower / Natrium",
+    "category": "Advanced reactor demonstration",
+    "geography": "Wyoming, United States",
+    "reactorOrFuelCycleType": "Sodium fast reactor / HALEU dependency",
+    "announcedTimeline": "DOE-backed demonstration schedule",
+    "publicStatus": "Public demonstration activity and fuel-cycle dependencies",
+    "keyDependency": "HALEU availability and demonstration execution",
+    "diligenceRelevance": "Highlights fuel-cycle dependencies for advanced reactor timelines."
+  },
+  {
+    "id": "mi-kairos-hermes",
+    "projectCompany": "Kairos / Hermes",
+    "category": "Test reactor",
+    "geography": "Tennessee, United States",
+    "reactorOrFuelCycleType": "Fluoride salt-cooled high-temperature reactor",
+    "announcedTimeline": "Test reactor path before commercial scale",
+    "publicStatus": "Public licensing precedent for a test reactor path",
+    "keyDependency": "Stepwise regulatory and technical demonstration",
+    "diligenceRelevance": "Relevant NRC precedent, but not direct proof of commercial campus deliverability."
+  },
+  {
+    "id": "mi-xenergy-xe100",
+    "projectCompany": "X-energy / Xe-100",
+    "category": "Advanced reactor developer",
+    "geography": "United States",
+    "reactorOrFuelCycleType": "HTGR / TRISO fuel dependency",
+    "announcedTimeline": "Commercial deployment target varies by project",
+    "publicStatus": "Public partnerships and demonstration activity",
+    "keyDependency": "Fuel fabrication, customer offtake, licensing and project execution",
+    "diligenceRelevance": "Comparable for customer-backed advanced reactor deployment claims."
+  },
+  {
+    "id": "mi-oklo-aurora",
+    "projectCompany": "Oklo / Aurora",
+    "category": "Microreactor / advanced reactor developer",
+    "geography": "United States",
+    "reactorOrFuelCycleType": "Fast reactor concept / HALEU dependency",
+    "announcedTimeline": "Commercial timelines subject to licensing and fuel supply",
+    "publicStatus": "Public company and regulatory history",
+    "keyDependency": "Licensing maturity, fuel supply, customer deployment sites",
+    "diligenceRelevance": "Comparable for public-market advanced reactor claims and fuel-cycle scrutiny."
+  },
+  {
+    "id": "mi-triso-x",
+    "projectCompany": "TRISO-X",
+    "category": "Fuel-cycle supplier",
+    "geography": "United States",
+    "reactorOrFuelCycleType": "TRISO fuel fabrication",
+    "announcedTimeline": "Facility and fuel qualification milestones",
+    "publicStatus": "Public fuel-cycle infrastructure development",
+    "keyDependency": "Qualification, licensing, capacity ramp, customer demand",
+    "diligenceRelevance": "Useful for assessing whether reactor demand has matched fuel-cycle readiness."
+  },
+  {
+    "id": "mi-palisades",
+    "projectCompany": "Palisades restart",
+    "category": "Nuclear restart",
+    "geography": "Michigan, United States",
+    "reactorOrFuelCycleType": "Existing light-water reactor restart",
+    "announcedTimeline": "Restart target subject to NRC and financing milestones",
+    "publicStatus": "Public restart effort and government support",
+    "keyDependency": "Regulatory approval, refurbishment execution, power offtake",
+    "diligenceRelevance": "Restart precedent, but different risk profile from new-build SMRs."
+  },
+  {
+    "id": "mi-vogtle",
+    "projectCompany": "Vogtle",
+    "category": "Large nuclear new build",
+    "geography": "Georgia, United States",
+    "reactorOrFuelCycleType": "AP1000 large light-water reactors",
+    "announcedTimeline": "Completed after major delays and cost growth",
+    "publicStatus": "Operating new-build units",
+    "keyDependency": "Construction execution and cost recovery",
+    "diligenceRelevance": "Critical precedent for EPC and construction risk in nuclear underwriting."
+  },
+  {
+    "id": "mi-centrus-haleu",
+    "projectCompany": "Centrus HALEU",
+    "category": "Fuel-cycle supplier",
+    "geography": "Ohio, United States",
+    "reactorOrFuelCycleType": "HALEU enrichment",
+    "announcedTimeline": "Capacity ramp dependent on funding and contracts",
+    "publicStatus": "Public HALEU production activity",
+    "keyDependency": "Commercial scale-up, government support, customer commitments",
+    "diligenceRelevance": "Core comparable for HALEU availability assumptions."
+  },
+  {
+    "id": "mi-doe-haleu",
+    "projectCompany": "DOE HALEU Availability Program",
+    "category": "Government fuel-cycle program",
+    "geography": "United States",
+    "reactorOrFuelCycleType": "HALEU supply support",
+    "announcedTimeline": "Programmatic availability tied to awards and supply chain ramp",
+    "publicStatus": "Public DOE program",
+    "keyDependency": "Procurement, contracts, enrichment and deconversion capacity",
+    "diligenceRelevance": "Important public signal but not proof of project-specific fuel availability."
+  }
+]
