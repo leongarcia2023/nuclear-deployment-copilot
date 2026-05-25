@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { Check, Clipboard, ListChecks } from "lucide-react";
+import { copyToClipboard } from "@/lib/clipboard/copyToClipboard";
 import type { DeploymentLayerFinding, DetectedClaim, FirstPassIcMemo, EvidenceLedger, MemoDocumentCoverageItem, MemoRelevantDocument, MemoSourceCoverage, ProjectCounterpartyProfile, PublicEvidenceNote } from "@/types/core";
 
 function list(items: string[]) {
@@ -18,29 +19,20 @@ export function icMemoMarkdown(
   relevantDocuments: MemoRelevantDocument[] = [],
   evidenceLedger?: EvidenceLedger,
 ) {
-  const atomicClaimNotes = evidenceLedger?.atomicClaims.length
-    ? list(evidenceLedger.atomicClaims.map((claim) => `${claim.text} — ${claim.evidenceStatus.replaceAll("_", " ")}`))
-    : detectedClaims.length
-      ? list(detectedClaims.map((claim) => `${claim.label} (${claim.triggeredKeywords.join(", ")})`))
-      : "- No atomic claims detected.";
-  const ledgerNotes = evidenceLedger?.atomicClaims.length
-    ? list(evidenceLedger.atomicClaims.map((claim) => `${claim.text}: ${claim.evidenceStatus.replaceAll("_", " ")}; required evidence: ${claim.requiredEvidence}; does not prove: ${claim.whatThisDoesNotProve}`))
-    : "- No evidence ledger generated.";
-  const documentCoverageNotes = (evidenceLedger?.deploymentLayerSummary ?? documentCoverage).length
-    ? list((evidenceLedger?.deploymentLayerSummary ?? documentCoverage).map((item) => `${item.layer}: Corpus coverage: ${item.corpusCoverage}; Target-specific support: ${item.targetSpecificSupport}. ${item.conclusion}`))
-    : "- No document coverage generated.";
   const missingNotes = evidenceLedger?.topMissingEvidence.length
-    ? list(evidenceLedger.topMissingEvidence)
-    : layerFindings.filter((item) => item.status === "unsupported").length
-      ? list(layerFindings.filter((item) => item.status === "unsupported").map((item) => `${item.layer}: ${item.requiredEvidence}`))
-      : list(memo.whatIsNotYetEvidenced);
+    ? list(evidenceLedger.topMissingEvidence.slice(0, 5))
+    : list((memo.whatIsNotYetEvidenced.length ? memo.whatIsNotYetEvidenced : layerFindings.map((item) => item.requiredEvidence)).slice(0, 5));
   const verdictChangeNotes = evidenceLedger?.whatWouldChangeVerdict.length
-    ? list(evidenceLedger.whatWouldChangeVerdict)
-    : list(memo.whatMustBeTrue);
-  const chunkNotes = evidenceLedger?.atomicClaims.flatMap((claim) => claim.matchedChunks.map((chunk) => `#${chunk.rank} ${chunk.documentTitle}: ${chunk.excerpt} Relevance: ${chunk.relevanceReason} Does not prove: ${chunk.doesNotProve}`)) ?? [];
-  const relevantChunkNotes = chunkNotes.length
-    ? list(Array.from(new Set(chunkNotes)).slice(0, 6))
-    : "- No chunk-backed evidence matched the atomic claims.";
+    ? list(evidenceLedger.whatWouldChangeVerdict.slice(0, 6))
+    : list(memo.whatMustBeTrue.slice(0, 6));
+  const coverageNotes = conciseCoverageNotes(evidenceLedger?.deploymentLayerSummary ?? documentCoverage, detectedClaims);
+  const chunkNotes = evidenceLedger?.atomicClaims.flatMap((claim) => claim.matchedChunks) ?? [];
+  const publicEvidence = concisePublicEvidence(chunkNotes).length
+    ? list(concisePublicEvidence(chunkNotes))
+    : publicEvidenceNotes.length
+      ? list(publicEvidenceNotes.slice(0, 3).map((note) => `${note.title}: ${note.whyItMatters || note.relevance}`))
+      : "- No chunk-backed public evidence matched the claim.";
+  const analystNotes = analystRead(memo, detectedClaims).slice(0, 5).join("\n\n");
 
   return `# First-Pass IC Memo
 
@@ -50,48 +42,116 @@ Decision question: ${memo.decision}
 Verdict: ${memo.verdict}
 Confidence: ${memo.confidence}
 
-## Executive summary
+## One-line judgment
 ${memo.thesis}
 
-## Atomic claims
-${atomicClaimNotes}
-
-## Evidence ledger
-${ledgerNotes}
-
-## Evidence coverage by deployment layer
-${documentCoverageNotes}
+## Analyst read
+${analystNotes}
 
 ## Top missing evidence
 ${missingNotes}
+
+## Evidence coverage
+${list(coverageNotes)}
+
+## Relevant public evidence
+${publicEvidence}
 
 ## What would change the verdict
 ${verdictChangeNotes}
 
 ## Diligence questions
-${list(memo.diligenceQuestions)}
-
-## Relevant chunk-backed evidence
-${relevantChunkNotes}
+${list(memo.diligenceQuestions.slice(0, 5))}
 
 ## Recommended next step
 ${memo.recommendedNextStep}
 `;
 }
-async function copyText(text: string, fallbackElement: HTMLTextAreaElement | null) {
-  try {
-    if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(text);
-      return true;
-    }
-  } catch {
-    // Fall through to selection-based copy.
+
+function conciseCoverageNotes(coverage: MemoDocumentCoverageItem[], detectedClaims: DetectedClaim[] = []) {
+  const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
+  if ((claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")) && !claimTypes.has("data_center_power_claim")) {
+    return [
+      "Strong corpus context: DOE/NRC HALEU materials, enrichment precedent, fuel-cycle facility licensing, fabrication review, and transport/safeguards context.",
+      "Missing target-specific proof: assay, form, quantity, first-core and reload schedule, named supplier or allocation, delivery window, and fallback if supply slips.",
+      "Private diligence required: capacity reservation terms, fabrication slot, commercial credit support, transport/safeguards owner, and milestone-linked cancellation rights.",
+    ];
   }
 
-  if (!fallbackElement) return false;
-  fallbackElement.focus();
-  fallbackElement.select();
-  return document.execCommand("copy");
+  const strong = coverage
+    .filter((item) => item.corpusCoverage === "Strong" || item.corpusCoverage === "Partial")
+    .map((item) => item.layer)
+    .slice(0, 4);
+  const missing = coverage
+    .filter((item) => item.targetSpecificSupport === "Missing" || item.targetSpecificSupport === "Partially supported")
+    .map((item) => item.layer)
+    .slice(0, 7);
+  const privateItems = coverage
+    .filter((item) => item.targetSpecificSupport === "Private diligence required" || item.targetSpecificSupport === "Cannot know from public docs")
+    .map((item) => item.layer)
+    .slice(0, 5);
+
+  return [
+    `Strong corpus context: ${strong.length ? strong.join(", ") : "none in current seed corpus"}.`,
+    `Missing target-specific support: ${missing.length ? missing.join(", ") : "none flagged"}.`,
+    `Private diligence required: ${privateItems.length ? privateItems.join(", ") : "binding contracts, pricing, EPC terms, customer credit, and capital stack where applicable"}.`,
+  ];
+}
+
+function sourceWhy(title: string, fallback: string) {
+  const lower = title.toLowerCase();
+  if (lower.includes("ferc") || lower.includes("susquehanna") || lower.includes("co-location")) return "Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues.";
+  if (lower.includes("talen") || lower.includes("amazon")) return "Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability.";
+  if (lower.includes("constellation") || lower.includes("crane")) return "Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence.";
+  if (lower.includes("criticality") || lower.includes("benchmark")) return "Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability.";
+  if (lower.includes("centrus") || lower.includes("american centrifuge")) return "Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target.";
+  if (lower.includes("eis") || lower.includes("availability program") || lower.includes("allocation")) return "Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer.";
+  if (lower.includes("triso") || lower.includes("fabrication")) return "Shows that fabrication capacity and license review are separate gating items from obtaining enriched material.";
+  if (lower.includes("transport") || lower.includes("safeguard") || lower.includes("storage")) return "Shows that transport, safeguards, and storage are part of fuel readiness, not administrative afterthoughts.";
+  if (lower.includes("haleu")) return "Relevant HALEU context, but not proof of target-specific fuel supply, fabrication, or delivery timing.";
+  if (lower.includes("lic-116") || lower.includes("preapplication")) return "Benchmarks why pre-application engagement is weaker than a docketed or accepted application.";
+  if (lower.includes("nuscale") || lower.includes("rai") || lower.includes("arcap")) return "Shows the level of public NRC review detail needed before treating a deployment timeline as mature.";
+  return firstSentence(fallback);
+}
+
+function analystRead(memo: FirstPassIcMemo, detectedClaims: DetectedClaim[]) {
+  const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
+  if (claimTypes.has("data_center_power_claim")) {
+    return [
+      "This is not primarily a reactor diligence problem yet; it is a power-campus deliverability problem.",
+      "The first question is whether the company can control sites, energize load, and contract customers before nuclear is available.",
+      "Nuclear should be treated as upside optionality unless the reactor vendor, licensing owner, fuel path, EPC responsibility, and bridge-to-nuclear transition plan are evidenced.",
+    ];
+  }
+  if (claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")) {
+    return [
+      "This is a fuel-readiness diligence problem: public HALEU context can show scarcity, licensing constraints, and precedent activity, but it does not prove this target has secured assay, form, quantity, supplier allocation, fabrication capacity, transport/safeguards arrangements, or delivery windows. Treat the claim as commercially relevant but unreserved until the counterparty provides a project-specific fuel-readiness package tied to first core, reloads, licensing milestones, and reservation authority.",
+    ];
+  }
+  if (claimTypes.has("NRC_engagement_claim") || claimTypes.has("licensing_claim") || claimTypes.has("deployment_timeline_claim")) {
+    return [
+      "The regulatory claim needs to be separated from the commercial-operation claim.",
+      "Pre-application engagement can be useful, but it does not establish a docketed application, completed safety review, construction authority, site readiness, or operations date.",
+      "Treat the timeline as unsupported until the public regulatory path and private execution milestones line up.",
+    ];
+  }
+  return [
+    firstSentence(memo.situation || memo.thesis),
+    "Read this as a first-pass diligence screen: it identifies which claims have public context and which still need counterparty proof.",
+  ];
+}
+
+function concisePublicEvidence(chunks: EvidenceLedger["atomicClaims"][number]["matchedChunks"]) {
+  const seenDocs = new Set<string>();
+  return chunks.filter((chunk) => {
+    if (seenDocs.has(chunk.documentId)) return false;
+    seenDocs.add(chunk.documentId);
+    return true;
+  }).slice(0, 3).map((chunk) => `Source: #${chunk.rank} ${chunk.documentTitle}. Why it matters: ${sourceWhy(chunk.documentTitle, chunk.relevanceReason)} Does not prove: ${firstSentence(chunk.doesNotProve)}`);
+}
+
+function firstSentence(value: string) {
+  return (value.replace(/\s+/g, " ").trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g) ?? [value])[0].trim();
 }
 
 function CopyBlock({
@@ -111,7 +171,7 @@ function CopyBlock({
   const [status, setStatus] = useState<"idle" | "copied" | "manual">("idle");
 
   async function handleCopy() {
-    const copied = await copyText(value, textareaRef.current);
+    const copied = await copyToClipboard(value, textareaRef.current);
     setStatus(copied ? "copied" : "manual");
     window.setTimeout(() => setStatus("idle"), 2500);
   }
@@ -121,9 +181,9 @@ function CopyBlock({
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="mt-2 text-base leading-7 text-[#4a4842]">{description}</p>
+          <p className="mt-2 text-base leading-7 text-[#151514]">{description}</p>
         </div>
-        <button className="inline-flex shrink-0 items-center justify-center gap-2 bg-[#151514] px-5 py-3 text-base font-semibold text-white" onClick={handleCopy}>
+        <button type="button" className="inline-flex shrink-0 items-center justify-center gap-2 bg-[#151514] px-5 py-3 text-base font-semibold text-white" style={{ color: "#ffffff" }} onClick={handleCopy}>
           {status === "copied" ? <Check className="h-5 w-5" /> : icon}
           {status === "copied" ? "Copied" : buttonLabel}
         </button>
@@ -131,7 +191,7 @@ function CopyBlock({
       {status === "manual" ? <p className="mt-3 text-base font-semibold text-[#9a3e33]">Copy was blocked by the browser. The text is selected below so you can press Cmd+C.</p> : null}
       <textarea
         ref={textareaRef}
-        className="mt-4 h-80 w-full resize-y border border-[#d9d3c8] bg-[#fbfaf7] p-4 font-mono text-sm leading-6 text-[#292824] outline-none focus:border-[#151514]"
+        className="mt-4 h-80 w-full resize-y border border-[#d9d3c8] bg-[#fbfaf7] p-4 font-mono text-sm leading-6 text-[#151514] outline-none focus:border-[#151514]"
         readOnly
         value={value}
         onFocus={(event) => event.currentTarget.select()}
@@ -149,13 +209,13 @@ export function ExportPanel({ profile }: { profile: ProjectCounterpartyProfile }
     <section className="space-y-5">
       <div className="border border-[#d9d3c8] bg-[#fbfaf7] p-6">
         <h2 className="text-2xl font-semibold">Copy outputs</h2>
-        <p className="mt-3 text-base leading-7 text-[#4a4842]">
+        <p className="mt-3 text-base leading-7 text-[#151514]">
           These are formatted for pasting into an IC draft, partner prep note, email, or meeting doc. No downloads needed.
         </p>
       </div>
       <CopyBlock
         title="First-pass IC memo"
-        description="Full memo with situation, thesis, evidence, kill risks, what must be true, questions, next step, and public evidence notes."
+        description="Concise first-pass IC memo without the analysis appendix."
         value={memoMarkdown}
         buttonLabel="Copy IC memo"
         icon={<Clipboard className="h-5 w-5" />}

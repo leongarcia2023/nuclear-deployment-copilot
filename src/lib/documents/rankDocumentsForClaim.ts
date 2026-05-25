@@ -34,7 +34,7 @@ const claimTerms: Record<string, string[]> = {
   financing_claim: ["financing", "Title 17", "loan guarantee", "LPO", "bankability", "capital"],
   EPC_construction_claim: ["EPC", "construction", "Vogtle", "construction monitoring", "contractor"],
   bridge_power_claim: ["bridge power", "initial energization", "phased", "gas", "turbine"],
-  nuclear_integration_claim: ["reactor", "nuclear", "SMR", "advanced reactor", "baseload"],
+  nuclear_integration_claim: ["nuclear integration", "baseload integration", "nuclear baseload", "future nuclear", "permanent power", "initial power", "bridge power", "campus power", "behind the meter", "behind-the-meter"],
 };
 
 function normalize(value: string) {
@@ -110,16 +110,34 @@ function scoreDocument(document: DocumentManifestItem, claims: DetectedClaim[], 
   return { ...document, relevance_score, matched_layers: matchedLayers, matched_claim_types: matchedClaims };
 }
 
+function cleanExcerptText(text: string) {
+  return text
+    .replace(/\bno mistake:\s*\d+\b/gi, " ")
+    .replace(/-{2,}\s*\d+\s*of\s*\d+\s*-{2,}/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/^[^A-Za-z0-9("]{1,80}/, "");
+}
+
 function excerptFrom(text: string) {
-  const sentences = text.replace(/\s+/g, " ").match(/[^.!?]+[.!?]+|[^.!?]+$/g) ?? [text];
-  return sentences.slice(0, 4).join(" ").trim().slice(0, 900);
+  const cleaned = cleanExcerptText(text);
+  const sentences = cleaned.match(/[^.!?]+[.!?]+|[^.!?]+$/g) ?? [cleaned];
+  const complete = sentences
+    .map((sentence) => sentence.trim())
+    .filter((sentence) => sentence.length > 40 && /[A-Za-z]/.test(sentence))
+    .slice(0, 3)
+    .join(" ")
+    .trim();
+  const excerpt = complete || cleaned.slice(0, 650);
+  return excerpt.length > 700 ? `${excerpt.slice(0, 700).replace(/\s+\S*$/, "").trim()}.` : excerpt;
 }
 
 function scoreChunk(chunk: DocumentChunk, claims: DetectedClaim[], layers: string[], targetText?: string): RankedChunk {
   const text = textForChunk(chunk);
   const matchedLayers = layers.filter((layer) => chunk.deployment_layers.some((docLayer) => layerMatches(docLayer, layer)) || layerAliases[layer]?.some((alias) => includesPhrase(text, alias)));
   const matchedClaims = matchedClaimTypes(text, claims);
-  const relevance_score = targetScore(text, targetText) + matchedClaims.length * 50 + matchedLayers.length * 14 + memoSectionScore(text, claims) + scoreBase(chunk.rank, chunk.benchmark_value);
+  const riskDisclosurePenalty = includesPhrase(text, "risk factor") && !matchedClaims.some((claim) => claim === "financing_claim" || claim === "offtake_claim") ? -18 : 0;
+  const relevance_score = targetScore(text, targetText) + matchedClaims.length * 50 + matchedLayers.length * 14 + memoSectionScore(text, claims) + scoreBase(chunk.rank, chunk.benchmark_value) + riskDisclosurePenalty;
   return { ...chunk, relevance_score, matched_layers: matchedLayers, matched_claim_types: matchedClaims, excerpt: excerptFrom(chunk.text) };
 }
 
@@ -146,8 +164,13 @@ function conclusion(layer: string, coverage: DocumentCoverageStatus, support: Ta
 }
 
 function loadChunks(): DocumentChunk[] {
-  if (!fs.existsSync(chunksPath)) return [];
-  return fs.readFileSync(chunksPath, "utf8").split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line) as DocumentChunk);
+  if (cachedChunks) return cachedChunks;
+  if (!fs.existsSync(chunksPath)) {
+    cachedChunks = [];
+    return cachedChunks;
+  }
+  cachedChunks = fs.readFileSync(chunksPath, "utf8").split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line) as DocumentChunk);
+  return cachedChunks;
 }
 
 export function rankDocumentsForClaim(input: {

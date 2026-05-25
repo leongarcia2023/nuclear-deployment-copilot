@@ -42,15 +42,15 @@ const claimKeywords: Record<ClaimType, string[]> = {
   behind_the_meter_claim: ["behind the meter", "behind-the-meter", "islanded", "private grid", "off-grid", "colocated", "co-located", "colocation", "co-location"],
   fuel_cycle_claim: ["fuel cycle", "fuel-cycle", "fabrication", "conversion", "deconversion", "supply chain", "first core", "reload", "reloads", "fuel", "fuel demand"],
   HALEU_claim: ["haleu", "high-assay", "high assay", "enrichment", "assay", "first core", "reload", "reloads"],
-  licensing_claim: ["construction permit", "cola", "license", "licensing", "regulatory approval", "design certification", "certification", "docket", "docketed"],
-  NRC_engagement_claim: ["nrc", "pre-application", "regulatory engagement", "readiness assessment", "application review"],
-  deployment_timeline_claim: ["2030", "2031", "2032", "deploy", "deployment", "cod", "first power", "commercial operation"],
+  licensing_claim: ["construction permit", "cola", "license", "licensing", "regulatory approval", "design certification", "certification", "docket", "docketed", "accepted application", "accepted for review"],
+  NRC_engagement_claim: ["nrc", "pre-application", "pre app", "preapp", "regulatory engagement", "readiness assessment", "application review"],
+  deployment_timeline_claim: ["2030", "2031", "2032", "deploy", "deployed", "deployment", "cod", "first power", "commercial operation", "36 months", "timeline", "schedule", "shortens"],
   offtake_claim: ["offtake", "customer", "ppa", "power purchase", "procurement", "power procurement", "hyperscaler", "anchor tenant", "long-term contract", "customer interest", "ppas", "signed ppas", "supplying", "supplied", "aws", "aws linked"],
-  site_control_claim: ["site", "land", "controlled", "control", "permit", "permitting", "campus", "location"],
-  financing_claim: ["financing", "financeable", "project finance", "lpo", "loan", "debt", "equity", "funding", "funded", "doe backed", "doe-backed", "award", "awards", "grant", "grants", "capex"],
+  site_control_claim: ["site", "sites", "siting", "land", "controlled", "control", "permit", "permits", "permitting", "campus", "location"],
+  financing_claim: ["financing", "financed", "financeable", "project finance", "lpo", "loan", "debt", "equity", "funding", "funded", "doe backed", "doe-backed", "award", "awards", "grant", "grants", "capex"],
   EPC_construction_claim: ["epc", "construction", "contractor", "build", "modular", "supply chain", "cost overrun", "factory", "factory built", "factory-built", "shipyard"],
   bridge_power_claim: ["bridge power", "fuel cell", "gas", "turbine", "phase 1", "initial energization", "temporary power"],
-  nuclear_integration_claim: ["nuclear", "reactor", "reactors", "smr", "advanced reactor", "advanced reactors", "baseload", "small modular", "microreactor", "microreactors"]
+  nuclear_integration_claim: ["nuclear integration", "baseload integration", "nuclear baseload", "future nuclear", "permanent power", "initial power", "bridge power", "campus power", "behind the meter", "behind-the-meter", "nuclear-powered", "nuclear powered"]
 };
 
 const claimLabels: Record<ClaimType, string> = {
@@ -119,6 +119,9 @@ function matchCompany(target: string, note: string): CompanyProfile | undefined 
 
 function detectClaims(note: string, profile?: CompanyProfile): DetectedClaim[] {
   const haystack = normalize(note);
+  const hasDataCenterContext = ["data center", "compute", "ai campus", "hyperscaler", "large load", "power campus", "behind the meter", "behind-the-meter", "colocation", "co-location"].some((keyword) => includesPhrase(haystack, keyword));
+  const hasNuclearTerm = ["nuclear", "reactor", "reactors", "smr", "advanced reactor", "advanced reactors", "microreactor", "microreactors"].some((keyword) => includesPhrase(haystack, keyword));
+  const hasNuclearIntegrationContext = ["nuclear integration", "baseload integration", "nuclear baseload", "future nuclear", "permanent power", "initial power", "bridge power", "campus power", "behind the meter", "behind-the-meter", "nuclear-powered", "nuclear powered"].some((keyword) => includesPhrase(haystack, keyword)) || (hasDataCenterContext && hasNuclearTerm);
   const detected = Object.entries(claimKeywords)
     .map(([claimType, keywords]) => {
       const triggeredKeywords = keywords.filter((keyword) => includesPhrase(haystack, keyword));
@@ -126,8 +129,9 @@ function detectClaims(note: string, profile?: CompanyProfile): DetectedClaim[] {
     })
     .filter((item) => {
       if (!item.triggeredKeywords.length) return false;
-      if (item.claimType !== "data_center_power_claim") return true;
-      return ["data center", "compute", "ai campus", "hyperscaler", "large load", "power campus", "behind the meter", "behind-the-meter", "colocation", "co-location"].some((keyword) => includesPhrase(haystack, keyword));
+      if (item.claimType === "data_center_power_claim") return hasDataCenterContext;
+      if (item.claimType === "nuclear_integration_claim") return hasNuclearIntegrationContext;
+      return true;
     })
     .map((item) => ({
       claimType: item.claimType,
@@ -135,6 +139,15 @@ function detectClaims(note: string, profile?: CompanyProfile): DetectedClaim[] {
       triggeredKeywords: item.triggeredKeywords,
       deploymentLayers: layerMap[item.claimType],
     }));
+
+  if (hasNuclearIntegrationContext && !detected.some((claim) => claim.claimType === "nuclear_integration_claim")) {
+    detected.push({
+      claimType: "nuclear_integration_claim",
+      label: claimLabels.nuclear_integration_claim,
+      triggeredKeywords: hasDataCenterContext ? ["data center nuclear context"] : ["nuclear integration context"],
+      deploymentLayers: layerMap.nuclear_integration_claim,
+    });
+  }
 
   const detectedTypes = new Set(detected.map((claim) => claim.claimType));
   if (detectedTypes.has("HALEU_claim") && !detectedTypes.has("fuel_cycle_claim")) {
@@ -159,8 +172,7 @@ function detectClaims(note: string, profile?: CompanyProfile): DetectedClaim[] {
 function statusForLayer(layer: string, detectedClaimTypes: Set<string>, profile?: CompanyProfile): DeploymentLayerFinding["status"] {
   if (layer === "Offtake / customer" || layer === "Financing" || layer === "EPC / construction") return "private diligence required";
   if (layer === "Licensing / NRC") {
-    if (detectedClaimTypes.has("licensing_claim") || detectedClaimTypes.has("NRC_engagement_claim")) return "plausible";
-    if (profile?.category === "data_center_power_infrastructure" && detectedClaimTypes.has("nuclear_integration_claim")) return "unsupported";
+    return "unsupported";
   }
   if (layer === "Fuel supply / HALEU" || layer === "Fuel fabrication" || layer === "Transportation / safeguards") {
     if (detectedClaimTypes.has("HALEU_claim") || detectedClaimTypes.has("fuel_cycle_claim")) return "unsupported";
@@ -219,14 +231,24 @@ function findingForLayer(layer: string, target: string, detectedClaimTypes: Set<
   return `${target}'s claim implicates ${layer.toLowerCase()} and needs layer-specific proof.`;
 }
 
-function buildLayerFindings(target: string, detectedClaims: DetectedClaim[], profile?: CompanyProfile): DeploymentLayerFinding[] {
+function buildLayerFindings(target: string, detectedClaims: DetectedClaim[], profile?: CompanyProfile, note = ""): DeploymentLayerFinding[] {
   const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
   const implicated = new Set(detectedClaims.flatMap((claim) => claim.deploymentLayers));
+  const normalizedNote = normalize(note);
+  const explicitFuelOrReactorPath =
+    claimTypes.has("HALEU_claim") ||
+    claimTypes.has("fuel_cycle_claim") ||
+    ["haleu", "fuel", "first core", "reload", "advanced reactor", "advanced reactors", "reactor vendor", "vendor", "smr", "microreactor"].some((term) => includesPhrase(normalizedNote, term));
 
-  if (profile?.category === "data_center_power_infrastructure") {
+  if (profile?.category === "data_center_power_infrastructure" || claimTypes.has("data_center_power_claim")) {
     ["Site / permitting", "Interconnection / power delivery", "Bridge power / phased energization", "Offtake / customer", "EPC / construction", "Financing"].forEach((layer) => implicated.add(layer));
     if (claimTypes.has("nuclear_integration_claim") || claimTypes.has("HALEU_claim")) {
-      ["Licensing / NRC", "Fuel supply / HALEU", "Fuel fabrication", "Transportation / safeguards", "Operations / waste"].forEach((layer) => implicated.add(layer));
+      ["Licensing / NRC", "EPC / construction", "Operations / waste"].forEach((layer) => implicated.add(layer));
+      if (explicitFuelOrReactorPath) {
+        ["Fuel supply / HALEU", "Fuel fabrication", "Transportation / safeguards"].forEach((layer) => implicated.add(layer));
+      } else {
+        ["Fuel supply / HALEU", "Fuel fabrication", "Transportation / safeguards"].forEach((layer) => implicated.delete(layer));
+      }
     }
   }
 
@@ -252,8 +274,22 @@ function coverageStatus(status: DeploymentLayerFinding["status"]): CoverageStatu
 function verdictFor(profile: CompanyProfile | undefined, detectedClaims: DetectedClaim[]): DealVerdict {
   const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
   if (profile?.category === "data_center_power_infrastructure" && claimTypes.has("nuclear_integration_claim")) return "Diligence Required";
-  if (claimTypes.has("data_center_power_claim") && (claimTypes.has("nuclear_integration_claim") || claimTypes.has("offtake_claim"))) return "Diligence Required";
-  if (claimTypes.has("deployment_timeline_claim") || claimTypes.has("HALEU_claim")) return "Diligence Required";
+  const diligenceTriggerClaims = [
+    "data_center_power_claim",
+    "behind_the_meter_claim",
+    "fuel_cycle_claim",
+    "HALEU_claim",
+    "licensing_claim",
+    "NRC_engagement_claim",
+    "deployment_timeline_claim",
+    "offtake_claim",
+    "site_control_claim",
+    "financing_claim",
+    "EPC_construction_claim",
+    "bridge_power_claim",
+    "nuclear_integration_claim",
+  ];
+  if (diligenceTriggerClaims.some((claimType) => claimTypes.has(claimType))) return "Diligence Required";
   return "Monitor";
 }
 
@@ -268,19 +304,27 @@ function buildQuestions(target: string, profile: CompanyProfile | undefined, fin
     "Site / permitting": ["Which named sites are controlled, and what land rights, permits, and local approvals have been secured?"],
     "Interconnection / power delivery": ["What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?"],
     "Bridge power / phased energization": ["What power source supports initial energization, on what term, at what cost, and what happens if nuclear slips?"],
-    "EPC / construction": ["Who is responsible for EPC execution, and what contract scope, cost basis, schedule, and risk allocation are binding?"],
+    "EPC / construction": ["Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"],
     "Offtake / customer": ["Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?"],
     Financing: ["What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"],
     "Operations / waste": ["Who will operate the nuclear asset and own spent fuel, security, waste, and long-term operational responsibility?"],
   };
+  const dataCenterQuestions = claimTypes.has("data_center_power_claim")
+    ? [
+        "Which sites are controlled, and what land/interconnection rights are secured?",
+        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
+        "Is the customer/offtake agreement binding, and what credit support exists?",
+        "Who is the reactor vendor, NRC applicant, and licensing owner?",
+        "What happens if nuclear slips 5-10 years?",
+      ]
+    : [];
   const layerQuestions = findings.flatMap((finding) => layerQuestionMap[finding.layer] ?? [`What evidence resolves the ${finding.layer.toLowerCase()} dependency?`]);
   const claimQuestions = [
     claimTypes.has("deployment_timeline_claim") ? "Which dated milestones connect the current status to the claimed commercial operation date?" : "",
     claimTypes.has("NRC_engagement_claim") ? "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?" : "",
     claimTypes.has("HALEU_claim") ? "Does the fuel evidence cover first core only, or both first core and reloads?" : "",
-    claimTypes.has("data_center_power_claim") ? "Which customer load is binding, and what MW ramp is actually committed?" : "",
   ].filter(Boolean);
-  return Array.from(new Set([...base, ...layerQuestions, ...claimQuestions])).slice(0, 10);
+  return Array.from(new Set([...dataCenterQuestions, ...base, ...layerQuestions, ...claimQuestions])).slice(0, 10);
 }
 function toPublicEvidenceNote(note: SourceMatchResult["relevantSourceNotes"][number]): PublicEvidenceNote {
   return {
@@ -339,8 +383,8 @@ function claimTextFor(target: string, claimType: string, note: string, triggered
     behind_the_meter_claim: [`${target} claims behind-the-meter, islanded, or campus-scale power delivery.`],
     bridge_power_claim: [`${target} claims near-term bridge power or phased energization before permanent supply is available.`],
     nuclear_integration_claim: [
-      `${target} claims future nuclear baseload or advanced-reactor integration.`,
-      `${target} implies a transition from bridge or initial power to permanent nuclear power.`,
+      `${target} claims nuclear baseload integration or permanent nuclear power as part of the project.`,
+      ["bridge power", "initial power", "initial energization", "permanent power"].some((term) => includesPhrase(normalize(note), term)) ? `${target} implies a transition from bridge or initial power to permanent nuclear power.` : "",
     ],
     HALEU_claim: [
       `${target} claims secured HALEU supply.`,
@@ -359,17 +403,48 @@ function claimTextFor(target: string, claimType: string, note: string, triggered
   return (base[claimType] ?? [`${target} makes a ${claimLabels[claimType as ClaimType] ?? claimType.replaceAll("_", " ")} that requires evidence.`]).filter(Boolean);
 }
 
-function classifyAtomicClaim(claimType: string, layers: string[], matchedChunks: MatchedChunk[]): AtomicClaimEvidenceStatus {
-  if (claimType === "behind_the_meter_claim" || claimType === "site_control_claim") return "user_note_only";
-  if (claimType === "bridge_power_claim" || claimType === "offtake_claim" || claimType === "financing_claim" || claimType === "EPC_construction_claim" || claimType === "nuclear_integration_claim" || claimType === "deployment_timeline_claim") return "private_diligence_required";
+function targetTermsForSupport(target: string) {
+  return normalize(target)
+    .split(" ")
+    .filter((word) => word.length > 3 && !["reactor", "developer", "project", "company", "target", "infrastructure"].includes(word));
+}
+
+function hasTargetSpecificPublicSupport(target: string, matchedChunks: MatchedChunk[]) {
+  const terms = targetTermsForSupport(target);
+  if (!terms.length) return false;
+  return matchedChunks.some((chunk) => {
+    const haystack = normalize([chunk.documentTitle, chunk.excerpt].join(" "));
+    return terms.some((term) => includesPhrase(haystack, term));
+  });
+}
+
+function classifyAtomicClaim(target: string, claimType: string, layers: string[], matchedChunks: MatchedChunk[]): AtomicClaimEvidenceStatus {
   if (layers.some((layer) => layer === "Operations / waste")) return "cannot_know_from_public_docs";
+  if (claimType === "bridge_power_claim" || claimType === "offtake_claim" || claimType === "financing_claim" || claimType === "EPC_construction_claim") return "private_diligence_required";
   if (layers.some((layer) => layer === "Offtake / customer" || layer === "Financing" || layer === "EPC / construction")) return "private_diligence_required";
-  if (matchedChunks.length) return "partially_supported_by_public_source";
+  if (hasTargetSpecificPublicSupport(target, matchedChunks)) return "partially_supported_by_public_source";
+  if (claimType === "licensing_claim" || claimType === "NRC_engagement_claim" || claimType === "deployment_timeline_claim") return "missing";
   return "user_note_only";
 }
 
-function doesNotProveFor(claimText: string) {
-  return `This context does not prove that ${claimText.replace(/\.$/, "").toLowerCase()} is true for the target, nor does it establish private contracts, permits, financing, or execution responsibility.`;
+function doesNotProveFor() {
+  return "This is useful public context, but it does not prove the target has project-specific contracts, permits, financing, fuel commitments, licensing outcomes, or execution responsibility.";
+}
+
+function doesNotProveForLayer(layer: string) {
+  if (layer === "Fuel supply / HALEU" || layer === "Fuel fabrication" || layer === "Transportation / safeguards") {
+    return "This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.";
+  }
+  if (layer === "Licensing / NRC") {
+    return "This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.";
+  }
+  if (layer === "Offtake / customer" || layer === "Financing" || layer === "EPC / construction") {
+    return "This is relevant market or precedent context, but it does not prove binding customer contracts, committed financing, EPC scope, schedule, or risk allocation for the target.";
+  }
+  if (layer === "Site / permitting" || layer === "Interconnection / power delivery" || layer === "Bridge power / phased energization") {
+    return "This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.";
+  }
+  return "This is useful public context, but it does not prove target-specific commitments or execution responsibility.";
 }
 
 function chunkToMatchedChunk(chunk: ReturnType<typeof rankDocumentsForClaim>["chunkEvidence"][number], claim: DetectedClaim): MatchedChunk {
@@ -381,8 +456,8 @@ function chunkToMatchedChunk(chunk: ReturnType<typeof rankDocumentsForClaim>["ch
     rank: chunk.rank,
     deploymentLayers: chunk.deployment_layers,
     excerpt: chunk.excerpt,
-    relevanceReason: `Relevant to ${matchedLayer} and the ${claim.label}; useful as public context or precedent, not target-specific proof.`,
-    doesNotProve: `Does not prove the target has secured project-specific ${matchedLayer.toLowerCase()} evidence or private commitments.`,
+    relevanceReason: `Public context for ${matchedLayer}; useful for testing the ${claim.label} without treating precedent as proof of the target's claim.`,
+    doesNotProve: doesNotProveForLayer(matchedLayer),
   };
 }
 
@@ -409,6 +484,158 @@ function claimChunkScore(chunk: ReturnType<typeof rankDocumentsForClaim>["chunkE
   return preferredScore + layerScore + claimScore + Math.max(0, 151 - chunk.rank) / 10;
 }
 
+function crispEvidenceForLayer(layer: string) {
+  const evidence: Record<string, string> = {
+    "Licensing / NRC": "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+    "Fuel supply / HALEU": "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+    "Fuel fabrication": "Licensed fuel fabrication route plus qualification and capacity evidence.",
+    "Transportation / safeguards": "Transportation package, safeguards category, storage plan, and responsible licensee.",
+    "Site / permitting": "Site-control documents for named sites and a permit matrix tied to schedule.",
+    "Interconnection / power delivery": "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
+    "Bridge power / phased energization": "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
+    "EPC / construction": "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+    "Offtake / customer": "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
+    Financing: "Committed financing sources and milestone conditions.",
+    "Operations / waste": "Operator, security, spent-fuel, waste, and long-term responsibility model.",
+  };
+  return evidence[layer] ?? `${layer} evidence with a named accountable owner.`;
+}
+
+function crispPrivateDiligenceForLayer(layer: string) {
+  const evidence = crispEvidenceForLayer(layer).replace(/\.$/, "");
+  return `${evidence} are likely private diligence items unless public filings or counterparty materials prove them.`;
+}
+
+function missingEvidenceItems(claims: AtomicClaim[]) {
+  const claimTypes = new Set(claims.map((claim) => claim.claimType));
+  const layerPriority = claimTypes.has("data_center_power_claim")
+    ? [
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "Bridge power / phased energization",
+        "Offtake / customer",
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "EPC / construction",
+        "Financing",
+        "Operations / waste",
+      ]
+    : claimTypes.has("bridge_power_claim")
+      ? [
+          "Bridge power / phased energization",
+          "Interconnection / power delivery",
+          "Site / permitting",
+          "Offtake / customer",
+          "Licensing / NRC",
+          "EPC / construction",
+          "Financing",
+          "Fuel supply / HALEU",
+          "Operations / waste",
+        ]
+      : claimTypes.has("offtake_claim")
+        ? [
+            "Offtake / customer",
+            "Financing",
+            "Site / permitting",
+            "Interconnection / power delivery",
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Licensing / NRC",
+            "EPC / construction",
+            "Operations / waste",
+          ]
+        : claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")
+          ? [
+              "Fuel supply / HALEU",
+              "Fuel fabrication",
+              "Transportation / safeguards",
+              "Licensing / NRC",
+              "Site / permitting",
+              "EPC / construction",
+              "Financing",
+              "Offtake / customer",
+              "Operations / waste",
+              "Bridge power / phased energization",
+            ]
+          : [
+              "Licensing / NRC",
+              "Site / permitting",
+              "EPC / construction",
+              "Financing",
+              "Fuel supply / HALEU",
+              "Fuel fabrication",
+              "Transportation / safeguards",
+              "Interconnection / power delivery",
+              "Offtake / customer",
+              "Bridge power / phased energization",
+              "Operations / waste",
+            ];
+  const layers = Array.from(new Set(claims
+    .filter((claim) => claim.evidenceStatus !== "supported_by_public_source")
+    .flatMap((claim) => claim.deploymentLayers)));
+  return layers
+    .sort((a, b) => layerPriority.indexOf(a) - layerPriority.indexOf(b))
+    .map(crispEvidenceForLayer)
+    .slice(0, 5);
+}
+
+function privateEvidenceItems(claims: AtomicClaim[]) {
+  const layers = claims
+    .filter((claim) => claim.evidenceStatus === "private_diligence_required" || claim.evidenceStatus === "cannot_know_from_public_docs")
+    .flatMap((claim) => claim.deploymentLayers);
+  return Array.from(new Set(layers.map(crispPrivateDiligenceForLayer))).slice(0, 6);
+}
+
+function verdictChangeItems(claims: AtomicClaim[]) {
+  const claimTypes = new Set(claims.map((claim) => claim.claimType));
+  const layerPriority = claimTypes.has("data_center_power_claim")
+    ? [
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "Bridge power / phased energization",
+        "Offtake / customer",
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "EPC / construction",
+        "Financing",
+        "Operations / waste",
+      ]
+    : claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")
+      ? [
+          "Fuel supply / HALEU",
+          "Fuel fabrication",
+          "Transportation / safeguards",
+          "Licensing / NRC",
+          "Site / permitting",
+          "EPC / construction",
+          "Financing",
+          "Offtake / customer",
+          "Operations / waste",
+          "Bridge power / phased energization",
+        ]
+      : [
+          "Licensing / NRC",
+          "Site / permitting",
+          "EPC / construction",
+          "Financing",
+          "Fuel supply / HALEU",
+          "Fuel fabrication",
+          "Transportation / safeguards",
+          "Interconnection / power delivery",
+          "Offtake / customer",
+          "Bridge power / phased energization",
+          "Operations / waste",
+        ];
+  const layers = Array.from(new Set(claims.flatMap((claim) => claim.deploymentLayers)))
+    .sort((a, b) => layerPriority.indexOf(a) - layerPriority.indexOf(b));
+  return layers.map(crispEvidenceForLayer).slice(0, 6);
+}
+
 function buildEvidenceLedger(
   target: string,
   note: string,
@@ -431,7 +658,7 @@ function buildEvidenceLedger(
       const matchedManifestDocs = relevantDocuments
         .filter((document) => document.deploymentLayers.some((layer) => claim.deploymentLayers.includes(layer)))
         .slice(0, 3);
-      const evidenceStatus = classifyAtomicClaim(claim.claimType, claim.deploymentLayers, matchedChunks);
+      const evidenceStatus = classifyAtomicClaim(target, claim.claimType, claim.deploymentLayers, matchedChunks);
       atomicClaims.push({
         id: `atomic-${atomicClaims.length + 1}`,
         text,
@@ -445,10 +672,30 @@ function buildEvidenceLedger(
         whyItMatters: claim.deploymentLayers.map((layer) => `${layer} can break bankability, schedule, or execution if unsupported.`).join(" "),
         matchedChunks,
         matchedManifestDocs,
-        whatThisDoesNotProve: doesNotProveFor(text),
+        whatThisDoesNotProve: doesNotProveFor(),
       });
     });
   });
+
+  const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
+  if (claimTypes.has("data_center_power_claim") && !claimTypes.has("bridge_power_claim")) {
+    const bridgeLayers = ["Bridge power / phased energization"];
+    atomicClaims.push({
+      id: `atomic-${atomicClaims.length + 1}`,
+      text: `${target} needs a credible initial power source and transition plan if the data-center campus must energize before nuclear is available.`,
+      claimType: "bridge_power_claim",
+      deploymentLayers: bridgeLayers,
+      triggeredBy: ["data center power-campus diligence"],
+      targetSpecificity: "target_specific",
+      evidenceStatus: "private_diligence_required",
+      confidence: "high",
+      requiredEvidence: bridgeLayers.map((layer) => requiredEvidenceForLayer(layer, target)).join(" "),
+      whyItMatters: bridgeLayers.map((layer) => `${layer} can break bankability, schedule, or execution if unsupported.`).join(" "),
+      matchedChunks: [],
+      matchedManifestDocs: relevantDocuments.filter((document) => document.deploymentLayers.some((layer) => bridgeLayers.includes(layer))).slice(0, 3),
+      whatThisDoesNotProve: doesNotProveFor(),
+    });
+  }
 
   if (!atomicClaims.length) {
     atomicClaims.push({
@@ -468,27 +715,9 @@ function buildEvidenceLedger(
     });
   }
 
-  const topMissingEvidence = Array.from(new Set(atomicClaims
-    .filter((claim) => claim.evidenceStatus === "missing" || claim.evidenceStatus === "user_note_only" || claim.evidenceStatus === "partially_supported_by_public_source")
-    .map((claim) => claim.requiredEvidence)
-  )).slice(0, 5);
-
-  const privateDiligenceRequired = Array.from(new Set(atomicClaims
-    .filter((claim) => claim.evidenceStatus === "private_diligence_required" || claim.evidenceStatus === "cannot_know_from_public_docs")
-    .map((claim) => `${claim.text} Required: ${claim.requiredEvidence}`)
-  )).slice(0, 6);
-
-  const whatWouldChangeVerdict = Array.from(new Set([
-    ...topMissingEvidence,
-    ...privateDiligenceRequired,
-    "Named NRC applicant and public docket or pre-application record.",
-    "Site-control documents for named project sites.",
-    "Binding customer/offtake agreement or credit support.",
-    "Named reactor vendor and licensing owner.",
-    "HALEU assay, form, quantity, supplier, allocation, fabrication, and transport evidence.",
-    "EPC scope, contractor, cost basis, schedule, and risk allocation.",
-    "Financing sources, uses, milestone conditions, and downside case.",
-  ])).slice(0, 8);
+  const topMissingEvidence = missingEvidenceItems(atomicClaims);
+  const privateDiligenceRequired = privateEvidenceItems(atomicClaims);
+  const whatWouldChangeVerdict = verdictChangeItems(atomicClaims);
 
   return {
     atomicClaims,
@@ -524,7 +753,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
   const claimLabelsList = detectedClaims.map((claim) => claim.label);
   const topFindings = findings.slice(0, 6);
 
-  const documentMatch = rankDocumentsForClaim({ detectedClaims, deploymentLayerFindings: findings, targetText: `${target} ${input.note}`, limit: 8 });
+  const documentMatch = rankDocumentsForClaim({ detectedClaims, deploymentLayerFindings: findings, targetText: target, limit: 8 });
   const relevantDocuments = documentMatch.relevantDocuments.map(toMemoRelevantDocument);
   const documentCoverage = documentMatch.documentCoverage.map((item) => ({
     layer: item.layer,
@@ -537,13 +766,19 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
   const evidenceLedger = buildEvidenceLedger(target, input.note, detectedClaims, findings, documentMatch, documentCoverage, relevantDocuments);
   const uniqueLedgerChunks = ledgerChunkEvidence(evidenceLedger);
   const isShuffleLike = category === "data_center_power_infrastructure";
-  const oneLineJudgment = isShuffleLike
+  const isDataCenterPowerCase = isShuffleLike || detectedClaims.some((claim) => claim.claimType === "data_center_power_claim");
+  const isFuelReadinessCase = !isDataCenterPowerCase && detectedClaims.some((claim) => claim.claimType === "HALEU_claim" || claim.claimType === "fuel_cycle_claim");
+  const oneLineJudgment = isDataCenterPowerCase
     ? `${target} appears to be a data-center power infrastructure diligence case, not a reactor developer case. Treat nuclear as long-term optionality unless site control, initial power, customer/offtake, reactor vendor, licensing responsibility, EPC, and fuel-cycle evidence are provided.`
-    : `${target} requires input-specific diligence across ${topFindings.map((item) => item.layer).join(", ") || "the relevant deployment layers"}; current deterministic analysis does not support treating the claim as bankable without proof.`;
+    : isFuelReadinessCase
+      ? `${target} may be a relevant HALEU/fuel-cycle prospect, but public HALEU market and licensing context does not prove target-specific fuel supply, first-core/reload commitments, fabrication capacity, transport readiness, or delivery timing.`
+      : `${target} requires input-specific diligence across ${topFindings.map((item) => item.layer).join(", ") || "the relevant deployment layers"}; current deterministic analysis does not support treating the claim as bankable without proof.`;
 
-  const recommendedNextAction = isShuffleLike
+  const recommendedNextAction = isDataCenterPowerCase
     ? `For ${target}, diligence the power-campus stack first: site rights, initial energization source, customer/offtake, bridge-power economics, and whether nuclear is base case or upside. Then require the named reactor vendor and licensing owner.`
-    : `Ask ${target} for layer-specific evidence for the detected claims before treating the deployment timeline or commercial claim as bankable.`;
+    : isFuelReadinessCase
+      ? `Ask ${target} for a fuel-readiness package: HALEU assay, form, quantity, first-core and reload schedule, supplier/allocation status, fabrication route, transport/safeguards plan, licensing owner, and commercial reservation authority.`
+      : `Ask ${target} for layer-specific evidence for the entered claims before treating the deployment timeline or commercial claim as bankable.`;
 
   const whatIsEvidenced = uniqueLedgerChunks.length
     ? uniqueLedgerChunks.slice(0, 3).map((chunk) => `${chunk.documentTitle}: ${chunk.relevanceReason}`)
@@ -551,7 +786,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
 
   const whatIsNotYetEvidenced = evidenceLedger.topMissingEvidence.length
     ? evidenceLedger.topMissingEvidence
-    : (isShuffleLike
+    : (isDataCenterPowerCase
         ? [
             "Binding site-control package and permitting path for the claimed campus scale.",
             "Initial energization source, cost, reliability, and bridge-power duration.",
@@ -561,7 +796,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
           ]
         : topFindings.map((finding) => `${finding.layer}: ${finding.requiredEvidence}`));
 
-  const majorKillRisks = isShuffleLike
+  const majorKillRisks = isDataCenterPowerCase
     ? [
         "The data center campus cannot energize at the claimed MW scale on the claimed schedule.",
         "Customer/offtake is preliminary rather than binding and financeable.",
@@ -571,7 +806,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
       ]
     : topFindings.map((finding) => `${finding.layer}: ${finding.finding}`).slice(0, 5);
 
-  const whatMustBeTrue = isShuffleLike
+  const whatMustBeTrue = isDataCenterPowerCase
     ? [
         `${target} controls sites that can host the proposed load and power configuration.`,
         "Initial power can energize the campus before nuclear arrives, at financeable cost and reliability.",
@@ -581,13 +816,17 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
       ]
     : topFindings.map((finding) => `${finding.layer} must be supported by: ${finding.requiredEvidence}`).slice(0, 6);
 
-  const situation = isShuffleLike
+  const situation = isDataCenterPowerCase
     ? `${target} is being evaluated as a data-center power infrastructure counterparty. The entered claim points to behind-the-meter or campus-scale power delivery with possible long-term nuclear integration, so diligence should prioritize power-campus deliverability before reactor-design conclusions.`
-    : `${target} is being evaluated for: ${input.decisionQuestion}. The entered claim triggers ${claimLabelsList.join(", ") || "no high-confidence claim type"}.`;
+    : isFuelReadinessCase
+      ? `${target} is being evaluated as a possible HALEU or fuel-cycle customer. The entered claim is about fuel availability and timing, so diligence should focus on project-specific supply, fabrication, logistics, licensing, and reservation authority rather than general market scarcity.`
+      : `${target} is being evaluated for: ${input.decisionQuestion}. The entered claim triggers ${claimLabelsList.join(", ") || "no high-confidence claim type"}.`;
 
-  const thesis = isShuffleLike
+  const thesis = isDataCenterPowerCase
     ? `${target} may be interesting if it can prove site control, near-term power, binding load/customer demand, and a credible path from bridge power to nuclear baseload. Without named nuclear counterparties and licensing responsibility, the nuclear component should be treated as long-term optionality, not bankable supply.`
-    : `${target} may merit further diligence, but the detected claims need evidence across each implicated deployment layer before the timeline, fuel-cycle, commercial, or construction claims can support an IC view.`;
+    : isFuelReadinessCase
+      ? `${target} is not yet a bankable fuel-cycle customer on the current record. Public HALEU sources establish market relevance and regulatory/fuel-cycle constraints, but the target still needs a project-specific fuel-readiness package before a supplier should reserve scarce capacity.`
+      : `${target} may merit further diligence, but the entered claims need evidence across each implicated deployment layer before the timeline, fuel-cycle, commercial, or construction claims can support an IC view.`;
 
   return {
     verdict,
@@ -629,7 +868,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
       detectedClaimTypes: detectedClaims.map((claim) => claim.claimType),
       triggeredKeywords: Object.fromEntries(detectedClaims.map((claim) => [claim.claimType, claim.triggeredKeywords])),
       deploymentLayersImplicated: findings.map((finding) => finding.layer),
-      selectedMemoTemplate: isShuffleLike ? "data_center_power_infrastructure" : profile ? `company_category_${profile.category}` : "generic_claim_type_template",
+      selectedMemoTemplate: isDataCenterPowerCase ? "data_center_power_infrastructure" : profile ? `company_category_${profile.category}` : "generic_claim_type_template",
     },
     confidenceRationale: sourceMatch.confidenceRationale,
     sourceCoverage: sourceMatch.sourceCoverageByLayer.map((item) => ({
@@ -651,7 +890,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
 export function analyzeInput(input: AnalysisInput): MemoResult {
   const profile = matchCompany(input.targetCompanyProject, input.note);
   const detectedClaims = detectClaims(input.note, profile);
-  const findings = buildLayerFindings(input.targetCompanyProject.trim() || profile?.name || "Target", detectedClaims, profile);
+  const findings = buildLayerFindings(input.targetCompanyProject.trim() || profile?.name || "Target", detectedClaims, profile, input.note);
   const sourceMatch = matchSources({
     companyProfile: profile,
     detectedClaims,
@@ -679,6 +918,7 @@ export function applyMemoResult(profile: ProjectCounterpartyProfile, result: Mem
     sourceCoverage: result.sourceCoverage,
     publicEvidenceNotes: result.relevantPublicEvidenceNotes,
     relevantDocuments: result.relevantDocuments,
+    manifestOnlyDocuments: result.manifestOnlyDocuments,
     documentCoverage: result.documentCoverage,
     evidenceLedger: result.evidenceLedger,
     unsupportedLayers: result.unsupportedLayers,

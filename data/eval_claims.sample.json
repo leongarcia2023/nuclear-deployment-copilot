@@ -1,630 +1,3196 @@
 [
   {
-    "id": "shuffle_data_center_power",
-    "target": "Shuffle Infrastructure",
-    "user_type": "Investor",
-    "decision_question": "Is this worth deeper diligence?",
-    "claim_text": "Shuffle Infrastructure claims it can develop 300 MW behind-the-meter AI data center campuses with near-term bridge power and future nuclear baseload integration.",
-    "expected_atomic_claim_types": [
-      "data_center_power_claim",
-      "behind_the_meter_claim",
-      "bridge_power_claim",
-      "nuclear_integration_claim"
+    "id": "nrc_preapp_2030_investor",
+    "target": "Reactor Developer",
+    "userType": "Investor",
+    "decisionQuestion": "Is this deployment timeline believable?",
+    "claimText": "Company is in NRC pre-application and can reach commercial operation by 2030.",
+    "expectedDetectedClaimTypes": [
+      "NRC_engagement_claim",
+      "deployment_timeline_claim"
     ],
-    "expected_deployment_layers": [
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC",
       "Site / permitting",
-      "Interconnection / power delivery",
-      "Bridge power / phased energization",
-      "Offtake / customer",
+      "EPC / construction",
       "Financing"
     ],
-    "expected_relevant_documents": [
-      "FERC Order",
-      "Constellation"
+    "expectedTopMissingEvidence": [
+      "Named NRC applicant",
+      "Site-control",
+      "EPC"
     ],
-    "expected_target_specific_support_statuses": [
-      "Missing",
-      "Private diligence required"
+    "expectedTargetSpecificSupport": {
+      "Licensing / NRC": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "Pre-application engagement can be useful"
     ],
-    "expected_top_missing_evidence": [
-      "site",
-      "customer",
-      "power"
+    "forbiddenMemoPhrases": [
+      "licensing approval",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
     ],
-    "expected_verdict": "Diligence Required"
+    "expectedQuestionsContain": [
+      "accepted, docketed, or reviewed"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "LIC-116",
+      "NuScale",
+      "ARCAP"
+    ]
+  },
+  {
+    "id": "nrc_preapp_2030_strategic",
+    "target": "Advanced Reactor Co",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this partner/customer credible?",
+    "claimText": "Advanced Reactor Co says NRC pre-application meetings put it on track for commercial operation by 2030.",
+    "expectedDetectedClaimTypes": [
+      "NRC_engagement_claim",
+      "deployment_timeline_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC",
+      "Site / permitting",
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "Named NRC applicant",
+      "Site-control"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Licensing / NRC": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "Pre-application engagement"
+    ],
+    "forbiddenMemoPhrases": [
+      "licensed for commercial operation",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "named NRC applicant"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "LIC-116",
+      "ARCAP"
+    ]
+  },
+  {
+    "id": "nrc_readiness_ready_file",
+    "target": "Readiness Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this deployment timeline believable?",
+    "claimText": "Readiness Reactor completed a readiness assessment and is ready to file its construction permit application.",
+    "expectedDetectedClaimTypes": [
+      "NRC_engagement_claim",
+      "licensing_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC"
+    ],
+    "expectedTopMissingEvidence": [
+      "Named NRC applicant"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Licensing / NRC": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "regulatory claim"
+    ],
+    "forbiddenMemoPhrases": [
+      "NRC approval",
+      "approved application",
+      "licensed",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "public docket"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "Readiness",
+      "LIC-116"
+    ]
+  },
+  {
+    "id": "nrc_docketed_application",
+    "target": "Docketed Reactor",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Docketed Reactor says it has a docketed construction permit application for an advanced reactor project.",
+    "expectedDetectedClaimTypes": [
+      "licensing_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC"
+    ],
+    "expectedTopMissingEvidence": [
+      "Named NRC applicant"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Licensing / NRC": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "regulatory claim"
+    ],
+    "forbiddenMemoPhrases": [
+      "license granted",
+      "commercial operation approved",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "public docket"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "Long Mott",
+      "Kemmerer"
+    ]
+  },
+  {
+    "id": "design_cert_no_site_nuscale",
+    "target": "NuScale",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "NuScale has design certification but no committed project site and says the next VOYGR project is financeable.",
+    "expectedDetectedClaimTypes": [
+      "licensing_claim",
+      "financing_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC",
+      "Financing",
+      "Site / permitting"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control",
+      "financing"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [],
+    "forbiddenMemoPhrases": [
+      "design certification proves project financing",
+      "site control secured",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "capital"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "NuScale"
+    ]
+  },
+  {
+    "id": "design_cert_utility_buyer",
+    "target": "Certified SMR Vendor",
+    "userType": "Utility / industrial power buyer",
+    "decisionQuestion": "Is this partner/customer credible?",
+    "claimText": "Certified SMR Vendor says design certification makes its first utility deployment low risk even though the utility site is not selected.",
+    "expectedDetectedClaimTypes": [
+      "licensing_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC",
+      "Site / permitting"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Site / permitting": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "regulatory claim"
+    ],
+    "forbiddenMemoPhrases": [
+      "low risk",
+      "deployability proven",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "named sites"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "NuScale"
+    ]
+  },
+  {
+    "id": "nrc_application_accepted_not_licensed",
+    "target": "Application Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Application Reactor says its NRC application has been accepted for review and therefore the project can begin commercial operation in 2031.",
+    "expectedDetectedClaimTypes": [
+      "licensing_claim",
+      "deployment_timeline_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC",
+      "Site / permitting",
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "licensing milestone",
+      "Site-control"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Licensing / NRC": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "regulatory claim"
+    ],
+    "forbiddenMemoPhrases": [
+      "accepted application is approval",
+      "licensed",
+      "commercial operation approved",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "dated milestones"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "RAI"
+    ]
+  },
+  {
+    "id": "readiness_assessment_supplier",
+    "target": "Fuel Customer A",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this a credible fuel-cycle customer?",
+    "claimText": "Fuel Customer A says an NRC readiness assessment validates its 2030 first fuel need.",
+    "expectedDetectedClaimTypes": [
+      "NRC_engagement_claim",
+      "deployment_timeline_claim",
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC",
+      "Fuel supply / HALEU"
+    ],
+    "expectedTopMissingEvidence": [
+      "Named NRC applicant",
+      "HALEU assay"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Licensing / NRC": "Missing",
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "readiness assessment proves NRC approval",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "assay"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "Readiness",
+      "HALEU"
+    ]
   },
   {
     "id": "haleu_first_core_reloads",
     "target": "Reactor Developer",
-    "user_type": "Fuel-cycle supplier",
-    "decision_question": "Is this a credible fuel-cycle customer?",
-    "claim_text": "A reactor developer claims it has secured HALEU supply for first core and reloads and can begin deployment by 2031.",
-    "expected_atomic_claim_types": [
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this a credible fuel-cycle customer?",
+    "claimText": "A reactor developer claims it has secured HALEU supply for first core and reloads and can begin deployment by 2031.",
+    "expectedDetectedClaimTypes": [
       "HALEU_claim",
       "fuel_cycle_claim",
       "deployment_timeline_claim"
     ],
-    "expected_deployment_layers": [
+    "forbiddenDetectedClaimTypes": [
+      "data_center_power_claim",
+      "bridge_power_claim"
+    ],
+    "expectedDeploymentLayers": [
       "Fuel supply / HALEU",
       "Fuel fabrication",
       "Transportation / safeguards",
       "Licensing / NRC"
     ],
-    "expected_relevant_documents": [
-      "HALEU",
-      "Centrus",
-      "Criticality"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Missing",
-      "Private diligence required"
-    ],
-    "expected_top_missing_evidence": [
-      "Assay",
+    "expectedTopMissingEvidence": [
+      "HALEU assay",
       "fabrication",
       "Transportation"
     ],
-    "expected_verdict": "Diligence Required"
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "public HALEU context"
+    ],
+    "forbiddenMemoPhrases": [
+      "target-specific fuel supply is proven",
+      "bankable fuel readiness",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "first core and reloads"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "HALEU",
+      "Centrus",
+      "Criticality"
+    ]
   },
   {
-    "id": "preapp_to_2030",
-    "target": "Reactor Developer",
-    "user_type": "Investor",
-    "decision_question": "Is this deployment timeline believable?",
-    "claim_text": "A reactor developer claims it can move from pre-application engagement to commercial operation by 2030.",
-    "expected_atomic_claim_types": [
-      "NRC_engagement_claim",
+    "id": "haleu_doe_allocation",
+    "target": "Allocation Reactor",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this a credible fuel-cycle customer?",
+    "claimText": "Allocation Reactor says it has a DOE HALEU allocation for first core but has not named the supplier or fuel fabricator.",
+    "expectedDetectedClaimTypes": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [
+      "data_center_power_claim"
+    ],
+    "expectedDeploymentLayers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication"
+    ],
+    "expectedTopMissingEvidence": [
+      "supplier",
+      "fabrication"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "DOE allocation proves delivery",
+      "fuel supply secured",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "supplier"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "HALEU",
+      "DOE"
+    ]
+  },
+  {
+    "id": "fuel_supplier_mou",
+    "target": "MOU Reactor",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this a credible fuel-cycle customer?",
+    "claimText": "MOU Reactor says it has a fuel supplier MOU covering HALEU first core and reloads.",
+    "expectedDetectedClaimTypes": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [
+      "data_center_power_claim"
+    ],
+    "expectedDeploymentLayers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication"
+    ],
+    "expectedTopMissingEvidence": [
+      "supplier",
+      "delivery"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "project-specific fuel-readiness package"
+    ],
+    "forbiddenMemoPhrases": [
+      "MOU is binding",
+      "binding fuel supply agreement",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "assay"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "HALEU",
+      "Centrus"
+    ]
+  },
+  {
+    "id": "leu_plus_not_haleu",
+    "target": "LEU Plus Reactor",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this a credible fuel-cycle customer?",
+    "claimText": "LEU Plus Reactor says it uses LEU+ rather than HALEU and can still reserve fuel-cycle capacity for first core by 2030.",
+    "expectedDetectedClaimTypes": [
+      "fuel_cycle_claim",
       "deployment_timeline_claim"
     ],
-    "expected_deployment_layers": [
-      "Licensing / NRC",
-      "Site / permitting",
-      "EPC / construction",
-      "Financing"
+    "forbiddenDetectedClaimTypes": [
+      "data_center_power_claim"
     ],
-    "expected_relevant_documents": [
-      "LIC-116",
-      "NuScale",
-      "ARCAP",
-      "Long Mott"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Partially supported",
-      "Private diligence required"
-    ],
-    "expected_top_missing_evidence": [
-      "Named license applicant",
-      "site",
-      "EPC"
-    ],
-    "expected_verdict": "Diligence Required"
-  },
-  {
-    "id": "oklo_data_center_offtake",
-    "target": "Oklo",
-    "user_type": "Investor",
-    "decision_question": "Is this partner/customer credible?",
-    "claim_text": "Oklo says it has a multi-gigawatt data center offtake pipeline and can deploy advanced reactors before 2032.",
-    "expected_atomic_claim_types": [
-      "data_center_power_claim",
-      "offtake_claim",
-      "deployment_timeline_claim",
-      "nuclear_integration_claim"
-    ],
-    "expected_deployment_layers": [
-      "Offtake / customer",
-      "Financing",
+    "expectedDeploymentLayers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication",
       "Licensing / NRC"
     ],
-    "expected_relevant_documents": [
-      "FERC",
-      "Constellation",
-      "NuScale"
+    "expectedTopMissingEvidence": [
+      "assay",
+      "fabrication"
     ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required",
-      "Missing"
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
     ],
-    "expected_top_missing_evidence": [
-      "offtake",
-      "license",
-      "EPC"
+    "forbiddenMemoPhrases": [
+      "HALEU supply secured",
+      "data center",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
     ],
-    "expected_verdict": "Diligence Required"
+    "expectedQuestionsContain": [
+      "assay"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "fuel"
+    ]
   },
   {
-    "id": "kairos_construction_permit",
-    "target": "Kairos",
-    "user_type": "Strategic partner / incumbent",
-    "decision_question": "Is this deployment timeline believable?",
-    "claim_text": "Kairos claims its NRC construction permit precedent supports a repeatable commercial deployment timeline.",
-    "expected_atomic_claim_types": [
-      "licensing_claim",
-      "deployment_timeline_claim"
+    "id": "reloads_no_load_false_positive",
+    "target": "Reload Reactor",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this a credible fuel-cycle customer?",
+    "claimText": "Reload Reactor says reloads are secured for ten years after first core.",
+    "expectedDetectedClaimTypes": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
     ],
-    "expected_deployment_layers": [
-      "Licensing / NRC",
-      "Site / permitting",
-      "EPC / construction"
+    "forbiddenDetectedClaimTypes": [
+      "data_center_power_claim",
+      "bridge_power_claim"
     ],
-    "expected_relevant_documents": [
-      "Hermes",
-      "Kairos",
-      "NuScale"
+    "expectedDeploymentLayers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication"
     ],
-    "expected_target_specific_support_statuses": [
-      "Partially supported",
-      "Private diligence required"
+    "expectedTopMissingEvidence": [
+      "HALEU assay",
+      "delivery"
     ],
-    "expected_top_missing_evidence": [
-      "site",
-      "EPC",
-      "commercial operation"
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
     ],
-    "expected_verdict": "Diligence Required"
+    "forbiddenMemoPhrases": [
+      "data center",
+      "large load",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "first core and reloads"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "HALEU"
+    ]
   },
   {
-    "id": "terrapower_kemmerer",
-    "target": "TerraPower",
-    "user_type": "Investor",
-    "decision_question": "Is this project/partner credible?",
-    "claim_text": "TerraPower claims Natrium can reach commercial operation after the Kemmerer construction permit process and DOE-backed demonstration work.",
-    "expected_atomic_claim_types": [
-      "licensing_claim",
-      "deployment_timeline_claim",
-      "financing_claim"
+    "id": "haleu_assay_form_quantity_missing",
+    "target": "Advanced Fuel Customer",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "What questions should we ask next?",
+    "claimText": "Advanced Fuel Customer says HALEU supply is secured but will not disclose assay, form, quantity, delivery window, or fabricator.",
+    "expectedDetectedClaimTypes": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
     ],
-    "expected_deployment_layers": [
-      "Licensing / NRC",
-      "Financing",
-      "EPC / construction"
+    "forbiddenDetectedClaimTypes": [
+      "data_center_power_claim"
     ],
-    "expected_relevant_documents": [
-      "Kemmerer",
-      "DOE"
+    "expectedDeploymentLayers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication"
     ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required",
-      "Partially supported"
+    "expectedTopMissingEvidence": [
+      "HALEU assay",
+      "fabrication"
     ],
-    "expected_top_missing_evidence": [
-      "financing",
-      "EPC",
-      "license"
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "assay, form, quantity"
     ],
-    "expected_verdict": "Diligence Required"
+    "forbiddenMemoPhrases": [
+      "supply is proven",
+      "target-specific fuel supply",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "assay"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "HALEU",
+      "Centrus"
+    ]
   },
   {
-    "id": "nuscale_next_project",
-    "target": "NuScale",
-    "user_type": "Investor",
-    "decision_question": "Is this worth deeper diligence?",
-    "claim_text": "NuScale claims its design certification and new development partnerships make the next VOYGR deployment financeable.",
-    "expected_atomic_claim_types": [
-      "licensing_claim",
-      "financing_claim"
-    ],
-    "expected_deployment_layers": [
-      "Licensing / NRC",
-      "Financing",
-      "Offtake / customer"
-    ],
-    "expected_relevant_documents": [
-      "NuScale",
-      "RAI"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required",
-      "Partially supported"
-    ],
-    "expected_top_missing_evidence": [
-      "offtake",
-      "financing",
-      "EPC"
-    ],
-    "expected_verdict": "Diligence Required"
-  },
-  {
-    "id": "centrus_haleu_capacity",
+    "id": "centrus_capacity_reactor_developer",
     "target": "Centrus",
-    "user_type": "Reactor developer",
-    "decision_question": "Is this partner/customer credible?",
-    "claim_text": "Centrus claims DOE awards and its American Centrifuge Plant support scaled HALEU enrichment capacity.",
-    "expected_atomic_claim_types": [
+    "userType": "Reactor developer",
+    "decisionQuestion": "Is this partner/customer credible?",
+    "claimText": "Centrus claims DOE awards and its American Centrifuge Plant support scaled HALEU enrichment capacity.",
+    "expectedDetectedClaimTypes": [
       "HALEU_claim",
       "fuel_cycle_claim",
       "financing_claim"
     ],
-    "expected_deployment_layers": [
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
       "Fuel supply / HALEU",
       "Financing"
     ],
-    "expected_relevant_documents": [
-      "Centrus",
-      "HALEU"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required",
-      "Missing"
-    ],
-    "expected_top_missing_evidence": [
+    "expectedTopMissingEvidence": [
       "quantity",
-      "delivery",
+      "delivery"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "closed financing",
+      "unlimited capacity",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
       "allocation"
     ],
-    "expected_verdict": "Diligence Required"
+    "expectedRelevantSourceFamilies": [
+      "Centrus",
+      "HALEU"
+    ]
+  },
+  {
+    "id": "haleu_no_fabricator",
+    "target": "No Fabricator Reactor",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "No Fabricator Reactor says it has HALEU feedstock access but has not selected a fuel fabricator or qualified design.",
+    "expectedDetectedClaimTypes": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [
+      "data_center_power_claim"
+    ],
+    "expectedDeploymentLayers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication"
+    ],
+    "expectedTopMissingEvidence": [
+      "fabrication",
+      "qualification"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel fabrication": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel fabrication": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "fabrication capacity secured",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "fabrication facility"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "TRISO",
+      "fabrication"
+    ]
+  },
+  {
+    "id": "fuel_design_qualified",
+    "target": "Fuel Design Co",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Fuel Design Co claims its advanced fuel design is qualified for commercial reactor deployment.",
+    "expectedDetectedClaimTypes": [
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Fuel fabrication",
+      "Transportation / safeguards"
+    ],
+    "expectedTopMissingEvidence": [
+      "qualification",
+      "fabrication"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel fabrication": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel fabrication": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "qualified design proven",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "qualification"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "Criticality",
+      "TRISO"
+    ]
   },
   {
     "id": "triso_x_fabrication",
     "target": "TRISO-X",
-    "user_type": "Fuel-cycle supplier",
-    "decision_question": "Is this partner/customer credible?",
-    "claim_text": "TRISO-X claims its fuel fabrication facility licensing path can support advanced reactor first cores.",
-    "expected_atomic_claim_types": [
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "TRISO-X claims its fuel fabrication facility licensing path can support advanced reactor first cores.",
+    "expectedDetectedClaimTypes": [
       "fuel_cycle_claim",
       "licensing_claim"
     ],
-    "expected_deployment_layers": [
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
       "Fuel fabrication",
-      "Licensing / NRC",
-      "Transportation / safeguards"
+      "Licensing / NRC"
     ],
-    "expected_relevant_documents": [
+    "expectedTopMissingEvidence": [
+      "fabrication",
+      "capacity"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel fabrication": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel fabrication": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "fabrication slot guaranteed",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "licensed fabrication facility"
+    ],
+    "expectedRelevantSourceFamilies": [
       "TRISO-X",
       "RAI"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Missing",
-      "Partially supported"
-    ],
-    "expected_top_missing_evidence": [
-      "fabrication",
-      "first core",
-      "transport"
-    ],
-    "expected_verdict": "Monitor"
+    ]
   },
   {
-    "id": "microsoft_nuclear_power",
-    "target": "Microsoft",
-    "user_type": "Data center power buyer",
-    "decision_question": "Is this partner/customer credible?",
-    "claim_text": "Microsoft claims long-term nuclear power procurement can support AI data center load growth.",
-    "expected_atomic_claim_types": [
+    "id": "bwxt_fabrication_claim",
+    "target": "BWXT Fuel Route",
+    "userType": "Reactor developer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "The reactor developer says fuel will be fabricated at BWXT, but no capacity reservation or qualification schedule has been provided.",
+    "expectedDetectedClaimTypes": [
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Fuel fabrication"
+    ],
+    "expectedTopMissingEvidence": [
+      "fabrication",
+      "capacity"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel fabrication": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel fabrication": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "capacity reservation secured",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "capacity"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "fabrication"
+    ]
+  },
+  {
+    "id": "framatome_fabrication_mou",
+    "target": "Framatome Fuel Route",
+    "userType": "Reactor developer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "The company says Framatome signed a fuel fabrication MOU for first core supply.",
+    "expectedDetectedClaimTypes": [
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Fuel fabrication",
+      "Fuel supply / HALEU"
+    ],
+    "expectedTopMissingEvidence": [
+      "fabrication",
+      "delivery"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel fabrication": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel fabrication": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "MOU is binding",
+      "fabrication secured",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "licensed fabrication facility"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "fabrication"
+    ]
+  },
+  {
+    "id": "transport_package_exists",
+    "target": "Transport Reactor",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Transport Reactor claims a transportation package exists for HALEU fuel shipments and first-core logistics.",
+    "expectedDetectedClaimTypes": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Transportation / safeguards",
+      "Fuel supply / HALEU"
+    ],
+    "expectedTopMissingEvidence": [
+      "Transportation package",
+      "safeguards"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Transportation / safeguards": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Transportation / safeguards": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "transport approved",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "transportation"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "transport"
+    ]
+  },
+  {
+    "id": "safeguards_storage_addressed",
+    "target": "Safeguards Reactor",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Safeguards Reactor says safeguards category and HALEU storage plan are addressed for the project.",
+    "expectedDetectedClaimTypes": [
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Transportation / safeguards",
+      "Fuel supply / HALEU"
+    ],
+    "expectedTopMissingEvidence": [
+      "safeguards",
+      "storage"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Transportation / safeguards": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Transportation / safeguards": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "safeguards approved",
+      "storage licensed",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "safeguards"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "safeguards",
+      "storage"
+    ]
+  },
+  {
+    "id": "first_core_transport_undefined",
+    "target": "Logistics Reactor",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Logistics Reactor claims first core fuel is on schedule but transport and safeguards owners are still being negotiated.",
+    "expectedDetectedClaimTypes": [
+      "fuel_cycle_claim",
+      "HALEU_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Transportation / safeguards",
+      "Fuel supply / HALEU"
+    ],
+    "expectedTopMissingEvidence": [
+      "Transportation",
+      "responsible licensee"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Transportation / safeguards": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Transportation / safeguards": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "transport/safeguards"
+    ],
+    "forbiddenMemoPhrases": [
+      "transport readiness proven",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "Who owns transportation"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "transport",
+      "HALEU"
+    ]
+  },
+  {
+    "id": "shuffle_data_center_power",
+    "target": "Shuffle Infrastructure",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Shuffle Infrastructure claims it can develop 300 MW behind-the-meter AI data center campuses with near-term bridge power and future nuclear baseload integration.",
+    "expectedDetectedClaimTypes": [
       "data_center_power_claim",
-      "offtake_claim",
+      "behind_the_meter_claim",
+      "bridge_power_claim",
       "nuclear_integration_claim"
     ],
-    "expected_deployment_layers": [
-      "Offtake / customer",
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Site / permitting",
+      "Interconnection / power delivery",
+      "Bridge power / phased energization",
+      "Offtake / customer"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control",
+      "Bridge-power",
+      "Binding offtake"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Site / permitting": "Missing",
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Interconnection / power delivery": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "power-campus deliverability"
+    ],
+    "forbiddenMemoPhrases": [
+      "interconnection risk eliminated",
+      "target-specific HALEU",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "power-delivery basis"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "FERC",
+      "Talen",
+      "Constellation"
+    ]
+  },
+  {
+    "id": "data_center_300mw_2031",
+    "target": "SMR Data Campus",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "SMR Data Campus claims 300 MW behind-the-meter AI data center load by 2031 with nuclear power later.",
+    "expectedDetectedClaimTypes": [
+      "data_center_power_claim",
+      "behind_the_meter_claim",
+      "deployment_timeline_claim",
+      "nuclear_integration_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Site / permitting",
+      "Interconnection / power delivery",
+      "Bridge power / phased energization",
+      "Offtake / customer"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control",
+      "Bridge-power",
+      "Binding offtake"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Interconnection / power delivery": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Interconnection / power delivery": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "power-campus deliverability"
+    ],
+    "forbiddenMemoPhrases": [
+      "behind-the-meter eliminates interconnection risk",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "What is the power-delivery basis"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "FERC",
+      "Talen"
+    ]
+  },
+  {
+    "id": "bridge_power_90_days",
+    "target": "Fast Energize Campus",
+    "userType": "Data center power buyer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Fast Energize Campus claims bridge power will energize the site in 90 days before nuclear baseload arrives.",
+    "expectedDetectedClaimTypes": [
+      "bridge_power_claim",
+      "nuclear_integration_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Bridge power / phased energization",
       "Interconnection / power delivery",
       "Financing"
     ],
-    "expected_relevant_documents": [
-      "Constellation",
-      "FERC"
+    "expectedTopMissingEvidence": [
+      "Bridge-power source",
+      "Interconnection"
     ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required"
+    "expectedTargetSpecificSupport": {
+      "Bridge power / phased energization": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Bridge power / phased energization": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
     ],
-    "expected_top_missing_evidence": [
-      "customer",
-      "power delivery",
-      "contract"
+    "forbiddenMemoPhrases": [
+      "bridge power proven",
+      "90 days is bankable",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
     ],
-    "expected_verdict": "Diligence Required"
+    "expectedQuestionsContain": [
+      "initial energization"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "FERC",
+      "power"
+    ]
   },
   {
-    "id": "aws_susquehanna_colocation",
-    "target": "AWS",
-    "user_type": "Investor",
-    "decision_question": "Is this partner/customer credible?",
-    "claim_text": "AWS-linked nuclear co-location claims imply large-load data center power can be delivered behind the meter from an existing nuclear plant.",
-    "expected_atomic_claim_types": [
+    "id": "nuclear_replaces_bridge_later",
+    "target": "Phased Campus",
+    "userType": "Data center power buyer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Phased Campus says gas bridge power will be replaced by nuclear baseload later without changing the data center economics.",
+    "expectedDetectedClaimTypes": [
+      "bridge_power_claim",
+      "nuclear_integration_claim",
+      "data_center_power_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Bridge power / phased energization",
+      "EPC / construction",
+      "Financing"
+    ],
+    "expectedTopMissingEvidence": [
+      "Bridge-power",
+      "EPC"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Bridge power / phased energization": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Interconnection / power delivery": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "power-campus deliverability"
+    ],
+    "forbiddenMemoPhrases": [
+      "transition risk solved",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "nuclear slips"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "FERC",
+      "Talen"
+    ]
+  },
+  {
+    "id": "customer_load_secured",
+    "target": "Load Campus",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Load Campus says customer load is secured for a behind-the-meter power campus but does not disclose contract terms.",
+    "expectedDetectedClaimTypes": [
       "data_center_power_claim",
       "behind_the_meter_claim",
       "offtake_claim"
     ],
-    "expected_deployment_layers": [
-      "Interconnection / power delivery",
-      "Offtake / customer"
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Offtake / customer",
+      "Interconnection / power delivery"
     ],
-    "expected_relevant_documents": [
-      "FERC",
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "Interconnection"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Offtake / customer": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "power-campus"
+    ],
+    "forbiddenMemoPhrases": [
+      "customer load is binding",
+      "interconnection risk eliminated",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "offtake agreement binding"
+    ],
+    "expectedRelevantSourceFamilies": [
       "Talen",
-      "Susquehanna"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required",
-      "Missing"
-    ],
-    "expected_top_missing_evidence": [
-      "interconnection",
-      "offtake"
-    ],
-    "expected_verdict": "Diligence Required"
-  },
-  {
-    "id": "blue_energy_shipyard",
-    "target": "Blue Energy",
-    "user_type": "Strategic partner / incumbent",
-    "decision_question": "Is this deployment timeline believable?",
-    "claim_text": "Blue Energy claims modular shipyard construction can reduce EPC risk and accelerate first power by 2031.",
-    "expected_atomic_claim_types": [
-      "EPC_construction_claim",
-      "deployment_timeline_claim"
-    ],
-    "expected_deployment_layers": [
-      "EPC / construction",
-      "Site / permitting",
-      "Licensing / NRC",
-      "Financing"
-    ],
-    "expected_relevant_documents": [
-      "Vogtle",
-      "NuScale",
-      "Long Mott"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required",
-      "Missing"
-    ],
-    "expected_top_missing_evidence": [
-      "EPC",
-      "schedule",
-      "site"
-    ],
-    "expected_verdict": "Diligence Required"
-  },
-  {
-    "id": "last_energy_ppas",
-    "target": "Last Energy",
-    "user_type": "Investor",
-    "decision_question": "Is this worth deeper diligence?",
-    "claim_text": "Last Energy claims signed PPAs and modular construction allow fast deployment of microreactors for industrial customers.",
-    "expected_atomic_claim_types": [
-      "offtake_claim",
-      "EPC_construction_claim",
-      "deployment_timeline_claim",
-      "nuclear_integration_claim"
-    ],
-    "expected_deployment_layers": [
-      "Offtake / customer",
-      "EPC / construction",
-      "Licensing / NRC"
-    ],
-    "expected_relevant_documents": [
-      "NuScale",
-      "Long Mott"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required"
-    ],
-    "expected_top_missing_evidence": [
-      "PPA",
-      "EPC",
-      "license"
-    ],
-    "expected_verdict": "Diligence Required"
-  },
-  {
-    "id": "aalo_factory_deployment",
-    "target": "Aalo",
-    "user_type": "Investor",
-    "decision_question": "Is this deployment timeline believable?",
-    "claim_text": "Aalo claims factory-built reactors can begin commercial deployment by 2030 after NRC engagement.",
-    "expected_atomic_claim_types": [
-      "NRC_engagement_claim",
-      "deployment_timeline_claim",
-      "EPC_construction_claim",
-      "nuclear_integration_claim"
-    ],
-    "expected_deployment_layers": [
-      "Licensing / NRC",
-      "EPC / construction",
-      "Financing"
-    ],
-    "expected_relevant_documents": [
-      "LIC-116",
-      "ARCAP",
-      "NuScale"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Partially supported",
-      "Private diligence required"
-    ],
-    "expected_top_missing_evidence": [
-      "NRC",
-      "EPC",
-      "financing"
-    ],
-    "expected_verdict": "Diligence Required"
-  },
-  {
-    "id": "radiant_mobile_microreactor",
-    "target": "Radiant",
-    "user_type": "Strategic partner / incumbent",
-    "decision_question": "Is this partner/customer credible?",
-    "claim_text": "Radiant claims its mobile microreactor can serve remote industrial loads with a compact fuel and operations model.",
-    "expected_atomic_claim_types": [
-      "nuclear_integration_claim",
-      "fuel_cycle_claim"
-    ],
-    "expected_deployment_layers": [
-      "Fuel supply / HALEU",
-      "Operations / waste",
-      "Transportation / safeguards"
-    ],
-    "expected_relevant_documents": [
-      "HALEU",
-      "Transportation"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Missing",
-      "Cannot know from public docs"
-    ],
-    "expected_top_missing_evidence": [
-      "fuel",
-      "operator",
-      "transport"
-    ],
-    "expected_verdict": "Monitor"
-  },
-  {
-    "id": "deep_fission_timeline",
-    "target": "Deep Fission",
-    "user_type": "Investor",
-    "decision_question": "Is this deployment timeline believable?",
-    "claim_text": "Deep Fission claims subsurface nuclear deployment can reach first power by 2031 with NRC engagement underway.",
-    "expected_atomic_claim_types": [
-      "NRC_engagement_claim",
-      "deployment_timeline_claim",
-      "nuclear_integration_claim"
-    ],
-    "expected_deployment_layers": [
-      "Licensing / NRC",
-      "Site / permitting",
-      "EPC / construction"
-    ],
-    "expected_relevant_documents": [
-      "LIC-116",
-      "ARCAP",
-      "NuScale"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Partially supported",
-      "Missing"
-    ],
-    "expected_top_missing_evidence": [
-      "site",
-      "NRC",
-      "EPC"
-    ],
-    "expected_verdict": "Diligence Required"
-  },
-  {
-    "id": "westinghouse_ap300_customer",
-    "target": "Westinghouse",
-    "user_type": "Fuel-cycle supplier",
-    "decision_question": "Is this a credible fuel-cycle customer?",
-    "claim_text": "Westinghouse claims AP300 customer interest can convert into fuel demand and deployment before the early 2030s.",
-    "expected_atomic_claim_types": [
-      "fuel_cycle_claim",
-      "deployment_timeline_claim",
-      "offtake_claim"
-    ],
-    "expected_deployment_layers": [
-      "Fuel supply / HALEU",
-      "Offtake / customer",
-      "Financing"
-    ],
-    "expected_relevant_documents": [
-      "NuScale",
       "Constellation"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required",
-      "Missing"
-    ],
-    "expected_top_missing_evidence": [
-      "customer",
-      "fuel",
-      "schedule"
-    ],
-    "expected_verdict": "Diligence Required"
+    ]
   },
   {
-    "id": "ge_hitachi_bwrx",
-    "target": "GE Hitachi",
-    "user_type": "Strategic partner / incumbent",
-    "decision_question": "Is this deployment timeline believable?",
-    "claim_text": "GE Hitachi claims BWRX-300 licensing precedents support near-term customer deployment and EPC readiness.",
-    "expected_atomic_claim_types": [
-      "licensing_claim",
-      "deployment_timeline_claim",
-      "EPC_construction_claim",
-      "offtake_claim"
-    ],
-    "expected_deployment_layers": [
-      "Licensing / NRC",
-      "EPC / construction",
-      "Offtake / customer"
-    ],
-    "expected_relevant_documents": [
-      "BWRX",
-      "NuScale"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required",
-      "Partially supported"
-    ],
-    "expected_top_missing_evidence": [
-      "customer",
-      "EPC",
-      "docket"
-    ],
-    "expected_verdict": "Diligence Required"
-  },
-  {
-    "id": "curio_waste_recycling",
-    "target": "Curio",
-    "user_type": "Investor",
-    "decision_question": "Is this worth deeper diligence?",
-    "claim_text": "Curio claims nuclear waste recycling can create a fuel-cycle business with future advanced reactor demand.",
-    "expected_atomic_claim_types": [
-      "fuel_cycle_claim",
-      "nuclear_integration_claim"
-    ],
-    "expected_deployment_layers": [
-      "Fuel supply / HALEU",
-      "Operations / waste",
-      "Transportation / safeguards"
-    ],
-    "expected_relevant_documents": [
-      "HALEU",
-      "waste"
-    ],
-    "expected_target_specific_support_statuses": [
-      "Cannot know from public docs",
-      "Missing"
-    ],
-    "expected_top_missing_evidence": [
-      "fuel-cycle",
-      "waste",
-      "license"
-    ],
-    "expected_verdict": "Monitor"
-  },
-  {
-    "id": "palisades_restart_power_buyer",
-    "target": "Palisades restart",
-    "user_type": "Data center power buyer",
-    "decision_question": "Is this partner/customer credible?",
-    "claim_text": "The Palisades restart is presented as a precedent for supplying firm nuclear power to large industrial and data center loads.",
-    "expected_atomic_claim_types": [
+    "id": "hyperscaler_mou_signed",
+    "target": "Hyperscaler Campus",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Hyperscaler Campus says a hyperscaler MOU has been signed for a 300 MW nuclear-powered AI campus.",
+    "expectedDetectedClaimTypes": [
       "data_center_power_claim",
       "offtake_claim",
       "nuclear_integration_claim"
     ],
-    "expected_deployment_layers": [
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
       "Offtake / customer",
-      "Operations / waste",
-      "Financing"
+      "Site / permitting",
+      "Interconnection / power delivery"
     ],
-    "expected_relevant_documents": [
-      "Palisades",
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "Site-control"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Offtake / customer": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "power-campus"
+    ],
+    "forbiddenMemoPhrases": [
+      "MOU is binding",
+      "binding PPA",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "credit support"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "Talen",
+      "Constellation"
+    ]
+  },
+  {
+    "id": "islanded_avoids_interconnection",
+    "target": "Islanded Campus",
+    "userType": "Data center power buyer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Islanded Campus claims an islanded behind-the-meter campus avoids interconnection risk entirely.",
+    "expectedDetectedClaimTypes": [
+      "behind_the_meter_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Interconnection / power delivery",
+      "Site / permitting"
+    ],
+    "expectedTopMissingEvidence": [
+      "Interconnection rights",
+      "operating basis"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Interconnection / power delivery": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Interconnection / power delivery": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "interconnection risk eliminated",
+      "avoids interconnection risk entirely",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "islanded operation"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "FERC"
+    ]
+  },
+  {
+    "id": "microsoft_power_buyer",
+    "target": "Microsoft",
+    "userType": "Data center power buyer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Microsoft claims long-term nuclear power procurement can support AI data center load growth.",
+    "expectedDetectedClaimTypes": [
+      "data_center_power_claim",
+      "offtake_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Offtake / customer",
+      "Interconnection / power delivery"
+    ],
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "power-delivery"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Offtake / customer": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "power-campus"
+    ],
+    "forbiddenMemoPhrases": [
+      "customer interest is binding",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "power-delivery basis"
+    ],
+    "expectedRelevantSourceFamilies": [
       "Constellation",
       "Talen"
+    ]
+  },
+  {
+    "id": "customer_mou_signed",
+    "target": "Customer MOU Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Customer MOU Reactor says a customer MOU is signed and proves offtake for its first project.",
+    "expectedDetectedClaimTypes": [
+      "offtake_claim"
     ],
-    "expected_target_specific_support_statuses": [
-      "Private diligence required",
-      "Cannot know from public docs"
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Offtake / customer",
+      "Financing"
     ],
-    "expected_top_missing_evidence": [
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "credit support"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Offtake / customer": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "MOU is binding",
+      "proves offtake",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "binding or preliminary"
+    ],
+    "expectedRelevantSourceFamilies": [
       "offtake",
-      "operations",
-      "financing"
+      "Talen"
+    ]
+  },
+  {
+    "id": "binding_ppa_signed",
+    "target": "PPA Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "PPA Reactor claims a binding PPA is signed with a creditworthy customer, but pricing and termination rights are private.",
+    "expectedDetectedClaimTypes": [
+      "offtake_claim"
     ],
-    "expected_verdict": "Diligence Required"
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Offtake / customer",
+      "Financing"
+    ],
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "credit support"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Offtake / customer": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "terms verified",
+      "pricing verified",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "termination rights"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "PPA",
+      "Talen"
+    ]
+  },
+  {
+    "id": "customer_loi",
+    "target": "LOI Reactor",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "LOI Reactor says a customer letter of intent supports deployment and fuel reservations.",
+    "expectedDetectedClaimTypes": [
+      "offtake_claim",
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Offtake / customer",
+      "Fuel supply / HALEU"
+    ],
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "HALEU assay"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Offtake / customer": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "letter of intent is binding",
+      "bankable offtake",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "binding or preliminary"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "offtake",
+      "HALEU"
+    ]
+  },
+  {
+    "id": "public_customer_announcement",
+    "target": "Announced Customer Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Announced Customer Reactor has a public customer announcement for future nuclear power but no disclosed PPA terms.",
+    "expectedDetectedClaimTypes": [
+      "offtake_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Offtake / customer",
+      "Financing"
+    ],
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "credit support"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Offtake / customer": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "public announcement proves PPA",
+      "terms verified",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "credit support"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "customer"
+    ]
+  },
+  {
+    "id": "creditworthy_termination_rights",
+    "target": "Credit Offtake Project",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Credit Offtake Project claims creditworthy offtake with termination rights already negotiated.",
+    "expectedDetectedClaimTypes": [
+      "offtake_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Offtake / customer",
+      "Financing"
+    ],
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "termination rights"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Offtake / customer": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "credit support verified",
+      "termination rights verified",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "termination rights"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "offtake"
+    ]
+  },
+  {
+    "id": "customer_interest_ap300",
+    "target": "Westinghouse",
+    "userType": "Utility / industrial power buyer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Westinghouse claims AP300 customer interest can convert into fuel demand and deployment before the early 2030s.",
+    "expectedDetectedClaimTypes": [
+      "offtake_claim",
+      "fuel_cycle_claim",
+      "deployment_timeline_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Offtake / customer",
+      "Fuel supply / HALEU",
+      "Licensing / NRC"
+    ],
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "HALEU assay"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "customer interest is a binding PPA",
+      "binding customer",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [],
+    "expectedRelevantSourceFamilies": [
+      "Westinghouse",
+      "NuScale"
+    ]
+  },
+  {
+    "id": "doe_award_announced",
+    "target": "Award Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Award Reactor says a DOE award announced last quarter makes the project financeable.",
+    "expectedDetectedClaimTypes": [
+      "financing_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Financing"
+    ],
+    "expectedTopMissingEvidence": [
+      "Committed financing"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Financing": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "DOE award is closed financing",
+      "closed financing",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "capital is committed"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "DOE",
+      "financing"
+    ]
+  },
+  {
+    "id": "doe_lpo_conditional_commitment",
+    "target": "Conditional Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Conditional Reactor says a DOE LPO conditional commitment means construction financing is secured.",
+    "expectedDetectedClaimTypes": [
+      "financing_claim",
+      "EPC_construction_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Financing",
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "Committed financing",
+      "EPC"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Financing": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "conditional commitment is closed financing",
+      "financing is secured",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "milestones"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "DOE LPO",
+      "loan"
+    ]
+  },
+  {
+    "id": "closed_loan_guarantee",
+    "target": "Loan Guarantee Project",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Loan Guarantee Project claims it has a closed loan guarantee and can proceed to construction.",
+    "expectedDetectedClaimTypes": [
+      "financing_claim",
+      "EPC_construction_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Financing",
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "EPC",
+      "milestone"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Financing": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "construction risk solved",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "capital is committed"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "loan guarantee",
+      "DOE"
+    ]
+  },
+  {
+    "id": "private_equity_committed",
+    "target": "PE Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "PE Reactor says private equity is committed for development and first construction.",
+    "expectedDetectedClaimTypes": [
+      "financing_claim",
+      "EPC_construction_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Financing",
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "Committed financing",
+      "EPC"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Financing": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "equity is verified",
+      "fully funded",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "capital is committed"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "financing"
+    ]
+  },
+  {
+    "id": "project_finance_ready",
+    "target": "Project Finance Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Project Finance Reactor claims it is project finance ready despite no public PPA, EPC contract, or site-control package.",
+    "expectedDetectedClaimTypes": [
+      "financing_claim",
+      "offtake_claim",
+      "EPC_construction_claim",
+      "site_control_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Financing",
+      "Offtake / customer",
+      "EPC / construction",
+      "Site / permitting"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control",
+      "Binding offtake",
+      "EPC"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required",
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Financing": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "project finance ready is proven",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "capital is committed"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "financing",
+      "offtake"
+    ]
+  },
+  {
+    "id": "doe_grant_not_bankable",
+    "target": "Grant Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Grant Reactor says DOE grants prove the project is bankable and can reserve HALEU immediately.",
+    "expectedDetectedClaimTypes": [
+      "financing_claim",
+      "HALEU_claim",
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Financing",
+      "Fuel supply / HALEU"
+    ],
+    "expectedTopMissingEvidence": [
+      "HALEU assay",
+      "Committed financing"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required",
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "DOE grant proves bankability",
+      "closed financing",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "reservation"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "DOE",
+      "HALEU"
+    ]
+  },
+  {
+    "id": "factory_built_risk_solved",
+    "target": "Factory Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Factory Reactor says factory-built reactors mean construction risk is solved and FOAK deployment can finish in 36 months.",
+    "expectedDetectedClaimTypes": [
+      "EPC_construction_claim",
+      "deployment_timeline_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "EPC / construction",
+      "Licensing / NRC",
+      "Financing"
+    ],
+    "expectedTopMissingEvidence": [
+      "EPC scope",
+      "schedule"
+    ],
+    "expectedTargetSpecificSupport": {
+      "EPC / construction": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "EPC / construction": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [],
+    "forbiddenMemoPhrases": [
+      "factory-built means construction risk is solved",
+      "construction risk is solved",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "EPC execution"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "EPC",
+      "NuScale"
+    ]
+  },
+  {
+    "id": "epc_partner_selected",
+    "target": "EPC Partner Reactor",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "EPC Partner Reactor says an EPC partner has been selected for a first project but contract scope is not public.",
+    "expectedDetectedClaimTypes": [
+      "EPC_construction_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "EPC scope"
+    ],
+    "expectedTargetSpecificSupport": {
+      "EPC / construction": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "EPC / construction": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "EPC contract binding",
+      "risk allocation verified",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "contract scope"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "EPC"
+    ]
+  },
+  {
+    "id": "fixed_price_epc_signed",
+    "target": "Fixed EPC Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Fixed EPC Reactor claims a fixed-price EPC contract is signed for FOAK construction.",
+    "expectedDetectedClaimTypes": [
+      "EPC_construction_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "EPC scope",
+      "risk allocation"
+    ],
+    "expectedTargetSpecificSupport": {
+      "EPC / construction": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "EPC / construction": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "fixed price verified",
+      "construction risk eliminated",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "risk allocation"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "EPC"
+    ]
+  },
+  {
+    "id": "foak_36_month_schedule",
+    "target": "FOAK Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "FOAK Reactor says its first-of-a-kind construction schedule is 36 months from notice to proceed.",
+    "expectedDetectedClaimTypes": [
+      "EPC_construction_claim",
+      "deployment_timeline_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "EPC / construction",
+      "Financing",
+      "Licensing / NRC"
+    ],
+    "expectedTopMissingEvidence": [
+      "EPC scope",
+      "schedule"
+    ],
+    "expectedTargetSpecificSupport": {
+      "EPC / construction": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "EPC / construction": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [],
+    "forbiddenMemoPhrases": [
+      "36 months is bankable",
+      "FOAK risk solved",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "dated milestones"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "EPC",
+      "NuScale"
+    ]
+  },
+  {
+    "id": "modular_shipyard_claim",
+    "target": "Shipyard Reactor",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Shipyard Reactor says shipyard modular construction eliminates nuclear construction overruns.",
+    "expectedDetectedClaimTypes": [
+      "EPC_construction_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "EPC scope",
+      "risk allocation"
+    ],
+    "expectedTargetSpecificSupport": {
+      "EPC / construction": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "EPC / construction": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "eliminates nuclear construction overruns",
+      "risk solved",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [],
+    "expectedRelevantSourceFamilies": [
+      "EPC"
+    ]
+  },
+  {
+    "id": "site_identified_not_controlled",
+    "target": "Site ID Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Site ID Reactor says a preferred site has been identified for its first deployment.",
+    "expectedDetectedClaimTypes": [
+      "site_control_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Site / permitting",
+      "Interconnection / power delivery"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Site / permitting": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Site / permitting": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [],
+    "forbiddenMemoPhrases": [
+      "site identified proves site control",
+      "site controlled",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "sites are controlled"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "site"
+    ]
+  },
+  {
+    "id": "site_controlled_claim",
+    "target": "Site Control Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Site Control Reactor says its first project site is controlled and local permits are advancing.",
+    "expectedDetectedClaimTypes": [
+      "site_control_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Site / permitting",
+      "Interconnection / power delivery"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control",
+      "permits"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Site / permitting": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Site / permitting": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "site control verified",
+      "permits secured",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "land rights"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "site",
+      "Kemmerer"
+    ]
+  },
+  {
+    "id": "permits_secured_claim",
+    "target": "Permit Reactor",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Permit Reactor claims permits are secured for site work but does not disclose the permit matrix.",
+    "expectedDetectedClaimTypes": [
+      "site_control_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Site / permitting"
+    ],
+    "expectedTopMissingEvidence": [
+      "permit matrix"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Site / permitting": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Site / permitting": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "first-pass diligence"
+    ],
+    "forbiddenMemoPhrases": [
+      "permits verified",
+      "all approvals secured",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "permits"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "EA",
+      "site"
+    ]
+  },
+  {
+    "id": "brownfield_coal_reuse",
+    "target": "Coal Site Reactor",
+    "userType": "Utility / industrial power buyer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Coal Site Reactor claims brownfield coal site reuse shortens permitting and interconnection timelines.",
+    "expectedDetectedClaimTypes": [
+      "site_control_claim",
+      "deployment_timeline_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Site / permitting",
+      "Interconnection / power delivery"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control",
+      "Interconnection"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Site / permitting": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Site / permitting": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [],
+    "forbiddenMemoPhrases": [
+      "permitting risk eliminated",
+      "interconnection risk eliminated",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "interconnection"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "Kemmerer",
+      "site"
+    ]
+  },
+  {
+    "id": "existing_nuclear_site_expansion",
+    "target": "Existing Nuclear Site",
+    "userType": "Utility / industrial power buyer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Existing Nuclear Site says expansion at an operating nuclear site makes licensing and interconnection straightforward.",
+    "expectedDetectedClaimTypes": [
+      "licensing_claim",
+      "site_control_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC",
+      "Site / permitting",
+      "Interconnection / power delivery"
+    ],
+    "expectedTopMissingEvidence": [
+      "Named NRC applicant",
+      "Interconnection"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Licensing / NRC": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "regulatory claim"
+    ],
+    "forbiddenMemoPhrases": [
+      "straightforward",
+      "risk eliminated",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "public docket"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "NRC",
+      "site"
+    ]
+  },
+  {
+    "id": "combined_smr_datacenter_haleu_preapp",
+    "target": "SMR + data center power campus",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "SMR + data center power campus claims 300 MW behind-the-meter data center load, secured HALEU, NRC pre-application engagement, site control, EPC readiness, offtake relevance, and deployment by 2031.",
+    "expectedDetectedClaimTypes": [
+      "data_center_power_claim",
+      "behind_the_meter_claim",
+      "HALEU_claim",
+      "NRC_engagement_claim",
+      "site_control_claim",
+      "EPC_construction_claim",
+      "offtake_claim",
+      "deployment_timeline_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Site / permitting",
+      "Interconnection / power delivery",
+      "Fuel supply / HALEU",
+      "Licensing / NRC",
+      "EPC / construction",
+      "Offtake / customer"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control",
+      "Interconnection",
+      "Bridge-power"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing",
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong",
+      "Interconnection / power delivery": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "power-campus deliverability"
+    ],
+    "forbiddenMemoPhrases": [
+      "secured HALEU is proven",
+      "pre-application approval",
+      "behind-the-meter eliminates interconnection risk",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "power-delivery basis"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "FERC",
+      "HALEU"
+    ]
+  },
+  {
+    "id": "combined_award_mou_preapp_2030",
+    "target": "DOE Award Reactor",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "An advanced reactor has a DOE award, customer MOU, NRC pre-application engagement, and claimed 2030 COD.",
+    "expectedDetectedClaimTypes": [
+      "financing_claim",
+      "offtake_claim",
+      "NRC_engagement_claim",
+      "deployment_timeline_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Financing",
+      "Offtake / customer",
+      "Licensing / NRC",
+      "Site / permitting",
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "Named NRC applicant",
+      "Binding offtake",
+      "Committed financing"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required",
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong",
+      "Financing": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "Pre-application engagement"
+    ],
+    "forbiddenMemoPhrases": [
+      "DOE award is closed financing",
+      "MOU is binding",
+      "COD is bankable",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "accepted, docketed, or reviewed"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "LIC-116",
+      "DOE"
+    ]
+  },
+  {
+    "id": "fuel_supplier_real_customer",
+    "target": "Future Fuel Customer",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this a credible fuel-cycle customer?",
+    "claimText": "A fuel supplier is evaluating whether a reactor developer with pre-app engagement, a customer LOI, and claimed HALEU first core demand is a real future customer.",
+    "expectedDetectedClaimTypes": [
+      "fuel_cycle_claim",
+      "HALEU_claim",
+      "NRC_engagement_claim",
+      "offtake_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication",
+      "Transportation / safeguards",
+      "Licensing / NRC",
+      "Offtake / customer"
+    ],
+    "expectedTopMissingEvidence": [
+      "HALEU assay",
+      "fabrication",
+      "Binding offtake"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing",
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "LOI is binding",
+      "fuel demand proven",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "first core and reloads"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "HALEU",
+      "Centrus"
+    ]
+  },
+  {
+    "id": "shuffle_bridge_nuclear_stress",
+    "target": "Shuffle Infrastructure",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Shuffle says it has multiple sites, hyperscaler interest, bridge power options, and eventual nuclear integration for 300 MW campuses.",
+    "expectedDetectedClaimTypes": [
+      "data_center_power_claim",
+      "site_control_claim",
+      "offtake_claim",
+      "bridge_power_claim",
+      "nuclear_integration_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Site / permitting",
+      "Bridge power / phased energization",
+      "Offtake / customer",
+      "Interconnection / power delivery"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control",
+      "Bridge-power",
+      "Binding offtake"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Site / permitting": "Missing",
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Interconnection / power delivery": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "power-campus deliverability"
+    ],
+    "forbiddenMemoPhrases": [
+      "hyperscaler interest is binding",
+      "nuclear integration proven",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "nuclear slips"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "FERC",
+      "Talen"
+    ]
+  },
+  {
+    "id": "oklo_data_center_offtake",
+    "target": "Oklo",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Oklo says it has a multi-gigawatt data center offtake pipeline and can deploy advanced reactors before 2032.",
+    "expectedDetectedClaimTypes": [
+      "data_center_power_claim",
+      "offtake_claim",
+      "deployment_timeline_claim",
+      "nuclear_integration_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Offtake / customer",
+      "Financing",
+      "Licensing / NRC",
+      "Interconnection / power delivery"
+    ],
+    "expectedTopMissingEvidence": [
+      "Binding offtake",
+      "Named NRC applicant",
+      "EPC"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Offtake / customer": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Offtake / customer": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "power-campus deliverability"
+    ],
+    "forbiddenMemoPhrases": [
+      "pipeline is binding",
+      "bankable offtake",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "offtake agreement binding"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "FERC",
+      "Constellation",
+      "NuScale"
+    ]
+  },
+  {
+    "id": "terrapower_kemmerer_combined",
+    "target": "TerraPower",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "TerraPower claims Natrium can reach commercial operation after the Kemmerer construction permit process and DOE-backed demonstration work.",
+    "expectedDetectedClaimTypes": [
+      "licensing_claim",
+      "deployment_timeline_claim",
+      "financing_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC",
+      "Financing",
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "EPC",
+      "financing",
+      "licensing"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "regulatory claim"
+    ],
+    "forbiddenMemoPhrases": [
+      "DOE-backed means fully financed",
+      "construction permit means commercial operation",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [],
+    "expectedRelevantSourceFamilies": [
+      "Kemmerer",
+      "DOE"
+    ]
+  },
+  {
+    "id": "palisades_restart_not_smr",
+    "target": "Palisades Restart",
+    "userType": "Utility / industrial power buyer",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Palisades restart proves new-build SMRs can be financed and deployed quickly for industrial power buyers.",
+    "expectedDetectedClaimTypes": [
+      "financing_claim",
+      "deployment_timeline_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Financing",
+      "Licensing / NRC",
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "Committed financing",
+      "licensing"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Financing": "Private diligence required"
+    },
+    "expectedCorpusCoverage": {
+      "Financing": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [],
+    "forbiddenMemoPhrases": [
+      "restart proves new-build",
+      "new-build SMRs can be financed",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "milestones"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "Palisades",
+      "DOE"
+    ]
+  },
+  {
+    "id": "deep_fission_underground_2031",
+    "target": "Deep Fission",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Deep Fission claims underground deployment can avoid ordinary siting delays and reach first power by 2031.",
+    "expectedDetectedClaimTypes": [
+      "deployment_timeline_claim",
+      "site_control_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Site / permitting",
+      "Licensing / NRC",
+      "EPC / construction"
+    ],
+    "expectedTopMissingEvidence": [
+      "Site-control",
+      "Named NRC applicant",
+      "EPC"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Site / permitting": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Licensing / NRC": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "regulatory claim"
+    ],
+    "forbiddenMemoPhrases": [
+      "avoid ordinary siting delays",
+      "siting risk eliminated",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [
+      "named NRC applicant"
+    ],
+    "expectedRelevantSourceFamilies": [
+      "NRC",
+      "site"
+    ]
+  },
+  {
+    "id": "curio_recycling_fuel_claim",
+    "target": "Curio",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Curio claims recycling technology can unlock fuel supply and waste solutions for advanced reactors.",
+    "expectedDetectedClaimTypes": [
+      "fuel_cycle_claim"
+    ],
+    "forbiddenDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [
+      "Fuel supply / HALEU",
+      "Fuel fabrication",
+      "Transportation / safeguards"
+    ],
+    "expectedTopMissingEvidence": [
+      "assay",
+      "fabrication"
+    ],
+    "expectedTargetSpecificSupport": {
+      "Fuel supply / HALEU": "Missing"
+    },
+    "expectedCorpusCoverage": {
+      "Fuel supply / HALEU": "Strong"
+    },
+    "expectedVerdict": "Diligence Required",
+    "expectedAnalystReadContains": [
+      "fuel-readiness"
+    ],
+    "forbiddenMemoPhrases": [
+      "waste solution proven",
+      "fuel supply unlocked",
+      "pre-application proves licensing approval",
+      "readiness assessment proves NRC approval",
+      "MOU is binding",
+      "conditional commitment is closed financing",
+      "site identified proves site control",
+      "factory-built means construction risk is solved",
+      "design certification proves project financing",
+      "customer interest is a binding PPA",
+      "behind-the-meter eliminates interconnection risk",
+      "public HALEU context proves target-specific fuel supply"
+    ],
+    "expectedQuestionsContain": [],
+    "expectedRelevantSourceFamilies": [
+      "fuel",
+      "waste"
+    ]
   }
 ]

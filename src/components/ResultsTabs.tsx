@@ -29,7 +29,7 @@ function AnalystDetails({ chunks }: { chunks: CorpusChunk[] }) {
   return (
     <section className="mt-8 border border-[#d9d3c8] bg-[#fbfaf7] p-6">
       <h2 className="text-2xl font-semibold">Analyst details</h2>
-      <p className="mt-3 text-base leading-7 text-[#4a4842]">
+      <p className="mt-3 text-base leading-7 text-[#151514]">
         Dense debug context for analysts. Executive users can ignore this section.
       </p>
 
@@ -41,9 +41,9 @@ function AnalystDetails({ chunks }: { chunks: CorpusChunk[] }) {
               <article key={chunk.id} className="border border-[#d9d3c8] bg-white p-4">
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                   <h4 className="text-lg font-semibold">{chunk.title}</h4>
-                  <span className="text-base font-semibold text-[#4a4842]">{chunk.agency}</span>
+                  <span className="text-base font-semibold text-[#151514]">{chunk.agency}</span>
                 </div>
-                <p className="mt-2 text-base leading-7 text-[#4a4842]">{chunk.text}</p>
+                <p className="mt-2 text-base leading-7 text-[#151514]">{chunk.text}</p>
                 <p className="mt-2 text-sm text-[#63615b]">{[...chunk.topic_tags, ...chunk.relevance_modules.map((item) => item.replaceAll("_", " "))].join(", ")}</p>
                 <p className="mt-2 text-sm text-[#63615b]">Why it matters: {chunk.why_it_matters}</p>
               </article>
@@ -58,7 +58,7 @@ function AnalystDetails({ chunks }: { chunks: CorpusChunk[] }) {
               <article key={item.id} className="border border-[#d9d3c8] bg-white p-4">
                 <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#7b5b25]">{item.category}</p>
                 <h4 className="mt-1 text-lg font-semibold">{item.label}</h4>
-                <p className="mt-2 text-base leading-7 text-[#4a4842]">{item.description}</p>
+                <p className="mt-2 text-base leading-7 text-[#151514]">{item.description}</p>
               </article>
             ))}
           </div>
@@ -93,7 +93,7 @@ export function ResultsTabs({ profile }: { profile: ProjectCounterpartyProfile }
             <button
               key={mode}
               onClick={() => setViewMode(mode)}
-              className={`px-4 py-2 text-base font-semibold capitalize ${viewMode === mode ? "bg-[#151514] text-white" : "text-[#3f3d38]"}`}
+              className={`px-4 py-2 text-base font-semibold capitalize ${viewMode === mode ? "bg-[#151514] text-white" : "text-[#151514]"}`}
             >
               {mode} view
             </button>
@@ -106,7 +106,7 @@ export function ResultsTabs({ profile }: { profile: ProjectCounterpartyProfile }
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`border px-4 py-3 text-base font-semibold ${activeTab === tab.id ? "border-[#151514] bg-[#151514] text-white" : "border-[#d9d3c8] bg-[#fbfaf7] text-[#3f3d38]"}`}
+            className={`border px-4 py-3 text-base font-semibold ${activeTab === tab.id ? "border-[#151514] bg-[#151514] text-white" : "border-[#d9d3c8] bg-[#fbfaf7] text-[#151514]"}`}
           >
             {tab.label}
           </button>

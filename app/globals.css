@@ -34,6 +34,23 @@ select {
   font: inherit;
 }
 
+input,
+textarea,
+select {
+  color: var(--foreground);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #4a4842;
+  opacity: 1;
+}
+
+button[class*="bg-[#151514]"],
+button[class*="bg-[#151514]"] * {
+  color: #ffffff !important;
+}
+
 ::selection {
   background: #d6c7a8;
 }

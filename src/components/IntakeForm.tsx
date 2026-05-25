@@ -50,7 +50,7 @@ export function IntakeForm({
             value={counterparty}
             onChange={(event) => setCounterparty(event.target.value)}
             placeholder="Example: Aurora Advanced Power AAP-80"
-            className="border border-[#bfb6a7] bg-white px-4 py-4 text-base outline-none focus:border-[#151514]"
+            className="border border-[#bfb6a7] bg-white px-4 py-4 text-base text-[#151514] placeholder-[#4a4842] outline-none focus:border-[#151514]"
           />
         </label>
 
@@ -60,7 +60,7 @@ export function IntakeForm({
             <select
               value={userType}
               onChange={(event) => setUserType(event.target.value)}
-              className="border border-[#bfb6a7] bg-white px-4 py-4 text-base outline-none focus:border-[#151514]"
+              className="border border-[#bfb6a7] bg-white px-4 py-4 text-base text-[#151514] placeholder-[#4a4842] outline-none focus:border-[#151514]"
             >
               {userTypes.map((type) => (
                 <option key={type}>{type}</option>
@@ -73,7 +73,7 @@ export function IntakeForm({
             <select
               value={decisionQuestion}
               onChange={(event) => setDecisionQuestion(event.target.value)}
-              className="border border-[#bfb6a7] bg-white px-4 py-4 text-base outline-none focus:border-[#151514]"
+              className="border border-[#bfb6a7] bg-white px-4 py-4 text-base text-[#151514] placeholder-[#4a4842] outline-none focus:border-[#151514]"
             >
               {decisionQuestions.map((question) => (
                 <option key={question}>{question}</option>
@@ -88,12 +88,12 @@ export function IntakeForm({
             value={sanitizedNotes}
             onChange={(event) => setSanitizedNotes(event.target.value)}
             placeholder="Example: Company X claims it can deploy a 300 MW SMR campus by 2031 using HALEU fuel, with data center offtake and NRC engagement underway."
-            className="min-h-32 resize-y border border-[#bfb6a7] bg-white px-4 py-4 text-base leading-7 outline-none focus:border-[#151514]"
+            className="min-h-32 resize-y border border-[#bfb6a7] bg-white px-4 py-4 text-base leading-7 text-[#151514] placeholder-[#4a4842] outline-none focus:border-[#151514]"
           />
         </label>
 
         <button
-          className="inline-flex w-full items-center justify-center gap-2 bg-[#151514] px-6 py-4 text-base font-semibold text-white sm:w-auto"
+          className="inline-flex w-full items-center justify-center gap-2 bg-[#151514] px-6 py-4 text-base font-semibold text-white sm:w-auto" style={{ color: "#ffffff" }}
           onClick={onGenerate}
         >
           {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <ArrowRight className="h-5 w-5" />}
