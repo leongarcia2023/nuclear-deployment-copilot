@@ -36,9 +36,58 @@ function allChunks(profile: ProjectCounterpartyProfile): ChunkWithClaim[] {
   return profile.claimToIcMemo.evidenceLedger?.atomicClaims.flatMap((claim) => claim.matchedChunks.map((chunk) => ({ ...chunk, claimText: claim.text }))) ?? [];
 }
 
+function claimTypes(profile: ProjectCounterpartyProfile) {
+  return new Set(profile.claimToIcMemo.detectedClaims?.map((claim) => claim.claimType) ?? []);
+}
+
+function sourceFamily(title: string) {
+  const lower = title.toLowerCase();
+  if (lower.includes("palisades") || lower.includes("restart")) return "restart";
+  if (lower.includes("ferc") || lower.includes("susquehanna") || lower.includes("co-location") || lower.includes("colocation")) return "data_center_power";
+  if (lower.includes("talen") || lower.includes("amazon") || lower.includes("constellation") || lower.includes("crane") || lower.includes("microsoft")) return "data_center_commercial";
+  if (lower.includes("triso") || lower.includes("fabrication")) return "fuel_fabrication";
+  if (lower.includes("transport") || lower.includes("safeguard") || lower.includes("storage")) return "fuel_logistics";
+  if (lower.includes("haleu") || lower.includes("centrus") || lower.includes("american centrifuge") || lower.includes("allocation") || lower.includes("enrichment")) return "haleu";
+  if (lower.includes("lic-116") || lower.includes("preapplication") || lower.includes("pre-application") || lower.includes("arcap") || lower.includes("rai") || lower.includes("nuscale") || lower.includes("long mott") || lower.includes("kemmerer") || lower.includes("construction permit")) return "licensing";
+  if (lower.includes("lpo") || lower.includes("loan") || lower.includes("title 17") || lower.includes("financing")) return "financing";
+  if (lower.includes("site") || lower.includes("permitting") || lower.includes("eis") || lower.includes("nepa")) return "site_permitting";
+  return "general";
+}
+
+function sourceMatchesClaimFamily(chunk: ChunkWithClaim, profile: ProjectCounterpartyProfile) {
+  const claims = claimTypes(profile);
+  const family = sourceFamily(chunk.documentTitle);
+  const layerText = chunk.deploymentLayers.join(" ").toLowerCase();
+  let matches = false;
+
+  if (claims.has("data_center_power_claim") || claims.has("behind_the_meter_claim") || claims.has("bridge_power_claim")) {
+    matches ||= family === "data_center_power" || family === "data_center_commercial" || layerText.includes("interconnection") || layerText.includes("offtake");
+  }
+  if (claims.has("HALEU_claim") || claims.has("fuel_cycle_claim")) {
+    matches ||= family === "haleu" || family === "fuel_fabrication" || family === "fuel_logistics";
+  }
+  if (claims.has("licensing_claim") || claims.has("NRC_engagement_claim") || claims.has("deployment_timeline_claim")) {
+    matches ||= family === "licensing";
+  }
+  if (claims.has("site_control_claim")) {
+    matches ||= family === "site_permitting" || family === "licensing" || family === "restart";
+  }
+  if (claims.has("offtake_claim")) {
+    matches ||= layerText.includes("offtake") && family !== "haleu" && family !== "fuel_fabrication" && family !== "fuel_logistics" && family !== "data_center_power" && family !== "data_center_commercial";
+  }
+  if (claims.has("financing_claim")) {
+    matches ||= family === "financing" || family === "restart";
+  }
+  if (claims.has("EPC_construction_claim")) {
+    matches ||= family === "licensing" || layerText.includes("construction") || family === "restart";
+  }
+  return matches || family !== "general" && claims.size === 0;
+}
+
+
 function mainChunks(profile: ProjectCounterpartyProfile) {
   const seenDocs = new Set<string>();
-  return allChunks(profile).filter((chunk) => {
+  return allChunks(profile).filter((chunk) => sourceMatchesClaimFamily(chunk, profile)).filter((chunk) => {
     if (seenDocs.has(chunk.documentId)) return false;
     seenDocs.add(chunk.documentId);
     return true;
@@ -47,6 +96,9 @@ function mainChunks(profile: ProjectCounterpartyProfile) {
 
 function sourceWhy(title: string, fallback: string) {
   const lower = title.toLowerCase();
+  if (lower.includes("palisades") || lower.includes("restart")) {
+    return "Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments.";
+  }
   if (lower.includes("ferc") || lower.includes("susquehanna") || lower.includes("co-location")) {
     return "Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues.";
   }
@@ -105,9 +157,9 @@ function conciseQuestions(profile: ProjectCounterpartyProfile) {
 }
 
 function analystRead(profile: ProjectCounterpartyProfile) {
-  const memo = profile.claimToIcMemo.firstPassIcMemo;
   const category = profile.claimToIcMemo.analysisDebug?.companyCategory;
-  const hasDataCenterClaim = profile.claimToIcMemo.detectedClaims?.some((claim) => claim.claimType === "data_center_power_claim");
+  const claims = profile.claimToIcMemo.detectedClaims ?? [];
+  const hasDataCenterClaim = claims.some((claim) => claim.claimType === "data_center_power_claim");
   if (category === "data_center_power_infrastructure" || hasDataCenterClaim) {
     return [
       "This is not primarily a reactor diligence problem yet; it is a power-campus deliverability problem.",
@@ -115,21 +167,44 @@ function analystRead(profile: ProjectCounterpartyProfile) {
       "Nuclear should be treated as upside optionality unless the reactor vendor, licensing owner, fuel path, EPC responsibility, and bridge-to-nuclear transition plan are evidenced.",
     ];
   }
-  if (profile.claimToIcMemo.detectedClaims?.some((claim) => claim.claimType === "HALEU_claim" || claim.claimType === "fuel_cycle_claim")) {
+  if (claims.some((claim) => claim.claimType === "HALEU_claim" || claim.claimType === "fuel_cycle_claim")) {
     return [
       "This is a fuel-readiness diligence problem: public HALEU context can show scarcity, licensing constraints, and precedent activity, but it does not prove this target has secured assay, form, quantity, supplier allocation, fabrication capacity, transport/safeguards arrangements, or delivery windows. Treat the claim as commercially relevant but unreserved until the counterparty provides a project-specific fuel-readiness package tied to first core, reloads, licensing milestones, and reservation authority.",
     ];
   }
-  if (profile.claimToIcMemo.detectedClaims?.some((claim) => claim.claimType === "NRC_engagement_claim" || claim.claimType === "licensing_claim" || claim.claimType === "deployment_timeline_claim")) {
+  if (claims.some((claim) => claim.claimType === "financing_claim")) {
+    return [
+      "This is a financing-readiness diligence problem.",
+      "A grant, award, or conditional commitment may validate strategic interest, but it does not equal closed project financing, satisfied conditions precedent, or a bankable capital stack.",
+    ];
+  }
+  if (claims.some((claim) => claim.claimType === "NRC_engagement_claim" || claim.claimType === "licensing_claim" || claim.claimType === "deployment_timeline_claim")) {
     return [
       "The regulatory claim needs to be separated from the commercial-operation claim.",
       "Pre-application engagement can be useful, but it does not establish a docketed application, completed safety review, construction authority, site readiness, or operations date.",
       "Treat the timeline as unsupported until the public regulatory path and private execution milestones line up.",
     ];
   }
+  if (claims.some((claim) => claim.claimType === "site_control_claim" || claim.claimType === "behind_the_meter_claim")) {
+    return [
+      "This is a site-control and power-delivery diligence problem.",
+      "A named site, brownfield narrative, or behind-the-meter claim is useful context, but it does not prove land rights, interconnection rights, permits, tariff treatment, or an islanded operating basis.",
+    ];
+  }
+  if (claims.some((claim) => claim.claimType === "offtake_claim")) {
+    return [
+      "This is a commercial commitment diligence problem.",
+      "Customer interest, an LOI, or an MOU can justify a call, but it is not the same as a binding PPA, credit support, termination rights, or a financeable offtake package.",
+    ];
+  }
+  if (claims.some((claim) => claim.claimType === "EPC_construction_claim")) {
+    return [
+      "This is an EPC and construction-risk diligence problem.",
+      "A selected partner or factory-built narrative does not resolve scope, price, schedule, liquidated damages, FOAK risk, or who carries cost-overrun exposure.",
+    ];
+  }
   return [
-    sentenceLimit(memo.situation || memo.thesis, 1),
-    "The memo should be read as a first-pass diligence screen: it identifies which claims are supportable from public context and which still need counterparty proof.",
+    "This claim is not yet underwritable because the target has not provided enough project-specific evidence to distinguish a serious deployment path from an early-stage commercial narrative.",
   ];
 }
 

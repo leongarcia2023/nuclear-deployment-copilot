@@ -27,10 +27,11 @@ export function icMemoMarkdown(
     : list(memo.whatMustBeTrue.slice(0, 6));
   const coverageNotes = conciseCoverageNotes(evidenceLedger?.deploymentLayerSummary ?? documentCoverage, detectedClaims);
   const chunkNotes = evidenceLedger?.atomicClaims.flatMap((claim) => claim.matchedChunks) ?? [];
-  const publicEvidence = concisePublicEvidence(chunkNotes).length
-    ? list(concisePublicEvidence(chunkNotes))
+  const conciseEvidence = concisePublicEvidence(chunkNotes, detectedClaims);
+  const publicEvidence = conciseEvidence.length
+    ? list(conciseEvidence)
     : publicEvidenceNotes.length
-      ? list(publicEvidenceNotes.slice(0, 3).map((note) => `${note.title}: ${note.whyItMatters || note.relevance}`))
+      ? list(prioritizedPublicEvidenceNotes(memo.target, publicEvidenceNotes, detectedClaims).map((note) => `${note.title}: ${note.whyItMatters || note.relevance}`))
       : "- No chunk-backed public evidence matched the claim.";
   const analystNotes = analystRead(memo, detectedClaims).slice(0, 5).join("\n\n");
 
@@ -68,6 +69,27 @@ ${memo.recommendedNextStep}
 `;
 }
 
+
+function prioritizedPublicEvidenceNotes(target: string, notes: PublicEvidenceNote[], detectedClaims: DetectedClaim[]) {
+  const targetTerms = target.toLowerCase().split(/[^a-z0-9]+/).filter((term) => term.length > 3);
+  const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
+  return [...notes]
+    .filter((note) => {
+      const title = note.title.toLowerCase();
+      if ((claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")) && (title.includes("palisades") || title.includes("ferc") || title.includes("talen") || title.includes("constellation"))) return false;
+      if ((claimTypes.has("data_center_power_claim") || claimTypes.has("behind_the_meter_claim") || claimTypes.has("bridge_power_claim")) && (title.includes("haleu") || title.includes("triso") || title.includes("centrus"))) return false;
+      return true;
+    })
+    .sort((a, b) => {
+      const aTitle = a.title.toLowerCase();
+      const bTitle = b.title.toLowerCase();
+      const aTarget = targetTerms.some((term) => aTitle.includes(term)) ? 1 : 0;
+      const bTarget = targetTerms.some((term) => bTitle.includes(term)) ? 1 : 0;
+      return bTarget - aTarget;
+    })
+    .slice(0, 3);
+}
+
 function conciseCoverageNotes(coverage: MemoDocumentCoverageItem[], detectedClaims: DetectedClaim[] = []) {
   const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
   if ((claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")) && !claimTypes.has("data_center_power_claim")) {
@@ -98,8 +120,55 @@ function conciseCoverageNotes(coverage: MemoDocumentCoverageItem[], detectedClai
   ];
 }
 
+
+function sourceFamily(title: string) {
+  const lower = title.toLowerCase();
+  if (lower.includes("palisades") || lower.includes("restart")) return "restart";
+  if (lower.includes("ferc") || lower.includes("susquehanna") || lower.includes("co-location") || lower.includes("colocation")) return "data_center_power";
+  if (lower.includes("talen") || lower.includes("amazon") || lower.includes("constellation") || lower.includes("crane") || lower.includes("microsoft")) return "data_center_commercial";
+  if (lower.includes("triso") || lower.includes("fabrication")) return "fuel_fabrication";
+  if (lower.includes("transport") || lower.includes("safeguard") || lower.includes("storage")) return "fuel_logistics";
+  if (lower.includes("haleu") || lower.includes("centrus") || lower.includes("american centrifuge") || lower.includes("allocation") || lower.includes("enrichment")) return "haleu";
+  if (lower.includes("lic-116") || lower.includes("preapplication") || lower.includes("pre-application") || lower.includes("arcap") || lower.includes("rai") || lower.includes("nuscale") || lower.includes("long mott") || lower.includes("kemmerer") || lower.includes("construction permit")) return "licensing";
+  if (lower.includes("lpo") || lower.includes("loan") || lower.includes("title 17") || lower.includes("financing")) return "financing";
+  if (lower.includes("site") || lower.includes("permitting") || lower.includes("eis") || lower.includes("nepa")) return "site_permitting";
+  return "general";
+}
+
+function sourceMatchesClaimFamily(chunk: EvidenceLedger["atomicClaims"][number]["matchedChunks"][number], detectedClaims: DetectedClaim[]) {
+  const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
+  const family = sourceFamily(chunk.documentTitle);
+  const layerText = chunk.deploymentLayers.join(" ").toLowerCase();
+  let matches = false;
+
+  if (claimTypes.has("data_center_power_claim") || claimTypes.has("behind_the_meter_claim") || claimTypes.has("bridge_power_claim")) {
+    matches ||= family === "data_center_power" || family === "data_center_commercial" || layerText.includes("interconnection") || layerText.includes("offtake");
+  }
+  if (claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")) {
+    matches ||= family === "haleu" || family === "fuel_fabrication" || family === "fuel_logistics";
+  }
+  if (claimTypes.has("licensing_claim") || claimTypes.has("NRC_engagement_claim") || claimTypes.has("deployment_timeline_claim")) {
+    matches ||= family === "licensing";
+  }
+  if (claimTypes.has("site_control_claim")) {
+    matches ||= family === "site_permitting" || family === "licensing" || family === "restart";
+  }
+  if (claimTypes.has("offtake_claim")) {
+    matches ||= layerText.includes("offtake") && family !== "haleu" && family !== "fuel_fabrication" && family !== "fuel_logistics" && family !== "data_center_power" && family !== "data_center_commercial";
+  }
+  if (claimTypes.has("financing_claim")) {
+    matches ||= family === "financing" || family === "restart";
+  }
+  if (claimTypes.has("EPC_construction_claim")) {
+    matches ||= family === "licensing" || layerText.includes("construction") || family === "restart";
+  }
+  return matches || family !== "general" && claimTypes.size === 0;
+}
+
+
 function sourceWhy(title: string, fallback: string) {
   const lower = title.toLowerCase();
+  if (lower.includes("palisades") || lower.includes("restart")) return "Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments.";
   if (lower.includes("ferc") || lower.includes("susquehanna") || lower.includes("co-location")) return "Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues.";
   if (lower.includes("talen") || lower.includes("amazon")) return "Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability.";
   if (lower.includes("constellation") || lower.includes("crane")) return "Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence.";
@@ -128,6 +197,12 @@ function analystRead(memo: FirstPassIcMemo, detectedClaims: DetectedClaim[]) {
       "This is a fuel-readiness diligence problem: public HALEU context can show scarcity, licensing constraints, and precedent activity, but it does not prove this target has secured assay, form, quantity, supplier allocation, fabrication capacity, transport/safeguards arrangements, or delivery windows. Treat the claim as commercially relevant but unreserved until the counterparty provides a project-specific fuel-readiness package tied to first core, reloads, licensing milestones, and reservation authority.",
     ];
   }
+  if (claimTypes.has("financing_claim")) {
+    return [
+      "This is a financing-readiness diligence problem.",
+      "A grant, award, or conditional commitment may validate strategic interest, but it does not equal closed project financing, satisfied conditions precedent, or a bankable capital stack.",
+    ];
+  }
   if (claimTypes.has("NRC_engagement_claim") || claimTypes.has("licensing_claim") || claimTypes.has("deployment_timeline_claim")) {
     return [
       "The regulatory claim needs to be separated from the commercial-operation claim.",
@@ -135,15 +210,32 @@ function analystRead(memo: FirstPassIcMemo, detectedClaims: DetectedClaim[]) {
       "Treat the timeline as unsupported until the public regulatory path and private execution milestones line up.",
     ];
   }
+  if (claimTypes.has("site_control_claim") || claimTypes.has("behind_the_meter_claim")) {
+    return [
+      "This is a site-control and power-delivery diligence problem.",
+      "A named site, brownfield narrative, or behind-the-meter claim is useful context, but it does not prove land rights, interconnection rights, permits, tariff treatment, or an islanded operating basis.",
+    ];
+  }
+  if (claimTypes.has("offtake_claim")) {
+    return [
+      "This is a commercial commitment diligence problem.",
+      "Customer interest, an LOI, or an MOU can justify a call, but it is not the same as a binding PPA, credit support, termination rights, or a financeable offtake package.",
+    ];
+  }
+  if (claimTypes.has("EPC_construction_claim")) {
+    return [
+      "This is an EPC and construction-risk diligence problem.",
+      "A selected partner or factory-built narrative does not resolve scope, price, schedule, liquidated damages, FOAK risk, or who carries cost-overrun exposure.",
+    ];
+  }
   return [
-    firstSentence(memo.situation || memo.thesis),
-    "Read this as a first-pass diligence screen: it identifies which claims have public context and which still need counterparty proof.",
+    "This claim is not yet underwritable because the target has not provided enough project-specific evidence to distinguish a serious deployment path from an early-stage commercial narrative.",
   ];
 }
 
-function concisePublicEvidence(chunks: EvidenceLedger["atomicClaims"][number]["matchedChunks"]) {
+function concisePublicEvidence(chunks: EvidenceLedger["atomicClaims"][number]["matchedChunks"], detectedClaims: DetectedClaim[] = []) {
   const seenDocs = new Set<string>();
-  return chunks.filter((chunk) => {
+  return chunks.filter((chunk) => sourceMatchesClaimFamily(chunk, detectedClaims)).filter((chunk) => {
     if (seenDocs.has(chunk.documentId)) return false;
     seenDocs.add(chunk.documentId);
     return true;

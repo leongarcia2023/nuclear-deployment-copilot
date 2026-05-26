@@ -29,6 +29,9 @@ type EvalCase = {
   forbiddenMemoPhrases?: string[];
   expectedQuestionsContain?: string[];
   expectedRelevantSourceFamilies?: string[];
+  expectedMainMemoSourceFamilies?: string[];
+  forbiddenRelevantSourceFamilies?: string[];
+  maxRelevantPublicEvidenceBullets?: number;
   expected_relevant_documents?: string[];
   expected_target_specific_support_statuses?: string[];
 };
@@ -58,6 +61,22 @@ function includesAny(values: string[], expected: string) {
 function unique(values: string[]) {
   return Array.from(new Set(values.filter(Boolean)));
 }
+
+function sectionBetween(markdown: string, heading: string) {
+  const start = markdown.indexOf(`## ${heading}`);
+  if (start < 0) return "";
+  const rest = markdown.slice(start + heading.length + 3);
+  const next = rest.search(/\n##\s+/);
+  return next >= 0 ? rest.slice(0, next) : rest;
+}
+
+const alwaysForbiddenMemoPhrases = [
+  "being evaluated for:",
+  "Read this as a first-pass diligence screen",
+  "Palisades shows DOE-level HALEU allocation constraints",
+  "Palisades shows DOE level HALEU allocation constraints",
+  "Palisades shows DOE-level HALEU program context",
+];
 
 function getCaseValue(testCase: EvalCase, camel: keyof EvalCase, snake: keyof EvalCase, fallback = "") {
   return String(testCase[camel] ?? testCase[snake] ?? fallback);
@@ -170,6 +189,8 @@ async function main() {
     ].join("\n");
     const topMissingEvidence = result.evidenceLedger?.topMissingEvidence ?? [];
     const questions = result.firstPassIcMemo?.diligenceQuestions ?? [];
+    const mainEvidenceSection = sectionBetween(memoMarkdown, "Relevant public evidence");
+    const mainEvidenceBullets = mainEvidenceSection.split("\n").filter((line) => line.trim().startsWith("- "));
 
     const failures: AssertionFailure[] = [];
     const expectedClaimTypes = getCaseArray(testCase, "expectedDetectedClaimTypes", "expected_atomic_claim_types");
@@ -210,7 +231,7 @@ async function main() {
       if (!includesLoose(memoMarkdown, expected)) failures.push(fail("missing analyst read text", `${expected} not found in memo`));
     }
 
-    for (const forbidden of getCaseArray(testCase, "forbiddenMemoPhrases")) {
+    for (const forbidden of [...alwaysForbiddenMemoPhrases, ...getCaseArray(testCase, "forbiddenMemoPhrases")]) {
       if (includesLoose(memoMarkdown, forbidden)) failures.push(fail("forbidden memo phrase", `${forbidden} appears in memo`));
     }
 
@@ -224,6 +245,18 @@ async function main() {
     ];
     for (const expected of expectedSourceFamilies) {
       if (!includesLoose(sourceFamilyText, expected)) failures.push(fail("missing expected source family", `${expected} not found in matched documents/chunks/memo`));
+    }
+
+    for (const expected of getCaseArray(testCase, "expectedMainMemoSourceFamilies")) {
+      if (!includesLoose(mainEvidenceSection, expected)) failures.push(fail("missing expected main memo source family", `${expected} not found in Relevant public evidence`));
+    }
+
+    for (const forbidden of getCaseArray(testCase, "forbiddenRelevantSourceFamilies")) {
+      if (includesLoose(mainEvidenceSection, forbidden)) failures.push(fail("irrelevant main memo source family", `${forbidden} appears in Relevant public evidence`));
+    }
+
+    if (typeof testCase.maxRelevantPublicEvidenceBullets === "number" && mainEvidenceBullets.length > testCase.maxRelevantPublicEvidenceBullets) {
+      failures.push(fail("too many public evidence bullets", `expected at most ${testCase.maxRelevantPublicEvidenceBullets}, got ${mainEvidenceBullets.length}`));
     }
 
     const passed = failures.length === 0;
@@ -254,6 +287,7 @@ async function main() {
       top_missing_evidence: topMissingEvidence,
       diligence_questions: questions.slice(0, 10),
       verdict: result.verdict,
+      main_memo_source_bullets: mainEvidenceBullets,
       memo_word_count: memoMarkdown.split(/\s+/).filter(Boolean).length,
       snapshot_path: passed ? null : `data/eval_memo_snapshots/${testCase.id}.md`,
     });

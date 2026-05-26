@@ -46,7 +46,7 @@ const claimKeywords: Record<ClaimType, string[]> = {
   NRC_engagement_claim: ["nrc", "pre-application", "pre app", "preapp", "regulatory engagement", "readiness assessment", "application review"],
   deployment_timeline_claim: ["2030", "2031", "2032", "deploy", "deployed", "deployment", "cod", "first power", "commercial operation", "36 months", "timeline", "schedule", "shortens"],
   offtake_claim: ["offtake", "customer", "ppa", "power purchase", "procurement", "power procurement", "hyperscaler", "anchor tenant", "long-term contract", "customer interest", "ppas", "signed ppas", "supplying", "supplied", "aws", "aws linked"],
-  site_control_claim: ["site", "sites", "siting", "land", "controlled", "control", "permit", "permits", "permitting", "campus", "location"],
+  site_control_claim: ["site", "sites", "siting", "land", "controlled", "control", "permit", "permits", "permitting", "campus", "location", "eis", "nepa", "environmental impact"],
   financing_claim: ["financing", "financed", "financeable", "project finance", "lpo", "loan", "debt", "equity", "funding", "funded", "doe backed", "doe-backed", "award", "awards", "grant", "grants", "capex"],
   EPC_construction_claim: ["epc", "construction", "contractor", "build", "modular", "supply chain", "cost overrun", "factory", "factory built", "factory-built", "shipyard"],
   bridge_power_claim: ["bridge power", "fuel cell", "gas", "turbine", "phase 1", "initial energization", "temporary power"],
@@ -749,9 +749,20 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
   const category = profile?.category ?? "unrecognized_counterparty";
   const verdict = verdictFor(profile, detectedClaims);
   const confidence = sourceMatch.confidence;
-  const questions = buildQuestions(target, profile, findings, detectedClaims);
+  const rawQuestions = buildQuestions(target, profile, findings, detectedClaims);
   const claimLabelsList = detectedClaims.map((claim) => claim.label);
   const topFindings = findings.slice(0, 6);
+  const decisionLower = input.decisionQuestion.toLowerCase();
+  const isFuelSupplierUser = input.userType.toLowerCase().includes("fuel-cycle supplier");
+  const isSupplierTarget = category === "fuel_cycle_supplier" || category === "fuel_fabrication_supplier";
+  const isReactorDeveloperTarget = category === "reactor_developer";
+  const isTimelineQuestion = decisionLower.includes("timeline") || decisionLower.includes("believable");
+  const isPartnerQuestion = decisionLower.includes("partner") || decisionLower.includes("customer credible");
+  const isDeeperDiligenceQuestion = decisionLower.includes("deeper diligence");
+  const questions = Array.from(new Set([
+    ...(isFuelSupplierUser && isSupplierTarget ? ["Are we evaluating the target's supplier credibility, or whether its customers represent real future fuel demand?"] : []),
+    ...rawQuestions,
+  ])).slice(0, 10);
 
   const documentMatch = rankDocumentsForClaim({ detectedClaims, deploymentLayerFindings: findings, targetText: target, limit: 8 });
   const relevantDocuments = documentMatch.relevantDocuments.map(toMemoRelevantDocument);
@@ -768,17 +779,34 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
   const isShuffleLike = category === "data_center_power_infrastructure";
   const isDataCenterPowerCase = isShuffleLike || detectedClaims.some((claim) => claim.claimType === "data_center_power_claim");
   const isFuelReadinessCase = !isDataCenterPowerCase && detectedClaims.some((claim) => claim.claimType === "HALEU_claim" || claim.claimType === "fuel_cycle_claim");
+  const genericLayerList = topFindings.map((item) => item.layer).join(", ") || "the relevant deployment layers";
   const oneLineJudgment = isDataCenterPowerCase
     ? `${target} appears to be a data-center power infrastructure diligence case, not a reactor developer case. Treat nuclear as long-term optionality unless site control, initial power, customer/offtake, reactor vendor, licensing responsibility, EPC, and fuel-cycle evidence are provided.`
+    : isFuelReadinessCase && isFuelSupplierUser && isReactorDeveloperTarget
+      ? `${target} is not yet a bankable future fuel customer; public HALEU context does not prove target-specific first-core or reload supply, fabrication, allocation, or delivery commitments.`
+    : isFuelReadinessCase && isSupplierTarget
+      ? `${target} appears to be a fuel-cycle participant, so the key question is supplier credibility or customer demand credibility, not whether the target itself is a fuel-cycle customer.`
     : isFuelReadinessCase
       ? `${target} may be a relevant HALEU/fuel-cycle prospect, but public HALEU market and licensing context does not prove target-specific fuel supply, first-core/reload commitments, fabrication capacity, transport readiness, or delivery timing.`
-      : `${target} requires input-specific diligence across ${topFindings.map((item) => item.layer).join(", ") || "the relevant deployment layers"}; current deterministic analysis does not support treating the claim as bankable without proof.`;
+    : isTimelineQuestion
+      ? `${target}'s timeline is not bankable until dated milestones for NRC path, site, fuel, EPC, financing, and commercial operation are evidenced.`
+    : isPartnerQuestion
+      ? `${target} may justify a counterparty conversation, but the current claim is not enough to establish partner or customer credibility without project-specific proof.`
+    : isDeeperDiligenceQuestion
+      ? `${target} may warrant deeper diligence only if the next gating evidence resolves ${genericLayerList}.`
+      : `${target} requires input-specific diligence across ${genericLayerList}; current deterministic analysis does not support treating the claim as bankable without proof.`;
 
   const recommendedNextAction = isDataCenterPowerCase
     ? `For ${target}, diligence the power-campus stack first: site rights, initial energization source, customer/offtake, bridge-power economics, and whether nuclear is base case or upside. Then require the named reactor vendor and licensing owner.`
+    : isFuelReadinessCase && isSupplierTarget
+      ? `Clarify whether the diligence question is supplier credibility or customer demand credibility, then request customer commitments, capacity, allocation, fabrication, delivery, and commercial-reservation evidence.`
     : isFuelReadinessCase
       ? `Ask ${target} for a fuel-readiness package: HALEU assay, form, quantity, first-core and reload schedule, supplier/allocation status, fabrication route, transport/safeguards plan, licensing owner, and commercial reservation authority.`
-      : `Ask ${target} for layer-specific evidence for the entered claims before treating the deployment timeline or commercial claim as bankable.`;
+    : isTimelineQuestion
+      ? `Ask ${target} for a dated milestone package tying NRC status, site, fuel, EPC, financing, and COD assumptions to public or counterparty-verifiable evidence.`
+    : isPartnerQuestion
+      ? `Use the next interaction to test counterparty credibility: accountable owner, binding commitments, execution responsibility, and the evidence that would justify a partnership or customer diligence process.`
+    : `Ask ${target} for layer-specific evidence for the entered claims before treating the deployment timeline or commercial claim as bankable.`;
 
   const whatIsEvidenced = uniqueLedgerChunks.length
     ? uniqueLedgerChunks.slice(0, 3).map((chunk) => `${chunk.documentTitle}: ${chunk.relevanceReason}`)
@@ -817,15 +845,25 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
     : topFindings.map((finding) => `${finding.layer} must be supported by: ${finding.requiredEvidence}`).slice(0, 6);
 
   const situation = isDataCenterPowerCase
-    ? `${target} is being evaluated as a data-center power infrastructure counterparty. The entered claim points to behind-the-meter or campus-scale power delivery with possible long-term nuclear integration, so diligence should prioritize power-campus deliverability before reactor-design conclusions.`
+    ? `${target} presents a data-center power infrastructure claim. The claim points to behind-the-meter or campus-scale power delivery with possible long-term nuclear integration, so diligence should prioritize power-campus deliverability before reactor-design conclusions.`
+    : isFuelReadinessCase && isSupplierTarget
+      ? `${target} presents a fuel-cycle participant claim. The current memo should clarify whether the diligence question is supplier credibility, customer demand behind the supplier, or both.`
     : isFuelReadinessCase
-      ? `${target} is being evaluated as a possible HALEU or fuel-cycle customer. The entered claim is about fuel availability and timing, so diligence should focus on project-specific supply, fabrication, logistics, licensing, and reservation authority rather than general market scarcity.`
-      : `${target} is being evaluated for: ${input.decisionQuestion}. The entered claim triggers ${claimLabelsList.join(", ") || "no high-confidence claim type"}.`;
+      ? `${target} presents a fuel-availability claim. Diligence should focus on project-specific supply, fabrication, logistics, licensing, and reservation authority rather than general HALEU scarcity.`
+    : isTimelineQuestion
+      ? `${target} presents a deployment-timeline claim. Diligence should test whether NRC milestones, site, fuel, EPC, financing, and commercial-operation assumptions line up.`
+    : isPartnerQuestion
+      ? `${target} presents a counterparty credibility claim. Diligence should test whether the claim is enough to justify a meeting, partnership process, customer diligence, or a stop.`
+    : `The entered claim triggers ${claimLabelsList.join(", ") || "no high-confidence claim type"}. This claim is not yet underwritable because the target has not provided enough project-specific evidence to distinguish a serious deployment path from an early-stage commercial narrative.`;
 
   const thesis = isDataCenterPowerCase
     ? `${target} may be interesting if it can prove site control, near-term power, binding load/customer demand, and a credible path from bridge power to nuclear baseload. Without named nuclear counterparties and licensing responsibility, the nuclear component should be treated as long-term optionality, not bankable supply.`
+    : isFuelReadinessCase && isFuelSupplierUser && isReactorDeveloperTarget
+      ? `${target} is not yet a bankable future fuel customer on the current record. Public HALEU sources establish market relevance and regulatory/fuel-cycle constraints, but the target still needs a project-specific fuel-readiness package before a supplier should reserve scarce capacity.`
+    : isFuelReadinessCase && isSupplierTarget
+      ? `The target appears to be a fuel-cycle participant; clarify whether the diligence question is supplier credibility or customer demand credibility. The current record should not be read as proving the target itself is a future fuel customer.`
     : isFuelReadinessCase
-      ? `${target} is not yet a bankable fuel-cycle customer on the current record. Public HALEU sources establish market relevance and regulatory/fuel-cycle constraints, but the target still needs a project-specific fuel-readiness package before a supplier should reserve scarce capacity.`
+      ? `${target} is not yet a bankable fuel-cycle prospect on the current record. Public HALEU sources establish market relevance and regulatory/fuel-cycle constraints, but the target still needs a project-specific fuel-readiness package before scarce capacity should be reserved.`
       : `${target} may merit further diligence, but the entered claims need evidence across each implicated deployment layer before the timeline, fuel-cycle, commercial, or construction claims can support an IC view.`;
 
   return {
