@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-26T19:57:45.498Z",
-  "total_cases": 70,
-  "passed": 70,
+  "generated_at": "2026-05-26T21:50:26.830Z",
+  "total_cases": 76,
+  "passed": 76,
   "failed": 0,
   "failure_categories": {},
   "results": [
@@ -131,10 +131,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -151,7 +151,7 @@
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 575,
+      "memo_word_count": 579,
       "snapshot_path": null
     },
     {
@@ -280,10 +280,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -513,7 +513,7 @@
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 549,
+      "memo_word_count": 553,
       "snapshot_path": null
     },
     {
@@ -1051,10 +1051,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -1231,10 +1231,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -1463,17 +1463,17 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Committed financing sources and milestone conditions.",
-        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
         "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Licensed fuel fabrication route plus qualification and capacity evidence."
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
         "Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?",
@@ -1483,11 +1483,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 632,
+      "memo_word_count": 634,
       "snapshot_path": null
     },
     {
@@ -1734,17 +1734,17 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Licensed fuel fabrication route plus qualification and capacity evidence.",
-        "Transportation package, safeguards category, storage plan, and responsible licensee.",
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
-        "Site-control documents for named sites and a permit matrix tied to schedule."
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
@@ -1753,11 +1753,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 641,
+      "memo_word_count": 644,
       "snapshot_path": null
     },
     {
@@ -1926,16 +1926,16 @@
       "diligence_questions": [
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #17 Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility. Why it matters: Shows that fabrication capacity and license review are separate gating items from obtaining enriched material. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 557,
+      "memo_word_count": 560,
       "snapshot_path": null
     },
     {
@@ -2138,16 +2138,16 @@
       "diligence_questions": [
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 556,
+      "memo_word_count": 559,
       "snapshot_path": null
     },
     {
@@ -2358,17 +2358,17 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Licensed fuel fabrication route plus qualification and capacity evidence.",
-        "Transportation package, safeguards category, storage plan, and responsible licensee.",
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
-        "Site-control documents for named sites and a permit matrix tied to schedule."
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
@@ -2377,11 +2377,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 644,
+      "memo_word_count": 647,
       "snapshot_path": null
     },
     {
@@ -2585,16 +2585,16 @@
       "diligence_questions": [
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 556,
+      "memo_word_count": 559,
       "snapshot_path": null
     },
     {
@@ -2773,7 +2773,7 @@
       "diligence_questions": [
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
@@ -2781,10 +2781,10 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 619,
+      "memo_word_count": 622,
       "snapshot_path": null
     },
     {
@@ -2969,18 +2969,18 @@
         "What schedule supports delivery?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 562,
+      "memo_word_count": 560,
       "snapshot_path": null
     },
     {
@@ -3113,16 +3113,16 @@
       "diligence_questions": [
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #11 Centrus Energy 2025 Annual Report. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 555,
+      "memo_word_count": 558,
       "snapshot_path": null
     },
     {
@@ -3260,17 +3260,17 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Licensed fuel fabrication route plus qualification and capacity evidence.",
-        "Transportation package, safeguards category, storage plan, and responsible licensee.",
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
-        "Site-control documents for named sites and a permit matrix tied to schedule."
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
@@ -3278,11 +3278,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 653,
+      "memo_word_count": 623,
       "snapshot_path": null
     },
     {
@@ -3421,15 +3421,15 @@
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?"
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 547,
+      "memo_word_count": 546,
       "snapshot_path": null
     },
     {
@@ -3567,17 +3567,17 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Licensed fuel fabrication route plus qualification and capacity evidence.",
-        "Transportation package, safeguards category, storage plan, and responsible licensee.",
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
-        "Site-control documents for named sites and a permit matrix tied to schedule."
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
@@ -3585,11 +3585,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 651,
+      "memo_word_count": 632,
       "snapshot_path": null
     },
     {
@@ -3755,15 +3755,15 @@
       "diligence_questions": [
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 498,
+      "memo_word_count": 501,
       "snapshot_path": null
     },
     {
@@ -3929,15 +3929,15 @@
       "diligence_questions": [
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 495,
+      "memo_word_count": 498,
       "snapshot_path": null
     },
     {
@@ -4069,15 +4069,15 @@
       "diligence_questions": [
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 497,
+      "memo_word_count": 500,
       "snapshot_path": null
     },
     {
@@ -4286,17 +4286,17 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Licensed fuel fabrication route plus qualification and capacity evidence.",
-        "Transportation package, safeguards category, storage plan, and responsible licensee.",
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
-        "Site-control documents for named sites and a permit matrix tied to schedule."
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
@@ -4305,11 +4305,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 640,
+      "memo_word_count": 643,
       "snapshot_path": null
     },
     {
@@ -4553,14 +4553,14 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Which sites are controlled and what rights are secured?",
         "What power source supports initial energization?",
         "Is the customer/offtake agreement binding or preliminary?",
@@ -4572,7 +4572,7 @@
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 544,
+      "memo_word_count": 534,
       "snapshot_path": null
     },
     {
@@ -4840,18 +4840,18 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?"
       ],
       "verdict": "Diligence Required",
@@ -4860,7 +4860,7 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 621,
+      "memo_word_count": 611,
       "snapshot_path": null
     },
     {
@@ -5084,14 +5084,16 @@
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation."
       ],
       "diligence_questions": [
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
-        "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?",
         "What power source supports initial energization, on what term, at what cost, and what happens if nuclear slips?",
-        "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
-        "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
-        "Who will operate the nuclear asset and own spent fuel, security, waste, and long-term operational responsibility?"
+        "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
@@ -5099,7 +5101,7 @@
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 583,
+      "memo_word_count": 600,
       "snapshot_path": null
     },
     {
@@ -5349,14 +5351,14 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?",
@@ -5369,7 +5371,7 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 606,
+      "memo_word_count": 596,
       "snapshot_path": null
     },
     {
@@ -5621,14 +5623,14 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?",
@@ -5641,7 +5643,7 @@
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 603,
+      "memo_word_count": 593,
       "snapshot_path": null
     },
     {
@@ -5861,14 +5863,14 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?",
@@ -5879,9 +5881,9 @@
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
-        "- Source: #23 NUREG-2268 Final EIS for Kemmerer Power Station Unit 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #23 NUREG-2268 Final EIS for Kemmerer Power Station Unit 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 606,
+      "memo_word_count": 594,
       "snapshot_path": null
     },
     {
@@ -6060,8 +6062,12 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design."
       ],
       "diligence_questions": [
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
-        "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?",
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
@@ -6072,7 +6078,7 @@
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 517,
+      "memo_word_count": 532,
       "snapshot_path": null
     },
     {
@@ -6250,14 +6256,14 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?",
@@ -6269,7 +6275,7 @@
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #8 Constellation Loan Guarantee Agreement Exhibit for Crane. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 546,
+      "memo_word_count": 536,
       "snapshot_path": null
     },
     {
@@ -6359,11 +6365,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Public company investor materials / filings: Use as public-source evidence, not truth serum.",
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
-        "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence."
+        "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence.",
+        "- AWS nuclear/data center power public sourcing context: Power-buyer claims need contract evidence."
       ],
-      "memo_word_count": 280,
+      "memo_word_count": 279,
       "snapshot_path": null
     },
     {
@@ -6453,11 +6459,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Public company investor materials / filings: Use as public-source evidence, not truth serum.",
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
-        "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence."
+        "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence.",
+        "- AWS nuclear/data center power public sourcing context: Power-buyer claims need contract evidence."
       ],
-      "memo_word_count": 277,
+      "memo_word_count": 276,
       "snapshot_path": null
     },
     {
@@ -6635,17 +6641,17 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Committed financing sources and milestone conditions.",
-        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
         "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Licensed fuel fabrication route plus qualification and capacity evidence."
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
         "Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?",
@@ -6654,11 +6660,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 646,
+      "memo_word_count": 634,
       "snapshot_path": null
     },
     {
@@ -6808,11 +6814,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Public company investor materials / filings: Use as public-source evidence, not truth serum.",
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
-        "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability."
+        "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability.",
+        "- Kairos Hermes construction permit: Important benchmark, with scope limitations."
       ],
-      "memo_word_count": 436,
+      "memo_word_count": 432,
       "snapshot_path": null
     },
     {
@@ -6902,11 +6908,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Public company investor materials / filings: Use as public-source evidence, not truth serum.",
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
-        "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence."
+        "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence.",
+        "- AWS nuclear/data center power public sourcing context: Power-buyer claims need contract evidence."
       ],
-      "memo_word_count": 280,
+      "memo_word_count": 279,
       "snapshot_path": null
     },
     {
@@ -7084,11 +7090,11 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Committed financing sources and milestone conditions.",
-        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
         "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Licensed fuel fabrication route plus qualification and capacity evidence."
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Which technology is in scope?",
@@ -7098,17 +7104,17 @@
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 596,
+      "memo_word_count": 580,
       "snapshot_path": null
     },
     {
@@ -7199,11 +7205,10 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Public company investor materials / filings: Use as public-source evidence, not truth serum.",
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
         "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability."
       ],
-      "memo_word_count": 271,
+      "memo_word_count": 257,
       "snapshot_path": null
     },
     {
@@ -8035,18 +8040,18 @@
       "diligence_questions": [
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 614,
+      "memo_word_count": 617,
       "snapshot_path": null
     },
     {
@@ -8177,10 +8182,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -8519,10 +8524,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -8769,10 +8774,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -9115,10 +9120,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -9597,18 +9602,18 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?"
       ],
       "verdict": "Diligence Required",
@@ -9617,7 +9622,7 @@
         "- Source: #8 Constellation Loan Guarantee Agreement Exhibit for Crane. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 623,
+      "memo_word_count": 613,
       "snapshot_path": null
     },
     {
@@ -9818,11 +9823,11 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Committed financing sources and milestone conditions.",
-        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
         "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -9840,7 +9845,7 @@
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 572,
+      "memo_word_count": 570,
       "snapshot_path": null
     },
     {
@@ -10088,7 +10093,7 @@
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
         "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?",
@@ -10096,11 +10101,11 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #17 Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility. Why it matters: Shows that fabrication capacity and license review are separate gating items from obtaining enriched material. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
+        "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 633,
+      "memo_word_count": 627,
       "snapshot_path": null
     },
     {
@@ -10385,14 +10390,14 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Which sites are controlled and what rights are secured?",
         "What power source supports initial energization?",
         "Is the customer/offtake agreement binding or preliminary?",
@@ -10405,7 +10410,7 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 603,
+      "memo_word_count": 593,
       "snapshot_path": null
     },
     {
@@ -10632,14 +10637,14 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Which NRC milestones are complete?",
         "What fuel supply path supports first core?",
         "Which sites are committed?",
@@ -10652,7 +10657,7 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 615,
+      "memo_word_count": 605,
       "snapshot_path": null
     },
     {
@@ -10898,10 +10903,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "What is the current NRC review schedule?",
@@ -10921,7 +10926,7 @@
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 519,
+      "memo_word_count": 522,
       "snapshot_path": null
     },
     {
@@ -11091,10 +11096,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -11247,10 +11252,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "What NRC path applies to the siting model?",
@@ -11367,14 +11372,14 @@
         "What financing supports scale-up?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?"
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 462,
+      "memo_word_count": 460,
       "snapshot_path": null
     },
     {
@@ -11836,11 +11841,11 @@
         "Private diligence required"
       ],
       "top_missing_evidence": [
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
-        "Licensed fuel fabrication route plus qualification and capacity evidence.",
-        "Transportation package, safeguards category, storage plan, and responsible licensee.",
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
-        "Site-control documents for named sites and a permit matrix tied to schedule."
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Which NRC milestones are complete?",
@@ -11851,16 +11856,16 @@
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
-        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 593,
+      "memo_word_count": 582,
       "snapshot_path": null
     },
     {
@@ -12045,17 +12050,17 @@
         "What schedule supports delivery?",
         "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
         "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
-        "Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
         "Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?",
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 564,
+      "memo_word_count": 562,
       "snapshot_path": null
     },
     {
@@ -12198,10 +12203,9 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability.",
-        "- Public company investor materials / filings: Use as public-source evidence, not truth serum.",
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like."
       ],
-      "memo_word_count": 361,
+      "memo_word_count": 347,
       "snapshot_path": null
     },
     {
@@ -12510,14 +12514,14 @@
         "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
         "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
         "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
-        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
         "Which sites are controlled and what rights are secured?",
         "What power source supports initial energization?",
         "Is the customer/offtake agreement binding or preliminary?",
@@ -12530,7 +12534,7 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 612,
+      "memo_word_count": 602,
       "snapshot_path": null
     },
     {
@@ -12661,10 +12665,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -12681,7 +12685,7 @@
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 575,
+      "memo_word_count": 579,
       "snapshot_path": null
     },
     {
@@ -12916,10 +12920,10 @@
       ],
       "top_missing_evidence": [
         "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
         "Site-control documents for named sites and a permit matrix tied to schedule.",
         "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
-        "Committed financing sources and milestone conditions.",
-        "HALEU assay, form, quantity, supplier or allocation, and delivery window."
+        "Committed financing sources and milestone conditions."
       ],
       "diligence_questions": [
         "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
@@ -12936,6 +12940,1203 @@
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
       "memo_word_count": 518,
+      "snapshot_path": null
+    },
+    {
+      "id": "blind_reactor_developer_timeline_haleu_not_power_campus",
+      "target": "Reactor Developer",
+      "user_type": "Reactor developer",
+      "decision_question": "Is this deployment timeline believable?",
+      "passed": true,
+      "failures": [],
+      "detected_claim_types": [
+        "HALEU_claim",
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "fuel_cycle_claim"
+      ],
+      "atomic_claim_types": [
+        "HALEU_claim",
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "fuel_cycle_claim"
+      ],
+      "forbidden_claim_types_checked": [
+        "data_center_power_claim",
+        "behind_the_meter_claim",
+        "bridge_power_claim"
+      ],
+      "matched_documents": [
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "DOE Final HALEU EIS, Volume 1",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "High Assay Low Enriched Uranium Transportation Packages",
+        "Acceptance of the TRISO-X License Application for a Fuel Fabrication Facility",
+        "BWX Technologies 2025 Annual Report",
+        "NRC New Fuels Licensing Activities",
+        "Louisiana Energy Services Final Audit Report"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "Site / permitting",
+        "EPC / construction",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "user_note_only",
+        "missing",
+        "private_diligence_required"
+      ],
+      "target_specific_support_by_layer": {
+        "Licensing / NRC": "Missing",
+        "Fuel supply / HALEU": "Missing",
+        "Fuel fabrication": "Missing",
+        "Transportation / safeguards": "Missing",
+        "Site / permitting": "Missing",
+        "EPC / construction": "Private diligence required",
+        "Financing": "Private diligence required"
+      },
+      "corpus_coverage_by_layer": {
+        "Licensing / NRC": "Strong",
+        "Fuel supply / HALEU": "Strong",
+        "Fuel fabrication": "Strong",
+        "Transportation / safeguards": "Strong",
+        "Site / permitting": "Strong",
+        "EPC / construction": "Strong",
+        "Financing": "Strong"
+      },
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [
+        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
+      ],
+      "diligence_questions": [
+        "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
+        "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
+        "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
+        "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
+        "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
+        "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
+        "Which dated milestones connect the current status to the claimed commercial operation date?",
+        "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?",
+        "Does the fuel evidence cover first core only, or both first core and reloads?"
+      ],
+      "verdict": "Diligence Required",
+      "main_memo_source_bullets": [
+        "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+      ],
+      "memo_word_count": 606,
+      "snapshot_path": null
+    },
+    {
+      "id": "blind_hyperscaler_power_buyer_questions",
+      "target": "Hyperscaler AI Campus",
+      "user_type": "Data center power buyer",
+      "decision_question": "Is this partner/customer credible?",
+      "passed": true,
+      "failures": [],
+      "detected_claim_types": [
+        "data_center_power_claim",
+        "deployment_timeline_claim",
+        "offtake_claim",
+        "site_control_claim",
+        "nuclear_integration_claim"
+      ],
+      "atomic_claim_types": [
+        "data_center_power_claim",
+        "deployment_timeline_claim",
+        "offtake_claim",
+        "site_control_claim",
+        "nuclear_integration_claim",
+        "bridge_power_claim"
+      ],
+      "forbidden_claim_types_checked": [
+        "HALEU_claim"
+      ],
+      "matched_documents": [
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Constellation Energy 2025 Annual Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "DOE Final HALEU EIS, Volume 1",
+        "NUREG-2268 Final EIS for Kemmerer Power Station Unit 1",
+        "Oklo and Meta Agreement Announcement",
+        "NuScale First Quarter 2025 Earnings Transcript",
+        "Talen Energy 2025 Annual Report to Shareholders",
+        "Talen Energy 2024 Form 10-K"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "data_center_power_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "offtake_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "site_control_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "site_control_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "site_control_claim",
+          "document_title": "DOE Final HALEU EIS, Volume 1",
+          "rank": 9,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "NUREG-2268 Final EIS for Kemmerer Power Station Unit 1",
+          "rank": 23,
+          "deployment_layers": [
+            "Site / permitting",
+            "Licensing / NRC",
+            "EPC / construction"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-5",
+          "claim_type": "nuclear_integration_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Site / permitting",
+        "Interconnection / power delivery",
+        "Bridge power / phased energization",
+        "EPC / construction",
+        "Offtake / customer",
+        "Financing",
+        "Operations / waste",
+        "Fuel supply / HALEU"
+      ],
+      "evidence_statuses": [
+        "private_diligence_required",
+        "user_note_only",
+        "cannot_know_from_public_docs"
+      ],
+      "target_specific_support_by_layer": {
+        "Licensing / NRC": "Missing",
+        "Site / permitting": "Missing",
+        "Interconnection / power delivery": "Missing",
+        "Bridge power / phased energization": "Missing",
+        "EPC / construction": "Private diligence required",
+        "Offtake / customer": "Private diligence required",
+        "Financing": "Private diligence required",
+        "Operations / waste": "Cannot know from public docs"
+      },
+      "corpus_coverage_by_layer": {
+        "Licensing / NRC": "Strong",
+        "Site / permitting": "Strong",
+        "Interconnection / power delivery": "Strong",
+        "Bridge power / phased energization": "Strong",
+        "EPC / construction": "Strong",
+        "Offtake / customer": "Strong",
+        "Financing": "Strong",
+        "Operations / waste": "Strong"
+      },
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required",
+        "Cannot know from public docs"
+      ],
+      "top_missing_evidence": [
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "Interconnection rights or behind-the-meter/islanded operating basis and power-delivery design.",
+        "Bridge-power source, term, cost, permits, reliability basis, and fallback if nuclear slips.",
+        "Binding offtake or customer agreement, credit support, load ramp, and termination rights.",
+        "Committed financing sources and milestone conditions."
+      ],
+      "diligence_questions": [
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        "Who owns licensing, construction, fuel, and operating risk?",
+        "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
+        "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
+        "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?",
+        "What power source supports initial energization, on what term, at what cost, and what happens if nuclear slips?",
+        "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
+      ],
+      "verdict": "Diligence Required",
+      "main_memo_source_bullets": [
+        "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
+        "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+      ],
+      "memo_word_count": 607,
+      "snapshot_path": null
+    },
+    {
+      "id": "blind_doe_selected_finance_not_solved",
+      "target": "Funding Selected Developer",
+      "user_type": "Investor",
+      "decision_question": "Is this worth deeper diligence?",
+      "passed": true,
+      "failures": [],
+      "detected_claim_types": [
+        "financing_claim"
+      ],
+      "atomic_claim_types": [
+        "financing_claim"
+      ],
+      "forbidden_claim_types_checked": [
+        "data_center_power_claim"
+      ],
+      "matched_documents": [
+        "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+        "Constellation Energy 2025 Annual Report",
+        "DOE Record of Decision for Holtec Palisades Loan Guarantee",
+        "DOE LPO Title 17 Overview Deck",
+        "Constellation Loan Guarantee Agreement Exhibit for Crane",
+        "NuScale First Quarter 2025 Earnings Transcript",
+        "Talen Energy 2025 Annual Report to Shareholders",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "Talen Energy 2024 Form 10-K",
+        "Oklo 2025 Form 10-K"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "financing_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "financing_claim",
+          "document_title": "FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000",
+          "rank": 1,
+          "deployment_layers": [
+            "Power delivery / interconnection",
+            "Offtake / customer credibility",
+            "Financing / bankability"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "financing_claim",
+          "document_title": "Constellation Energy 2025 Annual Report",
+          "rank": 2,
+          "deployment_layers": [
+            "Offtake / customer credibility",
+            "Financing / bankability",
+            "Power delivery / interconnection"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Offtake / customer",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "private_diligence_required"
+      ],
+      "target_specific_support_by_layer": {
+        "Offtake / customer": "Private diligence required",
+        "Financing": "Private diligence required"
+      },
+      "corpus_coverage_by_layer": {
+        "Offtake / customer": "Strong",
+        "Financing": "Strong"
+      },
+      "target_specific_support_statuses": [
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [
+        "Committed financing sources and milestone conditions.",
+        "Binding offtake or customer agreement, credit support, load ramp, and termination rights."
+      ],
+      "diligence_questions": [
+        "Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?",
+        "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
+      ],
+      "verdict": "Diligence Required",
+      "main_memo_source_bullets": [
+        "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
+        "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability."
+      ],
+      "memo_word_count": 260,
+      "snapshot_path": null
+    },
+    {
+      "id": "blind_fuel_supplier_target_competitive_positioning",
+      "target": "General Matter",
+      "user_type": "Fuel-cycle supplier",
+      "decision_question": "Is this a credible fuel-cycle customer?",
+      "passed": true,
+      "failures": [],
+      "detected_claim_types": [
+        "HALEU_claim",
+        "fuel_cycle_claim"
+      ],
+      "atomic_claim_types": [
+        "HALEU_claim",
+        "fuel_cycle_claim"
+      ],
+      "forbidden_claim_types_checked": [
+        "data_center_power_claim"
+      ],
+      "matched_documents": [
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "Centrus Energy 2025 Annual Report",
+        "DOE/NRC Criticality Safety for Commercial-Scale HALEU Fuel Cycle and Transportation",
+        "DOE Final HALEU EIS, Volume 1",
+        "High Assay Low Enriched Uranium Transportation Packages",
+        "NRC New Fuels Licensing Activities",
+        "Acceptance of the TRISO-X License Application for a Fuel Fabrication Facility",
+        "Orano 2025 Annual Results"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus Energy 2025 Annual Report",
+          "rank": 11,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Financing / bankability",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards"
+      ],
+      "evidence_statuses": [
+        "user_note_only"
+      ],
+      "target_specific_support_by_layer": {
+        "Fuel supply / HALEU": "Missing",
+        "Fuel fabrication": "Missing",
+        "Transportation / safeguards": "Missing"
+      },
+      "corpus_coverage_by_layer": {
+        "Fuel supply / HALEU": "Strong",
+        "Fuel fabrication": "Strong",
+        "Transportation / safeguards": "Strong"
+      },
+      "target_specific_support_statuses": [
+        "Missing"
+      ],
+      "top_missing_evidence": [
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Licensed fuel fabrication route plus qualification and capacity evidence.",
+        "Transportation package, safeguards category, storage plan, and responsible licensee."
+      ],
+      "diligence_questions": [
+        "Are we evaluating the target's supplier credibility, or whether its customers represent real future fuel demand?",
+        "Which customer demand is binding?",
+        "What capacity is financeable?",
+        "What feedstock path is secured?",
+        "What delivery windows are committed?",
+        "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
+        "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
+        "Does the fuel evidence cover first core only, or both first core and reloads?"
+      ],
+      "verdict": "Diligence Required",
+      "main_memo_source_bullets": [
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #11 Centrus Energy 2025 Annual Report. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
+      ],
+      "memo_word_count": 522,
+      "snapshot_path": null
+    },
+    {
+      "id": "blind_fuel_supplier_user_reactor_customer_future_customer_phrase",
+      "target": "Oklo",
+      "user_type": "Fuel-cycle supplier",
+      "decision_question": "Is this a credible fuel-cycle customer?",
+      "passed": true,
+      "failures": [],
+      "detected_claim_types": [
+        "fuel_cycle_claim",
+        "HALEU_claim"
+      ],
+      "atomic_claim_types": [
+        "fuel_cycle_claim",
+        "HALEU_claim"
+      ],
+      "forbidden_claim_types_checked": [
+        "data_center_power_claim"
+      ],
+      "matched_documents": [
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+        "DOE/NRC Criticality Safety for Commercial-Scale HALEU Fuel Cycle and Transportation",
+        "DOE Final HALEU EIS, Volume 1",
+        "High Assay Low Enriched Uranium Transportation Packages",
+        "NRC New Fuels Licensing Activities",
+        "Centrus Energy 2025 Annual Report",
+        "Acceptance of the TRISO-X License Application for a Fuel Fabrication Facility",
+        "Orano 2025 Annual Results"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "HALEU_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "HALEU_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "HALEU_claim",
+          "document_title": "Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility",
+          "rank": 17,
+          "deployment_layers": [
+            "Fuel fabrication",
+            "Site / permitting",
+            "Operations / waste"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards"
+      ],
+      "evidence_statuses": [
+        "partially_supported_by_public_source"
+      ],
+      "target_specific_support_by_layer": {
+        "Fuel supply / HALEU": "Missing",
+        "Fuel fabrication": "Missing",
+        "Transportation / safeguards": "Missing"
+      },
+      "corpus_coverage_by_layer": {
+        "Fuel supply / HALEU": "Strong",
+        "Fuel fabrication": "Strong",
+        "Transportation / safeguards": "Strong"
+      },
+      "target_specific_support_statuses": [
+        "Missing"
+      ],
+      "top_missing_evidence": [
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Licensed fuel fabrication route plus qualification and capacity evidence.",
+        "Transportation package, safeguards category, storage plan, and responsible licensee."
+      ],
+      "diligence_questions": [
+        "Which NRC milestones are complete?",
+        "What fuel supply path supports first core?",
+        "Which sites are committed?",
+        "Which customers are binding?",
+        "What milestone would move the deployment date?",
+        "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
+        "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
+        "Does the fuel evidence cover first core only, or both first core and reloads?"
+      ],
+      "verdict": "Diligence Required",
+      "main_memo_source_bullets": [
+        "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
+        "- Source: #17 Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility. Why it matters: Shows that fabrication capacity and license review are separate gating items from obtaining enriched material. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
+      ],
+      "memo_word_count": 521,
+      "snapshot_path": null
+    },
+    {
+      "id": "blind_timeline_question_over_haleu_template",
+      "target": "Advanced Reactor TimelineCo",
+      "user_type": "Investor",
+      "decision_question": "Is this deployment timeline believable?",
+      "passed": true,
+      "failures": [],
+      "detected_claim_types": [
+        "HALEU_claim",
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "fuel_cycle_claim"
+      ],
+      "atomic_claim_types": [
+        "HALEU_claim",
+        "NRC_engagement_claim",
+        "deployment_timeline_claim",
+        "fuel_cycle_claim"
+      ],
+      "forbidden_claim_types_checked": [
+        "data_center_power_claim"
+      ],
+      "matched_documents": [
+        "Centrus American Centrifuge Plant HALEU License Amendment Request",
+        "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+        "LIC-116, Preapplication Readiness Assessment",
+        "NuScale Standard Design Certification DCA RAI Report",
+        "Long Mott Construction Permit Application Part I, General and Financial Information",
+        "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+        "DOE Final HALEU EIS, Volume 1",
+        "Fuel Qualification Methodology for Kairos FHR, KP-TR-011",
+        "BWX Technologies 2025 Annual Report",
+        "Integration of Safety, Security, and Safeguards During Design and Regulation of Advanced Reactors and Fuel Fabrication Facilities",
+        "NRC New Fuels Licensing Activities",
+        "High Assay Low Enriched Uranium Transportation Packages",
+        "Louisiana Energy Services Final Audit Report"
+      ],
+      "matched_chunks": [
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-1",
+          "claim_type": "HALEU_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "LIC-116, Preapplication Readiness Assessment",
+          "rank": 18,
+          "deployment_layers": [
+            "Pre-application maturity",
+            "Licensing / NRC"
+          ]
+        },
+        {
+          "claim_id": "atomic-2",
+          "claim_type": "NRC_engagement_claim",
+          "document_title": "NuScale Standard Design Certification DCA RAI Report",
+          "rank": 19,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "Long Mott Construction Permit Application Part I, General and Financial Information",
+          "rank": 24,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Financing / bankability",
+            "Offtake / customer credibility",
+            "Site / permitting"
+          ]
+        },
+        {
+          "claim_id": "atomic-3",
+          "claim_type": "deployment_timeline_claim",
+          "document_title": "DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance",
+          "rank": 21,
+          "deployment_layers": [
+            "Licensing / NRC",
+            "Pre-application maturity"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities",
+          "rank": 13,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Fuel fabrication",
+            "Transportation / safeguards"
+          ]
+        },
+        {
+          "claim_id": "atomic-4",
+          "claim_type": "fuel_cycle_claim",
+          "document_title": "Centrus American Centrifuge Plant HALEU License Amendment Request",
+          "rank": 15,
+          "deployment_layers": [
+            "Fuel supply / HALEU",
+            "Licensing / NRC",
+            "Fuel fabrication"
+          ]
+        }
+      ],
+      "deployment_layers": [
+        "Licensing / NRC",
+        "Fuel supply / HALEU",
+        "Fuel fabrication",
+        "Transportation / safeguards",
+        "Site / permitting",
+        "EPC / construction",
+        "Financing"
+      ],
+      "evidence_statuses": [
+        "user_note_only",
+        "missing",
+        "private_diligence_required"
+      ],
+      "target_specific_support_by_layer": {
+        "Licensing / NRC": "Missing",
+        "Fuel supply / HALEU": "Missing",
+        "Fuel fabrication": "Missing",
+        "Transportation / safeguards": "Missing",
+        "Site / permitting": "Missing",
+        "EPC / construction": "Private diligence required",
+        "Financing": "Private diligence required"
+      },
+      "corpus_coverage_by_layer": {
+        "Licensing / NRC": "Strong",
+        "Fuel supply / HALEU": "Strong",
+        "Fuel fabrication": "Strong",
+        "Transportation / safeguards": "Strong",
+        "Site / permitting": "Strong",
+        "EPC / construction": "Strong",
+        "Financing": "Strong"
+      },
+      "target_specific_support_statuses": [
+        "Missing",
+        "Private diligence required"
+      ],
+      "top_missing_evidence": [
+        "Named NRC applicant and public docket, pre-application record, accepted application, or licensing milestone.",
+        "HALEU assay, form, quantity, supplier or allocation, and delivery window.",
+        "Site-control documents for named sites and a permit matrix tied to schedule.",
+        "EPC scope, contractor, schedule, cost basis, contingency, and risk allocation.",
+        "Committed financing sources and milestone conditions."
+      ],
+      "diligence_questions": [
+        "Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?",
+        "What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?",
+        "Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?",
+        "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?",
+        "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?",
+        "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?",
+        "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?",
+        "Which dated milestones connect the current status to the claimed commercial operation date?",
+        "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?",
+        "Does the fuel evidence cover first core only, or both first core and reloads?"
+      ],
+      "verdict": "Diligence Required",
+      "main_memo_source_bullets": [
+        "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+      ],
+      "memo_word_count": 608,
       "snapshot_path": null
     }
   ]

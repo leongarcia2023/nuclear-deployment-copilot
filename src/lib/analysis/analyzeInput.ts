@@ -293,14 +293,14 @@ function verdictFor(profile: CompanyProfile | undefined, detectedClaims: Detecte
   return "Monitor";
 }
 
-function buildQuestions(target: string, profile: CompanyProfile | undefined, findings: DeploymentLayerFinding[], detectedClaims: DetectedClaim[]) {
+function buildQuestions(target: string, profile: CompanyProfile | undefined, findings: DeploymentLayerFinding[], detectedClaims: DetectedClaim[], userType = "") {
   const base = profile?.default_diligence_questions ?? [];
   const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
   const layerQuestionMap: Record<string, string[]> = {
     "Licensing / NRC": ["Who is the named NRC applicant, and what public docket or pre-application record supports the claimed path?"],
     "Fuel supply / HALEU": ["What HALEU assay, form, quantity, supplier, allocation, and delivery window support first core and reload claims?"],
     "Fuel fabrication": ["Which licensed fabrication facility will make the fuel, and what qualification or capacity evidence supports that route?"],
-    "Transportation / safeguards": ["Who owns transportation, safeguards, criticality, and storage responsibility, and what public or counterparty evidence supports the plan?"],
+    "Transportation / safeguards": ["Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?"],
     "Site / permitting": ["Which named sites are controlled, and what land rights, permits, and local approvals have been secured?"],
     "Interconnection / power delivery": ["What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?"],
     "Bridge power / phased energization": ["What power source supports initial energization, on what term, at what cost, and what happens if nuclear slips?"],
@@ -309,19 +309,25 @@ function buildQuestions(target: string, profile: CompanyProfile | undefined, fin
     Financing: ["What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"],
     "Operations / waste": ["Who will operate the nuclear asset and own spent fuel, security, waste, and long-term operational responsibility?"],
   };
-  const dataCenterQuestions = claimTypes.has("data_center_power_claim")
+  const isPowerBuyer = userType.toLowerCase().includes("data center power buyer") || /hyperscaler|microsoft|aws|amazon|google|meta/.test(target.toLowerCase());
+  const hasExplicitFuelClaim = claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim");
+  const hasReactorOwnershipClaim = claimTypes.has("licensing_claim") || claimTypes.has("NRC_engagement_claim") || claimTypes.has("nuclear_integration_claim") || hasExplicitFuelClaim;
+  const dataCenterQuestions = claimTypes.has("data_center_power_claim") || isPowerBuyer
     ? [
-        "Which sites are controlled, and what land/interconnection rights are secured?",
-        "What is the power-delivery basis: grid interconnection, behind-the-meter, or islanded operation?",
-        "Is the customer/offtake agreement binding, and what credit support exists?",
-        "Who is the reactor vendor, NRC applicant, and licensing owner?",
-        "What happens if nuclear slips 5-10 years?",
+        "Who owns the reactor or project development risk?",
+        "Is the PPA/offtake agreement binding, and what termination rights apply?",
+        "What power is available if nuclear is delayed?",
+        "What is the power-delivery basis, and what evidence supports deliverability at the claimed MW scale?",
+        ...(hasReactorOwnershipClaim ? ["Who owns licensing, construction, fuel, and operating risk?"] : []),
       ]
     : [];
-  const layerQuestions = findings.flatMap((finding) => layerQuestionMap[finding.layer] ?? [`What evidence resolves the ${finding.layer.toLowerCase()} dependency?`]);
+  const layerQuestions = findings
+    .filter((finding) => hasExplicitFuelClaim || !["Fuel supply / HALEU", "Fuel fabrication", "Transportation / safeguards"].includes(finding.layer) || !isPowerBuyer)
+    .filter((finding) => hasReactorOwnershipClaim || finding.layer !== "Licensing / NRC" || !isPowerBuyer)
+    .flatMap((finding) => layerQuestionMap[finding.layer] ?? [`What evidence resolves the ${finding.layer.toLowerCase()} dependency?`]);
   const claimQuestions = [
     claimTypes.has("deployment_timeline_claim") ? "Which dated milestones connect the current status to the claimed commercial operation date?" : "",
-    claimTypes.has("NRC_engagement_claim") ? "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?" : "",
+    claimTypes.has("NRC_engagement_claim") && (!isPowerBuyer || hasReactorOwnershipClaim) ? "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?" : "",
     claimTypes.has("HALEU_claim") ? "Does the fuel evidence cover first core only, or both first core and reloads?" : "",
   ].filter(Boolean);
   return Array.from(new Set([...dataCenterQuestions, ...base, ...layerQuestions, ...claimQuestions])).slice(0, 10);
@@ -514,12 +520,12 @@ function missingEvidenceItems(claims: AtomicClaim[]) {
         "Interconnection / power delivery",
         "Bridge power / phased energization",
         "Offtake / customer",
+        "Financing",
         "Licensing / NRC",
+        "EPC / construction",
         "Fuel supply / HALEU",
         "Fuel fabrication",
         "Transportation / safeguards",
-        "EPC / construction",
-        "Financing",
         "Operations / waste",
       ]
     : claimTypes.has("bridge_power_claim")
@@ -534,6 +540,20 @@ function missingEvidenceItems(claims: AtomicClaim[]) {
           "Fuel supply / HALEU",
           "Operations / waste",
         ]
+      : claimTypes.has("deployment_timeline_claim")
+        ? [
+            "Licensing / NRC",
+            "Fuel supply / HALEU",
+            "Site / permitting",
+            "EPC / construction",
+            "Financing",
+            "Fuel fabrication",
+            "Transportation / safeguards",
+            "Offtake / customer",
+            "Interconnection / power delivery",
+            "Operations / waste",
+            "Bridge power / phased energization",
+          ]
       : claimTypes.has("offtake_claim")
         ? [
             "Offtake / customer",
@@ -597,14 +617,28 @@ function verdictChangeItems(claims: AtomicClaim[]) {
         "Interconnection / power delivery",
         "Bridge power / phased energization",
         "Offtake / customer",
+        "Financing",
         "Licensing / NRC",
+        "EPC / construction",
         "Fuel supply / HALEU",
         "Fuel fabrication",
         "Transportation / safeguards",
-        "EPC / construction",
-        "Financing",
         "Operations / waste",
       ]
+    : claimTypes.has("deployment_timeline_claim")
+      ? [
+          "Licensing / NRC",
+          "Fuel supply / HALEU",
+          "Offtake / customer",
+          "EPC / construction",
+          "Financing",
+          "Transportation / safeguards",
+          "Fuel fabrication",
+          "Site / permitting",
+          "Interconnection / power delivery",
+          "Operations / waste",
+          "Bridge power / phased energization",
+        ]
     : claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")
       ? [
           "Fuel supply / HALEU",
@@ -749,7 +783,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
   const category = profile?.category ?? "unrecognized_counterparty";
   const verdict = verdictFor(profile, detectedClaims);
   const confidence = sourceMatch.confidence;
-  const rawQuestions = buildQuestions(target, profile, findings, detectedClaims);
+  const rawQuestions = buildQuestions(target, profile, findings, detectedClaims, input.userType);
   const claimLabelsList = detectedClaims.map((claim) => claim.label);
   const topFindings = findings.slice(0, 6);
   const decisionLower = input.decisionQuestion.toLowerCase();
@@ -759,6 +793,8 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
   const isTimelineQuestion = decisionLower.includes("timeline") || decisionLower.includes("believable");
   const isPartnerQuestion = decisionLower.includes("partner") || decisionLower.includes("customer credible");
   const isDeeperDiligenceQuestion = decisionLower.includes("deeper diligence");
+  const noteText = input.note.toLowerCase();
+  const hasPowerCampusSignal = ["data center", "hyperscaler", "ai campus", "behind-the-meter", "behind the meter", "islanded", "bridge power", "power campus", "large load", "colocation", "co-location", "customer load"].some((term) => noteText.includes(term));
   const questions = Array.from(new Set([
     ...(isFuelSupplierUser && isSupplierTarget ? ["Are we evaluating the target's supplier credibility, or whether its customers represent real future fuel demand?"] : []),
     ...rawQuestions,
@@ -777,10 +813,14 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
   const evidenceLedger = buildEvidenceLedger(target, input.note, detectedClaims, findings, documentMatch, documentCoverage, relevantDocuments);
   const uniqueLedgerChunks = ledgerChunkEvidence(evidenceLedger);
   const isShuffleLike = category === "data_center_power_infrastructure";
-  const isDataCenterPowerCase = isShuffleLike || detectedClaims.some((claim) => claim.claimType === "data_center_power_claim");
-  const isFuelReadinessCase = !isDataCenterPowerCase && detectedClaims.some((claim) => claim.claimType === "HALEU_claim" || claim.claimType === "fuel_cycle_claim");
+  const isDataCenterPowerCase = hasPowerCampusSignal && (isShuffleLike || detectedClaims.some((claim) => ["data_center_power_claim", "behind_the_meter_claim", "bridge_power_claim"].includes(claim.claimType)));
+  const hasFuelClaim = detectedClaims.some((claim) => claim.claimType === "HALEU_claim" || claim.claimType === "fuel_cycle_claim");
+  const isPrimarilyFuelClaim = hasFuelClaim && !isTimelineQuestion && (isFuelSupplierUser || decisionLower.includes("fuel-cycle customer") || !detectedClaims.some((claim) => claim.claimType === "deployment_timeline_claim" || claim.claimType === "NRC_engagement_claim" || claim.claimType === "licensing_claim"));
+  const isFuelReadinessCase = !isDataCenterPowerCase && isPrimarilyFuelClaim;
   const genericLayerList = topFindings.map((item) => item.layer).join(", ") || "the relevant deployment layers";
-  const oneLineJudgment = isDataCenterPowerCase
+  const oneLineJudgment = isTimelineQuestion
+    ? `The deployment timeline is not yet bankable because fuel readiness, licensing, site control, EPC, and financing are not tied to dated project milestones.`
+    : isDataCenterPowerCase
     ? `${target} appears to be a data-center power infrastructure diligence case, not a reactor developer case. Treat nuclear as long-term optionality unless site control, initial power, customer/offtake, reactor vendor, licensing responsibility, EPC, and fuel-cycle evidence are provided.`
     : isFuelReadinessCase && isFuelSupplierUser && isReactorDeveloperTarget
       ? `${target} is not yet a bankable future fuel customer; public HALEU context does not prove target-specific first-core or reload supply, fabrication, allocation, or delivery commitments.`
@@ -788,22 +828,20 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
       ? `${target} appears to be a fuel-cycle participant, so the key question is supplier credibility or customer demand credibility, not whether the target itself is a fuel-cycle customer.`
     : isFuelReadinessCase
       ? `${target} may be a relevant HALEU/fuel-cycle prospect, but public HALEU market and licensing context does not prove target-specific fuel supply, first-core/reload commitments, fabrication capacity, transport readiness, or delivery timing.`
-    : isTimelineQuestion
-      ? `${target}'s timeline is not bankable until dated milestones for NRC path, site, fuel, EPC, financing, and commercial operation are evidenced.`
     : isPartnerQuestion
       ? `${target} may justify a counterparty conversation, but the current claim is not enough to establish partner or customer credibility without project-specific proof.`
     : isDeeperDiligenceQuestion
       ? `${target} may warrant deeper diligence only if the next gating evidence resolves ${genericLayerList}.`
       : `${target} requires input-specific diligence across ${genericLayerList}; current deterministic analysis does not support treating the claim as bankable without proof.`;
 
-  const recommendedNextAction = isDataCenterPowerCase
+  const recommendedNextAction = isTimelineQuestion
+    ? `Ask ${target} for a dated milestone package tying NRC status, site, fuel, EPC, financing, and COD assumptions to public or counterparty-verifiable evidence.`
+    : isDataCenterPowerCase
     ? `For ${target}, diligence the power-campus stack first: site rights, initial energization source, customer/offtake, bridge-power economics, and whether nuclear is base case or upside. Then require the named reactor vendor and licensing owner.`
     : isFuelReadinessCase && isSupplierTarget
       ? `Clarify whether the diligence question is supplier credibility or customer demand credibility, then request customer commitments, capacity, allocation, fabrication, delivery, and commercial-reservation evidence.`
     : isFuelReadinessCase
       ? `Ask ${target} for a fuel-readiness package: HALEU assay, form, quantity, first-core and reload schedule, supplier/allocation status, fabrication route, transport/safeguards plan, licensing owner, and commercial reservation authority.`
-    : isTimelineQuestion
-      ? `Ask ${target} for a dated milestone package tying NRC status, site, fuel, EPC, financing, and COD assumptions to public or counterparty-verifiable evidence.`
     : isPartnerQuestion
       ? `Use the next interaction to test counterparty credibility: accountable owner, binding commitments, execution responsibility, and the evidence that would justify a partnership or customer diligence process.`
     : `Ask ${target} for layer-specific evidence for the entered claims before treating the deployment timeline or commercial claim as bankable.`;
@@ -844,19 +882,21 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
       ]
     : topFindings.map((finding) => `${finding.layer} must be supported by: ${finding.requiredEvidence}`).slice(0, 6);
 
-  const situation = isDataCenterPowerCase
+  const situation = isTimelineQuestion
+    ? `${target} presents a deployment-timeline claim. Diligence should test whether NRC milestones, site, fuel, EPC, financing, and commercial-operation assumptions line up.`
+    : isDataCenterPowerCase
     ? `${target} presents a data-center power infrastructure claim. The claim points to behind-the-meter or campus-scale power delivery with possible long-term nuclear integration, so diligence should prioritize power-campus deliverability before reactor-design conclusions.`
     : isFuelReadinessCase && isSupplierTarget
       ? `${target} presents a fuel-cycle participant claim. The current memo should clarify whether the diligence question is supplier credibility, customer demand behind the supplier, or both.`
     : isFuelReadinessCase
       ? `${target} presents a fuel-availability claim. Diligence should focus on project-specific supply, fabrication, logistics, licensing, and reservation authority rather than general HALEU scarcity.`
-    : isTimelineQuestion
-      ? `${target} presents a deployment-timeline claim. Diligence should test whether NRC milestones, site, fuel, EPC, financing, and commercial-operation assumptions line up.`
     : isPartnerQuestion
       ? `${target} presents a counterparty credibility claim. Diligence should test whether the claim is enough to justify a meeting, partnership process, customer diligence, or a stop.`
     : `The entered claim triggers ${claimLabelsList.join(", ") || "no high-confidence claim type"}. This claim is not yet underwritable because the target has not provided enough project-specific evidence to distinguish a serious deployment path from an early-stage commercial narrative.`;
 
-  const thesis = isDataCenterPowerCase
+  const thesis = isTimelineQuestion
+    ? `${target}'s deployment date should be treated as unsupported until fuel readiness, licensing status, site control, EPC scope, financing, and commercial-operation milestones are tied to dated evidence.`
+    : isDataCenterPowerCase
     ? `${target} may be interesting if it can prove site control, near-term power, binding load/customer demand, and a credible path from bridge power to nuclear baseload. Without named nuclear counterparties and licensing responsibility, the nuclear component should be treated as long-term optionality, not bankable supply.`
     : isFuelReadinessCase && isFuelSupplierUser && isReactorDeveloperTarget
       ? `${target} is not yet a bankable future fuel customer on the current record. Public HALEU sources establish market relevance and regulatory/fuel-cycle constraints, but the target still needs a project-specific fuel-readiness package before a supplier should reserve scarce capacity.`

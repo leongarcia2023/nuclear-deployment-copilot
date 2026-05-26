@@ -28,11 +28,12 @@ export function icMemoMarkdown(
   const coverageNotes = conciseCoverageNotes(evidenceLedger?.deploymentLayerSummary ?? documentCoverage, detectedClaims);
   const chunkNotes = evidenceLedger?.atomicClaims.flatMap((claim) => claim.matchedChunks) ?? [];
   const conciseEvidence = concisePublicEvidence(chunkNotes, detectedClaims);
+  const prioritizedNotes = prioritizedPublicEvidenceNotes(memo.target, publicEvidenceNotes, detectedClaims);
   const publicEvidence = conciseEvidence.length
     ? list(conciseEvidence)
-    : publicEvidenceNotes.length
-      ? list(prioritizedPublicEvidenceNotes(memo.target, publicEvidenceNotes, detectedClaims).map((note) => `${note.title}: ${note.whyItMatters || note.relevance}`))
-      : "- No chunk-backed public evidence matched the claim.";
+    : prioritizedNotes.length
+      ? list(prioritizedNotes.map((note) => `${note.title}: ${note.whyItMatters || note.relevance}`))
+      : "- No concrete chunk-backed public evidence matched the claim.";
   const analystNotes = analystRead(memo, detectedClaims).slice(0, 5).join("\n\n");
 
   return `# First-Pass IC Memo
@@ -76,6 +77,7 @@ function prioritizedPublicEvidenceNotes(target: string, notes: PublicEvidenceNot
   return [...notes]
     .filter((note) => {
       const title = note.title.toLowerCase();
+      if (title.includes("placeholder") || title.includes("public company investor materials / filings")) return false;
       if ((claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")) && (title.includes("palisades") || title.includes("ferc") || title.includes("talen") || title.includes("constellation"))) return false;
       if ((claimTypes.has("data_center_power_claim") || claimTypes.has("behind_the_meter_claim") || claimTypes.has("bridge_power_claim")) && (title.includes("haleu") || title.includes("triso") || title.includes("centrus"))) return false;
       return true;
@@ -87,7 +89,7 @@ function prioritizedPublicEvidenceNotes(target: string, notes: PublicEvidenceNot
       const bTarget = targetTerms.some((term) => bTitle.includes(term)) ? 1 : 0;
       return bTarget - aTarget;
     })
-    .slice(0, 3);
+    .slice(claimTypes.has("financing_claim") && claimTypes.size <= 2 ? 0 : 0, claimTypes.has("financing_claim") && claimTypes.size <= 2 ? 2 : 3);
 }
 
 function conciseCoverageNotes(coverage: MemoDocumentCoverageItem[], detectedClaims: DetectedClaim[] = []) {
@@ -174,7 +176,8 @@ function sourceWhy(title: string, fallback: string) {
   if (lower.includes("constellation") || lower.includes("crane")) return "Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence.";
   if (lower.includes("criticality") || lower.includes("benchmark")) return "Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability.";
   if (lower.includes("centrus") || lower.includes("american centrifuge")) return "Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target.";
-  if (lower.includes("eis") || lower.includes("availability program") || lower.includes("allocation")) return "Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer.";
+  if (lower.includes("availability program") || lower.includes("allocation")) return "Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer.";
+  if (lower.includes("eis") || lower.includes("nepa")) return "Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing.";
   if (lower.includes("triso") || lower.includes("fabrication")) return "Shows that fabrication capacity and license review are separate gating items from obtaining enriched material.";
   if (lower.includes("transport") || lower.includes("safeguard") || lower.includes("storage")) return "Shows that transport, safeguards, and storage are part of fuel readiness, not administrative afterthoughts.";
   if (lower.includes("haleu")) return "Relevant HALEU context, but not proof of target-specific fuel supply, fabrication, or delivery timing.";
@@ -185,7 +188,15 @@ function sourceWhy(title: string, fallback: string) {
 
 function analystRead(memo: FirstPassIcMemo, detectedClaims: DetectedClaim[]) {
   const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
-  if (claimTypes.has("data_center_power_claim")) {
+  const decision = memo.decision.toLowerCase();
+  if (decision.includes("timeline") || decision.includes("believable")) {
+    return [
+      "The regulatory claim and execution timeline need to be separated from the commercial-operation claim.",
+      "Pre-application engagement can be useful, but supplier discussions or schedule targets do not establish a docketed application, secured fuel, site readiness, EPC execution, financing, or operations date.",
+      "Treat the timeline as unsupported until the public regulatory path and private execution milestones line up.",
+    ];
+  }
+  if (claimTypes.has("data_center_power_claim") || claimTypes.has("behind_the_meter_claim") || claimTypes.has("bridge_power_claim")) {
     return [
       "This is not primarily a reactor diligence problem yet; it is a power-campus deliverability problem.",
       "The first question is whether the company can control sites, energize load, and contract customers before nuclear is available.",
@@ -233,13 +244,32 @@ function analystRead(memo: FirstPassIcMemo, detectedClaims: DetectedClaim[]) {
   ];
 }
 
+
+function chunkSourcePriority(title: string, claims: Set<string>, decision = "") {
+  const family = sourceFamily(title);
+  const explicitTimelineDecision = decision.toLowerCase().includes("timeline") || decision.toLowerCase().includes("believable");
+  const hasDataCenterClaim = claims.has("data_center_power_claim") || claims.has("behind_the_meter_claim") || claims.has("bridge_power_claim");
+  if (hasDataCenterClaim && !explicitTimelineDecision && (family === "data_center_power" || family === "data_center_commercial")) return 0;
+  const timelineFirst = explicitTimelineDecision || claims.has("deployment_timeline_claim") || claims.has("NRC_engagement_claim") || claims.has("licensing_claim");
+  if (timelineFirst && family === "licensing") return 0;
+  if ((claims.has("HALEU_claim") || claims.has("fuel_cycle_claim")) && (family === "haleu" || family === "fuel_fabrication" || family === "fuel_logistics")) return 1;
+  if (hasDataCenterClaim && (family === "data_center_power" || family === "data_center_commercial")) return 1;
+  if (claims.has("financing_claim") && (family === "financing" || family === "restart")) return 1;
+  return 5;
+}
+
 function concisePublicEvidence(chunks: EvidenceLedger["atomicClaims"][number]["matchedChunks"], detectedClaims: DetectedClaim[] = []) {
   const seenDocs = new Set<string>();
-  return chunks.filter((chunk) => sourceMatchesClaimFamily(chunk, detectedClaims)).filter((chunk) => {
-    if (seenDocs.has(chunk.documentId)) return false;
-    seenDocs.add(chunk.documentId);
-    return true;
-  }).slice(0, 3).map((chunk) => `Source: #${chunk.rank} ${chunk.documentTitle}. Why it matters: ${sourceWhy(chunk.documentTitle, chunk.relevanceReason)} Does not prove: ${firstSentence(chunk.doesNotProve)}`);
+  const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
+  const limit = claimTypes.has("financing_claim") && claimTypes.size <= 2 ? 2 : 3;
+  return chunks
+    .filter((chunk) => sourceMatchesClaimFamily(chunk, detectedClaims))
+    .sort((a, b) => chunkSourcePriority(a.documentTitle, claimTypes) - chunkSourcePriority(b.documentTitle, claimTypes))
+    .filter((chunk) => {
+      if (seenDocs.has(chunk.documentId)) return false;
+      seenDocs.add(chunk.documentId);
+      return true;
+    }).slice(0, limit).map((chunk) => `Source: #${chunk.rank} ${chunk.documentTitle}. Why it matters: ${sourceWhy(chunk.documentTitle, chunk.relevanceReason)} Does not prove: ${firstSentence(chunk.doesNotProve)}`);
 }
 
 function firstSentence(value: string) {

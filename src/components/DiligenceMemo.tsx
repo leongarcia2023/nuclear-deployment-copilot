@@ -85,13 +85,31 @@ function sourceMatchesClaimFamily(chunk: ChunkWithClaim, profile: ProjectCounter
 }
 
 
+
+function chunkSourcePriority(title: string, claims: Set<string>, decision = "") {
+  const family = sourceFamily(title);
+  const explicitTimelineDecision = decision.toLowerCase().includes("timeline") || decision.toLowerCase().includes("believable");
+  const hasDataCenterClaim = claims.has("data_center_power_claim") || claims.has("behind_the_meter_claim") || claims.has("bridge_power_claim");
+  if (hasDataCenterClaim && !explicitTimelineDecision && (family === "data_center_power" || family === "data_center_commercial")) return 0;
+  const timelineFirst = explicitTimelineDecision || claims.has("deployment_timeline_claim") || claims.has("NRC_engagement_claim") || claims.has("licensing_claim");
+  if (timelineFirst && family === "licensing") return 0;
+  if ((claims.has("HALEU_claim") || claims.has("fuel_cycle_claim")) && (family === "haleu" || family === "fuel_fabrication" || family === "fuel_logistics")) return 1;
+  if (hasDataCenterClaim && (family === "data_center_power" || family === "data_center_commercial")) return 1;
+  if (claims.has("financing_claim") && (family === "financing" || family === "restart")) return 1;
+  return 5;
+}
+
 function mainChunks(profile: ProjectCounterpartyProfile) {
   const seenDocs = new Set<string>();
-  return allChunks(profile).filter((chunk) => sourceMatchesClaimFamily(chunk, profile)).filter((chunk) => {
-    if (seenDocs.has(chunk.documentId)) return false;
-    seenDocs.add(chunk.documentId);
-    return true;
-  }).slice(0, 3);
+  const claims = claimTypes(profile);
+  return allChunks(profile)
+    .filter((chunk) => sourceMatchesClaimFamily(chunk, profile))
+    .sort((a, b) => chunkSourcePriority(a.documentTitle, claims, profile.claimToIcMemo.firstPassIcMemo.decision) - chunkSourcePriority(b.documentTitle, claims, profile.claimToIcMemo.firstPassIcMemo.decision))
+    .filter((chunk) => {
+      if (seenDocs.has(chunk.documentId)) return false;
+      seenDocs.add(chunk.documentId);
+      return true;
+    }).slice(0, claims.has("financing_claim") && claims.size <= 2 ? 2 : 3);
 }
 
 function sourceWhy(title: string, fallback: string) {
@@ -110,7 +128,8 @@ function sourceWhy(title: string, fallback: string) {
   }
   if (lower.includes("criticality") || lower.includes("benchmark")) return "Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability.";
   if (lower.includes("centrus") || lower.includes("american centrifuge")) return "Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target.";
-  if (lower.includes("eis") || lower.includes("availability program") || lower.includes("allocation")) return "Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer.";
+  if (lower.includes("availability program") || lower.includes("allocation")) return "Shows DOE-level HALEU program context and allocation constraints; it does not identify this target as an allocated customer.";
+  if (lower.includes("eis") || lower.includes("nepa")) return "Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing.";
   if (lower.includes("triso") || lower.includes("fabrication")) return "Shows that fabrication capacity and license review are separate gating items from obtaining enriched material.";
   if (lower.includes("transport") || lower.includes("safeguard") || lower.includes("storage")) return "Shows that transport, safeguards, and storage are part of fuel readiness, not administrative afterthoughts.";
   if (lower.includes("haleu")) return "Relevant HALEU context, but not proof of target-specific fuel supply, fabrication, or delivery timing.";
@@ -157,10 +176,17 @@ function conciseQuestions(profile: ProjectCounterpartyProfile) {
 }
 
 function analystRead(profile: ProjectCounterpartyProfile) {
-  const category = profile.claimToIcMemo.analysisDebug?.companyCategory;
   const claims = profile.claimToIcMemo.detectedClaims ?? [];
-  const hasDataCenterClaim = claims.some((claim) => claim.claimType === "data_center_power_claim");
-  if (category === "data_center_power_infrastructure" || hasDataCenterClaim) {
+  const decision = profile.claimToIcMemo.firstPassIcMemo.decision.toLowerCase();
+  const hasDataCenterClaim = claims.some((claim) => ["data_center_power_claim", "behind_the_meter_claim", "bridge_power_claim"].includes(claim.claimType));
+  if (decision.includes("timeline") || decision.includes("believable")) {
+    return [
+      "The regulatory claim and execution timeline need to be separated from the commercial-operation claim.",
+      "Pre-application engagement can be useful, but supplier discussions or schedule targets do not establish a docketed application, secured fuel, site readiness, EPC execution, financing, or operations date.",
+      "Treat the timeline as unsupported until the public regulatory path and private execution milestones line up.",
+    ];
+  }
+  if (hasDataCenterClaim) {
     return [
       "This is not primarily a reactor diligence problem yet; it is a power-campus deliverability problem.",
       "The first question is whether the company can control sites, energize load, and contract customers before nuclear is available.",
