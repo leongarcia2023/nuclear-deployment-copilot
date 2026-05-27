@@ -134,7 +134,7 @@ function sourceWhy(title: string, fallback: string) {
   if (lower.includes("transport") || lower.includes("safeguard") || lower.includes("storage")) return "Shows that transport, safeguards, and storage are part of fuel readiness, not administrative afterthoughts.";
   if (lower.includes("haleu")) return "Relevant HALEU context, but not proof of target-specific fuel supply, fabrication, or delivery timing.";
   if (lower.includes("lic-116") || lower.includes("preapplication")) return "Benchmarks why pre-application engagement is weaker than a docketed or accepted application.";
-  if (lower.includes("nuscale") || lower.includes("rai") || lower.includes("arcap")) return "Shows the level of public NRC review detail needed before treating a deployment timeline as mature.";
+  if (lower.includes("nuscale") || lower.includes("rai") || lower.includes("arcap")) return "Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved.";
   return sentenceLimit(fallback, 1);
 }
 
@@ -191,6 +191,7 @@ function analystRead(profile: ProjectCounterpartyProfile) {
       "This is not primarily a reactor diligence problem yet; it is a power-campus deliverability problem.",
       "The first question is whether the company can control sites, energize load, and contract customers before nuclear is available.",
       "Nuclear should be treated as upside optionality unless the reactor vendor, licensing owner, fuel path, EPC responsibility, and bridge-to-nuclear transition plan are evidenced.",
+      "If the commercial proof is an MOU or expected future PPA, it is not equivalent to binding offtake with termination rights and credit support.",
     ];
   }
   if (claims.some((claim) => claim.claimType === "HALEU_claim" || claim.claimType === "fuel_cycle_claim")) {

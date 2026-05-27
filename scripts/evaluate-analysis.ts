@@ -5,6 +5,22 @@ import * as exportModule from "../src/components/ExportPanel";
 
 type StringMap = Record<string, string>;
 
+type GoldenMemoCase = {
+  id: string;
+  target: string;
+  userType: string;
+  decisionQuestion: string;
+  claimText: string;
+  requiredPhrases?: string[];
+  forbiddenPhrases?: string[];
+  maxMemoLength?: number;
+  requiredSections?: string[];
+  forbiddenSourceFamilies?: string[];
+  expectedSourceFamilies?: string[];
+  expectedVerdictChangeItems?: string[];
+  expectedDiligenceQuestions?: string[];
+};
+
 type EvalCase = {
   id: string;
   target: string;
@@ -78,6 +94,40 @@ const alwaysForbiddenMemoPhrases = [
   "Palisades shows DOE-level HALEU program context",
 ];
 
+const genericFallbackPhrases = [
+  "being evaluated for:",
+  "Read this as a first-pass diligence screen",
+  "first-pass diligence screen",
+  "generic source-note placeholder",
+];
+
+const overclaimPhrases = [
+  "MOU is binding",
+  "DOE award is closed financing",
+  "conditional commitment is closed financing",
+  "site identified proves site control",
+  "factory-built means construction risk is solved",
+  "design certification proves project financing",
+  "behind-the-meter eliminates interconnection risk",
+  "public HALEU context proves target-specific fuel supply",
+];
+
+function memoMetrics(memoMarkdown: string) {
+  const evidenceSection = sectionBetween(memoMarkdown, "Relevant public evidence");
+  const questionsSection = sectionBetween(memoMarkdown, "Diligence questions");
+  const evidenceBullets = evidenceSection.split("\n").filter((line) => line.trim().startsWith("- "));
+  const questionBullets = questionsSection.split("\n").filter((line) => line.trim().startsWith("- "));
+  const forbiddenOverclaims = overclaimPhrases.filter((phrase) => includesLoose(memoMarkdown, phrase));
+  const genericFallbacks = genericFallbackPhrases.filter((phrase) => includesLoose(memoMarkdown, phrase));
+  return {
+    word_count: memoMarkdown.split(/\s+/).filter(Boolean).length,
+    evidence_bullets: evidenceBullets.length,
+    diligence_questions: questionBullets.length,
+    forbidden_overclaim_phrases: forbiddenOverclaims,
+    generic_fallback_phrases: genericFallbacks,
+  };
+}
+
 function getCaseValue(testCase: EvalCase, camel: keyof EvalCase, snake: keyof EvalCase, fallback = "") {
   return String(testCase[camel] ?? testCase[snake] ?? fallback);
 }
@@ -118,6 +168,106 @@ ${unique((result.evidenceLedger?.deploymentLayerSummary ?? result.documentCovera
 ## Memo Snapshot
 ${memoMarkdown}
 `;
+}
+
+
+async function runGoldenMemoAssertions(snapshotDir: string) {
+  const goldenPath = path.join(process.cwd(), "data", "golden_memo_assertions.sample.json");
+  let goldenCases: GoldenMemoCase[] = [];
+  try {
+    goldenCases = JSON.parse(await fs.readFile(goldenPath, "utf8")) as GoldenMemoCase[];
+  } catch {
+    return { total: 0, passed: 0, failed: 0, results: [], failure_categories: {}, quality_summary: null };
+  }
+
+  const results = [];
+  for (const testCase of goldenCases) {
+    const result = analyzeInput({
+      targetCompanyProject: testCase.target,
+      userType: testCase.userType,
+      decisionQuestion: testCase.decisionQuestion,
+      note: testCase.claimText,
+    });
+    const memoMarkdown = icMemoMarkdown(
+      result.firstPassIcMemo,
+      result.relevantPublicEvidenceNotes ?? [],
+      result.sourceCoverage ?? [],
+      result.detectedClaims ?? [],
+      result.deploymentLayerFindings ?? [],
+      result.documentCoverage ?? [],
+      result.relevantDocuments ?? [],
+      result.evidenceLedger,
+    );
+    const mainEvidenceSection = sectionBetween(memoMarkdown, "Relevant public evidence");
+    const verdictSection = sectionBetween(memoMarkdown, "What would change the verdict");
+    const questions = result.firstPassIcMemo?.diligenceQuestions ?? [];
+    const metrics = memoMetrics(memoMarkdown);
+    const failures: AssertionFailure[] = [];
+
+    for (const phrase of testCase.requiredPhrases ?? []) {
+      if (!includesLoose(memoMarkdown, phrase)) failures.push(fail("golden required phrase missing", `${phrase} missing`));
+    }
+    for (const phrase of [...(testCase.forbiddenPhrases ?? []), ...alwaysForbiddenMemoPhrases]) {
+      if (includesLoose(memoMarkdown, phrase)) failures.push(fail("golden forbidden phrase", `${phrase} appears`));
+    }
+    if (testCase.maxMemoLength && metrics.word_count > testCase.maxMemoLength) {
+      failures.push(fail("golden memo too long", `expected <= ${testCase.maxMemoLength}, got ${metrics.word_count}`));
+    }
+    for (const section of testCase.requiredSections ?? []) {
+      if (!memoMarkdown.includes(`## ${section}`)) failures.push(fail("golden missing section", `${section} missing`));
+    }
+    for (const family of testCase.expectedSourceFamilies ?? []) {
+      if (!includesLoose(mainEvidenceSection, family)) failures.push(fail("golden expected source missing", `${family} missing from main evidence`));
+    }
+    for (const family of testCase.forbiddenSourceFamilies ?? []) {
+      if (includesLoose(mainEvidenceSection, family)) failures.push(fail("golden forbidden source", `${family} appears in main evidence`));
+    }
+    for (const item of testCase.expectedVerdictChangeItems ?? []) {
+      if (!includesLoose(verdictSection, item) && !includesLoose(memoMarkdown, item)) failures.push(fail("golden verdict changer missing", `${item} missing`));
+    }
+    for (const question of testCase.expectedDiligenceQuestions ?? []) {
+      if (!includesAny(questions, question) && !includesLoose(memoMarkdown, question)) failures.push(fail("golden question missing", `${question} missing`));
+    }
+    if (metrics.forbidden_overclaim_phrases.length) failures.push(fail("golden overclaim phrase", metrics.forbidden_overclaim_phrases.join(", ")));
+    if (metrics.generic_fallback_phrases.length) failures.push(fail("golden generic fallback", metrics.generic_fallback_phrases.join(", ")));
+
+    const passed = failures.length === 0;
+    if (!passed) {
+      await fs.writeFile(path.join(snapshotDir, `${testCase.id}.md`), formatSnapshot(testCase as any, result, memoMarkdown, failures));
+    }
+    results.push({
+      id: testCase.id,
+      passed,
+      failures,
+      quality_metrics: metrics,
+      snapshot_path: passed ? null : `data/eval_memo_snapshots/${testCase.id}.md`,
+    });
+  }
+  const failedResults = results.filter((item) => !item.passed);
+  const failureCategories = failedResults
+    .flatMap((item) => item.failures.map((failure) => failure.category))
+    .reduce<Record<string, number>>((counts, category) => {
+      counts[category] = (counts[category] ?? 0) + 1;
+      return counts;
+    }, {});
+  const wordCounts = results.map((item) => item.quality_metrics.word_count);
+  const evidenceCounts = results.map((item) => item.quality_metrics.evidence_bullets);
+  const questionCounts = results.map((item) => item.quality_metrics.diligence_questions);
+  return {
+    total: results.length,
+    passed: results.filter((item) => item.passed).length,
+    failed: failedResults.length,
+    failure_categories: failureCategories,
+    quality_summary: {
+      max_word_count: Math.max(...wordCounts, 0),
+      avg_word_count: wordCounts.length ? Math.round(wordCounts.reduce((sum, value) => sum + value, 0) / wordCounts.length) : 0,
+      max_evidence_bullets: Math.max(...evidenceCounts, 0),
+      max_diligence_questions: Math.max(...questionCounts, 0),
+      forbidden_overclaim_cases: results.filter((item) => item.quality_metrics.forbidden_overclaim_phrases.length).length,
+      generic_fallback_cases: results.filter((item) => item.quality_metrics.generic_fallback_phrases.length).length,
+    },
+    results,
+  };
 }
 
 async function main() {
@@ -267,6 +417,8 @@ async function main() {
       );
     }
 
+    const metrics = memoMetrics(memoMarkdown);
+
     results.push({
       id: testCase.id,
       target: testCase.target,
@@ -288,11 +440,13 @@ async function main() {
       diligence_questions: questions.slice(0, 10),
       verdict: result.verdict,
       main_memo_source_bullets: mainEvidenceBullets,
-      memo_word_count: memoMarkdown.split(/\s+/).filter(Boolean).length,
+      memo_word_count: metrics.word_count,
+      quality_metrics: metrics,
       snapshot_path: passed ? null : `data/eval_memo_snapshots/${testCase.id}.md`,
     });
   }
 
+  const golden = await runGoldenMemoAssertions(snapshotDir);
   const failedResults = results.filter((item) => !item.passed);
   const failureCategories = failedResults
     .flatMap((item) => item.failures.map((failure) => failure.category))
@@ -307,6 +461,15 @@ async function main() {
     passed: results.filter((item) => item.passed).length,
     failed: failedResults.length,
     failure_categories: failureCategories,
+    quality_summary: {
+      max_word_count: Math.max(...results.map((item) => item.memo_word_count), 0),
+      avg_word_count: results.length ? Math.round(results.reduce((sum, item) => sum + item.memo_word_count, 0) / results.length) : 0,
+      max_evidence_bullets: Math.max(...results.map((item) => item.quality_metrics.evidence_bullets), 0),
+      max_diligence_questions: Math.max(...results.map((item) => item.quality_metrics.diligence_questions), 0),
+      forbidden_overclaim_cases: results.filter((item) => item.quality_metrics.forbidden_overclaim_phrases.length).length,
+      generic_fallback_cases: results.filter((item) => item.quality_metrics.generic_fallback_phrases.length).length,
+    },
+    golden_memo_assertions: golden,
     results,
   };
 
@@ -315,9 +478,21 @@ async function main() {
   console.log(`eval cases: ${report.total_cases}`);
   console.log(`passed: ${report.passed}`);
   console.log(`failed: ${report.failed}`);
+  console.log(`golden memo cases: ${golden.total}`);
+  console.log(`golden passed: ${golden.passed}`);
+  console.log(`golden failed: ${golden.failed}`);
+  console.log(`memo quality: avg words ${report.quality_summary.avg_word_count}, max words ${report.quality_summary.max_word_count}, max evidence bullets ${report.quality_summary.max_evidence_bullets}, max questions ${report.quality_summary.max_diligence_questions}`);
+  console.log(`quality flags: overclaim cases ${report.quality_summary.forbidden_overclaim_cases}, generic fallback cases ${report.quality_summary.generic_fallback_cases}`);
   console.log("failure categories:");
   for (const [category, count] of Object.entries(failureCategories).sort((a, b) => b[1] - a[1])) {
     console.log(`  ${category}: ${count}`);
+  }
+  for (const item of golden.results) {
+    if (item.passed) {
+      console.log(`GOLDEN PASS ${item.id}`);
+    } else {
+      console.log(`GOLDEN FAIL ${item.id}: ${item.failures.slice(0, 4).map((failure) => `${failure.category} - ${failure.message}`).join("; ")}`);
+    }
   }
   for (const item of results) {
     if (item.passed) {

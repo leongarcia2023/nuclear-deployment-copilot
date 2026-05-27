@@ -1,9 +1,163 @@
 {
-  "generated_at": "2026-05-26T21:50:26.830Z",
+  "generated_at": "2026-05-27T01:05:36.854Z",
   "total_cases": 76,
   "passed": 76,
   "failed": 0,
   "failure_categories": {},
+  "quality_summary": {
+    "max_word_count": 657,
+    "avg_word_count": 528,
+    "max_evidence_bullets": 3,
+    "max_diligence_questions": 5,
+    "forbidden_overclaim_cases": 0,
+    "generic_fallback_cases": 0
+  },
+  "golden_memo_assertions": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "failure_categories": {},
+    "quality_summary": {
+      "max_word_count": 626,
+      "avg_word_count": 483,
+      "max_evidence_bullets": 3,
+      "max_diligence_questions": 5,
+      "forbidden_overclaim_cases": 0,
+      "generic_fallback_cases": 0
+    },
+    "results": [
+      {
+        "id": "golden_shuffle_data_center_power_campus",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 626,
+          "evidence_bullets": 3,
+          "diligence_questions": 5,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      },
+      {
+        "id": "golden_haleu_first_core_reloads",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 521,
+          "evidence_bullets": 3,
+          "diligence_questions": 5,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      },
+      {
+        "id": "golden_nrc_preapp_2030_cod",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 589,
+          "evidence_bullets": 3,
+          "diligence_questions": 5,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      },
+      {
+        "id": "golden_hyperscaler_mou_non_binding",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 623,
+          "evidence_bullets": 3,
+          "diligence_questions": 5,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      },
+      {
+        "id": "golden_doe_award_not_financing",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 255,
+          "evidence_bullets": 2,
+          "diligence_questions": 2,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      },
+      {
+        "id": "golden_site_identified_not_controlled",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 299,
+          "evidence_bullets": 3,
+          "diligence_questions": 2,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      },
+      {
+        "id": "golden_factory_built_epc_risk",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 370,
+          "evidence_bullets": 2,
+          "diligence_questions": 2,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      },
+      {
+        "id": "golden_design_cert_not_project_bankability",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 449,
+          "evidence_bullets": 2,
+          "diligence_questions": 5,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      },
+      {
+        "id": "golden_fuel_supplier_future_customer",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 521,
+          "evidence_bullets": 3,
+          "diligence_questions": 5,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      },
+      {
+        "id": "golden_btm_interconnection_risk_remains",
+        "passed": true,
+        "failures": [],
+        "quality_metrics": {
+          "word_count": 574,
+          "evidence_bullets": 2,
+          "diligence_questions": 5,
+          "forbidden_overclaim_phrases": [],
+          "generic_fallback_phrases": []
+        },
+        "snapshot_path": null
+      }
+    ]
+  },
   "results": [
     {
       "id": "nrc_preapp_2030_investor",
@@ -148,10 +302,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 579,
+      "memo_word_count": 589,
+      "quality_metrics": {
+        "word_count": 589,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -297,10 +458,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 582,
+      "memo_word_count": 592,
+      "quality_metrics": {
+        "word_count": 592,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -510,10 +678,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 553,
+      "memo_word_count": 563,
+      "quality_metrics": {
+        "word_count": 563,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -690,10 +865,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 532,
+      "memo_word_count": 542,
+      "quality_metrics": {
+        "word_count": 542,
+        "evidence_bullets": 3,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -879,9 +1061,16 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 439,
+      "memo_word_count": 449,
+      "quality_metrics": {
+        "word_count": 449,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -1068,10 +1257,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 594,
+      "memo_word_count": 604,
+      "quality_metrics": {
+        "word_count": 604,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -1248,10 +1444,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 572,
+      "memo_word_count": 582,
+      "quality_metrics": {
+        "word_count": 582,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -1484,10 +1687,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 634,
+      "memo_word_count": 644,
+      "quality_metrics": {
+        "word_count": 644,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -1754,10 +1964,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 644,
+      "memo_word_count": 654,
+      "quality_metrics": {
+        "word_count": 654,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -1936,6 +2153,13 @@
         "- Source: #17 Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility. Why it matters: Shows that fabrication capacity and license review are separate gating items from obtaining enriched material. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 560,
+      "quality_metrics": {
+        "word_count": 560,
+        "evidence_bullets": 3,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -2148,6 +2372,13 @@
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 559,
+      "quality_metrics": {
+        "word_count": 559,
+        "evidence_bullets": 3,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -2378,10 +2609,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 647,
+      "memo_word_count": 657,
+      "quality_metrics": {
+        "word_count": 657,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -2595,6 +2833,13 @@
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 559,
+      "quality_metrics": {
+        "word_count": 559,
+        "evidence_bullets": 3,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -2785,6 +3030,13 @@
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 622,
+      "quality_metrics": {
+        "word_count": 622,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -2981,6 +3233,13 @@
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 560,
+      "quality_metrics": {
+        "word_count": 560,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -3123,6 +3382,13 @@
         "- Source: #11 Centrus Energy 2025 Annual Report. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 558,
+      "quality_metrics": {
+        "word_count": 558,
+        "evidence_bullets": 3,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -3279,10 +3545,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 623,
+      "memo_word_count": 633,
+      "quality_metrics": {
+        "word_count": 633,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -3426,10 +3699,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 546,
+      "memo_word_count": 556,
+      "quality_metrics": {
+        "word_count": 556,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -3586,10 +3866,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 632,
+      "memo_word_count": 642,
+      "quality_metrics": {
+        "word_count": 642,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -3764,6 +4051,13 @@
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 501,
+      "quality_metrics": {
+        "word_count": 501,
+        "evidence_bullets": 2,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -3938,6 +4232,13 @@
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 498,
+      "quality_metrics": {
+        "word_count": 498,
+        "evidence_bullets": 2,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -4078,6 +4379,13 @@
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 500,
+      "quality_metrics": {
+        "word_count": 500,
+        "evidence_bullets": 2,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -4306,10 +4614,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 643,
+      "memo_word_count": 653,
+      "quality_metrics": {
+        "word_count": 653,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -4572,7 +4887,14 @@
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 534,
+      "memo_word_count": 558,
+      "quality_metrics": {
+        "word_count": 558,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -4860,7 +5182,14 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 611,
+      "memo_word_count": 635,
+      "quality_metrics": {
+        "word_count": 635,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -5101,7 +5430,14 @@
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 600,
+      "memo_word_count": 624,
+      "quality_metrics": {
+        "word_count": 624,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -5371,7 +5707,14 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 596,
+      "memo_word_count": 620,
+      "quality_metrics": {
+        "word_count": 620,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -5643,7 +5986,14 @@
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 593,
+      "memo_word_count": 617,
+      "quality_metrics": {
+        "word_count": 617,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -5883,7 +6233,14 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #23 NUREG-2268 Final EIS for Kemmerer Power Station Unit 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 594,
+      "memo_word_count": 618,
+      "quality_metrics": {
+        "word_count": 618,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -6078,7 +6435,14 @@
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 532,
+      "memo_word_count": 556,
+      "quality_metrics": {
+        "word_count": 556,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -6275,7 +6639,14 @@
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #8 Constellation Loan Guarantee Agreement Exhibit for Crane. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 536,
+      "memo_word_count": 560,
+      "quality_metrics": {
+        "word_count": 560,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -6370,6 +6741,13 @@
         "- AWS nuclear/data center power public sourcing context: Power-buyer claims need contract evidence."
       ],
       "memo_word_count": 279,
+      "quality_metrics": {
+        "word_count": 279,
+        "evidence_bullets": 3,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -6464,6 +6842,13 @@
         "- AWS nuclear/data center power public sourcing context: Power-buyer claims need contract evidence."
       ],
       "memo_word_count": 276,
+      "quality_metrics": {
+        "word_count": 276,
+        "evidence_bullets": 3,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -6661,10 +7046,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 634,
+      "memo_word_count": 644,
+      "quality_metrics": {
+        "word_count": 644,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -6819,6 +7211,13 @@
         "- Kairos Hermes construction permit: Important benchmark, with scope limitations."
       ],
       "memo_word_count": 432,
+      "quality_metrics": {
+        "word_count": 432,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -6913,6 +7312,13 @@
         "- AWS nuclear/data center power public sourcing context: Power-buyer claims need contract evidence."
       ],
       "memo_word_count": 279,
+      "quality_metrics": {
+        "word_count": 279,
+        "evidence_bullets": 3,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -7111,10 +7517,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 580,
+      "memo_word_count": 590,
+      "quality_metrics": {
+        "word_count": 590,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -7205,10 +7618,17 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
-        "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability."
+        "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability.",
+        "- DOE LPO application process: Useful for testing financing claims."
       ],
-      "memo_word_count": 257,
+      "memo_word_count": 252,
+      "quality_metrics": {
+        "word_count": 252,
+        "evidence_bullets": 2,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -7352,6 +7772,13 @@
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
       "memo_word_count": 453,
+      "quality_metrics": {
+        "word_count": 453,
+        "evidence_bullets": 2,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -7497,6 +7924,13 @@
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
       "memo_word_count": 456,
+      "quality_metrics": {
+        "word_count": 456,
+        "evidence_bullets": 2,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -7640,6 +8074,13 @@
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
       "memo_word_count": 453,
+      "quality_metrics": {
+        "word_count": 453,
+        "evidence_bullets": 2,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -7861,6 +8302,13 @@
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
       "memo_word_count": 498,
+      "quality_metrics": {
+        "word_count": 498,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -8052,6 +8500,13 @@
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 617,
+      "quality_metrics": {
+        "word_count": 617,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -8198,10 +8653,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 583,
+      "memo_word_count": 593,
+      "quality_metrics": {
+        "word_count": 593,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -8298,6 +8760,13 @@
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
       "memo_word_count": 373,
+      "quality_metrics": {
+        "word_count": 373,
+        "evidence_bullets": 2,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -8394,6 +8863,13 @@
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
       "memo_word_count": 370,
+      "quality_metrics": {
+        "word_count": 370,
+        "evidence_bullets": 2,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -8540,10 +9016,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 583,
+      "memo_word_count": 593,
+      "quality_metrics": {
+        "word_count": 593,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -8640,6 +9123,13 @@
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
       "memo_word_count": 370,
+      "quality_metrics": {
+        "word_count": 370,
+        "evidence_bullets": 2,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -8791,9 +9281,16 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 534,
+      "memo_word_count": 544,
+      "quality_metrics": {
+        "word_count": 544,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -8890,6 +9387,13 @@
         "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence."
       ],
       "memo_word_count": 292,
+      "quality_metrics": {
+        "word_count": 292,
+        "evidence_bullets": 3,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -8986,6 +9490,13 @@
         "- FERC generator interconnection reform/orders: Large-load claims need power-delivery evidence."
       ],
       "memo_word_count": 290,
+      "quality_metrics": {
+        "word_count": 290,
+        "evidence_bullets": 3,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -9137,9 +9648,16 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 538,
+      "memo_word_count": 548,
+      "quality_metrics": {
+        "word_count": 548,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -9271,9 +9789,16 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 436,
+      "memo_word_count": 446,
+      "quality_metrics": {
+        "word_count": 446,
+        "evidence_bullets": 2,
+        "diligence_questions": 3,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -9622,7 +10147,14 @@
         "- Source: #8 Constellation Loan Guarantee Agreement Exhibit for Crane. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 613,
+      "memo_word_count": 637,
+      "quality_metrics": {
+        "word_count": 637,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -9842,10 +10374,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 570,
+      "memo_word_count": 580,
+      "quality_metrics": {
+        "word_count": 580,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -10102,10 +10641,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 627,
+      "memo_word_count": 637,
+      "quality_metrics": {
+        "word_count": 637,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -10410,7 +10956,14 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 593,
+      "memo_word_count": 617,
+      "quality_metrics": {
+        "word_count": 617,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -10657,7 +11210,14 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 605,
+      "memo_word_count": 629,
+      "quality_metrics": {
+        "word_count": 629,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -10923,10 +11483,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 522,
+      "memo_word_count": 532,
+      "quality_metrics": {
+        "word_count": 532,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -11113,10 +11680,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
-      "memo_word_count": 582,
+      "memo_word_count": 592,
+      "quality_metrics": {
+        "word_count": 592,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -11275,6 +11849,13 @@
         "- Source: #22 Kemmerer Power Station Unit 1 Final Safety Evaluation. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
       "memo_word_count": 500,
+      "quality_metrics": {
+        "word_count": 500,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -11380,6 +11961,13 @@
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 460,
+      "quality_metrics": {
+        "word_count": 460,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -11602,6 +12190,13 @@
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
       ],
       "memo_word_count": 505,
+      "quality_metrics": {
+        "word_count": 505,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -11862,10 +12457,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
-      "memo_word_count": 582,
+      "memo_word_count": 592,
+      "quality_metrics": {
+        "word_count": 592,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -12061,6 +12663,13 @@
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 562,
+      "quality_metrics": {
+        "word_count": 562,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -12203,9 +12812,16 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability.",
-        "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like."
+        "- DOE LPO application process: Useful for testing financing claims."
       ],
-      "memo_word_count": 347,
+      "memo_word_count": 342,
+      "quality_metrics": {
+        "word_count": 342,
+        "evidence_bullets": 2,
+        "diligence_questions": 4,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -12534,7 +13150,14 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 602,
+      "memo_word_count": 626,
+      "quality_metrics": {
+        "word_count": 626,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -12682,10 +13305,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 579,
+      "memo_word_count": 589,
+      "quality_metrics": {
+        "word_count": 589,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -12785,6 +13415,13 @@
         "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence."
       ],
       "memo_word_count": 299,
+      "quality_metrics": {
+        "word_count": 299,
+        "evidence_bullets": 3,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -12937,9 +13574,16 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
+        "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 518,
+      "memo_word_count": 528,
+      "quality_metrics": {
+        "word_count": 528,
+        "evidence_bullets": 2,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -13172,10 +13816,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 606,
+      "memo_word_count": 616,
+      "quality_metrics": {
+        "word_count": 616,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -13453,7 +14104,14 @@
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 607,
+      "memo_word_count": 631,
+      "quality_metrics": {
+        "word_count": 631,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -13547,10 +14205,17 @@
       ],
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
-        "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
-        "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability."
+        "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability.",
+        "- DOE LPO application process: Useful for testing financing claims."
       ],
-      "memo_word_count": 260,
+      "memo_word_count": 255,
+      "quality_metrics": {
+        "word_count": 255,
+        "evidence_bullets": 2,
+        "diligence_questions": 2,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -13694,6 +14359,13 @@
         "- Source: #11 Centrus Energy 2025 Annual Report. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 522,
+      "quality_metrics": {
+        "word_count": 522,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -13904,6 +14576,13 @@
         "- Source: #17 Final Environmental Impact Statement for the Proposed TRISO-X Fuel Fabrication Facility. Why it matters: Shows that fabrication capacity and license review are separate gating items from obtaining enriched material. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
       ],
       "memo_word_count": 521,
+      "quality_metrics": {
+        "word_count": 521,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     },
     {
@@ -14133,10 +14812,17 @@
       "verdict": "Diligence Required",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
-        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
+        "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
       ],
-      "memo_word_count": 608,
+      "memo_word_count": 618,
+      "quality_metrics": {
+        "word_count": 618,
+        "evidence_bullets": 3,
+        "diligence_questions": 5,
+        "forbidden_overclaim_phrases": [],
+        "generic_fallback_phrases": []
+      },
       "snapshot_path": null
     }
   ]

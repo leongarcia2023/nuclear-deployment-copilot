@@ -8,7 +8,7 @@ import { PrivacyNotice } from "@/components/PrivacyNotice";
 import { analysisModeCopy } from "@/lib/analysis/analysisModes";
 import type { AppAnalysisMode, InputMode, ProjectCounterpartyProfile, UserMode } from "@/types/core";
 
-type DemoId = "smr-data-center" | "haleu-customer" | "deployment-timeline";
+type DemoId = "data-center-campus" | "haleu-readiness" | "nrc-preapp-2030" | "doe-award-financing" | "mou-offtake";
 
 const demos: Array<{
   id: DemoId;
@@ -19,31 +19,49 @@ const demos: Array<{
   claim: string;
 }> = [
   {
-    id: "smr-data-center",
-    label: "Load demo: data center power claim",
-    counterparty: "SMR + data center power campus",
+    id: "data-center-campus",
+    label: "Data center power campus",
+    counterparty: "Shuffle Infrastructure",
     decisionQuestion: "Is this worth deeper diligence?",
     userType: "Investor",
     claim:
-      "A developer claims it can deliver a 300 MW behind-the-meter nuclear-powered data center campus by 2031 using advanced reactors, HALEU fuel, and long-term data center offtake. The company says it has begun regulatory engagement and expects to sign strategic fuel-cycle and EPC partnerships soon.",
+      "Shuffle Infrastructure claims it can develop 300 MW behind-the-meter AI data center campuses with bridge power and customer load by 2031. Nuclear is presented as the long-term baseload path, but the company has not named reactor vendor, licensing owner, site-control package, or binding offtake evidence.",
   },
   {
-    id: "haleu-customer",
-    label: "Load demo: HALEU customer claim",
-    counterparty: "Prospective HALEU fuel-cycle customer",
+    id: "haleu-readiness",
+    label: "HALEU fuel-readiness claim",
+    counterparty: "Oklo",
     decisionQuestion: "Is this a credible fuel-cycle customer?",
     userType: "Fuel-cycle supplier",
     claim:
-      "A reactor developer claims it will need material HALEU supply for first core and reloads before 2031 and wants to reserve strategic fuel-cycle capacity before final licensing and project finance milestones are complete.",
+      "Oklo says it has secured HALEU supply for first core and reloads across early deployments and wants fuel-cycle suppliers to treat the demand as bankable before final project finance and licensing milestones are complete.",
   },
   {
-    id: "deployment-timeline",
-    label: "Load demo: reactor deployment timeline claim",
-    counterparty: "Advanced reactor deployment timeline",
+    id: "nrc-preapp-2030",
+    label: "NRC pre-application to 2030",
+    counterparty: "Reactor Developer",
     decisionQuestion: "Is this deployment timeline believable?",
-    userType: "Strategic partner / incumbent",
+    userType: "Investor",
     claim:
-      "A developer claims its advanced reactor can move from current public regulatory engagement to commercial deployment by 2030-2031, with site work, customer contracting, EPC scope, fuel supply, and financing all advancing in parallel.",
+      "The company says it is in NRC pre-application, has supplier discussions for HALEU, and expects commercial operation by 2030. Site control, EPC scope, financing, and customer commitments are described as advancing in parallel.",
+  },
+  {
+    id: "doe-award-financing",
+    label: "DOE award vs financing",
+    counterparty: "Funding Selected Developer",
+    decisionQuestion: "Is this worth deeper diligence?",
+    userType: "Investor",
+    claim:
+      "Developer says DOE selected it for funding, so project finance is solved. The company has not shown closed debt or equity, conditions precedent, offtake credit support, EPC cost basis, or milestone schedule.",
+  },
+  {
+    id: "mou-offtake",
+    label: "MOU vs binding offtake",
+    counterparty: "Hyperscaler AI Campus",
+    decisionQuestion: "Is this partner/customer credible?",
+    userType: "Data center power buyer",
+    claim:
+      "A developer says it signed a hyperscaler MOU for a nuclear-powered data center campus and expects the PPA to become binding later. The claimed project depends on deliverability at scale, termination rights, fallback power if nuclear slips, and clear ownership of reactor development risk.",
   },
 ];
 
@@ -57,7 +75,7 @@ export default function Home() {
   const [decisionQuestion, setDecisionQuestion] = useState("Is this worth deeper diligence?");
   const [userType, setUserType] = useState("Fuel-cycle supplier");
   const [sanitizedNotes, setSanitizedNotes] = useState("");
-  const [activeDemoId, setActiveDemoId] = useState<DemoId>("smr-data-center");
+  const [activeDemoId, setActiveDemoId] = useState<DemoId>("data-center-campus");
 
   async function runDemo() {
     setIsLoading(true);
@@ -147,13 +165,17 @@ export default function Home() {
               isLoading={isLoading}
               onGenerate={runDemo}
             />
-            <div className="flex flex-wrap gap-3">
+            <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
+              <p className="text-base font-semibold text-[#151514]">Demo Mode presets</p>
+              <p className="mt-1 text-base leading-7 text-[#4a4842]">Load a deterministic evidence-ledger scenario, then generate the memo.</p>
+              <div className="mt-4 flex flex-wrap gap-3">
               {demos.map((demo) => (
                 <button key={demo.id} className="border border-[#bfb6a7] bg-[#fbfaf7] px-4 py-3 text-base font-semibold text-[#255d82]" onClick={() => loadDemo(demo.id)}>
                   {demo.label}
                 </button>
               ))}
-            </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>

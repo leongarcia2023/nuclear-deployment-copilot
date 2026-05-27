@@ -89,6 +89,25 @@ export default function MethodologyPage() {
           </p>
         </header>
 
+
+        <section className="mb-8 grid gap-4 md:grid-cols-2">
+          <article className="border border-[#d9d3c8] bg-[#fbfaf7] p-6">
+            <h2 className="text-2xl font-semibold">Why not just ChatGPT?</h2>
+            <ul className="mt-4 space-y-2 text-base leading-7 text-[#4a4842]">
+              <li>Generic ChatGPT gives an opinion.</li>
+              <li>This app decomposes claims into atomic claims.</li>
+              <li>It checks each claim against a curated nuclear deployment corpus.</li>
+              <li>It separates corpus context from target-specific support.</li>
+              <li>It flags missing/private evidence and produces reusable diligence questions plus a copyable memo.</li>
+            </ul>
+          </article>
+          <article className="border border-[#d9d3c8] bg-[#fbfaf7] p-6">
+            <h2 className="text-2xl font-semibold">Deployment note</h2>
+            <p className="mt-4 text-base leading-7 text-[#4a4842]">
+              This version runs deterministic source-grounded analysis without paid AI API calls.
+            </p>
+          </article>
+        </section>
         <section className="space-y-4">
           {layers.map((item, index) => (
             <article key={item.layer} className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">

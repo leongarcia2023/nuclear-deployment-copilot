@@ -87,7 +87,9 @@ function prioritizedPublicEvidenceNotes(target: string, notes: PublicEvidenceNot
       const bTitle = b.title.toLowerCase();
       const aTarget = targetTerms.some((term) => aTitle.includes(term)) ? 1 : 0;
       const bTarget = targetTerms.some((term) => bTitle.includes(term)) ? 1 : 0;
-      return bTarget - aTarget;
+      const aFinancing = claimTypes.has("financing_claim") && (aTitle.includes("doe lpo") || aTitle.includes("loan") || aTitle.includes("title 17") || aTitle.includes("palisades")) ? 1 : 0;
+      const bFinancing = claimTypes.has("financing_claim") && (bTitle.includes("doe lpo") || bTitle.includes("loan") || bTitle.includes("title 17") || bTitle.includes("palisades")) ? 1 : 0;
+      return (bTarget - aTarget) || (bFinancing - aFinancing);
     })
     .slice(claimTypes.has("financing_claim") && claimTypes.size <= 2 ? 0 : 0, claimTypes.has("financing_claim") && claimTypes.size <= 2 ? 2 : 3);
 }
@@ -182,7 +184,7 @@ function sourceWhy(title: string, fallback: string) {
   if (lower.includes("transport") || lower.includes("safeguard") || lower.includes("storage")) return "Shows that transport, safeguards, and storage are part of fuel readiness, not administrative afterthoughts.";
   if (lower.includes("haleu")) return "Relevant HALEU context, but not proof of target-specific fuel supply, fabrication, or delivery timing.";
   if (lower.includes("lic-116") || lower.includes("preapplication")) return "Benchmarks why pre-application engagement is weaker than a docketed or accepted application.";
-  if (lower.includes("nuscale") || lower.includes("rai") || lower.includes("arcap")) return "Shows the level of public NRC review detail needed before treating a deployment timeline as mature.";
+  if (lower.includes("nuscale") || lower.includes("rai") || lower.includes("arcap")) return "Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved.";
   return firstSentence(fallback);
 }
 
@@ -201,6 +203,7 @@ function analystRead(memo: FirstPassIcMemo, detectedClaims: DetectedClaim[]) {
       "This is not primarily a reactor diligence problem yet; it is a power-campus deliverability problem.",
       "The first question is whether the company can control sites, energize load, and contract customers before nuclear is available.",
       "Nuclear should be treated as upside optionality unless the reactor vendor, licensing owner, fuel path, EPC responsibility, and bridge-to-nuclear transition plan are evidenced.",
+      "If the commercial proof is an MOU or expected future PPA, it is not equivalent to binding offtake with termination rights and credit support.",
     ];
   }
   if (claimTypes.has("HALEU_claim") || claimTypes.has("fuel_cycle_claim")) {

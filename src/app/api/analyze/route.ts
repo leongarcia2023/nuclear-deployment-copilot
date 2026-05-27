@@ -6,7 +6,7 @@ import type { AppAnalysisMode, ClaimToIcMemo, ProjectCounterpartyProfile } from 
 
 const baseProfile = demoProfile as ProjectCounterpartyProfile;
 
-type DemoId = "smr-data-center" | "haleu-customer" | "deployment-timeline";
+type DemoId = "data-center-campus" | "haleu-readiness" | "nrc-preapp-2030" | "doe-award-financing" | "mou-offtake" | "smr-data-center" | "haleu-customer" | "deployment-timeline";
 
 function cloneProfile(): ProjectCounterpartyProfile {
   return JSON.parse(JSON.stringify(baseProfile)) as ProjectCounterpartyProfile;
@@ -26,7 +26,7 @@ function withMemo(overrides: Partial<ClaimToIcMemo>): ProjectCounterpartyProfile
 }
 
 function profileForDemo(demoId: DemoId): ProjectCounterpartyProfile {
-  if (demoId === "haleu-customer") {
+  if (demoId === "haleu-customer" || demoId === "haleu-readiness") {
     return withMemo({
       verdict: "Monitor",
       confidence: "Medium",
@@ -144,7 +144,7 @@ function profileForDemo(demoId: DemoId): ProjectCounterpartyProfile {
     });
   }
 
-  if (demoId === "deployment-timeline") {
+  if (demoId === "deployment-timeline" || demoId === "nrc-preapp-2030") {
     return withMemo({
       verdict: "Diligence Required",
       confidence: "Low",

@@ -1,0 +1,386 @@
+[
+  {
+    "id": "golden_shuffle_data_center_power_campus",
+    "target": "Shuffle Infrastructure",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Shuffle Infrastructure claims it can develop 300 MW behind-the-meter AI data center campuses with bridge power and customer load by 2031.",
+    "requiredPhrases": [
+      "power-campus deliverability",
+      "Bridge-power source",
+      "Binding offtake",
+      "What power is available if nuclear is delayed"
+    ],
+    "forbiddenPhrases": [
+      "not yet a bankable fuel-cycle prospect",
+      "Read this as a first-pass diligence screen"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "One-line judgment",
+      "Analyst read",
+      "Top missing evidence",
+      "Relevant public evidence",
+      "What would change the verdict",
+      "Diligence questions",
+      "Recommended next step"
+    ],
+    "forbiddenSourceFamilies": [
+      "HALEU",
+      "Centrus",
+      "TRISO-X"
+    ],
+    "expectedSourceFamilies": [
+      "FERC"
+    ],
+    "expectedVerdictChangeItems": [
+      "Bridge-power source",
+      "Binding offtake",
+      "Interconnection rights"
+    ],
+    "expectedDiligenceQuestions": [
+      "What power is available if nuclear is delayed",
+      "deliverability at the claimed MW scale"
+    ]
+  },
+  {
+    "id": "golden_haleu_first_core_reloads",
+    "target": "Oklo",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this a credible fuel-cycle customer?",
+    "claimText": "Oklo says it has secured HALEU supply for first core and reloads across early deployments.",
+    "requiredPhrases": [
+      "future fuel customer",
+      "first-core",
+      "reload",
+      "fabrication",
+      "delivery"
+    ],
+    "forbiddenPhrases": [
+      "data center",
+      "power-campus deliverability",
+      "bridge power"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "Analyst read",
+      "Top missing evidence",
+      "Relevant public evidence",
+      "Diligence questions"
+    ],
+    "forbiddenSourceFamilies": [
+      "FERC",
+      "Talen",
+      "Constellation"
+    ],
+    "expectedSourceFamilies": [
+      "HALEU"
+    ],
+    "expectedVerdictChangeItems": [
+      "HALEU assay",
+      "Licensed fuel fabrication"
+    ],
+    "expectedDiligenceQuestions": [
+      "assay",
+      "first core and reload"
+    ]
+  },
+  {
+    "id": "golden_nrc_preapp_2030_cod",
+    "target": "Reactor Developer",
+    "userType": "Investor",
+    "decisionQuestion": "Is this deployment timeline believable?",
+    "claimText": "The company says it is in NRC pre-application and expects commercial operation by 2030.",
+    "requiredPhrases": [
+      "deployment timeline",
+      "Pre-application engagement can be useful",
+      "docketed application",
+      "operations date"
+    ],
+    "forbiddenPhrases": [
+      "power-campus deliverability problem",
+      "not yet a bankable fuel-cycle prospect"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "One-line judgment",
+      "Analyst read",
+      "Relevant public evidence",
+      "What would change the verdict"
+    ],
+    "forbiddenSourceFamilies": [
+      "FERC",
+      "Talen",
+      "Constellation"
+    ],
+    "expectedSourceFamilies": [
+      "NRC"
+    ],
+    "expectedVerdictChangeItems": [
+      "Named NRC applicant",
+      "EPC scope",
+      "Committed financing"
+    ],
+    "expectedDiligenceQuestions": [
+      "named NRC applicant",
+      "commercial operation date"
+    ]
+  },
+  {
+    "id": "golden_hyperscaler_mou_non_binding",
+    "target": "Hyperscaler AI Campus",
+    "userType": "Data center power buyer",
+    "decisionQuestion": "Is this partner/customer credible?",
+    "claimText": "A developer says it signed a hyperscaler MOU for a nuclear-powered data center campus and expects the PPA to become binding later.",
+    "requiredPhrases": [
+      "MOU",
+      "not equivalent to binding offtake",
+      "termination rights"
+    ],
+    "forbiddenPhrases": [
+      "MOU is binding",
+      "What HALEU assay"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "Analyst read",
+      "Top missing evidence",
+      "Diligence questions"
+    ],
+    "forbiddenSourceFamilies": [
+      "Centrus",
+      "TRISO-X"
+    ],
+    "expectedSourceFamilies": [
+      "FERC"
+    ],
+    "expectedVerdictChangeItems": [
+      "Binding offtake"
+    ],
+    "expectedDiligenceQuestions": [
+      "PPA/offtake agreement binding",
+      "termination rights"
+    ]
+  },
+  {
+    "id": "golden_doe_award_not_financing",
+    "target": "Funding Selected Developer",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Developer says DOE selected it for funding, so project finance is solved.",
+    "requiredPhrases": [
+      "financing-readiness",
+      "does not equal closed project financing",
+      "Committed financing"
+    ],
+    "forbiddenPhrases": [
+      "financing solved",
+      "closed financing",
+      "Public company investor materials / filings"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "Analyst read",
+      "Top missing evidence",
+      "Relevant public evidence",
+      "Diligence questions"
+    ],
+    "forbiddenSourceFamilies": [
+      "FERC",
+      "Talen",
+      "Constellation",
+      "HALEU"
+    ],
+    "expectedSourceFamilies": [
+      "DOE LPO"
+    ],
+    "expectedVerdictChangeItems": [
+      "Committed financing"
+    ],
+    "expectedDiligenceQuestions": [
+      "capital",
+      "conditional"
+    ]
+  },
+  {
+    "id": "golden_site_identified_not_controlled",
+    "target": "CoalSite SMR Project",
+    "userType": "Strategic partner / incumbent",
+    "decisionQuestion": "Is this partner/customer credible?",
+    "claimText": "The project has identified a retired coal plant site and says existing infrastructure will simplify permitting and interconnection.",
+    "requiredPhrases": [
+      "site-control",
+      "does not prove land rights",
+      "Interconnection rights"
+    ],
+    "forbiddenPhrases": [
+      "site identified proves site control",
+      "interconnection proof"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "Analyst read",
+      "Top missing evidence",
+      "What would change the verdict"
+    ],
+    "forbiddenSourceFamilies": [
+      "HALEU",
+      "Centrus"
+    ],
+    "expectedSourceFamilies": [],
+    "expectedVerdictChangeItems": [
+      "Site-control documents",
+      "Interconnection rights"
+    ],
+    "expectedDiligenceQuestions": [
+      "named sites",
+      "power-delivery basis"
+    ]
+  },
+  {
+    "id": "golden_factory_built_epc_risk",
+    "target": "Factory SMR Co",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Factory SMR Co says its factory-built reactor means construction risk is solved and EPC execution will not be a gating issue.",
+    "requiredPhrases": [
+      "EPC",
+      "construction-risk",
+      "cost-overrun"
+    ],
+    "forbiddenPhrases": [
+      "construction risk is solved",
+      "factory-built means construction risk is solved"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "Analyst read",
+      "Top missing evidence",
+      "Diligence questions"
+    ],
+    "forbiddenSourceFamilies": [
+      "FERC",
+      "Talen"
+    ],
+    "expectedSourceFamilies": [],
+    "expectedVerdictChangeItems": [
+      "EPC scope"
+    ],
+    "expectedDiligenceQuestions": [
+      "EPC execution",
+      "overrun"
+    ]
+  },
+  {
+    "id": "golden_design_cert_not_project_bankability",
+    "target": "NuScale",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "NuScale says design certification proves its next project is financeable even though no project site or binding customer has been announced.",
+    "requiredPhrases": [
+      "design certification",
+      "project-specific",
+      "site",
+      "Binding offtake"
+    ],
+    "forbiddenPhrases": [
+      "design certification proves project financing",
+      "project financing is proven"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "Top missing evidence",
+      "Relevant public evidence",
+      "Diligence questions"
+    ],
+    "forbiddenSourceFamilies": [
+      "FERC",
+      "Talen"
+    ],
+    "expectedSourceFamilies": [
+      "NuScale"
+    ],
+    "expectedVerdictChangeItems": [
+      "Site-control documents",
+      "Binding offtake"
+    ],
+    "expectedDiligenceQuestions": [
+      "customer/offtake",
+      "site"
+    ]
+  },
+  {
+    "id": "golden_fuel_supplier_future_customer",
+    "target": "Oklo",
+    "userType": "Fuel-cycle supplier",
+    "decisionQuestion": "Is this a credible fuel-cycle customer?",
+    "claimText": "Oklo says it will need HALEU for first core and reloads across early deployments.",
+    "requiredPhrases": [
+      "future fuel customer",
+      "project-specific fuel-readiness package",
+      "scarce capacity"
+    ],
+    "forbiddenPhrases": [
+      "fuel-cycle participant; clarify",
+      "power-campus"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "Analyst read",
+      "Top missing evidence",
+      "Diligence questions"
+    ],
+    "forbiddenSourceFamilies": [
+      "FERC",
+      "Talen"
+    ],
+    "expectedSourceFamilies": [
+      "HALEU"
+    ],
+    "expectedVerdictChangeItems": [
+      "HALEU assay",
+      "Licensed fuel fabrication"
+    ],
+    "expectedDiligenceQuestions": [
+      "assay",
+      "delivery window"
+    ]
+  },
+  {
+    "id": "golden_btm_interconnection_risk_remains",
+    "target": "Behind Meter Campus",
+    "userType": "Data center power buyer",
+    "decisionQuestion": "Is this partner/customer credible?",
+    "claimText": "A developer claims behind-the-meter nuclear supply for a data center means interconnection risk is eliminated.",
+    "requiredPhrases": [
+      "behind-the-meter",
+      "does not prove",
+      "interconnection rights"
+    ],
+    "forbiddenPhrases": [
+      "behind-the-meter eliminates interconnection risk",
+      "interconnection risk is eliminated"
+    ],
+    "maxMemoLength": 900,
+    "requiredSections": [
+      "Analyst read",
+      "Relevant public evidence",
+      "Diligence questions"
+    ],
+    "forbiddenSourceFamilies": [
+      "HALEU",
+      "Centrus",
+      "TRISO-X"
+    ],
+    "expectedSourceFamilies": [
+      "FERC"
+    ],
+    "expectedVerdictChangeItems": [
+      "Interconnection rights"
+    ],
+    "expectedDiligenceQuestions": [
+      "power-delivery basis",
+      "deliverability"
+    ]
+  }
+]
