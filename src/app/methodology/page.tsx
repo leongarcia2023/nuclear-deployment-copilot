@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SiteNav } from "@/components/SiteNav";
 
 const layers = [
   {
@@ -71,16 +71,9 @@ const layers = [
 
 export default function MethodologyPage() {
   return (
-    <main className="min-h-screen bg-[#f4f1ea] px-5 py-8 text-[#151514] sm:px-8">
-      <div className="mx-auto max-w-5xl">
-        <nav className="mb-8 flex items-center justify-between gap-4">
-          <Link className="text-base font-semibold text-[#151514]" href="/">Deal Diligence</Link>
-          <div className="flex gap-5 text-base text-[#63615b]">
-            <Link className="hover:text-[#151514]" href="/corpus">Source Library</Link>
-            <Link className="hover:text-[#151514]" href="/methodology">Methodology</Link>
-          </div>
-        </nav>
-
+    <main className="min-h-screen bg-[#f4f1ea] text-[#151514]">
+      <SiteNav />
+      <div className="mx-auto max-w-5xl px-5 py-8 sm:px-8">
         <header className="mb-8 border border-[#d9d3c8] bg-[#fbfaf7] p-8">
           <p className="text-base font-semibold text-[#7b5b25]">Methodology</p>
           <h1 className="mt-2 text-4xl font-semibold leading-tight">Deployment Risk Framework</h1>
@@ -94,11 +87,13 @@ export default function MethodologyPage() {
           <article className="border border-[#d9d3c8] bg-[#fbfaf7] p-6">
             <h2 className="text-2xl font-semibold">Why not just ChatGPT?</h2>
             <ul className="mt-4 space-y-2 text-base leading-7 text-[#4a4842]">
-              <li>Generic ChatGPT gives an opinion.</li>
-              <li>This app decomposes claims into atomic claims.</li>
-              <li>It checks each claim against a curated nuclear deployment corpus.</li>
-              <li>It separates corpus context from target-specific support.</li>
-              <li>It flags missing/private evidence and produces reusable diligence questions plus a copyable memo.</li>
+              <li>Generic ChatGPT gives a fluent opinion.</li>
+              <li>This system forces every claim through a nuclear deployment evidence framework.</li>
+              <li>It separates corpus coverage from target-specific support.</li>
+              <li>It flags missing/private evidence.</li>
+              <li>It retrieves relevant public source context.</li>
+              <li>It generates diligence questions and a reusable first-pass memo.</li>
+              <li>It runs without paid AI API calls in this version.</li>
             </ul>
           </article>
           <article className="border border-[#d9d3c8] bg-[#fbfaf7] p-6">

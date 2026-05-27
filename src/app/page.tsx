@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { Dashboard } from "@/components/Dashboard";
+import { SiteNav } from "@/components/SiteNav";
 import { IntakeForm } from "@/components/IntakeForm";
 import { PrivacyNotice } from "@/components/PrivacyNotice";
 import { analysisModeCopy } from "@/lib/analysis/analysisModes";
@@ -21,11 +21,11 @@ const demos: Array<{
   {
     id: "data-center-campus",
     label: "Data center power campus",
-    counterparty: "Shuffle Infrastructure",
+    counterparty: "AI Power Campus Developer",
     decisionQuestion: "Is this worth deeper diligence?",
     userType: "Investor",
     claim:
-      "Shuffle Infrastructure claims it can develop 300 MW behind-the-meter AI data center campuses with bridge power and customer load by 2031. Nuclear is presented as the long-term baseload path, but the company has not named reactor vendor, licensing owner, site-control package, or binding offtake evidence.",
+      "Company claims it can develop a 300 MW behind-the-meter AI data center campus with near-term bridge power and future nuclear baseload integration by 2031.",
   },
   {
     id: "haleu-readiness",
@@ -34,7 +34,7 @@ const demos: Array<{
     decisionQuestion: "Is this a credible fuel-cycle customer?",
     userType: "Fuel-cycle supplier",
     claim:
-      "Oklo says it has secured HALEU supply for first core and reloads across early deployments and wants fuel-cycle suppliers to treat the demand as bankable before final project finance and licensing milestones are complete.",
+      "A reactor developer claims it has secured HALEU supply for first core and reloads and can begin deployment by 2031.",
   },
   {
     id: "nrc-preapp-2030",
@@ -43,7 +43,7 @@ const demos: Array<{
     decisionQuestion: "Is this deployment timeline believable?",
     userType: "Investor",
     claim:
-      "The company says it is in NRC pre-application, has supplier discussions for HALEU, and expects commercial operation by 2030. Site control, EPC scope, financing, and customer commitments are described as advancing in parallel.",
+      "A reactor developer says it is in NRC pre-application and expects commercial operation by 2030.",
   },
   {
     id: "doe-award-financing",
@@ -52,7 +52,7 @@ const demos: Array<{
     decisionQuestion: "Is this worth deeper diligence?",
     userType: "Investor",
     claim:
-      "Developer says DOE selected it for funding, so project finance is solved. The company has not shown closed debt or equity, conditions precedent, offtake credit support, EPC cost basis, or milestone schedule.",
+      "A developer says DOE selected it for funding, so project finance is solved and construction can begin.",
   },
   {
     id: "mou-offtake",
@@ -61,7 +61,7 @@ const demos: Array<{
     decisionQuestion: "Is this partner/customer credible?",
     userType: "Data center power buyer",
     claim:
-      "A developer says it signed a hyperscaler MOU for a nuclear-powered data center campus and expects the PPA to become binding later. The claimed project depends on deliverability at scale, termination rights, fallback power if nuclear slips, and clear ownership of reactor development risk.",
+      "A company says it has a hyperscaler MOU and therefore its nuclear-powered data center project is commercially de-risked.",
   },
 ];
 
@@ -112,25 +112,40 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#f4f1ea]">
-      <nav className="border-b border-[#d9d3c8] bg-[#f4f1ea] px-5 py-4 sm:px-8">
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4">
-          <Link className="text-base font-semibold text-[#151514]" href="/">Deal Diligence</Link>
-          <div className="flex items-center gap-5 text-base text-[#63615b]">
-            <Link className="hover:text-[#151514]" href="/corpus">Source Library</Link>
-            <Link className="hover:text-[#151514]" href="/methodology">Methodology</Link>
-          </div>
-        </div>
-      </nav>
+      <SiteNav />
 
       <section className="px-5 py-10 sm:px-8 sm:py-14">
         <div className="mx-auto max-w-4xl">
           <header className="mb-8">
-            <h1 className="text-4xl font-semibold leading-tight text-[#151514] sm:text-6xl">Nuclear Deal Diligence Copilot</h1>
-            <p className="mt-4 max-w-3xl text-xl leading-8 text-[#3f3d38]">Turn nuclear deployment claims into evidence-backed diligence memos.</p>
+            <h1 className="text-4xl font-semibold leading-tight text-[#151514] sm:text-6xl">Nuclear Deployment Intelligence</h1>
+            <p className="mt-4 max-w-3xl text-xl leading-8 text-[#3f3d38]">Source-grounded diligence for advanced nuclear deployment claims.</p>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-[#4a4842]">
+              Paste a company claim or sanitized note. The system decomposes it into deployment claims, checks them against a curated nuclear deployment corpus, separates public context from target-specific support, and produces a concise diligence memo.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <a className="bg-[#151514] px-5 py-3 text-base font-semibold text-white" href="#diligence-intake">
+                Start diligence memo
+              </a>
+              <p className="text-base leading-7 text-[#4a4842]">No paid AI API calls in this version. Analysis is deterministic and source-grounded.</p>
+            </div>
           </header>
 
           <div className="space-y-5">
             <PrivacyNotice />
+            <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
+              <p className="text-base font-semibold text-[#151514]">How to use this</p>
+              <ol className="mt-3 grid gap-3 text-base leading-7 text-[#4a4842] sm:grid-cols-2">
+                <li><span className="font-semibold text-[#151514]">Step 1:</span> Paste a public claim or sanitized note.</li>
+                <li><span className="font-semibold text-[#151514]">Step 2:</span> Pick user type and decision question.</li>
+                <li><span className="font-semibold text-[#151514]">Step 3:</span> Generate a first-pass memo.</li>
+                <li><span className="font-semibold text-[#151514]">Step 4:</span> Review missing evidence, public context, and diligence questions.</li>
+              </ol>
+            </section>
+            <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
+              <p className="text-base leading-7 text-[#4a4842]">
+                This tool does not verify private contracts, financing terms, site rights, or confidential counterparties. It identifies what public evidence supports, what is missing, and what requires private diligence.
+              </p>
+            </section>
             <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
               <p className="text-base font-semibold text-[#7b5b25]">Analysis mode</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -153,6 +168,18 @@ export default function Home() {
                 Demo mode uses deterministic templates to illustrate the workflow. Source-grounded analysis mode will retrieve from NRC, DOE, financing, fuel-cycle, interconnection, and public company sources to generate cited memos.
               </p>
             </section>
+            <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
+              <p className="text-base font-semibold text-[#151514]">Demo Mode presets</p>
+              <p className="mt-1 text-base leading-7 text-[#4a4842]">Load a deterministic evidence-ledger scenario, then generate the memo.</p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {demos.map((demo) => (
+                  <button key={demo.id} className="border border-[#bfb6a7] bg-[#fbfaf7] px-4 py-3 text-base font-semibold text-[#255d82]" onClick={() => loadDemo(demo.id)}>
+                    {demo.label}
+                  </button>
+                ))}
+              </div>
+            </section>
+            <div id="diligence-intake">
             <IntakeForm
               counterparty={counterparty}
               setCounterparty={setCounterparty}
@@ -165,17 +192,7 @@ export default function Home() {
               isLoading={isLoading}
               onGenerate={runDemo}
             />
-            <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
-              <p className="text-base font-semibold text-[#151514]">Demo Mode presets</p>
-              <p className="mt-1 text-base leading-7 text-[#4a4842]">Load a deterministic evidence-ledger scenario, then generate the memo.</p>
-              <div className="mt-4 flex flex-wrap gap-3">
-              {demos.map((demo) => (
-                <button key={demo.id} className="border border-[#bfb6a7] bg-[#fbfaf7] px-4 py-3 text-base font-semibold text-[#255d82]" onClick={() => loadDemo(demo.id)}>
-                  {demo.label}
-                </button>
-              ))}
-              </div>
-            </section>
+            </div>
           </div>
         </div>
       </section>
