@@ -6,7 +6,7 @@ import type { AppAnalysisMode, ClaimToIcMemo, ProjectCounterpartyProfile } from 
 
 const baseProfile = demoProfile as ProjectCounterpartyProfile;
 
-type DemoId = "data-center-campus" | "haleu-readiness" | "nrc-preapp-2030" | "doe-award-financing" | "mou-offtake" | "smr-data-center" | "haleu-customer" | "deployment-timeline";
+type DemoId = "helios-compute-campus" | "data-center-campus" | "haleu-readiness" | "nrc-preapp-2030" | "doe-award-financing" | "mou-offtake" | "smr-data-center" | "haleu-customer" | "deployment-timeline";
 
 function cloneProfile(): ProjectCounterpartyProfile {
   return JSON.parse(JSON.stringify(baseProfile)) as ProjectCounterpartyProfile;

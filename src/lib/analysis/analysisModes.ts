@@ -8,8 +8,8 @@ export const analysisModeCopy: Record<AppAnalysisMode, { label: string; descript
   },
   source_grounded_scaffold: {
     label: "Source-Grounded Analysis Mode",
-    description: "Scaffold only: claim extraction -> source retrieval -> evidence classification -> memo synthesis.",
-    note: "Source-grounded analysis mode is scaffolded only. The current response still uses deterministic memo templates while the architecture prepares for cited analysis.",
+    description: "Retrieves from the chunked corpus and classifies evidence by deployment layer.",
+    note: "Source-grounded analysis retrieves from the chunked corpus, classifies evidence by deployment layer, and keeps memo synthesis deterministic in this version.",
   },
 };
 

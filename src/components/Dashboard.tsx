@@ -1,5 +1,6 @@
 import type { ProjectCounterpartyProfile } from "@/types/core";
 import { analysisModeCopy } from "@/lib/analysis/analysisModes";
+import { DiligenceEngineSummary } from "./DiligenceEngineSummary";
 import { ExecutiveVerdictCard } from "./ExecutiveVerdictCard";
 import { ResultsTabs } from "./ResultsTabs";
 
@@ -18,6 +19,7 @@ export function Dashboard({ profile }: { profile: ProjectCounterpartyProfile }) 
           </p>
         </div>
         <ExecutiveVerdictCard profile={profile} />
+        <DiligenceEngineSummary profile={profile} />
         <ResultsTabs profile={profile} />
       </div>
     </main>

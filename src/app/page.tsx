@@ -8,7 +8,7 @@ import { PrivacyNotice } from "@/components/PrivacyNotice";
 import { analysisModeCopy } from "@/lib/analysis/analysisModes";
 import type { AppAnalysisMode, InputMode, ProjectCounterpartyProfile, UserMode } from "@/types/core";
 
-type DemoId = "data-center-campus" | "haleu-readiness" | "nrc-preapp-2030" | "doe-award-financing" | "mou-offtake";
+type DemoId = "helios-compute-campus" | "haleu-readiness" | "nrc-preapp-2030" | "doe-award-financing" | "mou-offtake";
 
 const demos: Array<{
   id: DemoId;
@@ -19,13 +19,13 @@ const demos: Array<{
   claim: string;
 }> = [
   {
-    id: "data-center-campus",
-    label: "Data center power campus",
-    counterparty: "AI Power Campus Developer",
+    id: "helios-compute-campus",
+    label: "Helios Compute Campus",
+    counterparty: "Helios Compute Campus",
     decisionQuestion: "Is this worth deeper diligence?",
     userType: "Investor",
     claim:
-      "Company claims it can develop a 300 MW behind-the-meter AI data center campus with near-term bridge power and future nuclear baseload integration by 2031.",
+      "Helios claims it can deploy a 300 MW behind-the-meter AI data center campus by 2031 using bridge power in Phase 1 and advanced nuclear baseload in Phase 3, supported by a hyperscaler MOU and ongoing NRC engagement.",
   },
   {
     id: "haleu-readiness",
@@ -75,7 +75,7 @@ export default function Home() {
   const [decisionQuestion, setDecisionQuestion] = useState("Is this worth deeper diligence?");
   const [userType, setUserType] = useState("Fuel-cycle supplier");
   const [sanitizedNotes, setSanitizedNotes] = useState("");
-  const [activeDemoId, setActiveDemoId] = useState<DemoId>("data-center-campus");
+  const [activeDemoId, setActiveDemoId] = useState<DemoId>("helios-compute-campus");
 
   async function runDemo() {
     setIsLoading(true);
@@ -118,15 +118,19 @@ export default function Home() {
         <div className="mx-auto max-w-4xl">
           <header className="mb-8">
             <h1 className="text-4xl font-semibold leading-tight text-[#151514] sm:text-6xl">Nuclear Deployment Intelligence</h1>
-            <p className="mt-4 max-w-3xl text-xl leading-8 text-[#3f3d38]">Source-grounded diligence for advanced nuclear deployment claims.</p>
+            <p className="mt-4 max-w-3xl text-xl leading-8 text-[#3f3d38]">First-pass diligence for advanced nuclear deployment claims.</p>
             <p className="mt-5 max-w-3xl text-base leading-7 text-[#4a4842]">
-              Paste a company claim or sanitized note. The system decomposes it into deployment claims, checks them against a curated nuclear deployment corpus, separates public context from target-specific support, and produces a concise diligence memo.
+              Paste a public claim or sanitized note. The system decomposes it into deployment claims, separates public context from target-specific proof, and produces a concise diligence memo.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <a className="bg-[#151514] px-5 py-3 text-base font-semibold text-white" href="#diligence-intake">
                 Start diligence memo
               </a>
-              <p className="text-base leading-7 text-[#4a4842]">No paid AI API calls in this version. Analysis is deterministic and source-grounded.</p>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {["Source-grounded corpus", "Target-proof separation", "Eval-tested deterministic analysis", "No paid AI API calls"].map((badge) => (
+                <span key={badge} className="border border-[#bfb6a7] bg-[#fbfaf7] px-3 py-2 text-sm font-semibold text-[#151514]">{badge}</span>
+              ))}
             </div>
           </header>
 
@@ -140,11 +144,6 @@ export default function Home() {
                 <li><span className="font-semibold text-[#151514]">Step 3:</span> Generate a first-pass memo.</li>
                 <li><span className="font-semibold text-[#151514]">Step 4:</span> Review missing evidence, public context, and diligence questions.</li>
               </ol>
-            </section>
-            <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
-              <p className="text-base leading-7 text-[#4a4842]">
-                This tool does not verify private contracts, financing terms, site rights, or confidential counterparties. It identifies what public evidence supports, what is missing, and what requires private diligence.
-              </p>
             </section>
             <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
               <p className="text-base font-semibold text-[#7b5b25]">Analysis mode</p>
@@ -165,11 +164,11 @@ export default function Home() {
                 </button>
               </div>
               <p className="mt-4 text-base leading-7 text-[#4a4842]">
-                Demo mode uses deterministic templates to illustrate the workflow. Source-grounded analysis mode will retrieve from NRC, DOE, financing, fuel-cycle, interconnection, and public company sources to generate cited memos.
+                Demo mode uses deterministic templates to illustrate the workflow. Source-grounded analysis retrieves from NRC, DOE, financing, fuel-cycle, interconnection, and public company sources while keeping synthesis deterministic.
               </p>
             </section>
             <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
-              <p className="text-base font-semibold text-[#151514]">Demo Mode presets</p>
+              <p className="text-base font-semibold text-[#151514]">Demo presets</p>
               <p className="mt-1 text-base leading-7 text-[#4a4842]">Load a deterministic evidence-ledger scenario, then generate the memo.</p>
               <div className="mt-4 flex flex-wrap gap-3">
                 {demos.map((demo) => (
