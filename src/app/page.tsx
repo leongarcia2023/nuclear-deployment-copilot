@@ -77,7 +77,14 @@ export default function Home() {
   const [sanitizedNotes, setSanitizedNotes] = useState("");
   const [activeDemoId, setActiveDemoId] = useState<DemoId>("helios-compute-campus");
 
-  async function runDemo() {
+  async function analyzeClaim(input: {
+    demoId: DemoId;
+    analysisMode: AppAnalysisMode;
+    counterparty: string;
+    decisionQuestion: string;
+    userType: string;
+    sanitizedNotes: string;
+  }) {
     setIsLoading(true);
     const response = await fetch("/api/analyze", {
       method: "POST",
@@ -85,12 +92,12 @@ export default function Home() {
       body: JSON.stringify({
         mode: selectedMode,
         inputMode,
-        analysisMode,
-        demoId: activeDemoId,
-        publicQuery: counterparty,
-        decisionQuestion,
-        userType,
-        sanitizedNotes,
+        analysisMode: input.analysisMode,
+        demoId: input.demoId,
+        publicQuery: input.counterparty,
+        decisionQuestion: input.decisionQuestion,
+        userType: input.userType,
+        sanitizedNotes: input.sanitizedNotes,
         fixture: "demo_project_profile.sample.json",
       }),
     });
@@ -98,6 +105,28 @@ export default function Home() {
     setProfile(data.profile);
     setIsLoading(false);
     setTimeout(() => document.getElementById("dashboard")?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+  }
+
+  async function runDemo() {
+    await analyzeClaim({ demoId: activeDemoId, analysisMode, counterparty, decisionQuestion, userType, sanitizedNotes });
+  }
+
+  async function runFlagshipDemo() {
+    const demo = demos[0];
+    setAnalysisMode("demo");
+    setActiveDemoId(demo.id);
+    setCounterparty(demo.counterparty);
+    setDecisionQuestion(demo.decisionQuestion);
+    setUserType(demo.userType);
+    setSanitizedNotes(demo.claim);
+    await analyzeClaim({
+      demoId: demo.id,
+      analysisMode: "demo",
+      counterparty: demo.counterparty,
+      decisionQuestion: demo.decisionQuestion,
+      userType: demo.userType,
+      sanitizedNotes: demo.claim,
+    });
   }
 
   function loadDemo(demoId: DemoId) {
@@ -118,17 +147,20 @@ export default function Home() {
         <div className="mx-auto max-w-4xl">
           <header className="mb-8">
             <h1 className="text-4xl font-semibold leading-tight text-[#151514] sm:text-6xl">Nuclear Deployment Intelligence</h1>
-            <p className="mt-4 max-w-3xl text-xl leading-8 text-[#3f3d38]">First-pass diligence for advanced nuclear deployment claims.</p>
+            <p className="mt-4 max-w-3xl text-xl leading-8 text-[#3f3d38]">Overclaim detection for advanced nuclear and AI infrastructure deployment claims.</p>
             <p className="mt-5 max-w-3xl text-base leading-7 text-[#4a4842]">
-              Paste a public claim or sanitized note. The system decomposes it into deployment claims, separates public context from target-specific proof, and produces a concise diligence memo.
+              Paste a hypey deployment claim. The system decomposes it into evidence requirements, separates public context from target-specific proof, and generates a first-pass diligence memo.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4">
-              <a className="bg-[#151514] px-5 py-3 text-base font-semibold text-white" href="#diligence-intake">
+              <button className="bg-[#151514] px-5 py-3 text-base font-semibold text-white disabled:opacity-60" onClick={runFlagshipDemo} disabled={isLoading}>
+                {isLoading ? "Generating memo..." : "Run 60-second flagship demo"}
+              </button>
+              <a className="border border-[#151514] px-5 py-3 text-base font-semibold text-[#151514]" href="#diligence-intake">
                 Start diligence memo
               </a>
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
-              {["Source-grounded corpus", "Target-proof separation", "Eval-tested deterministic analysis", "No paid AI API calls"].map((badge) => (
+              {["150-source manifest", "2,521 evidence chunks", "76 adversarial evals", "10 golden memo tests", "No paid AI API calls"].map((badge) => (
                 <span key={badge} className="border border-[#bfb6a7] bg-[#fbfaf7] px-3 py-2 text-sm font-semibold text-[#151514]">{badge}</span>
               ))}
             </div>
@@ -136,6 +168,24 @@ export default function Home() {
 
           <div className="space-y-5">
             <PrivacyNotice />
+            <section className="grid gap-4 md:grid-cols-2">
+              <article className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
+                <p className="text-base font-semibold text-[#151514]">Why not just ChatGPT?</p>
+                <p className="mt-3 text-base leading-7 text-[#4a4842]">
+                  Generic ChatGPT can write a fluent memo. This system forces each claim through a nuclear deployment evidence framework, separates public context from target-specific proof, retrieves source-grounded context, and regression-tests against common diligence mistakes like treating an MOU as binding offtake or pre-application as approval.
+                </p>
+              </article>
+              <article className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
+                <p className="text-base font-semibold text-[#151514]">Built with</p>
+                <ul className="mt-3 space-y-2 text-base leading-7 text-[#4a4842]">
+                  <li>150-source ranked manifest</li>
+                  <li>2,521 chunked evidence passages</li>
+                  <li>76 adversarial eval cases</li>
+                  <li>10 golden memo regression tests</li>
+                  <li>Deterministic analysis, no paid AI API calls</li>
+                </ul>
+              </article>
+            </section>
             <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
               <p className="text-base font-semibold text-[#151514]">How to use this</p>
               <ol className="mt-3 grid gap-3 text-base leading-7 text-[#4a4842] sm:grid-cols-2">

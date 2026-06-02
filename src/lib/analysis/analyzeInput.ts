@@ -14,6 +14,7 @@ import type {
   DealVerdict,
   DeploymentLayerFinding,
   DetectedClaim,
+  EvidencePosture,
   MemoResult,
   ProjectCounterpartyProfile,
   PublicEvidenceNote,
@@ -778,6 +779,56 @@ function buildWhatWouldChangeVerdict(ledger: EvidenceLedger) {
   ];
 }
 
+function evidencePostureFor(note: string, detectedClaims: DetectedClaim[], documentCoverage: MemoResult["documentCoverage"], evidenceLedger: EvidenceLedger): EvidencePosture {
+  const normalized = note.toLowerCase();
+  const claimCount = evidenceLedger.atomicClaims.length || detectedClaims.length;
+  if (!normalized.trim() || claimCount === 0 || detectedClaims.every((claim) => claim.claimType === "unclear")) return "Insufficient Input";
+
+  const strongEvidenceSignals = [
+    /docketed (construction permit |license |)application/,
+    /application (has been |is )accepted/,
+    /binding ppa/,
+    /binding power purchase agreement/,
+    /closed loan guarantee/,
+    /loan guarantee (has been |is )closed/,
+    /site (is |has been )controlled/,
+    /site control(?:led)? documents/,
+    /fixed-price epc/,
+    /fixed price epc/,
+    /epc contract is signed/,
+    /design certification/,
+  ].filter((pattern) => pattern.test(normalized)).length;
+
+  const coverage = documentCoverage ?? [];
+  const strongCorpus = coverage.filter((item) => item.corpusCoverage === "Strong").length;
+  const partialCorpus = coverage.filter((item) => item.corpusCoverage === "Partial").length;
+  const targetSupported = coverage.filter((item) => item.targetSpecificSupport === "Supported" || item.targetSpecificSupport === "Partially supported").length;
+  const targetMissingOrPrivate = coverage.filter((item) => item.targetSpecificSupport === "Missing" || item.targetSpecificSupport === "Private diligence required" || item.targetSpecificSupport === "Cannot know from public docs").length;
+  const privateClaims = evidenceLedger.atomicClaims.filter((claim) => claim.evidenceStatus === "private_diligence_required" || claim.evidenceStatus === "cannot_know_from_public_docs").length;
+  const missingClaims = evidenceLedger.atomicClaims.filter((claim) => claim.evidenceStatus === "missing" || claim.evidenceStatus === "user_note_only").length;
+
+  if (strongEvidenceSignals >= 1 || targetSupported >= 2) return "Stronger Public Footing";
+
+  const weakOverclaimSignals = [
+    /mou(?![^.]{0,80}binding)/,
+    /letter of intent/,
+    /customer interest/,
+    /doe (award|selected|selection)(?![^.]{0,80}closed)/,
+    /site identified(?![^.]{0,80}(controlled|control))/,
+    /factory-built.*(solved|eliminates|removes)/,
+    /behind[- ]the[- ]meter.*(avoids|eliminates|no ).*interconnection/,
+    /pre[- ]application.*(commercial operation|cod|approval)/,
+    /readiness assessment.*(ready|approval)/,
+  ].some((pattern) => pattern.test(normalized));
+  if (weakOverclaimSignals && targetSupported === 0) return "Weak Public Footing";
+
+  if (strongCorpus + partialCorpus >= 4 && targetMissingOrPrivate <= 5) return "Mixed Public Footing";
+  if (missingClaims + privateClaims >= Math.max(2, Math.ceil(claimCount * 0.75))) {
+    return strongCorpus + partialCorpus >= 3 ? "Mixed Public Footing" : "Weak Public Footing";
+  }
+  return "Mixed Public Footing";
+}
+
 function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, detectedClaims: DetectedClaim[], findings: DeploymentLayerFinding[], sourceMatch: SourceMatchResult): MemoResult {
   const target = input.targetCompanyProject.trim() || profile?.name || "the target counterparty";
   const category = profile?.category ?? "unrecognized_counterparty";
@@ -811,6 +862,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
     topDocuments: item.topDocuments.map(toMemoRelevantDocument),
   }));
   const evidenceLedger = buildEvidenceLedger(target, input.note, detectedClaims, findings, documentMatch, documentCoverage, relevantDocuments);
+  const evidencePosture = evidencePostureFor(input.note, detectedClaims, documentCoverage, evidenceLedger);
   const uniqueLedgerChunks = ledgerChunkEvidence(evidenceLedger);
   const isShuffleLike = category === "data_center_power_infrastructure";
   const isDataCenterPowerCase = hasPowerCampusSignal && (isShuffleLike || detectedClaims.some((claim) => ["data_center_power_claim", "behind_the_meter_claim", "bridge_power_claim"].includes(claim.claimType)));
@@ -908,6 +960,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
 
   return {
     verdict,
+    evidencePosture,
     confidence,
     oneLineJudgment,
     recommendedNextAction,
@@ -986,6 +1039,7 @@ export function applyMemoResult(profile: ProjectCounterpartyProfile, result: Mem
   updated.claimToIcMemo = {
     ...updated.claimToIcMemo,
     verdict: result.verdict,
+    evidencePosture: result.evidencePosture,
     confidence: result.confidence,
     confidenceRationale: result.confidenceRationale,
     oneLineJudgment: result.oneLineJudgment,

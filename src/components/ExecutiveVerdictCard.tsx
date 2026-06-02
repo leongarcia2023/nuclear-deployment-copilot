@@ -28,7 +28,11 @@ export function ExecutiveVerdictCard({ profile }: { profile: ProjectCounterparty
         <div className="border border-[#d9d3c8] bg-white p-5">
           <p className="text-sm font-semibold text-[#63615b]">Confidence</p>
           <p className="mt-2 text-2xl font-semibold text-[#151514]">{memo.confidence}</p>
-          <p className="mt-3 text-base leading-7 text-[#151514]">First-pass diligence view, not an investment recommendation.</p>
+          <div className="mt-4 border-t border-[#d9d3c8] pt-4">
+            <p className="text-sm font-semibold text-[#63615b]">Evidence posture</p>
+            <p className="mt-2 text-xl font-semibold text-[#151514]">{memo.evidencePosture ?? "Diligence Required"}</p>
+          </div>
+          <p className="mt-3 text-base leading-7 text-[#151514]">Verdict is conservative by design; evidence posture distinguishes stronger vs weaker public footing.</p>
         </div>
       </div>
 

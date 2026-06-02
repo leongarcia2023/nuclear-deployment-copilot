@@ -132,6 +132,77 @@ function interpretation(row: MemoDocumentCoverageItem) {
   return row.conclusion;
 }
 
+
+const overbeliefRules = [
+  {
+    claimTypes: ["offtake_claim"],
+    claim: "MOU signed",
+    discipline: "Not binding offtake",
+  },
+  {
+    claimTypes: ["NRC_engagement_claim", "licensing_claim"],
+    claim: "NRC engagement underway",
+    discipline: "Not NRC approval",
+  },
+  {
+    claimTypes: ["financing_claim"],
+    claim: "DOE selected",
+    discipline: "Not closed financing",
+  },
+  {
+    claimTypes: ["HALEU_claim", "fuel_cycle_claim"],
+    claim: "HALEU supply available",
+    discipline: "Not target-specific fuel reservation",
+  },
+  {
+    claimTypes: ["behind_the_meter_claim"],
+    claim: "Behind the meter",
+    discipline: "Not no interconnection risk",
+  },
+  {
+    claimTypes: ["site_control_claim"],
+    claim: "Site identified",
+    discipline: "Not site control",
+  },
+  {
+    claimTypes: ["EPC_construction_claim"],
+    claim: "Factory-built",
+    discipline: "Not EPC risk solved",
+  },
+];
+
+function detectedClaimTypes(profile: ProjectCounterpartyProfile) {
+  return new Set([
+    ...(profile.claimToIcMemo.detectedClaims ?? []).map((claim) => claim.claimType),
+    ...(profile.claimToIcMemo.evidenceLedger?.atomicClaims ?? []).map((claim) => claim.claimType),
+  ]);
+}
+
+function RefusedOverbelief({ profile }: { profile: ProjectCounterpartyProfile }) {
+  const detected = detectedClaimTypes(profile);
+  const cards = overbeliefRules.filter((rule) => rule.claimTypes.some((claimType) => detected.has(claimType)));
+  if (!cards.length) return null;
+  return (
+    <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-5">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#7b5b25]">Claim discipline</p>
+          <h2 className="mt-1 text-2xl font-semibold text-[#151514]">Claims the system refused to overbelieve</h2>
+        </div>
+        <p className="max-w-lg text-sm leading-6 text-[#4a4842]">These are common deployment shortcuts the deterministic evaluator keeps separate from proven, target-specific evidence.</p>
+      </div>
+      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {cards.map((card) => (
+          <article key={card.claim} className="border border-[#d9d3c8] bg-white p-4">
+            <p className="text-base font-semibold text-[#151514]">“{card.claim}”</p>
+            <p className="mt-2 text-base leading-6 text-[#7a231e]">→ {card.discipline}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Matrix({ profile }: { profile: ProjectCounterpartyProfile }) {
   const rows = coverageItems(profile);
   return (
@@ -237,6 +308,7 @@ export function DiligenceEngineSummary({ profile }: { profile: ProjectCounterpar
   return (
     <section className="mt-6 space-y-5">
       <AtomicClaims profile={profile} />
+      <RefusedOverbelief profile={profile} />
       <ContextProofCards profile={profile} />
       <Matrix profile={profile} />
       <VerdictChecklist profile={profile} />

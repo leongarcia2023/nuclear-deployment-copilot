@@ -439,6 +439,7 @@ async function main() {
       top_missing_evidence: topMissingEvidence,
       diligence_questions: questions.slice(0, 10),
       verdict: result.verdict,
+      evidence_posture: result.evidencePosture,
       main_memo_source_bullets: mainEvidenceBullets,
       memo_word_count: metrics.word_count,
       quality_metrics: metrics,
@@ -446,6 +447,30 @@ async function main() {
     });
   }
 
+
+  const postureDistribution = results.reduce<Record<string, number>>((counts, item: any) => {
+    const posture = item.evidence_posture ?? "Missing";
+    counts[posture] = (counts[posture] ?? 0) + 1;
+    return counts;
+  }, {});
+  const postureAssertionFailures: AssertionFailure[] = [];
+  const postureById = Object.fromEntries(results.map((item: any) => [item.id, item.evidence_posture]));
+  if (results.some((item: any) => !item.evidence_posture)) postureAssertionFailures.push(fail("missing evidence posture", "one or more eval cases did not return evidencePosture"));
+  if (Object.keys(postureDistribution).filter((item) => item !== "Missing").length < 3) {
+    postureAssertionFailures.push(fail("insufficient posture variation", `expected at least 3 posture values, got ${Object.keys(postureDistribution).join(", ")}`));
+  }
+  for (const id of ["hyperscaler_mou_signed", "doe_award_announced", "site_identified_not_controlled", "blind_doe_award_not_closed_financing"]) {
+    const posture = postureById[id];
+    if (posture && !["Weak Public Footing", "Mixed Public Footing"].includes(String(posture))) {
+      postureAssertionFailures.push(fail("weak case posture mismatch", `${id}: expected Weak/Mixed Public Footing, got ${posture}`));
+    }
+  }
+  for (const id of ["nrc_docketed_application", "binding_ppa_signed", "closed_loan_guarantee", "site_controlled_claim", "fixed_price_epc_signed"]) {
+    const posture = postureById[id];
+    if (posture !== "Stronger Public Footing") {
+      postureAssertionFailures.push(fail("strong case posture mismatch", `${id}: expected Stronger Public Footing, got ${posture ?? "missing"}`));
+    }
+  }
   const golden = await runGoldenMemoAssertions(snapshotDir);
   const failedResults = results.filter((item) => !item.passed);
   const failureCategories = failedResults
@@ -461,6 +486,11 @@ async function main() {
     passed: results.filter((item) => item.passed).length,
     failed: failedResults.length,
     failure_categories: failureCategories,
+    evidence_posture_distribution: postureDistribution,
+    posture_assertions: {
+      passed: postureAssertionFailures.length === 0,
+      failures: postureAssertionFailures,
+    },
     quality_summary: {
       max_word_count: Math.max(...results.map((item) => item.memo_word_count), 0),
       avg_word_count: results.length ? Math.round(results.reduce((sum, item) => sum + item.memo_word_count, 0) / results.length) : 0,
@@ -481,6 +511,9 @@ async function main() {
   console.log(`golden memo cases: ${golden.total}`);
   console.log(`golden passed: ${golden.passed}`);
   console.log(`golden failed: ${golden.failed}`);
+  console.log(`evidence posture distribution: ${Object.entries(postureDistribution).map(([posture, count]) => `${posture} ${count}`).join(", ")}`);
+  console.log(`posture assertions: ${postureAssertionFailures.length === 0 ? "passed" : "failed"}`);
+  for (const failure of postureAssertionFailures) console.log(`  ${failure.category}: ${failure.message}`);
   console.log(`memo quality: avg words ${report.quality_summary.avg_word_count}, max words ${report.quality_summary.max_word_count}, max evidence bullets ${report.quality_summary.max_evidence_bullets}, max questions ${report.quality_summary.max_diligence_questions}`);
   console.log(`quality flags: overclaim cases ${report.quality_summary.forbidden_overclaim_cases}, generic fallback cases ${report.quality_summary.generic_fallback_cases}`);
   console.log("failure categories:");
@@ -494,6 +527,7 @@ async function main() {
       console.log(`GOLDEN FAIL ${item.id}: ${item.failures.slice(0, 4).map((failure) => `${failure.category} - ${failure.message}`).join("; ")}`);
     }
   }
+  if (postureAssertionFailures.length) process.exitCode = 1;
   for (const item of results) {
     if (item.passed) {
       console.log(`PASS ${item.id}`);

@@ -86,21 +86,19 @@ export default function MethodologyPage() {
         <section className="mb-8 grid gap-4 md:grid-cols-2">
           <article className="border border-[#d9d3c8] bg-[#fbfaf7] p-6">
             <h2 className="text-2xl font-semibold">Why not just ChatGPT?</h2>
-            <ul className="mt-4 space-y-2 text-base leading-7 text-[#4a4842]">
-              <li>Generic ChatGPT gives a fluent opinion.</li>
-              <li>This system forces every claim through a nuclear deployment evidence framework.</li>
-              <li>It separates corpus coverage from target-specific support.</li>
-              <li>It flags missing/private evidence.</li>
-              <li>It retrieves relevant public source context.</li>
-              <li>It generates diligence questions and a reusable first-pass memo.</li>
-              <li>It runs without paid AI API calls in this version.</li>
-            </ul>
+            <p className="mt-4 text-base leading-7 text-[#4a4842]">
+              Generic ChatGPT can write a fluent memo. This system forces each claim through a nuclear deployment evidence framework, separates public context from target-specific proof, retrieves source-grounded context, and regression-tests against common diligence mistakes like treating an MOU as binding offtake or pre-application as approval.
+            </p>
           </article>
           <article className="border border-[#d9d3c8] bg-[#fbfaf7] p-6">
-            <h2 className="text-2xl font-semibold">Deployment note</h2>
-            <p className="mt-4 text-base leading-7 text-[#4a4842]">
-              This version runs deterministic source-grounded analysis without paid AI API calls.
-            </p>
+            <h2 className="text-2xl font-semibold">Built with</h2>
+            <ul className="mt-4 space-y-2 text-base leading-7 text-[#4a4842]">
+              <li>150-source ranked manifest</li>
+              <li>2,521 chunked evidence passages</li>
+              <li>76 adversarial eval cases</li>
+              <li>10 golden memo regression tests</li>
+              <li>Deterministic analysis, no paid AI API calls</li>
+            </ul>
           </article>
         </section>
         <section className="space-y-4">

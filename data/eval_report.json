@@ -1,9 +1,18 @@
 {
-  "generated_at": "2026-06-01T08:57:42.124Z",
+  "generated_at": "2026-06-02T20:04:22.342Z",
   "total_cases": 76,
   "passed": 76,
   "failed": 0,
   "failure_categories": {},
+  "evidence_posture_distribution": {
+    "Weak Public Footing": 15,
+    "Stronger Public Footing": 8,
+    "Mixed Public Footing": 53
+  },
+  "posture_assertions": {
+    "passed": true,
+    "failures": []
+  },
   "quality_summary": {
     "max_word_count": 657,
     "avg_word_count": 528,
@@ -300,6 +309,7 @@
         "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -456,6 +466,7 @@
         "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -676,6 +687,7 @@
         "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -863,6 +875,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Stronger Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -1059,6 +1072,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Stronger Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
@@ -1255,6 +1269,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Stronger Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -1442,6 +1457,7 @@
         "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Stronger Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -1685,6 +1701,7 @@
         "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -1962,6 +1979,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -2147,6 +2165,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -2366,6 +2385,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -2607,6 +2627,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -2827,6 +2848,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -3024,6 +3046,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -3227,6 +3250,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -3376,6 +3400,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -3543,6 +3568,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -3697,6 +3723,7 @@
         "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -3864,6 +3891,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -4046,6 +4074,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
@@ -4227,6 +4256,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
@@ -4374,6 +4404,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
@@ -4612,6 +4643,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -4883,6 +4915,7 @@
         "Which reactor vendor or technology would supply nuclear baseload?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -5177,6 +5210,7 @@
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -5425,6 +5459,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -5702,6 +5737,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -5981,6 +6017,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #3 Talen Energy 2025 Annual Report to Shareholders. Why it matters: Shows a commercial benchmark for nuclear-powered data centers, but the diligence issue remains target-specific offtake and deliverability. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -6228,6 +6265,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -6431,6 +6469,7 @@
         "Who will operate the nuclear asset and own spent fuel, security, waste, and long-term operational responsibility?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -6635,6 +6674,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #8 Constellation Loan Guarantee Agreement Exhibit for Crane. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -6735,6 +6775,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
         "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence.",
@@ -6836,6 +6877,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Stronger Public Footing",
       "main_memo_source_bullets": [
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
         "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence.",
@@ -7044,6 +7086,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -7205,6 +7248,7 @@
         "Who will operate the nuclear asset and own spent fuel, security, waste, and long-term operational responsibility?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
         "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability.",
@@ -7306,6 +7350,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- TerraPower Natrium / Kemmerer NRC materials: Benchmark for what public regulatory maturity looks like.",
         "- Microsoft nuclear power public sourcing context: Power-buyer claims need contract evidence.",
@@ -7515,6 +7560,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -7617,6 +7663,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability.",
         "- DOE LPO application process: Useful for testing financing claims."
@@ -7767,6 +7814,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -7919,6 +7967,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Stronger Public Footing",
       "main_memo_source_bullets": [
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -8069,6 +8118,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -8297,6 +8347,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -8494,6 +8545,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -8651,6 +8703,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -8755,6 +8808,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -8858,6 +8912,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Stronger Public Footing",
       "main_memo_source_bullets": [
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -9014,6 +9069,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -9118,6 +9174,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -9279,6 +9336,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
@@ -9381,6 +9439,7 @@
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Stronger Public Footing",
       "main_memo_source_bullets": [
         "- ERCOT large load interconnection context: Good placeholder for future ISO/RTO source expansion.",
         "- FERC generator interconnection reform/orders: Large-load claims need power-delivery evidence.",
@@ -9484,6 +9543,7 @@
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Kairos Hermes construction permit: Important benchmark, with scope limitations.",
         "- ERCOT large load interconnection context: Good placeholder for future ISO/RTO source expansion.",
@@ -9646,6 +9706,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
@@ -9787,6 +9848,7 @@
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
@@ -10142,6 +10204,7 @@
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #8 Constellation Loan Guarantee Agreement Exhibit for Crane. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -10372,6 +10435,7 @@
         "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -10639,6 +10703,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -10951,6 +11016,7 @@
         "Which reactor vendor or technology would supply nuclear baseload?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -11205,6 +11271,7 @@
         "What milestone would move the deployment date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -11481,6 +11548,7 @@
         "Is the customer/offtake agreement binding or preliminary, and what credit support or termination rights apply?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -11678,6 +11746,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -11844,6 +11913,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #22 Kemmerer Power Station Unit 1 Final Safety Evaluation. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
@@ -11956,6 +12026,7 @@
         "Who owns transportation, safeguards, criticality, and storage responsibility, who is the responsible licensee, and what public or counterparty evidence supports the plan?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments."
@@ -12185,6 +12256,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #5 Final EIS for the Proposed Palisades Nuclear Restart Project. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #6 DOE Record of Decision for Holtec Palisades Loan Guarantee. Why it matters: Useful restart, NEPA, financing, or policy precedent; it does not prove fuel allocation, new-build licensing, or target-specific project commitments. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan."
@@ -12455,6 +12527,7 @@
         "Which named sites are controlled, and what land rights, permits, and local approvals have been secured?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -12657,6 +12730,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #9 DOE Final HALEU EIS, Volume 1. Why it matters: Useful NEPA, site, or environmental-review context, but not proof of target-specific permits, interconnection rights, or financing. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -12810,6 +12884,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability.",
         "- DOE LPO application process: Useful for testing financing claims."
@@ -13145,6 +13220,7 @@
         "Which reactor vendor or technology would supply nuclear baseload?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -13303,6 +13379,7 @@
         "Is NRC engagement limited to pre-application discussion, or has an application been accepted, docketed, or reviewed?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -13409,6 +13486,7 @@
         "What is the power-delivery basis: grid interconnection, behind-the-meter service, islanded operation, or another structure?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- ERCOT large load interconnection context: Good placeholder for future ISO/RTO source expansion.",
         "- FERC generator interconnection reform/orders: Large-load claims need power-delivery evidence.",
@@ -13572,6 +13650,7 @@
         "Which dated milestones connect the current status to the claimed commercial operation date?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #24 Long Mott Construction Permit Application Part I, General and Financial Information. Why it matters: Public context for Licensing / NRC; useful for testing the deployment timeline claim without treating precedent as proof of the target's claim. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #21 DANU-ISG-2022-01, ARCAP Roadmap Interim Staff Guidance. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path."
@@ -13814,6 +13893,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
@@ -14099,6 +14179,7 @@
         "Who is responsible for EPC execution, and what contract scope, cost basis, schedule, risk allocation, and overrun protection are binding?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #1 FERC Order, Susquehanna ISA / Amazon co-location, Docket ER24-2172-000. Why it matters: Shows that nuclear/data-center co-location can raise tariff, reliability, interconnection, and deliverability issues. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
         "- Source: #2 Constellation Energy 2025 Annual Report. Why it matters: Shows that large-load nuclear power structures are commercially relevant, while still leaving site, tariff, and contract specifics to diligence. Does not prove: This is useful power-delivery context, but it does not prove the target has site control, interconnection rights, an islanded operating basis, or a financeable bridge-power plan.",
@@ -14204,6 +14285,7 @@
         "What capital is committed, what remains conditional, and what milestones would unlock project finance or DOE LPO support?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Palisades restart public precedent: Useful financing/policy benchmark with limited transferability.",
         "- DOE LPO application process: Useful for testing financing claims."
@@ -14353,6 +14435,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -14570,6 +14653,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Mixed Public Footing",
       "main_memo_source_bullets": [
         "- Source: #13 Current State of Benchmark Criticality Experiments and Analytical Data to Support Licensing of HALEU Fuel Cycle Facilities. Why it matters: Shows that HALEU fuel-cycle licensing depends on validated criticality and analytical data, not just material availability. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
         "- Source: #15 Centrus American Centrifuge Plant HALEU License Amendment Request. Why it matters: Shows public precedent for HALEU enrichment/licensing activity, but not a reservation or delivery commitment for this target. Does not prove: This is useful public precedent, but it does not prove the target has secured project-specific fuel supply, fabrication capacity, transport approvals, safeguards arrangements, or delivery commitments.",
@@ -14810,6 +14894,7 @@
         "Does the fuel evidence cover first core only, or both first core and reloads?"
       ],
       "verdict": "Diligence Required",
+      "evidence_posture": "Weak Public Footing",
       "main_memo_source_bullets": [
         "- Source: #18 LIC-116, Preapplication Readiness Assessment. Why it matters: Benchmarks why pre-application engagement is weaker than a docketed or accepted application. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",
         "- Source: #19 NuScale Standard Design Certification DCA RAI Report. Why it matters: Shows the level of public NRC review detail needed before treating a deployment timeline as mature, while still leaving project-specific site, offtake, and financing evidence unresolved. Does not prove: This helps benchmark licensing maturity, but it does not prove the target has a named NRC applicant, accepted application, license, construction authorization, or commercial operation path.",

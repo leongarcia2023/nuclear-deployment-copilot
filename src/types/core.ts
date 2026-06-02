@@ -24,6 +24,13 @@ export type DecisionType =
 
 export type DealVerdict = "Pursue" | "Monitor" | "Pass" | "Diligence Required";
 
+export type EvidencePosture =
+  | "Insufficient Input"
+  | "Weak Public Footing"
+  | "Mixed Public Footing"
+  | "Stronger Public Footing"
+  | "Diligence Required";
+
 export type MustBeTrueStatus = "evidenced" | "plausible" | "unsupported" | "private diligence required" | "red flag";
 
 export type AppAnalysisMode = "demo" | "source_grounded_scaffold";
@@ -133,6 +140,7 @@ export interface AnalysisDebug {
 
 export interface MemoResult {
   verdict: DealVerdict;
+  evidencePosture: EvidencePosture;
   confidence: "High" | "Medium" | "Low";
   confidenceRationale?: string;
   oneLineJudgment: string;
@@ -356,6 +364,7 @@ export interface FirstPassIcMemo {
 
 export interface ClaimToIcMemo {
   verdict: DealVerdict;
+  evidencePosture?: EvidencePosture;
   confidence: "High" | "Medium" | "Low";
   oneLineJudgment: string;
   recommendedNextAction: string;
