@@ -41,6 +41,8 @@ type EvalCase = {
   expectedCorpusCoverage?: StringMap;
   expectedVerdict?: string;
   expected_verdict?: string;
+  expectedEvidencePosture?: string;
+  expected_evidence_posture?: string;
   expectedAnalystReadContains?: string[];
   forbiddenMemoPhrases?: string[];
   expectedQuestionsContain?: string[];
@@ -361,6 +363,11 @@ async function main() {
       failures.push(fail("verdict mismatch", `expected ${expectedVerdict}, got ${result.verdict}`));
     }
 
+    const expectedEvidencePosture = testCase.expectedEvidencePosture ?? testCase.expected_evidence_posture;
+    if (expectedEvidencePosture && result.evidencePosture !== expectedEvidencePosture) {
+      failures.push(fail("evidence posture mismatch", `expected ${expectedEvidencePosture}, got ${result.evidencePosture}`));
+    }
+
     for (const expected of getCaseArray(testCase, "expectedTopMissingEvidence", "expected_top_missing_evidence")) {
       if (!includesAny(topMissingEvidence, expected) && !includesLoose(memoMarkdown, expected)) {
         failures.push(fail("missing expected top evidence", `${expected} not found in top missing evidence or memo`));
@@ -448,6 +455,33 @@ async function main() {
   }
 
 
+  const verdictDistribution = results.reduce<Record<string, number>>((counts, item: any) => {
+    const verdict = item.verdict ?? "Missing";
+    counts[verdict] = (counts[verdict] ?? 0) + 1;
+    return counts;
+  }, {});
+  const expectedVerdicts = cases
+    .map((testCase) => testCase.expectedVerdict ?? testCase.expected_verdict)
+    .filter(Boolean)
+    .map(String);
+  const verdictAssertionFailures: AssertionFailure[] = [];
+  const verdictById = Object.fromEntries(results.map((item: any) => [item.id, item.verdict]));
+  if (results.some((item: any) => !item.verdict)) {
+    verdictAssertionFailures.push(fail("missing verdict", "one or more eval cases did not return a verdict"));
+  }
+  if (new Set(expectedVerdicts).size <= 1) {
+    verdictAssertionFailures.push(fail("circular expected verdicts", "expected verdicts are identical across the eval suite"));
+  }
+  if (Object.keys(verdictDistribution).filter((item) => item !== "Missing").length <= 1) {
+    verdictAssertionFailures.push(fail("constant actual verdicts", "actual verdicts are identical across the eval suite"));
+  }
+  for (const id of ["absurd_backyard_reactor_2026", "absurd_garage_reactor_next_year", "anonymous_nrc_doe_no_specifics"]) {
+    const verdict = verdictById[id];
+    if (verdict === "Diligence Required") {
+      verdictAssertionFailures.push(fail("absurd claim treated as diligence required", `${id}: expected Overclaim Risk, got Diligence Required`));
+    }
+  }
+
   const postureDistribution = results.reduce<Record<string, number>>((counts, item: any) => {
     const posture = item.evidence_posture ?? "Missing";
     counts[posture] = (counts[posture] ?? 0) + 1;
@@ -459,7 +493,7 @@ async function main() {
   if (Object.keys(postureDistribution).filter((item) => item !== "Missing").length < 3) {
     postureAssertionFailures.push(fail("insufficient posture variation", `expected at least 3 posture values, got ${Object.keys(postureDistribution).join(", ")}`));
   }
-  for (const id of ["hyperscaler_mou_signed", "doe_award_announced", "site_identified_not_controlled", "blind_doe_award_not_closed_financing"]) {
+  for (const id of ["hyperscaler_mou_signed", "doe_award_announced", "site_identified_not_controlled", "blind_doe_award_not_closed_financing", "absurd_backyard_reactor_2026", "absurd_garage_reactor_next_year", "anonymous_nrc_doe_no_specifics"]) {
     const posture = postureById[id];
     if (posture && !["Weak Public Footing", "Mixed Public Footing"].includes(String(posture))) {
       postureAssertionFailures.push(fail("weak case posture mismatch", `${id}: expected Weak/Mixed Public Footing, got ${posture}`));
@@ -486,6 +520,11 @@ async function main() {
     passed: results.filter((item) => item.passed).length,
     failed: failedResults.length,
     failure_categories: failureCategories,
+    verdict_distribution: verdictDistribution,
+    verdict_assertions: {
+      passed: verdictAssertionFailures.length === 0,
+      failures: verdictAssertionFailures,
+    },
     evidence_posture_distribution: postureDistribution,
     posture_assertions: {
       passed: postureAssertionFailures.length === 0,
@@ -511,6 +550,9 @@ async function main() {
   console.log(`golden memo cases: ${golden.total}`);
   console.log(`golden passed: ${golden.passed}`);
   console.log(`golden failed: ${golden.failed}`);
+  console.log(`verdict distribution: ${Object.entries(verdictDistribution).map(([verdict, count]) => `${verdict} ${count}`).join(", ")}`);
+  console.log(`verdict assertions: ${verdictAssertionFailures.length === 0 ? "passed" : "failed"}`);
+  for (const failure of verdictAssertionFailures) console.log(`  ${failure.category}: ${failure.message}`);
   console.log(`evidence posture distribution: ${Object.entries(postureDistribution).map(([posture, count]) => `${posture} ${count}`).join(", ")}`);
   console.log(`posture assertions: ${postureAssertionFailures.length === 0 ? "passed" : "failed"}`);
   for (const failure of postureAssertionFailures) console.log(`  ${failure.category}: ${failure.message}`);
@@ -527,7 +569,7 @@ async function main() {
       console.log(`GOLDEN FAIL ${item.id}: ${item.failures.slice(0, 4).map((failure) => `${failure.category} - ${failure.message}`).join("; ")}`);
     }
   }
-  if (postureAssertionFailures.length) process.exitCode = 1;
+  if (verdictAssertionFailures.length || postureAssertionFailures.length) process.exitCode = 1;
   for (const item of results) {
     if (item.passed) {
       console.log(`PASS ${item.id}`);

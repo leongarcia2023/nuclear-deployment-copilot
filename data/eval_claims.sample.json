@@ -27,7 +27,7 @@
     "expectedCorpusCoverage": {
       "Licensing / NRC": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "Pre-application engagement can be useful"
     ],
@@ -79,7 +79,7 @@
     "expectedCorpusCoverage": {
       "Licensing / NRC": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "Pre-application engagement"
     ],
@@ -127,7 +127,7 @@
     "expectedCorpusCoverage": {
       "Licensing / NRC": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "regulatory claim"
     ],
@@ -176,7 +176,7 @@
     "expectedCorpusCoverage": {
       "Licensing / NRC": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Stronger Public Footing",
     "expectedAnalystReadContains": [
       "regulatory claim"
     ],
@@ -228,7 +228,7 @@
     "expectedCorpusCoverage": {
       "Licensing / NRC": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Stronger Public Footing",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "design certification proves project financing",
@@ -274,7 +274,7 @@
     "expectedCorpusCoverage": {
       "Licensing / NRC": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Stronger Public Footing",
     "expectedAnalystReadContains": [
       "regulatory claim"
     ],
@@ -325,7 +325,7 @@
     "expectedCorpusCoverage": {
       "Licensing / NRC": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Stronger Public Footing",
     "expectedAnalystReadContains": [
       "regulatory claim"
     ],
@@ -542,7 +542,7 @@
     "expectedCorpusCoverage": {
       "Fuel supply / HALEU": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "project-specific fuel-readiness package"
     ],
@@ -753,7 +753,7 @@
     "expectedCorpusCoverage": {
       "Fuel supply / HALEU": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "fuel-readiness"
     ],
@@ -1001,7 +1001,7 @@
     "expectedCorpusCoverage": {
       "Fuel fabrication": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "fuel-readiness"
     ],
@@ -1470,7 +1470,7 @@
     "expectedCorpusCoverage": {
       "Offtake / customer": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "power-campus"
     ],
@@ -1520,7 +1520,7 @@
     "expectedCorpusCoverage": {
       "Interconnection / power delivery": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "interconnection risk eliminated",
@@ -1617,7 +1617,7 @@
     "expectedCorpusCoverage": {
       "Offtake / customer": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "MOU is binding",
@@ -1665,7 +1665,7 @@
     "expectedCorpusCoverage": {
       "Offtake / customer": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Stronger Public Footing",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "terms verified",
@@ -1714,7 +1714,7 @@
     "expectedCorpusCoverage": {
       "Offtake / customer": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "fuel-readiness"
     ],
@@ -1861,7 +1861,7 @@
     "expectedCorpusCoverage": {
       "Licensing / NRC": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "fuel-readiness"
     ],
@@ -1907,7 +1907,7 @@
     "expectedCorpusCoverage": {
       "Financing": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "DOE award is closed financing",
@@ -1956,7 +1956,7 @@
     "expectedCorpusCoverage": {
       "Financing": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "conditional commitment is closed financing",
@@ -2005,7 +2005,7 @@
     "expectedCorpusCoverage": {
       "Financing": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Stronger Public Footing",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "construction risk solved",
@@ -2157,7 +2157,7 @@
     "expectedCorpusCoverage": {
       "Fuel supply / HALEU": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "fuel-readiness"
     ],
@@ -2209,7 +2209,7 @@
     "expectedCorpusCoverage": {
       "EPC / construction": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "factory-built means construction risk is solved",
@@ -2301,7 +2301,7 @@
     "expectedCorpusCoverage": {
       "EPC / construction": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Stronger Public Footing",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "fixed price verified",
@@ -2397,7 +2397,7 @@
     "expectedCorpusCoverage": {
       "EPC / construction": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "eliminates nuclear construction overruns",
@@ -2441,7 +2441,7 @@
     "expectedCorpusCoverage": {
       "Site / permitting": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "site identified proves site control",
@@ -2488,7 +2488,7 @@
     "expectedCorpusCoverage": {
       "Site / permitting": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Stronger Public Footing",
     "expectedAnalystReadContains": [],
     "forbiddenMemoPhrases": [
       "site control verified",
@@ -2757,7 +2757,7 @@
       "Licensing / NRC": "Strong",
       "Financing": "Strong"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "Pre-application engagement"
     ],
@@ -3195,7 +3195,7 @@
       "Offtake / customer": "Private diligence required",
       "Financing": "Private diligence required"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "site-control",
       "power-delivery"
@@ -3472,7 +3472,7 @@
     "expectedTargetSpecificSupport": {
       "Licensing / NRC": "Missing"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "regulatory claim"
     ],
@@ -3572,7 +3572,7 @@
     "expectedTargetSpecificSupport": {
       "Financing": "Private diligence required"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "financing-readiness"
     ],
@@ -3627,7 +3627,7 @@
       "EPC",
       "Committed financing"
     ],
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "timeline"
     ],
@@ -3743,7 +3743,7 @@
     "expectedTargetSpecificSupport": {
       "Financing": "Private diligence required"
     },
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "financing-readiness",
       "does not equal closed project financing"
@@ -3904,7 +3904,7 @@
       "EPC",
       "Committed financing"
     ],
-    "expectedVerdict": "Diligence Required",
+    "expectedVerdict": "Overclaim Risk",
     "expectedAnalystReadContains": [
       "timeline"
     ],
@@ -3934,6 +3934,69 @@
       "FERC",
       "Talen",
       "Constellation"
+    ]
+  },
+  {
+    "id": "absurd_backyard_reactor_2026",
+    "target": "Backyard Reactor Claim",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "My buddy said he could build a reactor in his backyard by 2026.",
+    "expectedDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [],
+    "expectedVerdict": "Overclaim Risk",
+    "expectedEvidencePosture": "Weak Public Footing",
+    "forbiddenMemoPhrases": [
+      "Stronger Public Footing"
+    ]
+  },
+  {
+    "id": "absurd_garage_reactor_next_year",
+    "target": "Garage Reactor Startup",
+    "userType": "Investor",
+    "decisionQuestion": "Is this deployment timeline believable?",
+    "claimText": "A friend says his garage reactor startup can deliver nuclear power next year.",
+    "expectedDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [],
+    "expectedVerdict": "Overclaim Risk",
+    "expectedEvidencePosture": "Weak Public Footing",
+    "forbiddenMemoPhrases": [
+      "Stronger Public Footing"
+    ]
+  },
+  {
+    "id": "anonymous_nrc_doe_no_specifics",
+    "target": "Anonymous SMR Team",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "Some anonymous team says it has NRC approval and DOE backing for an SMR but provides no company name, docket, site, or financing terms.",
+    "expectedDetectedClaimTypes": [
+      "licensing_claim",
+      "financing_claim"
+    ],
+    "expectedDeploymentLayers": [
+      "Licensing / NRC",
+      "Financing"
+    ],
+    "expectedVerdict": "Overclaim Risk",
+    "expectedEvidencePosture": "Weak Public Footing",
+    "forbiddenMemoPhrases": [
+      "Stronger Public Footing"
+    ]
+  },
+  {
+    "id": "insufficient_input_like_nuclear",
+    "target": "General Nuclear Interest",
+    "userType": "Investor",
+    "decisionQuestion": "Is this worth deeper diligence?",
+    "claimText": "I like nuclear energy.",
+    "expectedDetectedClaimTypes": [],
+    "expectedDeploymentLayers": [],
+    "expectedVerdict": "Insufficient Input",
+    "expectedEvidencePosture": "Insufficient Input",
+    "forbiddenMemoPhrases": [
+      "Overclaim Risk",
+      "Stronger Public Footing"
     ]
   }
 ]

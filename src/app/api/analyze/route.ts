@@ -28,7 +28,7 @@ function withMemo(overrides: Partial<ClaimToIcMemo>): ProjectCounterpartyProfile
 function profileForDemo(demoId: DemoId): ProjectCounterpartyProfile {
   if (demoId === "haleu-customer" || demoId === "haleu-readiness") {
     return withMemo({
-      verdict: "Monitor",
+      verdict: "Diligence Required",
       confidence: "Medium",
       oneLineJudgment:
         "Monitor, but do not reserve fuel-cycle capacity yet. The claimed HALEU demand is commercially relevant, but customer maturity, fuel specification, credit support, and reservation authority are not evidenced.",
@@ -94,7 +94,7 @@ function profileForDemo(demoId: DemoId): ProjectCounterpartyProfile {
       firstPassIcMemo: {
         target: "Prospective HALEU fuel-cycle customer",
         decision: "Is this a credible fuel-cycle customer?",
-        verdict: "Monitor",
+        verdict: "Diligence Required",
         confidence: "Medium",
         situation:
           "A reactor developer claims it will become a meaningful HALEU customer and wants strategic fuel-cycle engagement before final project maturity.",

@@ -37,8 +37,14 @@ const claimTerms: Record<string, string[]> = {
   nuclear_integration_claim: ["nuclear integration", "baseload integration", "nuclear baseload", "future nuclear", "permanent power", "initial power", "bridge power", "campus power", "behind the meter", "behind-the-meter"],
 };
 
+const normalizedTextCache = new Map<string, string>();
+
 function normalize(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const cached = normalizedTextCache.get(value);
+  if (cached !== undefined) return cached;
+  const normalized = value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  normalizedTextCache.set(value, normalized);
+  return normalized;
 }
 
 function escapeRegExp(value: string) {

@@ -20,6 +20,7 @@ Users paste a public company claim or sanitized note. The app then:
 - Separates corpus coverage from target-specific proof.
 - Builds an evidence ledger and deployment stack matrix.
 - Produces a concise first-pass diligence / IC memo.
+- Assigns a conservative public-evidence screening disposition: Insufficient Input, Overclaim Risk, Diligence Required, or Stronger Public Footing.
 - Flags common overclaims, such as treating an MOU as binding offtake or pre-application engagement as NRC approval.
 
 ## Architecture Overview
@@ -91,10 +92,11 @@ The flagship demo claim is:
 
 The project includes an internal evaluation harness:
 
-- 76 adversarial eval cases.
+- 80 adversarial eval cases.
 - 10 golden memo regression tests.
 - Memo quality metrics, including word count, evidence bullet count, and diligence question count.
 - Overclaim checks for common diligence errors.
+- Screening-disposition checks to prevent constant verdicts.
 - Evidence posture checks to ensure the app distinguishes weak, mixed, and stronger public footing while keeping verdicts conservative.
 
 Run:
@@ -105,8 +107,9 @@ npm run eval
 
 Recent passing output includes:
 
-- 76/76 eval cases passed.
+- 80/80 eval cases passed.
 - 10/10 golden memo tests passed.
+- Screening disposition distribution across Overclaim Risk, Diligence Required, Stronger Public Footing, and Insufficient Input.
 - Evidence posture distribution across Weak Public Footing, Mixed Public Footing, and Stronger Public Footing.
 - Zero forbidden overclaim cases.
 - Zero generic fallback cases.
@@ -114,6 +117,8 @@ Recent passing output includes:
 ## Limitations
 
 This project is a first-pass diligence prototype, not final investment advice.
+
+The headline verdict is a public-evidence screening disposition. It does not verify private contracts, financing terms, site rights, confidential counterparty evidence, or non-public regulatory feedback. `Stronger Public Footing` does not mean approved, bankable, safe, or investable. It only means the claim has stronger public evidence relative to other screened claims, while remaining subject to private diligence on contracts, financing, execution, and counterparty credibility.
 
 Known limitations:
 

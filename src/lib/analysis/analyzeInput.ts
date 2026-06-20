@@ -272,26 +272,82 @@ function coverageStatus(status: DeploymentLayerFinding["status"]): CoverageStatu
   return "missing";
 }
 
-function verdictFor(profile: CompanyProfile | undefined, detectedClaims: DetectedClaim[]): DealVerdict {
+function hasNuclearDeploymentLanguage(note: string) {
+  const normalized = normalize(note);
+  const hasNuclearTerm = ["nuclear", "reactor", "reactors", "smr", "advanced reactor", "microreactor"].some((term) => includesPhrase(normalized, term));
+  const hasDeploymentTerm = ["build", "deploy", "deployment", "deliver", "commercial operation", "cod", "first power", "nrc", "doe", "site", "financing", "approval"].some((term) => includesPhrase(normalized, term));
+  return hasNuclearTerm && hasDeploymentTerm;
+}
+
+function absurdInformalClaim(note: string) {
+  const normalized = normalize(note);
+  if (!hasNuclearDeploymentLanguage(note)) return false;
+  return [
+    "my buddy said",
+    "my friend said",
+    "some guy said",
+    "backyard",
+    "garage",
+    "basement",
+    "homemade reactor",
+    "build a reactor in his backyard",
+    "build a reactor by 2026",
+    "garage reactor",
+  ].some((phrase) => includesPhrase(normalized, phrase));
+}
+
+function hardOverclaimDetected(note: string) {
+  const normalized = note.toLowerCase();
+  return absurdInformalClaim(note) || [
+    /\bmou\b(?![^.]{0,80}\bbinding\b)/,
+    /letter of intent/,
+    /customer interest/,
+    /anonymous team.*(nrc approval|doe backing|smr)/,
+    /provides no company name/,
+    /doe (award|selected|selection)(?![^.]{0,80}\bclosed\b)/,
+    /doe grant.*(bankable|financeable|financing|reserve)/,
+    /conditional commitment.*(means|secured|solved|construction financing|closed financing|fully financed)/,
+    /site (has been |is |was )?identified(?![^.]{0,80}\b(controlled|control)\b)/,
+    /preferred site.*identified(?![^.]{0,80}\b(controlled|control)\b)/,
+    /factory-built.*(solved|eliminates|removes)/,
+    /modular.*(solved|eliminates|removes).*construction/,
+    /behind[- ]the[- ]meter.*(avoids|eliminates|no ).*interconnection/,
+    /pre[- ]application.*(commercial operation|cod|approval)/,
+    /nrc engagement.*(approval|approved)/,
+    /readiness assessment.*(ready|approval)/,
+    /haleu.*(secured|available|reserved)(?![^.]{0,120}\b(supplier|allocation|contract|reservation|quantity|assay|delivery)\b)/,
+  ].some((pattern) => pattern.test(normalized));
+}
+
+function lowSpecificityOverclaim(note: string, target: string, detectedClaims: DetectedClaim[]) {
+  if (!hasNuclearDeploymentLanguage(note) || !detectedClaims.length) return false;
+  const normalized = normalize(`${target} ${note}`);
+  const detailSignals = [
+    "nrc applicant",
+    "docket",
+    "reactor vendor",
+    "site controlled",
+    "site control",
+    "binding ppa",
+    "closed loan guarantee",
+    "fixed price epc",
+    "haleu supplier",
+    "fuel fabricator",
+    "construction permit application",
+  ].filter((term) => includesPhrase(normalized, term)).length;
+  const anonymousOrInformal = ["anonymous", "unnamed", "some guy", "my buddy", "my friend", "no company name", "no docket", "no site"].some((term) => includesPhrase(normalized, term));
+  return anonymousOrInformal && detailSignals < 2;
+}
+
+function verdictFor(input: AnalysisInput, detectedClaims: DetectedClaim[], evidencePosture: EvidencePosture, evidenceLedger: EvidenceLedger): DealVerdict {
   const claimTypes = new Set(detectedClaims.map((claim) => claim.claimType));
-  if (profile?.category === "data_center_power_infrastructure" && claimTypes.has("nuclear_integration_claim")) return "Diligence Required";
-  const diligenceTriggerClaims = [
-    "data_center_power_claim",
-    "behind_the_meter_claim",
-    "fuel_cycle_claim",
-    "HALEU_claim",
-    "licensing_claim",
-    "NRC_engagement_claim",
-    "deployment_timeline_claim",
-    "offtake_claim",
-    "site_control_claim",
-    "financing_claim",
-    "EPC_construction_claim",
-    "bridge_power_claim",
-    "nuclear_integration_claim",
-  ];
-  if (diligenceTriggerClaims.some((claimType) => claimTypes.has(claimType))) return "Diligence Required";
-  return "Monitor";
+  const targetSupported = evidenceLedger.deploymentLayerSummary.filter((item) => item.targetSpecificSupport === "Supported" || item.targetSpecificSupport === "Partially supported").length;
+  if (absurdInformalClaim(input.note)) return "Overclaim Risk";
+  if (!detectedClaims.length || evidencePosture === "Insufficient Input" || claimTypes.has("unclear")) return "Insufficient Input";
+  if ((hardOverclaimDetected(input.note) || lowSpecificityOverclaim(input.note, input.targetCompanyProject, detectedClaims)) && targetSupported === 0) return "Overclaim Risk";
+  if (evidencePosture === "Weak Public Footing") return "Overclaim Risk";
+  if (evidencePosture === "Stronger Public Footing") return "Stronger Public Footing";
+  return "Diligence Required";
 }
 
 function buildQuestions(target: string, profile: CompanyProfile | undefined, findings: DeploymentLayerFinding[], detectedClaims: DetectedClaim[], userType = "") {
@@ -782,6 +838,7 @@ function buildWhatWouldChangeVerdict(ledger: EvidenceLedger) {
 function evidencePostureFor(note: string, detectedClaims: DetectedClaim[], documentCoverage: MemoResult["documentCoverage"], evidenceLedger: EvidenceLedger): EvidencePosture {
   const normalized = note.toLowerCase();
   const claimCount = evidenceLedger.atomicClaims.length || detectedClaims.length;
+  if (absurdInformalClaim(note)) return "Weak Public Footing";
   if (!normalized.trim() || claimCount === 0 || detectedClaims.every((claim) => claim.claimType === "unclear")) return "Insufficient Input";
 
   const strongEvidenceSignals = [
@@ -809,17 +866,7 @@ function evidencePostureFor(note: string, detectedClaims: DetectedClaim[], docum
 
   if (strongEvidenceSignals >= 1 || targetSupported >= 2) return "Stronger Public Footing";
 
-  const weakOverclaimSignals = [
-    /mou(?![^.]{0,80}binding)/,
-    /letter of intent/,
-    /customer interest/,
-    /doe (award|selected|selection)(?![^.]{0,80}closed)/,
-    /site identified(?![^.]{0,80}(controlled|control))/,
-    /factory-built.*(solved|eliminates|removes)/,
-    /behind[- ]the[- ]meter.*(avoids|eliminates|no ).*interconnection/,
-    /pre[- ]application.*(commercial operation|cod|approval)/,
-    /readiness assessment.*(ready|approval)/,
-  ].some((pattern) => pattern.test(normalized));
+  const weakOverclaimSignals = hardOverclaimDetected(note);
   if (weakOverclaimSignals && targetSupported === 0) return "Weak Public Footing";
 
   if (strongCorpus + partialCorpus >= 4 && targetMissingOrPrivate <= 5) return "Mixed Public Footing";
@@ -832,7 +879,6 @@ function evidencePostureFor(note: string, detectedClaims: DetectedClaim[], docum
 function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, detectedClaims: DetectedClaim[], findings: DeploymentLayerFinding[], sourceMatch: SourceMatchResult): MemoResult {
   const target = input.targetCompanyProject.trim() || profile?.name || "the target counterparty";
   const category = profile?.category ?? "unrecognized_counterparty";
-  const verdict = verdictFor(profile, detectedClaims);
   const confidence = sourceMatch.confidence;
   const rawQuestions = buildQuestions(target, profile, findings, detectedClaims, input.userType);
   const claimLabelsList = detectedClaims.map((claim) => claim.label);
@@ -863,6 +909,7 @@ function buildMemo(input: AnalysisInput, profile: CompanyProfile | undefined, de
   }));
   const evidenceLedger = buildEvidenceLedger(target, input.note, detectedClaims, findings, documentMatch, documentCoverage, relevantDocuments);
   const evidencePosture = evidencePostureFor(input.note, detectedClaims, documentCoverage, evidenceLedger);
+  const verdict = verdictFor(input, detectedClaims, evidencePosture, evidenceLedger);
   const uniqueLedgerChunks = ledgerChunkEvidence(evidenceLedger);
   const isShuffleLike = category === "data_center_power_infrastructure";
   const isDataCenterPowerCase = hasPowerCampusSignal && (isShuffleLike || detectedClaims.some((claim) => ["data_center_power_claim", "behind_the_meter_claim", "bridge_power_claim"].includes(claim.claimType)));

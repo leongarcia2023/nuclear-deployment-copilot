@@ -21,7 +21,7 @@ export function ExecutiveVerdictCard({ profile }: { profile: ProjectCounterparty
     <section className="border border-[#d9d3c8] bg-[#fbfaf7] p-6 sm:p-8">
       <div className="grid gap-6 lg:grid-cols-[1fr_0.34fr]">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#7b5b25]">Verdict</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#7b5b25]">Screening disposition</p>
           <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#151514] sm:text-4xl">{memo.verdict}</h2>
           <p className="mt-4 max-w-3xl text-xl leading-8 text-[#151514]">{memo.oneLineJudgment}</p>
         </div>
@@ -32,7 +32,9 @@ export function ExecutiveVerdictCard({ profile }: { profile: ProjectCounterparty
             <p className="text-sm font-semibold text-[#63615b]">Evidence posture</p>
             <p className="mt-2 text-xl font-semibold text-[#151514]">{memo.evidencePosture ?? "Diligence Required"}</p>
           </div>
-          <p className="mt-3 text-base leading-7 text-[#151514]">Verdict is conservative by design; evidence posture distinguishes stronger vs weaker public footing.</p>
+          <p className="mt-3 text-base leading-7 text-[#151514]">
+            This is a public-evidence screening disposition, not a final investment judgment. The app is conservative by design and distinguishes stronger vs weaker public footing without verifying private contracts.
+          </p>
         </div>
       </div>
 

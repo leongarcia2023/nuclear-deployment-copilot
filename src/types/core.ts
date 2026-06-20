@@ -22,7 +22,7 @@ export type DecisionType =
   | "Is this partner/customer credible?"
   | "What questions should we ask next?";
 
-export type DealVerdict = "Pursue" | "Monitor" | "Pass" | "Diligence Required";
+export type DealVerdict = "Insufficient Input" | "Overclaim Risk" | "Diligence Required" | "Stronger Public Footing";
 
 export type EvidencePosture =
   | "Insufficient Input"

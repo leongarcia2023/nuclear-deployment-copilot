@@ -95,11 +95,20 @@ export default function MethodologyPage() {
             <ul className="mt-4 space-y-2 text-base leading-7 text-[#4a4842]">
               <li>150-source ranked manifest</li>
               <li>2,521 chunked evidence passages</li>
-              <li>76 adversarial eval cases</li>
+              <li>80 adversarial eval cases</li>
               <li>10 golden memo regression tests</li>
               <li>Deterministic analysis, no paid AI API calls</li>
             </ul>
           </article>
+        </section>
+        <section className="mb-8 border border-[#d9d3c8] bg-[#fbfaf7] p-6">
+          <h2 className="text-2xl font-semibold">Screening disposition</h2>
+          <p className="mt-4 text-base leading-7 text-[#4a4842]">
+            The headline disposition is a public-evidence screen, not a final investment judgment. The system distinguishes Insufficient Input, Overclaim Risk, Diligence Required, and Stronger Public Footing without verifying private contracts, financing terms, site rights, confidential counterparty evidence, or non-public regulatory feedback.
+          </p>
+          <p className="mt-3 text-base leading-7 text-[#4a4842]">
+            Stronger Public Footing does not mean approved, bankable, safe, or investable. It means the public record is stronger than the average screened claim while private diligence remains necessary.
+          </p>
         </section>
         <section className="space-y-4">
           {layers.map((item, index) => (
