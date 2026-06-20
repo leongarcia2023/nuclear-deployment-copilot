@@ -2,7 +2,7 @@
 
 Nuclear Deployment Intelligence is a deterministic, source-grounded diligence tool that detects overclaims in advanced nuclear and AI infrastructure deployment narratives.
 
-**Live demo:** [https://nuclear-deployment-copilot-56frv6p3l-leongarcia2023s-projects.vercel.app/](https://nuclear-deployment-copilot-riqd4kd8p-leongarcia2023s-projects.vercel.app/))
+**Live demo:** [https://nuclear-deployment-copilot-56frv6p3l-leongarcia2023s-projects.vercel.app/](https://nuclear-deployment-copilot-riqd4kd8p-leongarcia2023s-projects.vercel.app/)
 
 ## Problem / Motivation
 
